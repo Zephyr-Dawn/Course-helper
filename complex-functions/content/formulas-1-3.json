@@ -1,0 +1,162 @@
+[
+  {
+    "id": "K01",
+    "chapter": 1,
+    "section": 3,
+    "title": "共轭、实虚部与除法有理化",
+    "tex": "z\\overline z=\\lvert z\\rvert^2,\\quad \\operatorname{Re}z=\\frac{z+\\overline z}{2},\\quad \\operatorname{Im}z=\\frac{z-\\overline z}{2i},\\quad \\frac{z_1}{z_2}=\\frac{z_1\\overline z_2}{\\lvert z_2\\rvert^2}",
+    "use": "提取实虚部，消去分母中的虚数，核对复数运算。",
+    "conditions": "商式要求 $z_2\\ne0$；实部、虚部和模均为实数。",
+    "pitfall": "共轭必须作用于全部乘数：$\\overline{iz}=-i\\overline z$；虚部是 $y$，不是 $iy$。"
+  },
+  {
+    "id": "K02",
+    "chapter": 1,
+    "section": 2,
+    "title": "极坐标乘除与主辐角归一化",
+    "tex": "z_1z_2=r_1r_2e^{i(\\theta_1+\\theta_2)},\\quad \\frac{z_1}{z_2}=\\frac{r_1}{r_2}e^{i(\\theta_1-\\theta_2)},\\quad \\arg z\\in(-\\pi,\\pi]",
+    "use": "计算乘除的模与方向，判断旋转缩放，处理大整数幂。",
+    "conditions": "$z_j=r_je^{i\\theta_j}$；写辐角时要求对应复数非零，商还要求 $z_2\\ne0$。",
+    "pitfall": "主辐角的和、差须按 $2\\pi$ 归入 $(-\\pi,\\pi]$；负实数的主辐角为 $\\pi$。"
+  },
+  {
+    "id": "K03",
+    "chapter": 1,
+    "section": 4,
+    "title": "非零复数的全部 n 次方根",
+    "tex": "w_k=\\lvert z\\rvert^{1/n}\\exp\\!\\left(i\\frac{\\arg z+2k\\pi}{n}\\right),\\quad k=0,1,\\ldots,n-1",
+    "use": "求方程 $w^n=z$ 的全部根，用正多边形检查根的数量和角间距。",
+    "conditions": "$z\\ne0$，$n$ 为正整数；当 $z=0$ 时唯一不同根为 $0$。",
+    "pitfall": "先对原数的模开 $n$ 次方，再将全部角除以 $n$；只取一个辐角会漏根。"
+  },
+  {
+    "id": "K04",
+    "chapter": 1,
+    "section": 8,
+    "title": "距离与方向的几何表达",
+    "tex": "\\lvert z-a\\rvert=R,\\quad z=a+t(b-a)\\ (0\\le t\\le1),\\quad z=a+Re^{i\\theta}\\ (0\\le\\theta\\le2\\pi)",
+    "use": "依次表示圆周、从 $a$ 到 $b$ 的线段、以 $a$ 为圆心的逆时针圆周参数式。",
+    "conditions": "$R>0$；非退化线段要求 $a\\ne b$；参数递增规定行进方向。",
+    "pitfall": "圆周方程只给轨迹，不给方向；$\\arg(z-a)=\\alpha$ 的射线表达式不含顶点 $a$。"
+  },
+  {
+    "id": "K05",
+    "chapter": 2,
+    "section": 4,
+    "title": "C-R 充要条件与复导数",
+    "tex": "u_x=v_y,\\quad u_y=-v_x,\\qquad f'(z)=u_x+iv_x=v_y-iu_y",
+    "use": "判断复可导点与解析区域，计算导数。",
+    "conditions": "必须同时有 $u,v$ 在该点实可微；在开区域内逐点成立才推出区域内解析。一阶偏导连续是便于检验实可微的充分条件。",
+    "pitfall": "偏导存在且满足 C-R 不能单独保证可导；只在一条线或一个点可导，不能推出该处解析。"
+  },
+  {
+    "id": "K06",
+    "chapter": 2,
+    "section": 5,
+    "title": "调和实部与共轭虚部的重建",
+    "tex": "u_{xx}+u_{yy}=0,\\qquad dv=-u_y\\,dx+u_x\\,dy",
+    "use": "先验给定实部是否调和，再由 C-R 积分求共轭虚部和解析函数。",
+    "conditions": "$u$ 有连续二阶偏导；单连通区域中调和性保证全局共轭存在，通常只差一个实常数。",
+    "pitfall": "对一个变量积分时，积分常数可依赖另一个变量；有洞区域未必存在全局单值共轭。"
+  },
+  {
+    "id": "K07",
+    "chapter": 2,
+    "section": 7,
+    "title": "复指数的模、相位与全部原像",
+    "tex": "e^{x+iy}=e^x(\\cos y+i\\sin y),\\quad \\lvert e^z\\rvert=e^{\\operatorname{Re}z},\\quad e^{z+2k\\pi i}=e^z",
+    "use": "分离指数函数实虚部，解指数方程，检查模与周期。",
+    "conditions": "$z\\in\\mathbb C$、$k\\in\\mathbb Z$；指数是整函数且永不为零。",
+    "pitfall": "$\\operatorname{Re}(e^z)$ 通常不等于 $e^{\\operatorname{Re}z}$；后者是模。指数在全平面不一一对应。"
+  },
+  {
+    "id": "K08",
+    "chapter": 2,
+    "section": 8,
+    "title": "全部对数值与解析分支求导",
+    "tex": "\\operatorname{Ln}z=\\ln\\lvert z\\rvert+i(\\arg z+2k\\pi),\\quad k\\in\\mathbb Z,\\qquad (\\log z)'=\\frac1z",
+    "use": "求 $e^w=z$ 的全部解，选择对数原函数或定义复幂。",
+    "conditions": "$z\\ne0$；求导必须选定单值解析分支，主支的解析域为 $\\mathbb C\\setminus(-\\infty,0]$。",
+    "pitfall": "负实轴上的主值可定义，但主对数在该处不连续；主值的乘法加法法则可能相差 $2k\\pi i$。"
+  },
+  {
+    "id": "K09",
+    "chapter": 2,
+    "section": 9,
+    "title": "复幂的定义与同支求导",
+    "tex": "z^\\mu=e^{\\mu\\operatorname{Ln}z},\\qquad \\frac{d}{dz}e^{\\mu L(z)}=\\frac\\mu z e^{\\mu L(z)}",
+    "use": "列出多值幂的全部值，在选定区域计算单值幂的导数。",
+    "conditions": "$z\\ne0$、$\\mu\\in\\mathbb C$；求导时 $L$ 是所在区域的解析对数分支。",
+    "pitfall": "整数幂、既约有理幂、无理幂的值数不同；写成 $\\mu z^{\\mu-1}$ 时两侧必须使用同一对数分支。"
+  },
+  {
+    "id": "K10",
+    "chapter": 2,
+    "section": 10,
+    "title": "三角与双曲函数的指数定义",
+    "tex": "\\sin z=\\frac{e^{iz}-e^{-iz}}{2i},\\quad \\cos z=\\frac{e^{iz}+e^{-iz}}2,\\quad \\sinh z=\\frac{e^z-e^{-z}}2,\\quad \\cosh z=\\frac{e^z+e^{-z}}2",
+    "use": "把三角方程化为指数代数方程，推导 $\\sin(iz)=i\\sinh z$ 等关系。",
+    "conditions": "四个函数均为整函数；使用 $\\tan z$ 时还须排除 $\\cos z=0$。",
+    "pitfall": "$\\sin^2z+\\cos^2z=1$ 中是平方而非模平方；复正弦、余弦在全平面无界。"
+  },
+  {
+    "id": "K11",
+    "chapter": 3,
+    "section": 1,
+    "title": "复积分参数化",
+    "tex": "\\int_C f(z)\\,dz=\\int_\\alpha^\\beta f(z(t))z'(t)\\,dt",
+    "use": "计算含共轭、模、实部或分段路径的复积分。",
+    "conditions": "$C$ 按参数递增定向且分段光滑，$f$ 在路径上连续是常用充分条件。",
+    "pitfall": "必须同时代换 $f$ 和 $dz=z'(t)dt$；$dz$ 是有向复增量，不能换成弧长 $ds$。"
+  },
+  {
+    "id": "K12",
+    "chapter": 3,
+    "section": 3,
+    "title": "ML 积分估计",
+    "tex": "\\left\\lvert\\int_C f(z)\\,dz\\right\\rvert\\le\\int_C\\lvert f(z)\\rvert\\,ds\\le ML",
+    "use": "估计积分大小，证明大圆弧或小圆弧贡献趋零。",
+    "conditions": "路径可求长且长度为 $L$，沿路径有统一界 $\\lvert f(z)\\rvert\\le M$。",
+    "pitfall": "改变半径时 $M$ 和 $L$ 都可能变化；函数值趋零并不单独保证积分趋零。"
+  },
+  {
+    "id": "K13",
+    "chapter": 3,
+    "section": 7,
+    "title": "原函数与路径无关",
+    "tex": "F'=f\\quad\\Longrightarrow\\quad \\int_C f(z)\\,dz=F(b)-F(a),\\qquad \\oint_C f(z)\\,dz=0",
+    "use": "用端点值计算积分，判断能否建立全局单值原函数。",
+    "conditions": "$F$ 是包含整条路径的区域上的单值原函数；解析加单连通保证原函数存在。",
+    "pitfall": "$1/z$ 在去心平面没有全局原函数；若用对数，必须选择能覆盖整条路径的合法分支。"
+  },
+  {
+    "id": "K14",
+    "chapter": 3,
+    "section": 10,
+    "title": "柯西积分公式与高阶导数",
+    "tex": "\\oint_C\\frac{f(z)}{(z-a)^{n+1}}\\,dz=\\frac{2\\pi i}{n!}f^{(n)}(a),\\qquad n=0,1,2,\\ldots",
+    "use": "由闭路积分提取内部函数值或导数；$n=0$ 为普通柯西积分公式。",
+    "conditions": "$f$ 在逆时针简单闭曲线及内部的邻域解析，$a$ 在内部；多连通情形须用完整正向边界。",
+    "pitfall": "分母幂次比导数阶数多一；顺时针反号，点在外部时为零，点在路径上不能直接套用。"
+  },
+  {
+    "id": "K15",
+    "chapter": 3,
+    "section": 11,
+    "title": "柯西导数估计",
+    "tex": "\\lvert f^{(n)}(a)\\rvert\\le\\frac{n!M_R}{R^n},\\qquad M_R=\\max_{\\lvert z-a\\rvert=R}\\lvert f(z)\\rvert",
+    "use": "用函数增长控制导数，证明整函数为常数或低次多项式。",
+    "conditions": "$f$ 在闭圆盘 $\\lvert z-a\\rvert\\le R$ 的邻域解析；$n$ 为非负整数。",
+    "pitfall": "$M_R$ 一般随 $R$ 增长，必须核对 $M_R/R^n$ 是否趋零，不能直接令半径无穷大。"
+  },
+  {
+    "id": "K16",
+    "chapter": 3,
+    "section": 12,
+    "title": "刘维尔定理与实部上界转换",
+    "tex": "\\bigl[f\\text{ 为整函数},\\ \\lvert f\\rvert\\le M\\bigr]\\Longrightarrow f\\equiv c,\\qquad \\lvert e^f\\rvert=e^{\\operatorname{Re}f}",
+    "use": "由全平面统一有界推出恒常；实部有上界时改对整函数 $e^f$ 应用。",
+    "conditions": "界必须对整个复平面统一成立；若是实部上界，利用 $e^f$ 永不为零进一步推出 $f'=0$。",
+    "pitfall": "只在实轴或一个有界区域有界不够；实部趋零只推出 $f$ 为纯虚常数，未必为零。"
+  }
+]

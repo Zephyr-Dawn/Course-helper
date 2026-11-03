@@ -1,0 +1,132 @@
+[
+  {
+    "id": "L1",
+    "original": "第一章预备知识 （修）.pdf",
+    "name": "第一章预备知识 （修）.pdf",
+    "path": "assets/sources/ch01.pdf",
+    "pages": 27,
+    "type": "lecture",
+    "note": "正文按专题标物理页码，补充手写页按相关方法纳入",
+    "sha256": "ee5c8a9e41024c4f358d23161842acea5217e7480ec31bc3398f3f24ced964fd"
+  },
+  {
+    "id": "L2",
+    "original": "第二章解析函数（修）.pdf",
+    "name": "第二章解析函数（修）.pdf",
+    "path": "assets/sources/ch02.pdf",
+    "pages": 51,
+    "type": "lecture",
+    "note": "正文按专题标物理页码，补充手写页按相关方法纳入",
+    "sha256": "dff0fb89af2a7046c1c1551cf1d52b69c0607bdce2ce02e72b1b65e7237dbfed"
+  },
+  {
+    "id": "L3",
+    "original": "第三章复变函数的积分(修）.pdf",
+    "name": "第三章复变函数的积分(修）.pdf",
+    "path": "assets/sources/ch03.pdf",
+    "pages": 30,
+    "type": "lecture",
+    "note": "正文按专题标物理页码，补充手写页按相关方法纳入",
+    "sha256": "cb0d5b54e46694e39cabbcc68f20f5048a3f1bdbb5f24f1d693a98b88c2ccfd7"
+  },
+  {
+    "id": "L4",
+    "original": "第四章级数 (修）.pdf",
+    "name": "第四章级数 (修）.pdf",
+    "path": "assets/sources/ch04.pdf",
+    "pages": 39,
+    "type": "lecture",
+    "note": "正文按专题标物理页码，补充手写页按相关方法纳入",
+    "sha256": "6e2f6d87d725283e0770c21e1e158f06d2d9825917571978bb3e2068a4958765"
+  },
+  {
+    "id": "L5",
+    "original": "第五章留数（修）.pdf",
+    "name": "第五章留数（修）.pdf",
+    "path": "assets/sources/ch05.pdf",
+    "pages": 38,
+    "type": "lecture",
+    "note": "正文按专题标物理页码，补充手写页按相关方法纳入",
+    "sha256": "caa0254ee30026a93ea7f3dc1ed9a7d4c88c4ed0d4ce1aa40455810caf5dc359"
+  },
+  {
+    "id": "L6",
+    "original": "第六章保角映射 （修）.pdf",
+    "name": "第六章保角映射 （修）.pdf",
+    "path": "assets/sources/ch06.pdf",
+    "pages": 40,
+    "type": "lecture",
+    "note": "正文按专题标物理页码，补充手写页按相关方法纳入",
+    "sha256": "859cf8543da1c84fd59cc5757136de7a6c216dee3f60a2fa91fa6a98603cc206"
+  },
+  {
+    "id": "L7",
+    "original": "第七章拉普拉斯变换（修）.pdf",
+    "name": "第七章拉普拉斯变换（修）.pdf",
+    "path": "assets/sources/ch07.pdf",
+    "pages": 31,
+    "type": "lecture",
+    "note": "正文按专题标物理页码，补充手写页按相关方法纳入",
+    "sha256": "e017b356f9dbf68b637d19b0f8bf6bea906e89d5c59ba8b9f9bb69a7485b1548"
+  },
+  {
+    "id": "P1",
+    "original": "papers/25-26秋期末.pdf",
+    "name": "2025–2026 秋学期期末",
+    "path": "assets/sources/paper-01.pdf",
+    "pages": 2,
+    "type": "paper",
+    "note": "14题全收录；按原卷格式自述，本站补算解析",
+    "sha256": "1fd20674f8a9f199e160897f1a5fd8130cc60c2c675112a9b27e4d48da8ce055"
+  },
+  {
+    "id": "P2",
+    "original": "papers/24-25.pdf",
+    "name": "2024–2025 秋学期期末",
+    "path": "assets/sources/paper-02.pdf",
+    "pages": 4,
+    "type": "paper",
+    "note": "12题全收录；此文件含参考解，本站复算并勘误",
+    "sha256": "74659ed25b95d299705f35bed32dcab42681a9986abd246bb13f210e67db7d1a"
+  },
+  {
+    "id": "P3",
+    "original": "papers/22-23.pdf",
+    "name": "2022–2023 秋学期期末",
+    "path": "assets/sources/paper-03.pdf",
+    "pages": 1,
+    "type": "paper",
+    "note": "12题全收录；整理题面，条件缺失另注",
+    "sha256": "fd2d063913a7a68e26109b1be7040106c85fce9f8aa535b63f9e264723f6c5a2"
+  },
+  {
+    "id": "P4",
+    "original": "papers/21-22.pdf",
+    "name": "2021–2022 期末",
+    "path": "assets/sources/paper-04.pdf",
+    "pages": 1,
+    "type": "paper",
+    "note": "13条小题记录，保留原6大题编号；整理版",
+    "sha256": "3b9ea27238b29da55ddfabbc669e7e5af3bbb06dba3b032d461ce521a2137515"
+  },
+  {
+    "id": "P5",
+    "original": "papers/20-21.pdf",
+    "name": "2020 秋冬回忆卷（文件名20-21）",
+    "path": "assets/sources/paper-05.pdf",
+    "pages": 2,
+    "type": "paper",
+    "note": "14条记录；第14含两问；回忆性质按原文件标题",
+    "sha256": "6e624427c7c464276fa45c6fc015665b2925b2d5226bfe20c8f0602aeb99f698"
+  },
+  {
+    "id": "P6",
+    "original": "papers/复变函数历年真题 在线阅读.pdf",
+    "name": "复变函数历年真题·60页汇编",
+    "path": "assets/sources/paper-06.pdf",
+    "pages": 60,
+    "type": "paper",
+    "note": "原卷保留；选2011–2012中3道缺答案题补全；2021–2022重复卷不重复计数",
+    "sha256": "1d8108fc8b15b49e0dbfb57452345a1815aa77f653ede856fc3f20a2eefd2067"
+  }
+]

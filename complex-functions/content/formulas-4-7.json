@@ -1,0 +1,232 @@
+[
+  {
+    "id": "K401",
+    "chapter": 4,
+    "section": 2,
+    "title": "幂级数半径与圆内外判别",
+    "tex": "R=\\frac1{\\limsup_{n\\to\\infty}|c_n|^{1/n}},\\qquad R=\\lim_{n\\to\\infty}\\left|\\frac{c_n}{c_{n+1}}\\right|\\ \\text{（极限存在时）}",
+    "use": "求 $\\sum c_n(z-a)^n$ 的收敛半径；再单独判断圆周。",
+    "conditions": "$|z-a|<R$ 绝对收敛，$|z-a|>R$ 发散；约定 $1/0=\\infty$。",
+    "pitfall": "比值极限不存在不代表半径不存在；$|z-a|=R$ 不能由半径直接判定。"
+  },
+  {
+    "id": "K402",
+    "chapter": 4,
+    "section": 4,
+    "title": "Taylor 展开与系数唯一性",
+    "tex": "f(z)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(a)}{n!}(z-a)^n",
+    "use": "把解析函数转成以 $a$ 为中心的幂级数。",
+    "conditions": "$f$ 在相应圆内解析；实际半径由最近不可去奇点限制。",
+    "pitfall": "人为选定区域的边界不一定是展开障碍；换中心必须改为 $z-a$。"
+  },
+  {
+    "id": "K403",
+    "chapter": 4,
+    "section": 6,
+    "title": "零点阶与首个非零导数",
+    "tex": "f(z)=(z-a)^m\\varphi(z),\\quad \\varphi(a)\\ne0\\ \\Longleftrightarrow\\ f(a)=\\cdots=f^{(m-1)}(a)=0,\\ f^{(m)}(a)\\ne0",
+    "use": "判零点阶；分子分母阶差用于奇点分类。",
+    "conditions": "$f$ 在 $a$ 解析且不在邻域恒为零。",
+    "pitfall": "唯一性定理还要求零点序列的聚点在同一解析区域内部。"
+  },
+  {
+    "id": "K404",
+    "chapter": 4,
+    "section": 7,
+    "title": "Laurent 展开与系数积分",
+    "tex": "f(z)=\\sum_{n=-\\infty}^{\\infty}c_n(z-a)^n,\\quad c_n=\\frac1{2\\pi i}\\oint_{|\\zeta-a|=\\rho}\\frac{f(\\zeta)}{(\\zeta-a)^{n+1}}\\,d\\zeta",
+    "use": "在圆环上展开函数，提取主部与留数。",
+    "conditions": "$f$ 在 $r<|z-a|<R$ 解析，$r<\\rho<R$，积分圆逆时针。",
+    "pitfall": "不同环域一般有不同展开；正负幂两部分须分别收敛。"
+  },
+  {
+    "id": "K501",
+    "chapter": 5,
+    "section": 4,
+    "title": "单极点的留数极限",
+    "tex": "\\operatorname{Res}(f,a)=\\lim_{z\\to a}(z-a)f(z)",
+    "use": "消掉一个极点因子，直接代值或求极限。",
+    "conditions": "$a$ 为单极点。",
+    "pitfall": "二阶及以上极点不能直接使用单极点公式；留数为零也不代表可去。"
+  },
+  {
+    "id": "K502",
+    "chapter": 5,
+    "section": 4,
+    "title": "商在分母单零点处的留数",
+    "tex": "\\operatorname{Res}\\!\\left(\\frac{g}{h},a\\right)=\\frac{g(a)}{h'(a)}",
+    "use": "分母有简单零点时快速求留数。",
+    "conditions": "$g,h$ 在 $a$ 解析，$h(a)=0$、$h'(a)\\ne0$。",
+    "pitfall": "先检查约去的公共零点；分母高阶零点不能除以 $h'(a)=0$。"
+  },
+  {
+    "id": "K503",
+    "chapter": 5,
+    "section": 4,
+    "title": "高阶极点与展开取系数",
+    "tex": "\\operatorname{Res}(f,a)=\\frac1{(m-1)!}\\left[\\frac{d^{m-1}}{dz^{m-1}}\\big((z-a)^mf(z)\\big)\\right]_{z=a}=c_{-1}",
+    "use": "高阶极点求导，或从 Laurent 展开直接读 $(z-a)^{-1}$ 系数。",
+    "conditions": "导数式要求 $m$ 阶极点；取系数法也适用于本性奇点。",
+    "pitfall": "先乘 $(z-a)^m$ 再求导；不要遗漏 $(m-1)!$。"
+  },
+  {
+    "id": "K504",
+    "chapter": 5,
+    "section": 3,
+    "title": "留数定理与无穷远符号",
+    "tex": "\\oint_Cf(z)\\,dz=2\\pi i\\sum_k\\operatorname{Res}(f,a_k),\\qquad \\operatorname{Res}(f,\\infty)=\\operatorname{Res}_{w=0}\\!\\left[-\\frac{f(1/w)}{w^2}\\right]",
+    "use": "把闭路积分化为内部留数和；用无穷远作加和核查。",
+    "conditions": "$C$ 正向简单闭合，曲线上无奇点，内部除有限孤立奇点外解析；无穷远公式见第5.5节。",
+    "pitfall": "顺时针变号；无穷远的函数分类看 $f(1/w)$，留数必须保留微分因子 $-1/w^2$。"
+  },
+  {
+    "id": "K505",
+    "chapter": 5,
+    "section": 6,
+    "title": "三角有理积分代换",
+    "tex": "z=e^{i\\theta},\\quad \\cos\\theta=\\frac{z^2+1}{2z},\\quad \\sin\\theta=\\frac{z^2-1}{2iz},\\quad d\\theta=\\frac{dz}{iz}",
+    "use": "将完整周期三角有理积分变成单位圆留数积分。",
+    "conditions": "原积分在一周期无未处理奇点；$\\theta:0\\to2\\pi$ 对应逆时针单位圆。",
+    "pitfall": "漏 $1/(iz)$ 会改变全部极点和留数；半周期补全须检查对称性。"
+  },
+  {
+    "id": "K506",
+    "chapter": 5,
+    "section": 7,
+    "title": "有理函数全轴积分",
+    "tex": "\\int_{-\\infty}^{\\infty}R(x)\\,dx=2\\pi i\\sum_{\\operatorname{Im}a_k>0}\\operatorname{Res}(R,a_k)",
+    "use": "用上半平面极点计算有理广义积分。",
+    "conditions": "实轴无极点；常用充分条件为分母次数至少比分子高二次。",
+    "pitfall": "半轴积分只有在原函数为偶函数且收敛时才等于全轴一半；有实轴极点须另作处理。"
+  },
+  {
+    "id": "K507",
+    "chapter": 5,
+    "section": 8,
+    "title": "振荡核积分与闭合半平面",
+    "tex": "\\int_{-\\infty}^{\\infty}e^{i\\alpha x}R(x)\\,dx=2\\pi i\\sum_{\\operatorname{Im}a_k>0}\\operatorname{Res}(e^{i\\alpha z}R(z),a_k),\\qquad \\alpha>0",
+    "use": "求全轴余弦、正弦振荡积分。",
+    "conditions": "实轴无极点，实积分收敛，Jordan 估计成立；有理 $R=O(1/z)$ 是常用充分情形。",
+    "pitfall": "$\\alpha<0$ 选下半平面并变号；直接取实虚部要求实轴上 $R$ 为实值。"
+  },
+  {
+    "id": "K601",
+    "chapter": 6,
+    "section": 1,
+    "title": "导数的局部伸缩与旋转",
+    "tex": "\\Delta w=f'(z_0)\\Delta z+o(|\\Delta z|),\\quad \\rho=|f'(z_0)|,\\quad \\alpha=\\arg f'(z_0)",
+    "use": "解释保角性，求局部伸缩率与旋转角。",
+    "conditions": "$f$ 在 $z_0$ 解析且 $f'(z_0)\\ne0$。",
+    "pitfall": "导数非零只保证局部保角，全局域间映射还须证明双射。"
+  },
+  {
+    "id": "K602",
+    "chapter": 6,
+    "section": 6,
+    "title": "分式线性映射与交比",
+    "tex": "w=\\frac{az+b}{cz+d},\\ ad-bc\\ne0,\\qquad \\frac{w-w_1}{w-w_2}\\frac{w_3-w_2}{w_3-w_1}=\\frac{z-z_1}{z-z_2}\\frac{z_3-z_2}{z_3-z_1}",
+    "use": "由三对点确定映射；把圆弧边界拉直。",
+    "conditions": "三组源点各自互异，三组目标点各自互异，含无穷远时取极限。",
+    "pitfall": "整条广义圆映广义圆；弧段的像才可能仅是一条射线。"
+  },
+  {
+    "id": "K603",
+    "chapter": 6,
+    "section": 7,
+    "title": "上半平面到单位圆盘",
+    "tex": "w=e^{i\\theta}\\frac{z-a}{z-\\bar a},\\qquad \\operatorname{Im}a>0,\\ \\theta\\in\\mathbb R",
+    "use": "把上半平面内点 $a$ 送到圆心；再用旋转满足导数方向。",
+    "conditions": "$\\operatorname{Im}z>0$；目标为 $|w|<1$。",
+    "pitfall": "分母是共轭点 $\\bar a$；指定一个内点对应后通常还剩旋转自由度。"
+  },
+  {
+    "id": "K604",
+    "chapter": 6,
+    "section": 8,
+    "title": "单位圆盘自同构",
+    "tex": "\\phi(z)=e^{i\\theta}\\frac{z-a}{1-\\bar a z},\\qquad |a|<1",
+    "use": "把圆盘内任意点送到零；复合逆变换实现任意内点对应。",
+    "conditions": "$|z|<1$，$|a|<1$，$\\theta\\in\\mathbb R$；定义域和目标域均为单位开圆盘。",
+    "pitfall": "共轭放在参数 $a$ 上，不是变量 $z$ 上；后者会破坏解析性。"
+  },
+  {
+    "id": "K605",
+    "chapter": 6,
+    "section": 4,
+    "title": "角域与条带的标准化",
+    "tex": "\\zeta=\\big[e^{-i\\theta_0}(z-a)\\big]^{\\pi/\\beta},\\qquad w=\\exp\\!\\left(\\frac{\\pi i(z-A)}{B-A}\\right)",
+    "use": "前式把开角域映到上半平面；后式把垂直条带映到上半平面。",
+    "conditions": "前式取 $I=(\\theta_0,\\theta_0+\\beta)$、$0<\\beta\\le2\\pi$ 内的连续辐角 $\\arg_I(z-a)$，并按该连续支定义幂；不带下标的 $\\arg$ 仍是主辐角。后式 $A<\\operatorname{Re}z<B$，$A,B$ 为实数且 $A<B$；条带详见第6.5节。",
+    "pitfall": "非整数幂必须选支；指数全平面不单射，垂直条带直接取 $e^z$ 只得到多对一圆环。"
+  },
+  {
+    "id": "K701",
+    "chapter": 7,
+    "section": 2,
+    "title": "基本 Laplace 表与 Gamma 公式",
+    "tex": "\\mathcal L[t^\\alpha]=\\frac{\\Gamma(\\alpha+1)}{s^{\\alpha+1}},\\quad \\mathcal L[e^{at}]=\\frac1{s-a},\\quad \\mathcal L[\\sin\\omega t]=\\frac{\\omega}{s^2+\\omega^2},\\quad \\mathcal L[\\cos\\omega t]=\\frac{s}{s^2+\\omega^2}",
+    "use": "配方、部分分式、变换或反演的基本底表。",
+    "conditions": "$\\alpha>-1$；幂函数和实频三角函数常取 $\\operatorname{Re}s>0$，指数取 $\\operatorname{Re}s>\\operatorname{Re}a$。",
+    "pitfall": "非整数幂须取右半平面的解析分支；变换的解析延拓不等于积分收敛域扩大。"
+  },
+  {
+    "id": "K702",
+    "chapter": 7,
+    "section": 3,
+    "title": "时移与频移",
+    "tex": "\\mathcal L[f(t-a)u(t-a)]=e^{-as}F(s),\\qquad \\mathcal L[e^{bt}f(t)]=F(s-b)",
+    "use": "处理延迟启动和指数衰减或增长；频移详见第7.5节。",
+    "conditions": "时移 $a>0$，采用因果延拓；相关变换在共同收敛半平面使用。",
+    "pitfall": "时移要移动全部时间变量并补阶跃；$tu(t-a)$ 须先写为 $[(t-a)+a]u(t-a)$。"
+  },
+  {
+    "id": "K703",
+    "chapter": 7,
+    "section": 6,
+    "title": "时域微分与积分",
+    "tex": "\\mathcal L[f^{(n)}]=s^nF-\\sum_{k=0}^{n-1}s^{n-1-k}f^{(k)}(0+),\\qquad \\mathcal L\\!\\left[\\int_0^tf(\\tau)d\\tau\\right]=\\frac{F(s)}s",
+    "use": "微分方程初值问题，以及从零累积积分。",
+    "conditions": "相关导数存在、满足所需局部正则性和指数阶，分部积分边界项可控。",
+    "pitfall": "不能漏初值；内部跳跃不能当作普通连续导数忽略。"
+  },
+  {
+    "id": "K704",
+    "chapter": 7,
+    "section": 7,
+    "title": "象函数微分与积分",
+    "tex": "\\mathcal L[t^nf(t)]=(-1)^nF^{(n)}(s),\\qquad \\mathcal L[f(t)/t]=\\int_0^\\infty F(s+u)\\,du",
+    "use": "含时间幂的变换、对数象函数反演，以及除以时间的积分性质。",
+    "conditions": "在足够的绝对收敛条件下交换导数或积分；$f(t)/t$ 须在原点局部可积。",
+    "pitfall": "对 $s$ 求一次导数对应 $-tf$；$f(0+)\\ne0$ 时直接除 $t$ 通常发散。"
+  },
+  {
+    "id": "K705",
+    "chapter": 7,
+    "section": 8,
+    "title": "初值与终值",
+    "tex": "f(0+)=\\lim_{s\\to+\\infty}sF(s),\\qquad f(\\infty)=\\lim_{s\\to0+}sF(s)",
+    "use": "快速求端点行为，或核查反演结果。",
+    "conditions": "初值需有限右极限与通常变换条件；真分式有理 $F$ 的终值常用充分条件为约分后 $sF$ 全部极点严格在左半平面。",
+    "pitfall": "两个公式条件不同；虚轴极点导致持续振荡时，代数极限不能当作终值。"
+  },
+  {
+    "id": "K706",
+    "chapter": 7,
+    "section": 9,
+    "title": "因果卷积与乘积反演",
+    "tex": "(f*g)(t)=\\int_0^tf(\\tau)g(t-\\tau)\\,d\\tau,\\qquad \\mathcal L[f*g]=F(s)G(s)",
+    "use": "反演象函数乘积、求响应，以及卷积型积分方程。",
+    "conditions": "因果函数，重积分交换在相关收敛半平面有充分依据。",
+    "pitfall": "卷积不同于逐点乘积；一因子必须使用 $t-\\tau$。"
+  },
+  {
+    "id": "K707",
+    "chapter": 7,
+    "section": 10,
+    "title": "Bromwich 与留数反演",
+    "tex": "f(t)=\\frac1{2\\pi i}\\lim_{R\\to\\infty}\\int_{\\sigma-iR}^{\\sigma+iR}e^{st}F(s)\\,ds=\\sum_k\\operatorname{Res}_{s=s_k}[e^{st}F(s)]",
+    "use": "用复积分恢复象原函数，尤其是真分式有理象函数。",
+    "conditions": "积分式需反演正则性，$\\sigma$ 在收敛半平面；留数和还需左闭合成立、弧积分消失且仅有相应有限极点，$t>0$。",
+    "pitfall": "有分支点可能存在割线积分；留数对象是 $e^{st}F(s)$，不是 $F(s)$。"
+  }
+]
