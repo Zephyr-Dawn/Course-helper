@@ -2,8 +2,8 @@
   "date": "2026-11-04",
   "edition": "public-web",
   "entry": "index.html",
-  "html_sha256": "95413bb2681576d75bd5f152933645ae19efa4b5524c78dbae828302af232ce7",
-  "html_bytes": 7305232,
+  "html_sha256": "2055f0c3c61d1bcb13521fc3e83c370e0bb1c208fd54ad4cde21436bbe0d203a",
+  "html_bytes": 7304989,
   "browser_plugin": "not available; existing Playwright with Chrome used",
   "public_source_rebuild": "PASS",
   "accepted_chapter_html_unchanged": true,
@@ -48,5 +48,7 @@
     "networkRequests": [],
     "consoleErrors": [],
     "status": "PASS"
-  }
+  },
+  "git_artifact_bytes_match_generated": "PASS",
+  "independent_review": "No critical/important findings; publication line-ending metadata discrepancy fixed with RED-to-GREEN regression."
 }

@@ -133,7 +133,7 @@ def main():
     source=(ROOT/'src/shell.html').read_text(encoding='utf-8')
     repl={'/*KATEX_CSS*/':css,'/*APP_CSS*/':(ROOT/'src/style.css').read_text(encoding='utf-8'),'/*COURSE_DATA*/':json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('</','<\/'),'/*KATEX_JS*/':(ROOT/'assets/katex/katex.min.js').read_text(encoding='utf-8').split('//# sourceMappingURL=')[0],'/*MODELS_JS*/':(ROOT/'src/models.js').read_text(encoding='utf-8'),'/*LABS_JS*/':(ROOT/'src/labs.js').read_text(encoding='utf-8'),'/*APP_JS*/':(ROOT/'src/app.js').read_text(encoding='utf-8')}
     for token,value in repl.items():source=source.replace(token,value)
-    dest=ROOT/'index.html';dest.write_text(source,encoding='utf-8')
+    dest=ROOT/'index.html';dest.write_text(source,encoding='utf-8',newline='\n')
     (ROOT/'build-manifest.json').write_text(json.dumps({'edition':'public-web','source_page_images':0,'chapters':len(chapters),'sections':len(search)-len(exercises),'exercise_pages':sum(bool(e.get('page')) for e in exercises),'challenges':sum(bool(e.get('url')) for e in exercises),'formulas':len(all_formulas),'formula_selection':'manual-key-formulas','lecture_display_formulas':sum(c['html'].count('class="math-display"') for c in chapters),'quizzes':len(quizzes),'theory_figures':len(figures),'question_figures':len(question_figures),'content_characters':count,'html_bytes':dest.stat().st_size,'draft':draft},ensure_ascii=False,indent=2),encoding='utf-8')
     print((ROOT/'build-manifest.json').read_text(encoding='utf-8'))
     print(dest)

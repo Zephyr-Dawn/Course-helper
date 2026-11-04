@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 import re
+import shutil
 import subprocess
 import sys
 
@@ -14,6 +15,14 @@ run = subprocess.run(
 assert run.returncode == 0, "Public source must build without private slide images:\n" + run.stderr
 entry = ROOT / "index.html"
 assert entry.is_file(), "Pages needs a real index.html entry"
+if shutil.which("git") and (ROOT.parent / ".git").exists():
+    unfiltered = subprocess.check_output(
+        ["git", "hash-object", "--no-filters", str(entry)], cwd=ROOT.parent
+    )
+    published = subprocess.check_output(
+        ["git", "hash-object", "--path=analog-circuit/index.html", str(entry)], cwd=ROOT.parent
+    )
+    assert unfiltered == published, "Git must publish exactly the generated HTML bytes, including line endings"
 text = entry.read_text(encoding="utf-8")
 data = json.loads(re.search(
     r'<script type="application/json" id="course-data">(.*?)</script>', text, re.S
