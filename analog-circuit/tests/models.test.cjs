@@ -1,0 +1,32 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+assert.ok(fs.existsSync(require('node:path').join(__dirname,'../src/models.js')), 'Educational model module must exist');
+const M = require('../src/models.js');
+const near=(a,b,tol=1e-9)=>assert.ok(Math.abs(a-b)<tol,`${a} != ${b}`);
+near(M.firstOrder(0,2,8,3),2);
+near(M.firstOrder(3,2,8,3),8-6/Math.E);
+near(M.firstOrder(150,2,8,3),8);
+assert.throws(()=>M.firstOrder(1,0,5,0),/positive/);
+for(const alpha of [.2,1,3]){
+ near(M.secondOrder(0,alpha,1,2,.7,5),2);
+ const h=1e-6;
+ near((M.secondOrder(h,alpha,1,2,.7,5)-2)/h,.7,3e-5);
+ near(M.secondOrder(1000,alpha,1,2,.7,5),5,1e-7);
+}
+const s=M.resonance(10,.1,.001,false),p=M.resonance(10,.1,.001,true);
+near(s.w0,100); near(s.Q,1);near(s.bandwidth,100);
+near(p.Q,1);near(s.w1*s.w2,s.w0*s.w0,1e-7);
+near(M.abs(M.filter('low',1,1)),1/Math.sqrt(2));
+near(M.arg(M.filter('high',1,1)),Math.PI/4);
+near(M.abs(M.filter('band',1,4)),1);
+near(M.abs(M.filter('notch',1,4)),0);
+near(M.abs(M.div([3,4],[0,1])),5);
+near(M.loadPower(12,3,3),12);
+near(M.loadPower(12,3,0),0);
+near(M.opAmp(4,2,10,0,15).ideal,-20);
+near(M.opAmp(4,2,10,0,15).output,-15);
+near(M.dac([1,0,1,0],5),-3.125);
+const b=M.bode(10,2,[10],[100]);near(M.abs(b),2*Math.sqrt(2)/Math.sqrt(1.01));
+assert.deepEqual(M.sanitizeState({mastered:['ch01','evil'],wrong:['E1'],bookmarks:['a'],font:800},['ch01'],['E1'],['a']),{mastered:['ch01'],wrong:['E1'],bookmarks:['a'],font:19});
+assert.deepEqual(M.sanitizeState(null,[],[],[]),{mastered:[],wrong:[],bookmarks:[],font:17});
+console.log('PASS: numerical, limit, invalid-parameter and state-import checks');

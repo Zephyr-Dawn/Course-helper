@@ -1,0 +1,148 @@
+[
+  {
+    "id": "L9-P55",
+    "chapter": 9,
+    "title": "转移阻抗的零点、极点与极限",
+    "source": "L9 p55 · Practice Problem 14.2",
+    "page": 55,
+    "difficulty": 2,
+    "question": "图14.7两支路并联：10 Ω串联50 mF电容，6 Ω串联2 H电感。端口电压Vo、总输入电流Ii，求Vo/Ii及零极点。",
+    "hints": [
+      "Vo/Ii是输入阻抗，有Ω量纲。",
+      "先把两支路写成10(s+2)/s与2(s+3)。"
+    ],
+    "solution": "零初始条件下，$Z_C=1/(sC)=20/s$，$Z_L=2s$。两支路为\n$$Z_1=10+20/s=10(s+2)/s,\\qquad Z_2=6+2s=2(s+3).$$\n并联：\n$$H(s)=\\frac{V_o}{I_i}=\\frac{Z_1Z_2}{Z_1+Z_2}=\\frac{10(s+2)(s+3)}{s^2+8s+10}\\ \\Omega.$$\n分子根为−2、−3；分母根为 $-4\\pm\\sqrt6$，约−1.550510257、−6.449489743，均未相消。H是转移阻抗而非无量纲电压增益，不能不加参考阻抗就把其数值机械称为增益dB。",
+    "answer": "$H(s)=10(s+2)(s+3)/(s^2+8s+10)$ Ω；零点−2、−3，极点−4±√6。",
+    "checks": "s→0时C开路、L短路，只余6 Ω，H(0)=6；s→∞时只余10 Ω，H(∞)=10。",
+    "tags": [
+      "零极点",
+      "传递函数",
+      "量纲"
+    ]
+  },
+  {
+    "id": "L9-P56",
+    "chapter": 9,
+    "title": "原点零点、一阶极点与重极点的波特图",
+    "source": "L9 p56 · Practice Problem 14.4",
+    "page": 56,
+    "difficulty": 2,
+    "question": "画 $H(j\\omega)=50j\\omega/[(j\\omega+4)(j\\omega+10)^2]$ 的幅度与相位波特图。ω单位rad/s。",
+    "hints": [
+      "先提取4和10²，得到0.125jω的分子。",
+      "4 rad/s的一个极点使斜率减少20；10 rad/s的两个极点使斜率减少40。"
+    ],
+    "solution": "标准式\n$$H(j\\omega)=\\frac{0.125j\\omega}{(1+j\\omega/4)(1+j\\omega/10)^2}.$$\n低频渐近幅度 $20\\log_{10}0.125+20\\log_{10}\\omega=-18.0618+20\\log_{10}\\omega$ dB。ω=1时−18.0618 dB；到ω=4时为−6.0206 dB。4到10 rad/s斜率变为0，维持−6.0206 dB；10以后斜率为−40 dB/dec。因此ω=100 rad/s的渐近值为−46.0206 dB。\n\n精确幅相为\n$$|H|=\\frac{0.125\\omega}{\\sqrt{1+(\\omega/4)^2}[1+(\\omega/10)^2]},$$\n$$\\phi=90^\\circ-\\arctan(\\omega/4)-2\\arctan(\\omega/10).$$\n相位从+90°趋向−180°；4 rad/s精确相位约1.397°，10 rad/s约−68.199°。作相位折线时，4极点从0.4到40 rad/s过渡，双10极点从1到100 rad/s过渡；两段重叠，必须相加。课件中的红线是渐近图，不是精确幅相曲线。",
+    "answer": "转折4、10 rad/s；幅度斜率+20→0→−40 dB/dec；相位+90°→−180°。",
+    "checks": "高频近似50/(jω)²，幅度50/ω²，斜率−40，负实相位−180°。",
+    "tags": [
+      "波特图",
+      "重极点",
+      "渐近线"
+    ]
+  },
+  {
+    "id": "L9-P57",
+    "chapter": 9,
+    "title": "串联谐振设计与半功率计算",
+    "source": "L9 p57 · Practice Problem 14.7",
+    "page": 57,
+    "difficulty": 2,
+    "question": "R=4 Ω、L=25 mH的串联RLC，选择C使Q=50。求上下半功率频率、带宽，并在输入峰值Vm=100 V时求谐振点与两半功率点的平均耗散功率。",
+    "hints": [
+      "串联Q=ω0L/R，先求ω0再求C。",
+      "Vm是峰值，所以平均功率有1/2。"
+    ],
+    "solution": "由 $\\omega_0=QR/L=50\\times4/0.025=8000$ rad/s，\n$$C=\\frac1{\\omega_0^2L}=6.25\\times10^{-7}\\ \\mathrm F=0.625\\ \\mathrm{\\mu F}.$$\n带宽 $B=R/L=160$ rad/s。精确半功率角频率为\n$$\\omega_{1,2}=\\sqrt{\\omega_0^2+(B/2)^2}\\mp B/2,$$\n因此 $\\omega_1=7920.399990$、$\\omega_2=8080.399990$ rad/s。Q=50较高，课件使用近似 $\\omega_0\\mp B/2$，得到7920、8080 rad/s。\n\n谐振阻抗R，电流峰值25 A，平均耗散\n$$P_0=\\frac{V_m^2}{2R}=1250\\ \\mathrm W.$$\n半功率点阻抗幅值 $\\sqrt2R$，电流峰值 $25/\\sqrt2$，所以 $P_1=P_2=625$ W。若把100 V误当有效值，会把三个功率都算成正确值的两倍。",
+    "answer": "C=0.625 µF，B=160 rad/s；ω1≈7920.400、ω2≈8080.400 rad/s；P0=1.25 kW，两端各0.625 kW。",
+    "checks": "ω2−ω1=160，ω1ω2=8000²，Q=8000/160=50。",
+    "tags": [
+      "串联谐振",
+      "Q",
+      "半功率"
+    ]
+  },
+  {
+    "id": "L9-P58",
+    "chapter": 9,
+    "title": "并联谐振的五参数",
+    "source": "L9 p58 · Practice Problem 14.8",
+    "page": 58,
+    "difficulty": 2,
+    "question": "并联RLC：R=100 kΩ、L=20 mH、C=5 nF，求ω0、ω1、ω2、Q及B。按理想电流源驱动、输出电压响应定义半功率点。",
+    "hints": [
+      "并联Q=ω0RC，不是ω0L/R。",
+      "B=1/(RC)，先统一SI单位。"
+    ],
+    "solution": "$L=0.02$ H，$C=5\\times10^{-9}$ F，$R=10^5$ Ω。\n$$\\omega_0=\\frac1{\\sqrt{LC}}=10^5\\ \\mathrm{rad/s},$$\n$$Q=\\omega_0RC=50,\\qquad B=\\frac1{RC}=2000\\ \\mathrm{rad/s}.$$\n上下半功率频率精确为\n$$\\omega_{1,2}=\\sqrt{(10^5)^2+1000^2}\\mp1000.$$\n数值 $\\omega_1=99004.999875$、$\\omega_2=101004.999875$ rad/s，即约99.005与101.005 krad/s。高Q近似99、101 krad/s与课件一致。R增大时并联损耗电导减小，Q增大、带宽减小；串联R增大则恰好相反。",
+    "answer": "ω0=100 krad/s，Q=50，B=2 krad/s；ω1≈99.005、ω2≈101.005 krad/s。",
+    "checks": "两端频率差2 krad/s，几何平均100 krad/s；并联在谐振处阻抗最大为R。",
+    "tags": [
+      "并联谐振",
+      "带宽",
+      "对偶"
+    ]
+  },
+  {
+    "id": "L9-P59",
+    "chapter": 9,
+    "title": "L 串联 RC 并联网络的输入谐振",
+    "source": "L9 p59 · Practice Problem 14.9",
+    "page": 59,
+    "difficulty": 3,
+    "question": "图14.29：L=10 mH串联一个R=20 Ω与C=0.5 mF的并联网络。求输入阻抗虚部为零的正谐振频率。",
+    "hints": [
+      "不能套简单串联RLC的1/√LC；R与C在本题中并联。",
+      "先写Zin=jωL+R/(1+jωRC)，再取虚部。"
+    ],
+    "solution": "输入阻抗\n$$Z_{in}=j\\omega L+\\frac R{1+j\\omega RC}=\\frac R{1+(\\omega RC)^2}+j\\left[\\omega L-\\frac{\\omega R^2C}{1+(\\omega RC)^2}\\right].$$\n除去ω=0的直流退化点，对正频率令虚部为零：\n$$L=\\frac{R^2C}{1+\\omega^2R^2C^2}\\quad\\Rightarrow\\quad\\omega_r^2=\\frac1{LC}-\\frac1{R^2C^2}.$$\n代入 $1/(LC)=200000$、$1/(R^2C^2)=10000$，得\n$$\\omega_r=\\sqrt{190000}=435.889894\\ \\mathrm{rad/s}.$$\n正实根存在要求 $R^2C>L$。本题是在求输入电压电流同相的频率，并未指定某个输出传函的幅值最大点；两者不可无条件混同。",
+    "answer": "ωr≈435.890 rad/s（约69.373 Hz）。",
+    "checks": "在该频率ωL=4.35890 Ω，并联RC的虚部正好−4.35890 Ω，输入阻抗实部约1 Ω。",
+    "tags": [
+      "非标准谐振",
+      "输入阻抗"
+    ]
+  },
+  {
+    "id": "L9-P60",
+    "chapter": 9,
+    "title": "由上下截止频率反求带通参数",
+    "source": "L9 p60 · Practice Problem 14.11",
+    "page": 60,
+    "difficulty": 2,
+    "question": "按图14.35的串联L、C、R，输出取电阻两端，设计下截止20.1 kHz、上截止20.3 kHz的带通滤波器。R=20 kΩ，求L、C、Q。",
+    "hints": [
+      "中心频率是几何平均，带宽是两端之差。",
+      "计算L时需把Hz带宽乘2π转为角带宽。"
+    ],
+    "solution": "带宽 $\\Delta f=200$ Hz，角带宽 $B=2\\pi\\Delta f=400\\pi$ rad/s。中心频率\n$$f_0=\\sqrt{20100\\times20300}=20199.752474\\ \\mathrm{Hz},$$\n$$\\omega_0=2\\pi f_0.$$\n串联带宽 $B=R/L$，所以\n$$L=\\frac{20000}{400\\pi}=15.91549431\\ \\mathrm H.$$\n随后\n$$C=\\frac1{\\omega_0^2L}\\simeq3.90065\\ \\mathrm{pF},\\qquad Q=\\frac{f_0}{\\Delta f}=100.9987624.$$\n课件写15.915 H、3.9 pF、101，是合理舍入。若把带宽200 Hz直接当200 rad/s，会使L多算2π倍，后面的C与中心频率也不再匹配。这里是理想元件参数设计；实际实现需另考虑这种参数组合的可实现性与寄生。",
+    "answer": "L≈15.9155 H，C≈3.90065 pF，Q≈100.999。",
+    "checks": "R/L=2π×200，1/(2π√LC)=√(f1f2)，Q=f0/200。",
+    "tags": [
+      "带通",
+      "参数设计",
+      "单位"
+    ]
+  },
+  {
+    "id": "L9-P61",
+    "chapter": 9,
+    "title": "Sallen–Key 一般参数传递函数",
+    "source": "L9 p61 · 课件引入 Example 15–16",
+    "page": 61,
+    "difficulty": 3,
+    "question": "图15.34中，R1、R2依次连接输入至节点Y、X；C2从X到地，C1从Y到输出。X接运放正端，负端经R4到地、经R3到输出。求Vo/Vin，假设理想运放在线性负反馈区。",
+    "hints": [
+      "先把运放及R3、R4归为非反相增益K=1+R3/R4。",
+      "节点X的KCL可先把Y表示为X，再代Y的KCL。"
+    ],
+    "solution": "定义 $K=1+R_3/R_4$，于是 $V_o=KV_X$。节点X不向运放输入供电，\n$$\\frac{V_X-V_Y}{R_2}+sC_2V_X=0\\quad\\Rightarrow\\quad V_Y=(1+sR_2C_2)V_X.$$\n节点Y KCL为\n$$\\frac{V_Y-V_{in}}{R_1}+\\frac{V_Y-V_X}{R_2}+sC_1(V_Y-V_o)=0.$$\n将上式和Vo代入，整理：\n$$V_{in}=\\{1+s[(R_1+R_2)C_2+R_1C_1(1-K)]+s^2R_1R_2C_1C_2\\}V_X.$$\n故\n$$H(s)=\\frac K{R_1R_2C_1C_2s^2+[(R_1+R_2)C_2+R_1C_1(1-K)]s+1}.$$\n令二次系数 $a_2=R_1R_2C_1C_2$、一次系数 $a_1=(R_1+R_2)C_2+R_1C_1(1-K)$，则 $\\omega_0=1/\\sqrt{a_2}$、$Q=\\sqrt{a_2}/a_1$，稳定正阻尼需a1>0。等R、等C时 $H=K/[(RC)^2s^2+(3-K)RCs+1]$，所以 $Q=1/(3-K)$，不能任意提高增益而仍声称稳定。",
+    "answer": "$H(s)=K/[R_1R_2C_1C_2s^2+((R_1+R_2)C_2+R_1C_1(1-K))s+1]$，$K=1+R_3/R_4$。",
+    "checks": "s=0时两电容开路，增益K；高频按s⁻²衰减；K=1且等R/C时分母(1+sRC)²。",
+    "tags": [
+      "Sallen–Key",
+      "有源滤波",
+      "稳定条件"
+    ]
+  }
+]

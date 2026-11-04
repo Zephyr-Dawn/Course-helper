@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-04",
+  "edition": "public-web",
+  "entry": "index.html",
+  "html_sha256": "95413bb2681576d75bd5f152933645ae19efa4b5524c78dbae828302af232ce7",
+  "html_bytes": 7305232,
+  "browser_plugin": "not available; existing Playwright with Chrome used",
+  "public_source_rebuild": "PASS",
+  "accepted_chapter_html_unchanged": true,
+  "exercise_text_solutions_diagrams_unchanged": true,
+  "source_page_images": 0,
+  "local_offline_html_unchanged": true,
+  "browser": {
+    "desktop": "1440×1000",
+    "mobile": "390×844",
+    "chapters": 9,
+    "exercises": 67,
+    "websiteChallenges": 12,
+    "labs": 18,
+    "networkRequests": [],
+    "consoleErrors": [],
+    "printRegression": "PASS",
+    "rlSourceConsistency": "PASS",
+    "status": "PASS"
+  },
+  "figures": {
+    "date": "2026-11-04",
+    "theoryFiguresDecoded": 76,
+    "questionFiguresDecoded": 50,
+    "zoom": "PASS",
+    "keyboardAndClose": "PASS",
+    "mobile": "PASS",
+    "networkRequests": [],
+    "consoleErrors": [],
+    "status": "PASS"
+  },
+  "formulas": {
+    "date": "2026-11-04",
+    "keyFormulaGroups": 39,
+    "lectures": 9,
+    "typesetting": "PASS",
+    "structuredNotes": "PASS",
+    "sourceLinks": "PASS",
+    "filters": "PASS",
+    "mobile": "PASS",
+    "printExpansion": "PASS",
+    "printFormulaOverflow": 0,
+    "networkRequests": [],
+    "consoleErrors": [],
+    "status": "PASS"
+  }
+}

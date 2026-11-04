@@ -1,0 +1,126 @@
+[
+  {
+    "id": "L5-P37",
+    "chapter": 5,
+    "title": "正弦电压对应的电容电流",
+    "source": "L5 p37 · Practice Problem 6.2",
+    "page": 37,
+    "difficulty": 1,
+    "question": "$10\\,\\mathrm{\\mu F}$ 理想电容接在 $v(t)=75\\sin(2000t)\\,\\mathrm V$ 的电压源两端。按电流流入电压正端的关联参考方向求 $i(t)$，$t$ 以秒计。",
+    "hints": [
+      "使用 i=C dv/dt。",
+      "求正弦导数时不可漏掉角频率 2000。"
+    ],
+    "solution": "采用关联参考方向，\n$$i(t)=C\\frac{dv}{dt}=10\\times10^{-6}\\frac{d}{dt}[75\\sin(2000t)]$$\n$$=10\\times10^{-6}\\times75\\times2000\\cos(2000t)=1.5\\cos(2000t)\\,\\mathrm A.$$\n电流可写成 $1.5\\sin(2000t+90^\\circ)\\,\\mathrm A$，比电压超前四分之一周期。原页答案末尾标成 V 是单位笔误；所求为电流，应为 A。",
+    "answer": "$i(t)=1.5\\cos(2000t)\\,\\mathrm A$。",
+    "tags": [
+      "电容",
+      "微分关系",
+      "源答案勘误"
+    ],
+    "checks": "量纲 F·V/s=A；t=0 时电压过零且斜率最大，电流应为正峰值。"
+  },
+  {
+    "id": "L5-P38",
+    "chapter": 5,
+    "title": "混联电容的等效电容量",
+    "source": "L5 p38 · Practice Problem 6.6",
+    "page": 38,
+    "difficulty": 1,
+    "question": "按 Fig.6.17：输入上端先经过 $50\\,\\mathrm{\\mu F}$ 与 $70\\,\\mathrm{\\mu F}$ 的并联组到中间节点；中间节点到输入下端有两条支路：一条 $20\\,\\mathrm{\\mu F}$，另一条为 $60\\,\\mathrm{\\mu F}$ 和 $120\\,\\mathrm{\\mu F}$ 串联。求端口等效电容。",
+    "hints": [
+      "从最右端的串联组开始。",
+      "电容并联相加，串联取倒数和。"
+    ],
+    "solution": "左并联组为 $C_a=50+70=120\\,\\mathrm{\\mu F}$。右侧两个串联电容为\n$$C_b=\\frac{60\\times120}{60+120}=40\\,\\mathrm{\\mu F}.$$\n它与 $20\\,\\mathrm{\\mu F}$ 并联：$C_c=40+20=60\\,\\mathrm{\\mu F}$。最后 $C_a,C_c$ 串联，\n$$C_{\\rm eq}=\\frac{120\\times60}{120+60}=40\\,\\mathrm{\\mu F}.$$\n该等效值描述端口的电流—电压增量关系；有初始储能时还必须保留等效初始状态。",
+    "answer": "$C_{\\rm eq}=40\\,\\mathrm{\\mu F}$。",
+    "tags": [
+      "电容串并联",
+      "等效"
+    ],
+    "checks": "最后串联结果小于 60 μF 和 120 μF 中较小的 60 μF。"
+  },
+  {
+    "id": "L5-P39",
+    "chapter": 5,
+    "title": "电感正弦电流的电压与储能",
+    "source": "L5 p39 · Practice Problem 6.8",
+    "page": 39,
+    "difficulty": 1,
+    "question": "$1\\,\\mathrm{mH}$ 电感的电流为 $i(t)=60\\cos(100t)\\,\\mathrm{mA}$，采用关联参考方向，求端电压及磁场储能。",
+    "hints": [
+      "先把 mA 换成 A。",
+      "储能使用电流平方，不能对储能直接求正弦。"
+    ],
+    "solution": "将本题量换成 SI 单位：$L=10^{-3}\\,\\mathrm H$，$i=0.06\\cos(100t)\\,\\mathrm A$。故\n$$v=L\\frac{di}{dt}=10^{-3}[-0.06(100)\\sin(100t)]=-0.006\\sin(100t)\\,\\mathrm V.$$\n储能为\n$$w_L=\\frac12Li^2=\\frac12(10^{-3})(0.06)^2\\cos^2(100t)=1.8\\times10^{-6}\\cos^2(100t)\\,\\mathrm J.$$\n所以 $v=-6\\sin(100t)\\,\\mathrm{mV}$，$w_L=1.8\\cos^2(100t)\\,\\mathrm{\\mu J}$。",
+    "answer": "$v=-6\\sin(100t)\\,\\mathrm{mV}$；$w_L=1.8\\cos^2(100t)\\,\\mathrm{\\mu J}$。",
+    "tags": [
+      "电感",
+      "储能"
+    ],
+    "checks": "t=0 时电流为峰值，电压为零、储能最大；dw/dt 应等于 vi。"
+  },
+  {
+    "id": "L5-P40",
+    "chapter": 5,
+    "title": "无互感电感梯形网络",
+    "source": "L5 p40 · Practice Problem 6.11",
+    "page": 40,
+    "difficulty": 2,
+    "question": "Fig.6.32 的电感网络无互感。上边从输入向右依次为 $20,100,40\\,\\mathrm{mH}$；从输入上节点及随后三个节点到共同下端，分别接 $50,40,30,20\\,\\mathrm{mH}$。求等效电感。",
+    "hints": [
+      "从最右边开始向左逐级化简。",
+      "无互感电感的串并联运算与电阻相同。"
+    ],
+    "solution": "最右侧上边 $40\\,\\mathrm{mH}$ 和竖边 $20\\,\\mathrm{mH}$ 串联，得 $60\\,\\mathrm{mH}$。与竖边 $30\\,\\mathrm{mH}$ 并联，\n$$L_a=\\frac{30\\times60}{30+60}=20\\,\\mathrm{mH}.$$\n再与左侧上边 $100\\,\\mathrm{mH}$ 串联，得 $120\\,\\mathrm{mH}$；与竖边 $40\\,\\mathrm{mH}$ 并联，\n$$L_b=\\frac{40\\times120}{40+120}=30\\,\\mathrm{mH}.$$\n再与最左上边 $20\\,\\mathrm{mH}$ 串联，得 $50\\,\\mathrm{mH}$；最后与输入竖边 $50\\,\\mathrm{mH}$ 并联，\n$$L_{\\rm eq}=50\\parallel50=25\\,\\mathrm{mH}.$$\n计算等效值不允许丢弃非零初始电流；若还要实际支路电流，必须另给状态。",
+    "answer": "$L_{\\rm eq}=25\\,\\mathrm{mH}$。",
+    "tags": [
+      "电感串并联",
+      "梯形网络"
+    ],
+    "checks": "逐级结果 60、20、120、30、50、25 mH；端口并联结果小于 50 mH。"
+  },
+  {
+    "id": "L5-P41",
+    "chapter": 5,
+    "title": "含电容电感的直流稳态",
+    "source": "L5 p41 · Practice Problem 6.10",
+    "page": 41,
+    "difficulty": 2,
+    "question": "Fig.6.28：$10\\,\\mathrm A$ 电流源自下向上注入左节点；左节点经 $6\\,\\Omega$ 接共同下端，经 $6\\,\\mathrm H$ 电感接右节点；右节点经 $2\\,\\Omega$ 和 $4\\,\\mathrm F$ 电容分别接下端。求直流稳态 $v_C$、由左向右的 $i_L$、电容和电感储能。",
+    "hints": [
+      "稳态电感短路、电容开路。",
+      "电感电流只等于右侧 2 Ω 电阻电流。"
+    ],
+    "solution": "直流稳态时 $di_L/dt=dv_C/dt=0$。电感以零电压短路，左右节点同电位 $V$；电容支路无电流。KCL 得\n$$10=\\frac{V}{6}+\\frac{V}{2}=\\frac23V,$$\n所以 $V=v_C=15\\,\\mathrm V$。右节点只有 $2\\,\\Omega$ 消耗电流，\n$$i_L=\\frac{15}{2}=7.5\\,\\mathrm A.$$\n两储能分别为\n$$w_C=\\frac12(4)(15)^2=450\\,\\mathrm J,$$\n$$w_L=\\frac12(6)(7.5)^2=168.75\\,\\mathrm J.$$\n$6\\,\\Omega$ 支路电流为 $2.5\\,\\mathrm A$，与电感电流合计 $10\\,\\mathrm A$。",
+    "answer": "$v_C=15\\,\\mathrm V$；$i_L=7.5\\,\\mathrm A$；$w_C=450\\,\\mathrm J$；$w_L=168.75\\,\\mathrm J$。",
+    "tags": [
+      "直流稳态",
+      "初始状态",
+      "储能"
+    ],
+    "checks": "电源提供 150 W，两个电阻消耗 37.5+112.5=150 W；储能在稳态保持不变。"
+  },
+  {
+    "id": "L5-P42",
+    "chapter": 5,
+    "title": "并联电感的初始电流与记忆性",
+    "source": "L5 p42 · Practice Problem 6.12",
+    "page": 42,
+    "difficulty": 3,
+    "question": "Fig.6.34 中 $3\\,\\mathrm H$（电流 $i_2$）和 $6\\,\\mathrm H$（电流 $i_1$）并联，电流都从左向右；其右端再与 $8\\,\\mathrm H$ 串联。并联组电压 $v_1$ 左正右负，$8\\,\\mathrm H$ 电压 $v_2$ 上正下负，总电压 $v=v_1+v_2$。给定 $i_1(t)=600e^{-2t}\\,\\mathrm{mA}$、总输入电流 $i(0)=1.4\\,\\mathrm A$。求 (a) $i_2(0)$；(b) $i_2(t),i(t)$；(c) $v_1(t),v_2(t),v(t)$。",
+    "hints": [
+      "初始时刻先用 KCL 求另一支路电流。",
+      "并联电感电压相同，因此导数成反比；积分后仍有独立初值常数。"
+    ],
+    "solution": "(a) $i_1(0)=0.6\\,\\mathrm A$，由 $i=i_1+i_2$ 得 $i_2(0)=1.4-0.6=0.8\\,\\mathrm A$。\n\n(b) 并联两电感的电压相等：\n$$6\\frac{di_1}{dt}=3\\frac{di_2}{dt},\\qquad \\frac{di_2}{dt}=2\\frac{di_1}{dt}.$$\n对 $0$ 到 $t$ 积分，必须带入 $i_2(0)$：\n$$i_2(t)=0.8+2[i_1(t)-i_1(0)]=0.8+2(0.6e^{-2t}-0.6)=-0.4+1.2e^{-2t}\\,\\mathrm A.$$\n因此 $i(t)=i_1+i_2=-0.4+1.8e^{-2t}\\,\\mathrm A$。\n\n(c) 按原图极性，\n$$v_1=6\\frac{d(0.6e^{-2t})}{dt}=-7.2e^{-2t}\\,\\mathrm V,$$\n$$v_2=8\\frac{d(-0.4+1.8e^{-2t})}{dt}=-28.8e^{-2t}\\,\\mathrm V,$$\n$$v=v_1+v_2=-36e^{-2t}\\,\\mathrm V.$$\n原页答案栏把三个电压数值排成 $-36,-7.2,-28.8$；该顺序与题目 $v_1,v_2,v$ 的标注不一致。应依据原图与上述本构关系对应。\n\n当 $t\\to\\infty$，$i_1\\to0$，$i_2\\to-0.4\\,\\mathrm A$。这说明仅把等效电感 $3\\parallel6=2\\,\\mathrm H$ 算出，并不能复原各支路初始电流。",
+    "answer": "$i_2(0)=0.8\\,\\mathrm A$；$i_2=-0.4+1.2e^{-2t}\\,\\mathrm A$；$i=-0.4+1.8e^{-2t}\\,\\mathrm A$；$v_1=-7.2e^{-2t}\\,\\mathrm V$、$v_2=-28.8e^{-2t}\\,\\mathrm V$、$v=-36e^{-2t}\\,\\mathrm V$。",
+    "tags": [
+      "电感",
+      "初始条件",
+      "记忆性",
+      "源答案勘误"
+    ],
+    "checks": "逐时刻检查 i=i1+i2、3di2/dt=6di1/dt 和 v=v1+v2；总等效电感 10 H，有 10di/dt=-36e^-2t V。"
+  }
+]

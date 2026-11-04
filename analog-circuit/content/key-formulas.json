@@ -1,0 +1,469 @@
+[
+  {
+    "id": "KF01",
+    "chapter": 1,
+    "section": "ch01-s03",
+    "related_sections": [],
+    "title": "电流与通过电荷",
+    "tex": "i(t)=\\frac{dq}{dt},\\qquad q(t_2)-q(t_1)=\\int_{t_1}^{t_2}i(t)\\,dt",
+    "use": "已知电荷求电流，或由电流计算一段时间内通过的电荷。",
+    "conditions": "先固定电流参考方向；积分限的顺序与时间区间一致。",
+    "pitfall": "积分通常得到 $\\Delta q$，不是相对于任意零点的总电荷 $q(t_2)$。"
+  },
+  {
+    "id": "KF02",
+    "chapter": 1,
+    "section": "ch01-s07",
+    "related_sections": [],
+    "title": "欧姆定律与电阻耗散",
+    "tex": "v=Ri,\\qquad G=\\frac1R,\\qquad p_R=Ri^2=\\frac{v^2}{R}",
+    "use": "在支路电压、电流与电阻之间换算，并检查电阻的耗散功率。",
+    "conditions": "线性电阻、关联参考方向；功率非负的结论要求 $R>0$。",
+    "pitfall": "若电压、电流参考方向非关联，应写 $v=-Ri$；不能因选反箭头而算出正电阻发电。"
+  },
+  {
+    "id": "KF03",
+    "chapter": 1,
+    "section": "ch01-s05",
+    "related_sections": [],
+    "title": "吸收功率与能量",
+    "tex": "p(t)=v(t)i(t),\\qquad \\Delta w=\\int_{t_1}^{t_2}p(t)\\,dt",
+    "use": "判断元件吸收还是提供能量，并进行全电路功率守恒检查。",
+    "conditions": "电流流入电压标记正端时使用本式；吸收功率为正，提供功率为负。",
+    "pitfall": "电源也可能吸收功率。非关联参考方向应把功率式改成 $p=-vi$。"
+  },
+  {
+    "id": "KF04",
+    "chapter": 1,
+    "section": "ch01-s09",
+    "related_sections": [],
+    "title": "基尔霍夫两定律",
+    "tex": "\\sum_{\\text{节点边界}} i_k=0,\\qquad \\sum_{\\text{闭合回路}} v_k=0",
+    "use": "按 KCL、KVL 建立电路方程；节点法和网孔法由此组织。",
+    "conditions": "集总电路模型；电流流入/流出与回路电压升降必须采用统一的代数符号。",
+    "pitfall": "KCL 不是把电流绝对值相加。只选独立方程，避免把重复方程当成新增约束。"
+  },
+  {
+    "id": "KF05",
+    "chapter": 2,
+    "section": "ch02-s01",
+    "related_sections": [
+      "ch02-s02"
+    ],
+    "title": "电阻串、并联等效",
+    "tex": "R_{\\mathrm{s}}=\\sum_kR_k,\\qquad \\frac1{R_{\\mathrm{p}}}=\\sum_k\\frac1{R_k}",
+    "use": "在列节点或网孔方程前，先做局部等效化简。",
+    "conditions": "串联要求同一电流；并联要求接在同一对节点。两电阻并联可用 $R_1R_2/(R_1+R_2)$。",
+    "pitfall": "图上看起来相邻不保证串联；连接点有分支时必须先确认支路电流。"
+  },
+  {
+    "id": "KF06",
+    "chapter": 2,
+    "section": "ch02-s02",
+    "related_sections": [
+      "ch02-s01"
+    ],
+    "title": "分压与分流",
+    "tex": "v_k=\\frac{R_k}{\\sum_jR_j}v,\\qquad i_k=\\frac{G_k}{\\sum_jG_j}i",
+    "use": "直接求串联链中的某段电压，或并联网络中的某支路电流。",
+    "conditions": "分压链中电流相同；分流网络中电压相同，且 $G_k=1/R_k$。",
+    "pitfall": "接入负载后要先重算等效电阻。分流与电导成正比，不是与电阻成正比。"
+  },
+  {
+    "id": "KF07",
+    "chapter": 2,
+    "section": "ch02-s04",
+    "related_sections": [],
+    "title": "Δ–Y 三端变换",
+    "tex": "\\begin{gathered}S=R_{ab}+R_{bc}+R_{ca}\\\\R_a=\\frac{R_{ab}R_{ca}}S,\\quad R_b=\\frac{R_{ab}R_{bc}}S,\\quad R_c=\\frac{R_{bc}R_{ca}}S\\\\R_{ab}=R_a+R_b+\\frac{R_aR_b}{R_c}\\quad\\text{（其余循环置换）}\\end{gathered}",
+    "use": "处理不能直接串、并联化简的桥式网络。",
+    "conditions": "各支路为正的线性电阻，外部端子 a、b、c 对应固定；星形 $R_a$ 接 a 端，$R_{ab}$ 是三角形 a–b 边。",
+    "pitfall": "Δ 转 Y 取相邻两边之积；Y 转 Δ 的分母是与所求边相对的星形支路。"
+  },
+  {
+    "id": "KF08",
+    "chapter": 2,
+    "section": "ch02-s07",
+    "related_sections": [
+      "ch02-s09",
+      "ch02-s10"
+    ],
+    "title": "支路表达与超节点、超网孔约束",
+    "tex": "i_{ab}=\\frac{v_a-v_b}{R_{ab}},\\qquad v_a-v_b=V_s,\\qquad I_m-I_n=I_s",
+    "use": "节点法用第一式写支路电流；含理想电压源/电流源时补对应源约束。",
+    "conditions": "电压源极性取 a 正 b 负；第三式中公共电流源箭头与所定义的 $I_m-I_n$ 一致。",
+    "pitfall": "超节点不表示短路；超网孔不表示电流源电压为零。受控源还需联立控制关系。"
+  },
+  {
+    "id": "KF09",
+    "chapter": 3,
+    "section": "ch03-s08",
+    "related_sections": [
+      "ch03-s07",
+      "ch03-s09"
+    ],
+    "title": "戴维南、诺顿与测试源",
+    "tex": "\\begin{gathered}v=V_{\\mathrm{Th}}-R_{\\mathrm{Th}}i,\\qquad I_{\\mathrm N}=\\frac{V_{\\mathrm{Th}}}{R_{\\mathrm{Th}}}\\\\R_{\\mathrm N}=R_{\\mathrm{Th}},\\qquad R_{\\mathrm{Th}}=\\frac{v_t}{i_t}\\end{gathered}",
+    "use": "把线性二端网络等效为电压源串联电阻或电流源并联电阻。",
+    "conditions": "第一式的 i 从网络正端流向负载；测试电流 $i_t$ 则从测试源流入被测端口。求电阻时独立源置零，受控源保留。 诺顿电流比值式要求 $R_{\\mathrm{Th}}\\ne0$。",
+    "pitfall": "没有独立源时 $V_{\\mathrm{oc}}$ 可能为零，仍可能有非零端口电阻；此时不能用 $0/0$ 的开短路比值法。"
+  },
+  {
+    "id": "KF10",
+    "chapter": 3,
+    "section": "ch03-s10",
+    "related_sections": [],
+    "title": "最大负载功率",
+    "tex": "P_L=\\frac{V_{\\mathrm{Th}}^2R_L}{(R_{\\mathrm{Th}}+R_L)^2},\\qquad R_L=R_{\\mathrm{Th}},\\qquad P_{L,\\max}=\\frac{V_{\\mathrm{Th}}^2}{4R_{\\mathrm{Th}}}",
+    "use": "选择纯电阻负载，使固定电源网络向负载输送最大功率。",
+    "conditions": "固定的戴维南参数，且 $R_{\\mathrm{Th}}>0$、$R_L\\ge0$。",
+    "pitfall": "这是最大负载功率条件；原网络电源提供功率或整体效率最大时，最优负载未必相同。"
+  },
+  {
+    "id": "KF11",
+    "chapter": 3,
+    "section": "ch03-s13",
+    "related_sections": [],
+    "title": "惠斯通电桥平衡",
+    "tex": "\\frac{R_1}{R_2}=\\frac{R_3}{R_x},\\qquad R_x=\\frac{R_2R_3}{R_1}",
+    "use": "通过两中点等电位的调零条件测量未知电阻。",
+    "conditions": "左链从上到下为 $R_1,R_2$，右链为 $R_3,R_x$；检流计接两中点，电源接上下端。",
+    "pitfall": "仅在平衡时使用。非平衡时检流计是负载，不能继续把它的电流当成零。"
+  },
+  {
+    "id": "KF12",
+    "chapter": 4,
+    "section": "ch04-s01",
+    "related_sections": [],
+    "title": "电压放大器的带载增益",
+    "tex": "\\frac{v_o}{v_s}=\\frac{R_i}{R_s+R_i}\\,A_{vo}\\,\\frac{R_L}{R_o+R_L}",
+    "use": "把源内阻造成的输入衰减、内部空载增益和输出负载效应放在同一式中。",
+    "conditions": "单向电压放大器等效模型；$A_{vo}$ 是空载增益，$R_i,R_o$ 是输入、输出电阻。",
+    "pitfall": "内部增益不是源到负载的总增益。级联时还要计入前级输出电阻与后级输入电阻之间的分压。"
+  },
+  {
+    "id": "KF13",
+    "chapter": 4,
+    "section": "ch04-s04",
+    "related_sections": [
+      "ch04-s03",
+      "ch04-s05"
+    ],
+    "title": "反相与同相闭环增益",
+    "tex": "\\begin{aligned}v_o&=v_r-\\frac{R_f}{R_1}(v_i-v_r)&&\\text{反相，正端为 }v_r\\\\v_o&=\\left(1+\\frac{R_f}{R_g}\\right)v_i&&\\text{同相}\\end{aligned}",
+    "use": "由基本闭环结构直接建立输入、输出关系；反相接地基准取 $v_r=0$。",
+    "conditions": "理想运放、稳定负反馈且输出未饱和，才能使用 $i_+=i_-=0$ 与 $v_+=v_-$。同相结构中 $R_g$ 接地。",
+    "pitfall": "虚短不是实体短接。反相增益作用于相对基准的偏差；算完后检查电源轨及内部节点范围。"
+  },
+  {
+    "id": "KF14",
+    "chapter": 4,
+    "section": "ch04-s06",
+    "related_sections": [
+      "ch04-s10"
+    ],
+    "title": "加权求和与二进制 DAC",
+    "tex": "\\begin{gathered}v_o=-R_f\\sum_k\\frac{v_k}{R_k}\\\\v_o=-V_{\\mathrm{ref}}\\sum_{k=1}^{n}\\frac{b_{n-k}}{2^k}\\quad\\text{（二进制加权 DAC）}\\end{gathered}",
+    "use": "把多路输入的电流相加；按二进制权重选电阻，即得到 DAC。",
+    "conditions": "反相求和节点为虚地。DAC 第二式对应各位在零与 $V_{\\mathrm{ref}}$ 间切换，并以 $b_{n-1}$ 为最高位。",
+    "pitfall": "DAC 的满量程幅值为 $V_{\\mathrm{ref}}(1-2^{-n})$；不是恰好等于参考电压。实际输入源内阻要并入各输入电阻。"
+  },
+  {
+    "id": "KF15",
+    "chapter": 4,
+    "section": "ch04-s07",
+    "related_sections": [
+      "ch04-s08"
+    ],
+    "title": "差分放大、共模与 CMRR",
+    "tex": "\\begin{gathered}\\frac{R_2}{R_1}=\\frac{R_4}{R_3}=K\\ \\Longrightarrow\\ v_o=K(v_2-v_1)\\\\v_o=A_dv_d+A_{cm}v_{cm},\\qquad \\mathrm{CMRR}_{\\mathrm{dB}}=20\\log_{10}\\left|\\frac{A_d}{A_{cm}}\\right|\\end{gathered}",
+    "use": "求匹配差分电路的输出，并衡量共模干扰转换成输出误差的程度。",
+    "conditions": "$v_d=v_2-v_1$，$v_{cm}=(v_1+v_2)/2$。$R_1$ 接反相输入、$R_2$ 反馈；$R_3$ 接同相输入、$R_4$ 接地。",
+    "pitfall": "两侧比例失配时不能直接套纯差分式；即使失配很小，较大的共模电压也可能造成显著误差。"
+  },
+  {
+    "id": "KF16",
+    "chapter": 4,
+    "section": "ch04-s09",
+    "related_sections": [],
+    "title": "浮接仪表放大器增益",
+    "tex": "A_d=\\left(1+\\frac{2R}{R_G}\\right)k,\\qquad A_{cm,\\text{第一级}}=1",
+    "use": "用跨接电阻调节第一级差模增益，再乘第二级匹配差分增益。",
+    "conditions": "此卡把第一级两个相同反馈电阻记为 R，跨接电阻记为 $R_G$，第二级差分增益记为 k；所有运放工作在线性区。",
+    "pitfall": "浮接前级的共模增益是 1，不是 0；总差模增益正确也不保证前级没有饱和。"
+  },
+  {
+    "id": "KF17",
+    "chapter": 5,
+    "section": "ch05-s02",
+    "related_sections": [
+      "ch05-s03"
+    ],
+    "title": "电容的本构关系与储能",
+    "tex": "q=Cv_C,\\qquad i_C=C\\frac{dv_C}{dt},\\qquad w_C=\\frac12Cv_C^2",
+    "use": "把电容支路加入 KCL，并由状态电压计算储能。",
+    "conditions": "线性、定常电容，电流流入所标电压的正端。",
+    "pitfall": "正电压不表示正电流；电流取决于电压斜率。直流稳态开路也不表示电容电压为零。"
+  },
+  {
+    "id": "KF18",
+    "chapter": 5,
+    "section": "ch05-s05",
+    "related_sections": [
+      "ch05-s06"
+    ],
+    "title": "电感的本构关系与储能",
+    "tex": "v_L=L\\frac{di_L}{dt},\\qquad w_L=\\frac12Li_L^2",
+    "use": "把电感支路加入 KVL，并由状态电流计算储能。",
+    "conditions": "线性、定常电感，采用关联参考方向；本卡不计互感。",
+    "pitfall": "直流稳态短路表示 $v_L=0$，不表示 $i_L=0$。电流减小时电感可能向外释放能量。"
+  },
+  {
+    "id": "KF19",
+    "chapter": 5,
+    "section": "ch05-s04",
+    "related_sections": [
+      "ch05-s07"
+    ],
+    "title": "电容、电感的串并联",
+    "tex": "\\begin{aligned}C_{\\parallel}&=\\sum C_k,&\\frac1{C_{\\mathrm{s}}}&=\\sum\\frac1{C_k}\\\\L_{\\mathrm{s}}&=\\sum L_k,&\\frac1{L_{\\parallel}}&=\\sum\\frac1{L_k}\\end{aligned}",
+    "use": "求储能元件的端口等效参数。",
+    "conditions": "电容线性；电感之间没有互感；拓扑确实满足串联/并联。",
+    "pitfall": "等效参数不能自动恢复内部初始状态。串联电容分压要追踪初始电荷，并联电感分流要保留初始电流。"
+  },
+  {
+    "id": "KF20",
+    "chapter": 5,
+    "section": "ch05-s09",
+    "related_sections": [],
+    "title": "反相积分器与微分器",
+    "tex": "\\begin{aligned}v_{o,\\mathrm{int}}(t)&=v_o(t_0)-\\frac1{RC}\\int_{t_0}^{t}v_i(\\tau)\\,d\\tau\\\\v_{o,\\mathrm{diff}}(t)&=-RC\\frac{dv_i}{dt}\\end{aligned}",
+    "use": "识别电阻、电容置于输入支路或反馈支路时对应的运算。",
+    "conditions": "积分器为输入 R、反馈 C；微分器为输入 C、反馈 R。理想运放须在线性负反馈区。",
+    "pitfall": "积分式不能漏掉初始输出；实际积分器限制直流增益，实际微分器限制高频增益。"
+  },
+  {
+    "id": "KF21",
+    "chapter": 6,
+    "section": "ch06-s02",
+    "related_sections": [
+      "ch07-s02"
+    ],
+    "title": "换路连续性与初始斜率",
+    "tex": "\\begin{gathered}v_C(0^+)=v_C(0^-),\\qquad i_L(0^+)=i_L(0^-)\\\\v_C^{\\prime}(0^+)=\\frac{i_C(0^+)}C,\\qquad i_L^{\\prime}(0^+)=\\frac{v_L(0^+)}L\\end{gathered}",
+    "use": "把换路前的储能状态传给换路后，并从新拓扑求初始导数。",
+    "conditions": "电容电流、电感电压没有使状态跳变的冲激；本构式采用关联方向。",
+    "pitfall": "连续的是电容电压、电感电流；电容电流和电感电压可以在换路时跳变。"
+  },
+  {
+    "id": "KF22",
+    "chapter": 6,
+    "section": "ch06-s08",
+    "related_sections": [
+      "ch06-s05",
+      "ch06-s09"
+    ],
+    "title": "一阶全响应与时间常数",
+    "tex": "\\begin{gathered}x(t)=x(\\infty)+[x(0^+)-x(\\infty)]e^{-t/\\tau}\\\\\\tau_{RC}=R_{\\mathrm{eq}}C,\\qquad \\tau_{RL}=\\frac{L}{R_{\\mathrm{eq}}}\\end{gathered}",
+    "use": "用初态、终态和时间常数求一阶换路响应；零输入可取终值为零。",
+    "conditions": "换路后是一阶、定常且稳定的网络，独立激励为常量。$R_{\\mathrm{eq}}$ 从储能元件端口求，受控源保留。",
+    "pitfall": "每次换路后都要重新求三要素，并把指数时间改为从该阶段起点计时；5τ 只是接近终值。"
+  },
+  {
+    "id": "KF23",
+    "chapter": 6,
+    "section": "ch06-s06",
+    "related_sections": [],
+    "title": "阶跃、冲激与窗脉冲",
+    "tex": "\\frac{du(t)}{dt}=\\delta(t),\\qquad \\int_{-\\infty}^{\\infty}\\delta(t)\\,dt=1,\\qquad v(t)=A[u(t-a)-u(t-b)]",
+    "use": "用错时阶跃表示在 a 开启、在 b 关闭的矩形脉冲。",
+    "conditions": "$b>a$；冲激的微分/积分关系按分布意义理解。",
+    "pitfall": "$u(t-a)$ 在 a 开启，$u(t+a)$ 在 −a 开启。输入关闭时，储能元件已有的状态不会随之清零。"
+  },
+  {
+    "id": "KF24",
+    "chapter": 7,
+    "section": "ch07-s03",
+    "related_sections": [
+      "ch07-s05"
+    ],
+    "title": "RLC 特征根与阻尼参数",
+    "tex": "\\begin{gathered}s_{1,2}=-\\alpha\\pm\\sqrt{\\alpha^2-\\omega_0^2},\\qquad \\omega_0=\\frac1{\\sqrt{LC}}\\\\\\alpha_{\\mathrm{s}}=\\frac{R}{2L},\\qquad \\alpha_{\\parallel}=\\frac1{2RC},\\qquad \\zeta=\\frac{\\alpha}{\\omega_0}\\end{gathered}",
+    "use": "对比 α 与 ω₀，确定过阻尼、临界阻尼或欠阻尼。",
+    "conditions": "参数式限简单串联 RLC 或简单并联 RLC 的自然方程；R、L、C 为正。",
+    "pitfall": "一般二阶网络应重新列状态方程；串联增大 R 增强阻尼，并联增大 R 反而减小阻尼。"
+  },
+  {
+    "id": "KF25",
+    "chapter": 7,
+    "section": "ch07-s04",
+    "related_sections": [],
+    "title": "三种阻尼的自然响应模板",
+    "tex": "x_n(t)=\\begin{cases}Ae^{s_1t}+Be^{s_2t},&\\alpha>\\omega_0\\\\(A+Bt)e^{-\\alpha t},&\\alpha=\\omega_0\\\\e^{-\\alpha t}(A\\cos\\omega_dt+B\\sin\\omega_dt),&0\\le\\alpha<\\omega_0\\end{cases}\\qquad \\omega_d=\\sqrt{\\omega_0^2-\\alpha^2}",
+    "use": "按根的类型写出通解结构，再用两个初始条件求 A、B。",
+    "conditions": "对应二阶齐次常系数方程；有恒定输入时，全响应还需加相应的特解。",
+    "pitfall": "临界重根不能继续用两个相同指数；某一系数为零也不表示网络只有一阶。α=0 的理想无损情形可能没有最终稳态。"
+  },
+  {
+    "id": "KF26",
+    "chapter": 7,
+    "section": "ch07-s06",
+    "related_sections": [],
+    "title": "欠阻尼零状态阶跃响应",
+    "tex": "x(t)=x_\\infty\\left[1-e^{-\\alpha t}\\left(\\cos\\omega_dt+\\frac{\\alpha}{\\omega_d}\\sin\\omega_dt\\right)\\right]",
+    "use": "查用串联 RLC 的电容电压阶跃响应，或并联 RLC 的电感电流阶跃响应。",
+    "conditions": "$0<\\alpha<\\omega_0$，$x(0^+)=x^{\\prime}(0^+)=0$；$x_\\infty$ 是所求状态的常值终态。",
+    "pitfall": "有初始储能时不能直接套此零状态式；应从自然响应模板和实际两个初始条件重新求系数。"
+  },
+  {
+    "id": "KF27",
+    "chapter": 7,
+    "section": "ch07-s04",
+    "related_sections": [],
+    "title": "无源零输入电路的能量检查",
+    "tex": "\\begin{gathered}E=\\frac12Li^2+\\frac12Cv^2\\\\\\frac{dE}{dt}=-Ri^2\\quad\\text{（串联）},\\qquad \\frac{dE}{dt}=-\\frac{v^2}{R}\\quad\\text{（并联）}\\end{gathered}",
+    "use": "检查求得的零输入响应是否符合无源网络的储能耗散。",
+    "conditions": "仅含正 R、L、C 的简单串联或并联网络，没有外部供能。",
+    "pitfall": "能量应不增，但某个电压或电流可以振荡、变号。含电源或有源元件时不能直接套本耗散式。"
+  },
+  {
+    "id": "KF28",
+    "chapter": 8,
+    "section": "ch08-s03",
+    "related_sections": [
+      "ch08-s01"
+    ],
+    "title": "峰值相量、频率与有效值",
+    "tex": "v(t)=V_m\\cos(\\omega t+\\phi)\\ \\longleftrightarrow\\ \\mathbf V=V_m\\angle\\phi,\\qquad \\omega=2\\pi f,\\qquad V_{\\mathrm{rms}}=\\frac{V_m}{\\sqrt2}",
+    "use": "把正弦稳态信号转为相量，统一频率与幅值约定。",
+    "conditions": "本讲统一余弦参考、峰值相量；RMS 与峰值的 √2 关系限纯正弦。",
+    "pitfall": "转相量时要带相位而不带时间因子；不同频率要分别求解，不能把相量直接相加。"
+  },
+  {
+    "id": "KF29",
+    "chapter": 8,
+    "section": "ch08-s04",
+    "related_sections": [],
+    "title": "R、L、C 的复阻抗",
+    "tex": "Z_R=R,\\qquad Z_L=j\\omega L,\\qquad Z_C=\\frac1{j\\omega C},\\qquad Y=\\frac1Z",
+    "use": "把微分关系变成复数代数关系，随后沿用 KCL、KVL。",
+    "conditions": "同一角频率的正弦稳态、关联参考方向；电容/电感的瞬态初值响应不包含在该阻抗解中。",
+    "pitfall": "先确认 ω 的单位是 rad/s。电感电压超前电流，电容电流超前电压。"
+  },
+  {
+    "id": "KF30",
+    "chapter": 8,
+    "section": "ch08-s05",
+    "related_sections": [],
+    "title": "复阻抗分压、分流",
+    "tex": "\\mathbf V_2=\\frac{Z_2}{Z_1+Z_2}\\mathbf V_s,\\qquad \\mathbf I_k=\\frac{Y_k}{\\sum_mY_m}\\mathbf I_s",
+    "use": "在交流串、并联网络中同时求幅值与相位。",
+    "conditions": "分压对应真正串联的阻抗；分流对应同一对端点上的导纳，所有相量采用同一频率。",
+    "pitfall": "必须先进行完整复数运算，再取模或相位；不能先对每个阻抗取绝对值。"
+  },
+  {
+    "id": "KF31",
+    "chapter": 8,
+    "section": "ch08-s03",
+    "related_sections": [],
+    "title": "正弦平均功率：峰值与 RMS 两种写法",
+    "tex": "P=\\frac12\\operatorname{Re}\\{\\mathbf V\\mathbf I^*\\}=V_{\\mathrm{rms}}I_{\\mathrm{rms}}\\cos(\\phi_v-\\phi_i)",
+    "use": "把交流端口的电压、电流转换为平均吸收功率。",
+    "conditions": "左式的 $\\mathbf V,\\mathbf I$ 是峰值相量；电流流入电压正端，星号表示复共轭。",
+    "pitfall": "RMS 相量写法没有 1/2；把峰值相量与 RMS 相量混用会差一倍。只在同频条件下这样直接计算。"
+  },
+  {
+    "id": "KF32",
+    "chapter": 9,
+    "section": "ch09-s01",
+    "related_sections": [],
+    "title": "传递函数与稳态输入输出",
+    "tex": "\\begin{gathered}H(s)=K\\frac{\\prod_k(s-z_k)}{\\prod_m(s-p_m)}\\\\y(t)=X_m|H(j\\omega)|\\cos[\\omega t+\\theta+\\angle H(j\\omega)]\\end{gathered}",
+    "use": "从零极点描述网络，并由幅频、相频关系求正弦稳态输出。",
+    "conditions": "线性定常网络；传递函数按零初始状态定义。第二式要求该频率下存在稳定正弦稳态。",
+    "pitfall": "先明确输入输出量与 H 的单位；约分消去的根不是端口传递函数的实际零点或极点。"
+  },
+  {
+    "id": "KF33",
+    "chapter": 9,
+    "section": "ch09-s03",
+    "related_sections": [],
+    "title": "dB 的两种定义",
+    "tex": "G_P=10\\log_{10}\\frac{P_o}{P_i},\\qquad G_V=20\\log_{10}\\left|\\frac{V_o}{V_i}\\right|",
+    "use": "把功率比或幅值比换为对数增益，便于阅读波特图。",
+    "conditions": "功率比取正数；幅值比先取模。只有对应阻抗条件满足时，电压增益 dB 才等于功率增益 dB。",
+    "pitfall": "负 dB 不表示反相；负号带来的相位变化另行处理。相同阻抗下，−3.0103 dB 对应半功率。"
+  },
+  {
+    "id": "KF34",
+    "chapter": 9,
+    "section": "ch09-s04",
+    "related_sections": [],
+    "title": "一阶零点、极点的波特贡献",
+    "tex": "\\begin{gathered}M_z=10\\log_{10}\\!\\left[1+\\left(\\frac\\omega{\\omega_z}\\right)^2\\right],\\qquad \\phi_z=\\tan^{-1}\\!\\left(\\frac\\omega{\\omega_z}\\right)\\\\M_p=-10\\log_{10}\\!\\left[1+\\left(\\frac\\omega{\\omega_p}\\right)^2\\right],\\qquad \\phi_p=-\\tan^{-1}\\!\\left(\\frac\\omega{\\omega_p}\\right)\\end{gathered}",
+    "use": "把标准因子的幅值 dB 与相位相加，画出整体频率响应。",
+    "conditions": "分别对应左半平面一阶因子 $1+s/\\omega_z$ 与 $1/(1+s/\\omega_p)$；转折频率为正。",
+    "pitfall": "高频每个零点贡献 +20 dB/dec，每个极点贡献 −20 dB/dec；原点因子、负增益与右半平面零点需单独处理。"
+  },
+  {
+    "id": "KF35",
+    "chapter": 9,
+    "section": "ch09-s06",
+    "related_sections": [
+      "ch09-s07"
+    ],
+    "title": "简单串、并联谐振参数",
+    "tex": "\\begin{gathered}\\omega_0=\\frac1{\\sqrt{LC}},\\qquad B=\\frac{\\omega_0}{Q}\\\\Q_{\\mathrm{s}}=\\frac{\\omega_0L}{R},\\quad B_{\\mathrm{s}}=\\frac RL,\\qquad Q_{\\parallel}=\\omega_0RC,\\quad B_{\\parallel}=\\frac1{RC}\\end{gathered}",
+    "use": "求谐振中心、品质因数和半功率带宽，或反推元件参数。",
+    "conditions": "简单串联 RLC 取电压激励下的电流响应；简单并联 RLC 取电流激励下的电压响应。B 的单位为 rad/s。",
+    "pitfall": "串联用阻抗虚部为零，并联用导纳虚部为零。非简单网络须回到实际输入阻抗或导纳。"
+  },
+  {
+    "id": "KF36",
+    "chapter": 9,
+    "section": "ch09-s06",
+    "related_sections": [
+      "ch09-s07"
+    ],
+    "title": "精确半功率频率与带宽单位",
+    "tex": "\\omega_{1,2}=\\sqrt{\\omega_0^2+\\left(\\frac B2\\right)^2}\\mp\\frac B2,\\qquad \\omega_0=\\sqrt{\\omega_1\\omega_2},\\qquad B=\\omega_2-\\omega_1=2\\pi(f_2-f_1)",
+    "use": "由两个半功率点求中心频率、带宽，或由 ω₀、B 求上下截止频率。",
+    "conditions": "采用上一卡简单 RLC 谐振响应的半功率定义，正参数、正频率。",
+    "pitfall": "ω 与 f 的带宽差一个 2π；$\\omega_0\\pm B/2$ 只是高 Q 近似，精确中心是几何平均。"
+  },
+  {
+    "id": "KF37",
+    "chapter": 9,
+    "section": "ch09-s08",
+    "related_sections": [],
+    "title": "一阶 RC 低通与高通",
+    "tex": "H_{\\mathrm{LP}}(s)=\\frac1{1+sRC},\\qquad H_{\\mathrm{HP}}(s)=\\frac{sRC}{1+sRC},\\qquad \\omega_c=\\frac1{RC}",
+    "use": "根据输出位置识别滤波类型，并快速求一阶截止频率。",
+    "conditions": "输入加在串联 RC 两端；低通输出取 C，高通输出取 R；没有额外加载。",
+    "pitfall": "加入源内阻或负载后要重新推 H。低通、高通的截止幅值为各自通带参考幅值的 $1/\\sqrt2$。"
+  },
+  {
+    "id": "KF38",
+    "chapter": 9,
+    "section": "ch09-s08",
+    "related_sections": [
+      "ch09-s07"
+    ],
+    "title": "二阶滤波器的标准形式",
+    "tex": "\\begin{gathered}D(s)=s^2+\\frac{\\omega_0}{Q}s+\\omega_0^2\\\\H_{\\mathrm{LP}}=\\frac{K\\omega_0^2}{D(s)},\\quad H_{\\mathrm{BP}}=\\frac{K(\\omega_0/Q)s}{D(s)},\\quad H_{\\mathrm{BS}}=\\frac{K(s^2+\\omega_0^2)}{D(s)}\\end{gathered}",
+    "use": "从分子零点和分母二阶结构判断低通、带通、带阻。",
+    "conditions": "稳定的理想标准二阶形式；$\\omega_0>0,Q>0$，K 是相应参考增益。具体网络必须先与此形式对应。",
+    "pitfall": "ω₀ 通常不等于截止频率或峰值频率；标准二阶低通只有 $Q>1/\\sqrt2$ 才有非零频率处的幅值峰。"
+  },
+  {
+    "id": "KF39",
+    "chapter": 9,
+    "section": "ch09-s09",
+    "related_sections": [],
+    "title": "等 R、等 C 的 Sallen–Key 低通",
+    "tex": "\\begin{gathered}H(s)=\\frac{K}{(sRC)^2+(3-K)sRC+1}\\\\K=1+\\frac{R_3}{R_4},\\qquad \\omega_0=\\frac1{RC},\\qquad Q=\\frac1{3-K}\\end{gathered}",
+    "use": "把闭环增益与二阶阻尼联系起来，快速选择等值元件设计。",
+    "conditions": "严格为正文所画 Sallen–Key 拓扑，$R_1=R_2=R$、$C_1=C_2=C$；理想非反相级的稳定范围为 $1\\le K<3$。",
+    "pitfall": "提高 K 会降低阻尼；Butterworth 取 $K=3-\\sqrt2$。非等值元件要回正文使用一般式。"
+  }
+]

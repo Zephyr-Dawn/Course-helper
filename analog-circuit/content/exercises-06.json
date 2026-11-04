@@ -1,0 +1,131 @@
+[
+  {
+    "id": "L6-P55",
+    "chapter": 6,
+    "title": "RC 零输入响应与初始储能",
+    "source": "L6 p55 · Practice Problem 7.2",
+    "page": 55,
+    "difficulty": 1,
+    "question": "Fig.7.10：换路前 $24\\,\\mathrm V$ 电源经 $6\\,\\Omega$ 和闭合开关接到 $C=1/6\\,\\mathrm F$、$12\\,\\Omega$、$4\\,\\Omega$ 的并联组；换路前已达直流稳态。$t=0$ 开关打开，电源与 $6\\,\\Omega$ 一起脱离该并联组。求 $t\\ge0$ 的电容电压 $v(t)$ 和 $w_C(0)$。",
+    "hints": [
+      "初值要在开关打开前求。",
+      "时间常数使用打开后电容所见的 12∥4。"
+    ],
+    "solution": "换路前电容开路，$12\\parallel4=3\\,\\Omega$，所以\n$$v(0^-)=24\\frac{3}{6+3}=8\\,\\mathrm V.$$\n换路没有冲激电流，因此 $v(0^+)=8\\,\\mathrm V$。打开开关后电容仅通过 $3\\,\\Omega$ 放电，\n$$\\tau=R_{\\rm eq}C=3\\times\\frac16=0.5\\,\\mathrm s.$$\nKCL 为 $(1/6)dv/dt+v/3=0$，即 $dv/dt+2v=0$，从而\n$$v(t)=8e^{-2t}\\,\\mathrm V,\\quad t\\ge0.$$\n初始能量 $w_C(0)=\\tfrac12(1/6)8^2=16/3=5.333333\\,\\mathrm J$。",
+    "answer": "$v(t)=8e^{-2t}\\,\\mathrm V$；$w_C(0)=16/3\\,\\mathrm J$。",
+    "tags": [
+      "RC",
+      "零输入",
+      "时间常数"
+    ],
+    "checks": "初值 8 V、终值 0，初始斜率 -16 V/s；积分电阻功率可得 16/3 J。"
+  },
+  {
+    "id": "L6-P56",
+    "chapter": 6,
+    "title": "含受控源的 RL 自然响应",
+    "source": "L6 p56 · Practice Problem 7.3",
+    "page": 56,
+    "difficulty": 3,
+    "question": "按 Fig.7.15：$L=2\\,\\mathrm H$ 由左上节点 $a$ 接地，电流 $i$ 向下且 $i(0)=7\\,\\mathrm A$。$a$ 经 $1\\,\\Omega$ 接右上节点 $b$，电压 $v_x=v_a-v_b$；$b$ 经 $6\\,\\Omega$ 接地，另经 $2\\,\\Omega$ 接受控电压源上端 $c$，该源下端接地、上正下负、值为 $2v_x$。求 $i(t),v_x(t)$。",
+    "hints": [
+      "受控源不能置零。",
+      "先由节点 a 的 KCL 把 vx 写成 i，再求电感端电压。"
+    ],
+    "solution": "节点 $a$ KCL 给出 $(v_a-v_b)/1+i=0$，故 $v_x=-i$（数值以 V、A、Ω 为单位）。受控源约束为 $v_c=2v_x=-2i$。节点 $b$ 的 KCL 为\n$$\\frac{v_b-v_a}{1}+\\frac{v_b-v_c}{2}+\\frac{v_b}{6}=0.$$\n代入 $v_b-v_a=i$ 和 $v_c=-2i$：\n$$i+\\frac{v_b+2i}{2}+\\frac{v_b}{6}=0\\quad\\Rightarrow\\quad v_b=-3i.$$\n从而 $v_a=v_b+v_x=-4i$。电感采用关联方向，$v_a=Ldi/dt=2di/dt$，所以\n$$2\\frac{di}{dt}=-4i,\\qquad \\tau=\\frac{2}{4}=0.5\\,\\mathrm s.$$\n结合初值，\n$$i(t)=7e^{-2t}\\,\\mathrm A,\\qquad v_x(t)=-7e^{-2t}\\,\\mathrm V,\\quad t>0.$$\n也可用保留受控源的测试源法得到电感所见电阻 $4\\,\\Omega$。",
+    "answer": "$i=7e^{-2t}\\,\\mathrm A$；$v_x=-7e^{-2t}\\,\\mathrm V$，$t>0$。",
+    "tags": [
+      "受控源",
+      "RL",
+      "自然响应"
+    ],
+    "checks": "初始电感电压 va(0+)=-28 V，对应 di/dt=-14 A/s；受控源约束及两节点 KCL 可逐项代回。"
+  },
+  {
+    "id": "L6-P57",
+    "chapter": 6,
+    "title": "同时换路与电压源阶跃的 RC 全响应",
+    "source": "L6 p57 · Practice Problem 7.11",
+    "page": 57,
+    "difficulty": 2,
+    "question": "Fig.7.47：电压源为 $20u(-t)\\,\\mathrm V$，经 $5\\,\\Omega$ 接 $C=0.2\\,\\mathrm F$ 上端，电容下端接地；电流 $i$ 从源经电阻向电容节点为正。$t=0$ 开关闭合，将 $10\\,\\Omega$ 对地电阻及向上注入节点的 $3\\,\\mathrm A$ 电流源接入。$t<0$ 已达稳态。求全时域 $v(t),i(t)$。",
+    "hints": [
+      "t<0 时电压源为 20 V，t>0 时为 0 V，后一状态是短路。",
+      "电容电压连续，但 5 Ω 支路电流可以跳变。"
+    ],
+    "solution": "对 $t<0$，开关断开，电容稳态开路，所以 $v=20\\,\\mathrm V$、$i=0$。\n\n对 $t>0$，左电压源为零，$5\\,\\Omega$ 接地；$v(0^+)=20\\,\\mathrm V$。稳态 KCL 为 $v(\\infty)/5+v(\\infty)/10=3$，故 $v(\\infty)=10\\,\\mathrm V$。时间常数\n$$\\tau=(5\\parallel10)0.2=\\frac{10}{3}\\times0.2=\\frac23\\,\\mathrm s.$$\n因此\n$$v(t)=10+(20-10)e^{-1.5t}=10(1+e^{-1.5t})\\,\\mathrm V,\\quad t>0.$$\n按题定方向，$i=(0-v)/5=-2(1+e^{-1.5t})\\,\\mathrm A$。全时域写成\n$$v(t)=\\begin{cases}20,&t<0,\\\\10(1+e^{-1.5t}),&t>0,\\end{cases}\\quad\\mathrm V,$$\n$$i(t)=\\begin{cases}0,&t<0,\\\\-2(1+e^{-1.5t}),&t>0,\\end{cases}\\quad\\mathrm A.$$\n注意 $i(0^+)=-4\\,\\mathrm A$，实际经 $5\\,\\Omega$ 流向零电压源。",
+    "answer": "$v=20\\,\\mathrm V,i=0$（$t<0$）；$v=10(1+e^{-1.5t})\\,\\mathrm V,i=-2(1+e^{-1.5t})\\,\\mathrm A$（$t>0$）。",
+    "tags": [
+      "RC",
+      "阶跃",
+      "三要素",
+      "连续性"
+    ],
+    "checks": "代回 0.2dv/dt+v/5+v/10=3；初始 20 V、最终 10 V。"
+  },
+  {
+    "id": "L6-P58",
+    "chapter": 6,
+    "title": "开关打开后的 RL 全响应",
+    "source": "L6 p58 · Practice Problem 7.12",
+    "page": 58,
+    "difficulty": 2,
+    "question": "Fig.7.52：$1.5\\,\\mathrm H$ 电感连接左右上节点，电流 $i$ 从右向左为正；左节点经 $5\\,\\Omega$ 接地，另有初始闭合的开关将左节点接地。右节点经 $10\\,\\Omega$ 接地，另有 $6\\,\\mathrm A$ 电流源向上注入。开关闭合很久后于 $t=0$ 打开，求 $t>0$ 的 $i(t)$。",
+    "hints": [
+      "换路前稳态电感和开关都是短路，6 A 全经电感。",
+      "换路后求电感所见电阻时将 6 A 电流源开路。"
+    ],
+    "solution": "换路前电感短路，左右上节点都在地电位，$10\\,\\Omega$ 无电流，故 $i(0^-)=6\\,\\mathrm A$，连续性给出 $i(0^+)=6\\,\\mathrm A$。\n\n换路后最终电感又为短路，源电流分流至 $5\\,\\Omega$ 与 $10\\,\\Omega$。流经电感向左的电流等于 $5\\,\\Omega$ 电流，\n$$i(\\infty)=6\\frac{10}{5+10}=4\\,\\mathrm A.$$\n将独立电流源开路，从电感两个端子看，经地相连的 $5\\,\\Omega$ 与 $10\\,\\Omega$ 串联，因此 $R_{\\rm eq}=15\\,\\Omega$，\n$$\\tau=\\frac{1.5}{15}=0.1\\,\\mathrm s.$$\n所以\n$$i(t)=4+(6-4)e^{-t/0.1}=4+2e^{-10t}\\,\\mathrm A,\\quad t>0.$$\n直接列方程也得到 $1.5di/dt+15i=60$。",
+    "answer": "$i(t)=4+2e^{-10t}\\,\\mathrm A$，$t>0$。",
+    "tags": [
+      "RL",
+      "三要素",
+      "端口电阻"
+    ],
+    "checks": "i(0+)=6 A、i(∞)=4 A；初始 di/dt=-20 A/s，代入微分方程成立。"
+  },
+  {
+    "id": "L6-P59",
+    "chapter": 6,
+    "title": "两个开关的三阶段 RL 响应",
+    "source": "L6 p59 · Practice Problem 7.13",
+    "page": 59,
+    "difficulty": 3,
+    "question": "Fig.7.54：$12\\,\\mathrm A$ 源与 $15\\,\\Omega$ 并联构成左侧源网络；经过初始断开的 $S_1$、$10\\,\\Omega$、$20\\,\\Omega$ 串联至 $5\\,\\mathrm H$ 电感上端，电感下端回共同地，$i$ 向下为正。$S_1$ 在 $t=0$ 闭合；与 $20\\,\\Omega$ 并联的 $S_2$ 在 $t=2\\,\\mathrm s$ 闭合。初始电感无储能。求全时域 $i(t)$、$i(1)$、$i(3)$。",
+    "hints": [
+      "先将 12 A∥15 Ω 变换为 180 V 串联 15 Ω。",
+      "第二次换路的初值是第一阶段在 2 s 的值。"
+    ],
+    "solution": "左侧戴维南源为 $V_{\\rm Th}=12\\times15=180\\,\\mathrm V$、$R_{\\rm Th}=15\\,\\Omega$。$t<0$ 时支路未接入，按给定初始无储能，$i=0$。\n\n$0\\le t<2$ 时，串联总电阻 $R_1=15+10+20=45\\,\\Omega$，最终值 $I_{\\infty1}=180/45=4\\,\\mathrm A$，时间常数 $\\tau_1=5/45=1/9\\,\\mathrm s$，所以\n$$i(t)=4(1-e^{-9t})\\,\\mathrm A.$$\n阶段结束值 $i(2^-)=4(1-e^{-18})$，不是严格等于 4。\n\n$t\\ge2$ 时，$20\\,\\Omega$ 被短路，$R_2=15+10=25\\,\\Omega$，$I_{\\infty2}=180/25=7.2\\,\\mathrm A$，$\\tau_2=5/25=0.2\\,\\mathrm s$。由连续性\n$$i(t)=7.2+[4(1-e^{-18})-7.2]e^{-5(t-2)}$$\n$$=7.2-(3.2+4e^{-18})e^{-5(t-2)}\\,\\mathrm A.$$\n因此\n$$i(1)=4(1-e^{-9})=3.99950636\\,\\mathrm A,$$\n$$i(3)=7.2-(3.2+4e^{-18})e^{-5}=7.17843857\\,\\mathrm A.$$\n课件把 $e^{-18}$ 忽略，写成 $7.2-3.2e^{-5(t-2)}$ 和 $i(1)\\approx4\\,\\mathrm A$，属于数值极好的近似。",
+    "answer": "$i=0$（$t<0$）；$i=4(1-e^{-9t})$（$0\\le t<2$）；$i=7.2-(3.2+4e^{-18})e^{-5(t-2)}$ A（$t\\ge2$）；$i(1)=3.999506$ A、$i(3)=7.178439$ A。",
+    "tags": [
+      "多阶段",
+      "RL",
+      "状态连续",
+      "戴维南"
+    ],
+    "checks": "在 t=2 左右代入得到相同的电感电流；每阶段分别代回 5di/dt+Ri=180。"
+  },
+  {
+    "id": "L6-P60",
+    "chapter": 6,
+    "title": "带并联反馈 RC 的运放阶跃响应",
+    "source": "L6 p60 · Practice Problem 7.15",
+    "page": 60,
+    "difficulty": 2,
+    "question": "Fig.7.58：理想运放同相端接地，$4\\,\\mathrm{mV}$ 源经 $10\\,\\mathrm{k\\Omega}$ 与开关接反相节点；反馈为 $100\\,\\mathrm{k\\Omega}$ 与 $1\\,\\mathrm{\\mu F}$ 并联。开关在 $t=0$ 闭合，此前无输入且已达稳态。电容电压 $v$ 左正右负，即 $v=v_--v_o$。求全时域 $v(t)$ 与 $v_o(t)$。",
+    "hints": [
+      "负反馈使反相节点为虚地，因此 v=-vo。",
+      "零输入稳态反馈电阻会把初始电容电压放至零。"
+    ],
+    "solution": "$t<0$ 无输入并已达稳态，所以 $v(0^-)=v_o(0^-)=0$。$t>0$ 时虚地成立，输入电流为\n$$i_{\\rm in}=\\frac{4\\times10^{-3}}{10\\times10^3}=0.4\\,\\mathrm{\\mu A}.$$\n该电流分到反馈电阻、电容，因 $v=v_--v_o=-v_o$，\n$$0.4\\times10^{-6}=\\frac{v}{100000}+10^{-6}\\frac{dv}{dt}.$$\n最终电压 $v(\\infty)=0.4\\,\\mathrm{\\mu A}\\times100\\,\\mathrm{k\\Omega}=40\\,\\mathrm{mV}$，时间常数 $\\tau=100000\\times10^{-6}=0.1\\,\\mathrm s$。故\n$$v(t)=40(1-e^{-10t})u(t)\\,\\mathrm{mV},$$\n$$v_o(t)=-v(t)=40(e^{-10t}-1)u(t)\\,\\mathrm{mV}.$$\n初始时输入电流全部流入电容，$dv/dt(0^+)=0.4\\,\\mathrm{V/s}$；稳态时全部流经反馈电阻。",
+    "answer": "$v=40(1-e^{-10t})u(t)\\,\\mathrm{mV}$；$v_o=40(e^{-10t}-1)u(t)\\,\\mathrm{mV}$。",
+    "tags": [
+      "运放",
+      "RC",
+      "阶跃",
+      "反馈电容"
+    ],
+    "checks": "检查 v=-vo、初始值为零、最终输出 -40 mV；将波形导数代入反馈节点 KCL。"
+  }
+]

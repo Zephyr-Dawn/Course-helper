@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+test-output/
+assets/exercises/
+assets/design/
+*.pdf
+*.ppt
+*.pptx
+*.zip
+电子电路基础-互动复习.html

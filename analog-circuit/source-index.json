@@ -1,0 +1,5473 @@
+{
+  "scope": "EC2026 第1–9讲；525页；章节级来源索引。页码为PDF物理页序。",
+  "index_precision": "extracted_preview为文本提取预览，低文字量图页请核对原文件。正文内的讲次/页码引用提供更细的对应关系。",
+  "supplemental_sources": [
+    {
+      "name": "Alexander, Sadiku & Fredette: Fundamentals of Electric Circuits, 2026 Release",
+      "use": "仅补充与九讲对应的定义、推导及例题。"
+    },
+    {
+      "name": "Razavi: Fundamentals of Microelectronics",
+      "use": "仅补充相关运放、反馈及频率响应背景；不扩展半导体器件章节。"
+    },
+    {
+      "name": "EC2024题库",
+      "url": "https://bc0403.github.io/EC2024/",
+      "use": "12道精选题，原编号和逐题来源见content/challenges.json。"
+    }
+  ],
+  "pages": [
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 1,
+      "extracted_preview": "电子电路基础 / 第一讲：电路基本概念",
+      "destination": "ch01",
+      "classification": "cover",
+      "note": "讲次信息保留为章节标题。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 2,
+      "extracted_preview": "为何要学习本课程 / • 信电学科(EE)的两大基础理论 / – 电子电路理论 / – 电磁场理论 / • 前沿科技的基础 / – AI算力 / – 机器人 / • 复杂系统的建模工具 / – 物理模型，从物理机理推导出数学公式 / – 电路模型，从数学公式推导出等效电路",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 3,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 4,
+      "extracted_preview": "实际电路 & 电路模型 / 电池内阻            灯 / 电池 / Wiki：电路（英语：Electrical circuit）或称电子回路，是由电气设备和元器件， / 按一定方式连接起来，为电荷流通提供了路径的总体，也叫电子线路或称电气回 / 路，简称网络或回路。如电源、电阻、电容、电感、二极管、晶体管、集",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F1-01"
+      ]
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 5,
+      "extracted_preview": "集总参数电路（lumped circuit） / 分布参数电路（distributed circuit） / 集总参数电路 实际电路的尺寸远小于电路工作时电 / 磁波的波长，可以把元件的作用集总在一起，用一个 / 或有限个理想元件来加以描述。【本课程主要关注】 / 分布参数电路 实际电路的尺寸与电路工作时电磁波 / 的",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 6,
+      "extracted_preview": "课程目的：学会主流的电路分析方法；逐步形成对电路的洞察力",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 7,
+      "extracted_preview": "International System of Units （SI） / 7个基本单位（下表六个和 mol ）和一个导出单位（C） / （库仑）",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 8,
+      "extracted_preview": "The derived units commonly used / in electric circuit theory / 前缀 + 主要单位 / 注意：k、m的大小写表示不同含义 / Decimal multiples and / 千瓦正确的写法：kW、km                             ",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 9,
+      "extracted_preview": "电荷（Charge） / Wiki：电荷是许多次原子粒子所拥有的一种基本守恒性质。称带有电荷的粒子为 / “带电粒子”。电荷的量称为“电荷量”。在国际单位制里，电荷量的符号以Q / 为表示，单位是库仑（C） / • 物质由原子组成，原子又由电子、质子和中子构成 / – 电子带负电荷，一个电子的电荷量（e）为1.602×",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 10,
+      "extracted_preview": "电流（current） / Wiki：电流是电荷的平均定向移动。电流的大小称为电流强度，是指单位时间内 / 通过导线某一截面的电荷量，每秒通过1库仑的电荷量称为1安培 / • 电荷移动产生电流； / • 电流的定义：单位时间内流过的电荷 / • 电流的单位：A，ampere / • 已知电流，求 t0 时刻和 t 时刻",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 11,
+      "extracted_preview": "电流 / • 电流的方向： / – 因历史原因，定义为正电荷移动的方向 / – 实际上在导体中，流动的是负电荷（电子） / same / 概念2: 电荷的流动产生电流，电流有方向和大小，方向与电子流动方向相 / 反；大小（强度）指单位时间内流过导线某一截面的电荷量。在电路分析 / 中，我们需要计算出流过每个元件的电流值",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 12,
+      "extracted_preview": "直流 vs 交流 / 教材第5版： / √ 教材第6,7版： / Wiki：Direct current (DC) is the unidirectional flow of an electric charge / 通用符号规范：                直流电流： / 变量用斜体, I, i         ",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 13,
+      "extracted_preview": "• 电流方向不与时间一起变化，但大小会周期变化的电流虽然也是DC， / 但一般称之为脉冲电流( pulsating current ) ； / • 电流方向随时间变化，但不呈现周期性，虽然也是AC，但一般称为变 / 化电流( variable current )； / • 一般情况，直流（DC）指恒定不变的电流； / ",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 14,
+      "extracted_preview": "电流的参考方向 是一个关于电流流向的人为的“假定” / 参考方向：任意选定的一个方向作为电流的参考方向。 / i    参考方向 / i > 0 表示电流的参考方向与实际方向相同 / i < 0 表示电流的参考方向与实际方向相反 / 例 / I1                            I1 / 10 ",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F1-02"
+      ]
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 15,
+      "extracted_preview": "为什么要引入参考方向 ？ / ？ (a) 复杂电路的某些支路 / 事先无法确定实际方向。 / (b) 电流是交变的 / i / i                                                               t / 0      T/2    T / i = I  sin",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 16,
+      "extracted_preview": "例题 / 4600个电子具有多少电荷量？",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 17,
+      "extracted_preview": "给出流过电荷表达式，求电流 / 软件1（可选）：Python，免费，AI友好 / 软件2（可选）：Mathcad，带量纲计算，直观",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 18,
+      "extracted_preview": "给出电流表达式，求流过的电荷",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 19,
+      "extracted_preview": "19      电压（电势差） / voltage (potential difference) / • 移动电荷需要能量； / • 电压的定义： / – 移动单位电荷所需的能量， / • 电压的单位：V，volt / • 电压的极性： / –  vab > 0，表示 a 点的电势比 b 点高； / –  vab < ",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 20,
+      "extracted_preview": "电压 / 直流电压（DC）： / •电压极性不随时间变化 / •【一般情况】电压值不随时间变化； / •用大写的 V 表示； / same / 交流电压（AC）： / •电压极性随时间变化 / •【一般情况】电压随时间正弦变化； / •用小写的 v 表示； / 分析电路中的元件 / • 电流：流过元件 / • 电压：元",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 21,
+      "extracted_preview": "电压的参考方向  是一个关于两端电位高低的人为的“假定” / +  实际方向         实际方向   + / +       v         +       v / （参考方向）                  （参考方向） / v < 0             v > 0 / 例 / + / V1  1",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F1-03"
+      ]
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 22,
+      "extracted_preview": "电压参考方向的三种表示方式 / (1) 【最常用】用正负极性表示（voltage polarity）： / 由正极指向负极的方向为电压的参考方向 / +         v / (2) 用箭头表示：箭头指向为电压的参考方向 / v / (3) 用双下标表示：如 vab , 由a指向b的方向为电压 / 的参考方向。 / ",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 23,
+      "extracted_preview": "关联和非关联的参考方向 / v +         v            + / i                                                   i / 关联参考方向      非关联参考方向 / 对电阻元件而言，流过电阻的电流的方向总是与电压 / 降的方向一致；任意元件指",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F1-04"
+      ]
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 24,
+      "extracted_preview": "功率（Power）和能量（Energy） / • 功率：单位时间内消耗或吸收的能量 / • 功率与电压、电流的关系： / 下图中电压电流为实际方向 / • 功率正负的约定 / – 电压电流为关联参考方向时， / • p > 0，表示吸收能量（消耗能量），比如电阻 / • p < 0，表示提供能量，比如电源 / • 关联",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 25,
+      "extracted_preview": "吸收功率 or 输出功率？ / 非关联参考方向 / 关联参考方向 / 关联参考方向   非关联参考方向 / 功率计算：先改成“关联参考方向(passive sign convention)”，再计算， / p > 0 则吸收能量；p < 0 则提供能量",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 26,
+      "extracted_preview": "功率和能量 / • 能量守恒：在任何时刻，电路中消耗的功率和输出的功率 / 总和都为零； / • 从 t0 时刻到 t 时刻，电路中某元件消耗吸收或输出的能量 / 为： / 日常生活中的一度电：",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 27,
+      "extracted_preview": "例题 / 已知电荷量，以及移动该电荷量所需的能量，求电压 / 也可先计算消耗的功率， / 再计算电压",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 28,
+      "extracted_preview": "例题 / 已知电压电 / 流，求功率",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 29,
+      "extracted_preview": "例题 / 已知功率、时间，求消耗的能量",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 30,
+      "extracted_preview": "电路参数符号书写规范 / vB / Vb             vb                                           v = V + V cos t +                                                        B     B",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 31,
+      "extracted_preview": "优秀的设计源于对基本 building blocks 的熟练掌握 / ——电路分析是电路设计的基础",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 32,
+      "extracted_preview": "基本电路元件 / 电路元件是为建立实际电气器件的模型而提出的一种 / 理想元件。 / 按电路元件与外电路连接端点（terminal）的数目，电 / 路元件可分为二端元件、三端元件、四端元件等。 / (a) 二端元件    (b) 三端元件   (c) 四端元件",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 33,
+      "extracted_preview": "电路元件 / • 什么是电路分析？ / – 分析电路中（1）流经各元件的电流；（2）各节点的电压； / • 有源元件 & 无源元件 / – 有源元件（active element）：能够向电路提供能量或实现功率增益的元 / 件，例如电源、发电机、晶体管和运算放大器等； / – 无源元件（passive element）",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 34,
+      "extracted_preview": "电路元件 / Q：电流源哪一端应该标为 +？  A：电流源提供能量（p为负）→ 箭头所指端为 + / Active Elements 有源元件             Passive Elements 无源 / +       + / -             - / 符号规范： / •电压源用±；电流源用箭头； /",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 35,
+      "extracted_preview": "电路元件 / 适用于dc & ac                仅适用于 dc",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 36,
+      "extracted_preview": "电路元件 / • 受控源有四种类型： / 电压控制电压源 / 电流控制电压源 / 电压控制电流源 / 电流控制电流源 / 受控源判断方法： / • 先判断是电压源还是电流源，正负 / （电压源），箭头（电流源） / • 再看表达式（依赖的变量是电压， / 还是电流）",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F1-05"
+      ]
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 37,
+      "extracted_preview": "按关联参考方向（电流从“+”流入）， / 计算各元件消耗的功率 / 流入正极，功率为正 →消耗能量 / 能量守恒",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 38,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 39,
+      "extracted_preview": "电阻（器） / • 本质上，材料具有阻止电荷流动的内在特性，表征这一特 / 性的物理量称之为电阻(resistance)，用符号 R 表示，电阻 / 器(resistor)是最基本的电路元件。 / 长度，m                  电阻，Ω / 截面积，m2 / 材料电阻率：Ω∙m / 注意材料电阻率的单位",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 40,
+      "extracted_preview": "常用材料的电阻率",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 41,
+      "extracted_preview": "电阻元件 / 电阻元件：对电流呈现阻力的元件。 / 其特性可用 v~i 平面上的一条曲线来描述。这 / 条曲线称为电阻的特性曲线（一般是在关联的参考 / 方向下），它表明了电阻电压与电流间的约束关系 / (Voltage Ampere Relationship，简称为VAR)。 / v / 伏安         f (",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 42,
+      "extracted_preview": "电阻的分类：                                          4242 / ➢线性电阻与非线性电阻 / 其特性曲线为通过坐标原点直线的电阻，称为线性电阻；否则称为非线性 / 电阻。 / ➢时变电阻与时不变（或定常）电阻 / 其特性曲线随时间变化的电阻，称为时变电阻；否则称为时不变电阻或",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 43,
+      "extracted_preview": "欧姆定律                                   符号 / • 电阻两端的电压与流经电阻的电流成正比，比值为该电阻 / 的阻值 R / • R 的单位为欧姆，ohm，或 Ω / 注意电流方向 / 和电压极性！",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 44,
+      "extracted_preview": "欧姆定律 / • R 的两个极端：0 和 ∞ / R = 0 / •短路、电压为0，电流可为任意值； / R = ∞ / •开路、电流为0，电压可为任意值；",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 45,
+      "extracted_preview": "Through-Hole （通孔插装） / SMD （表面贴装） / 可变电阻   电位计",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 46,
+      "extracted_preview": "• 电导（conductance）:电阻的倒数，单位为西门 / 子（S）或姆欧（ ） / • 电阻消耗的功率： / – 观察1： 功率与电压、电流的关系均为非线性 / – 观察2：R、G是正值，所以电阻始终消耗功率",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 47,
+      "extracted_preview": "已知电压、电流，求电阻",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 48,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 49,
+      "extracted_preview": "给出电压、电阻，求电流、功率",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 50,
+      "extracted_preview": "50   支路（Branches），节点/结点（Nodes）， / 回路（Loops），网孔（Mesh）的基本概念 / 支路：组成电路的每一个二端元件（如电压源、电阻等）称为一条支路 / 节点：支路的连接点称为节点                              支路x5；节点x3 / 回路：支路所构成的闭合",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F1-06"
+      ]
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 51,
+      "extracted_preview": "数学和计算机科学中的图论（Graph） / • 图是由点和连接这些点的边构成的，点表示对象，边表示对 / 象间的关系，所以图论适用于多个学科领域。电路中，点和 / 边分别对应于node和branch / • 图是给定连接关系的点和边的集合，允许孤立点，孤立点表 / 示一个与外界不联系的事物。电路中，branch是实体，",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 52,
+      "extracted_preview": "数学和计算机科学中的图论（Graph） / • 当图的任意两个点之间至少存在一条路径时，该图就称为连 / 通图。 / • 连通图的树的定义为：包含该连通图中的所有点，但不包含 / 任何回路的连通子图 / Q：右边那几个是图G的树？",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 53,
+      "extracted_preview": "数学和计算机科学中的图论（Graph） / • 对于一个图，先选择一棵树，树中包含的边称为该树的树枝 / ，其他边称为对应于该树的连枝。树枝和连枝一起构成图的 / 全部边。 / • 一个具有 n 个点的连通图，它的任意一棵树的树枝数为 n-1 / （选择任一node作为树的根节点，其他所 / 有node作为这棵树的叶子",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F1-07"
+      ]
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 54,
+      "extracted_preview": "数学和计算机科学中的图论（Graph） / • 对于连通图的任意一棵树，加入一个连枝后，就会形成一个回 / 路，该回路除所加连枝外，均由树枝构成，故这种回路称为单 / 连枝回路，或基本回路。选定一棵树→ 添加一连枝 →形成一基本回路 / • 显然，基本回路的数目等于连枝的数目。假定一个连通图有 b / 条边，n 个点，",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 55,
+      "extracted_preview": "数学和计算机科学中的图论（Graph） / • 对于平面图，可以引入网孔（mesh）的概念。平面图的 / 一个网孔，是它的一个自然的“孔”，它限定的区域内， / 不再有其他边（其他branch） / • 平面图的全部网孔是一组独立回路，所以平面图的网孔数 / 也是独立回路数 / • 我们有两种方法构成独立回路组： / ",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 56,
+      "extracted_preview": "串联（series）和并联（parallel） / 串联：电流相等 / 并联：电压相等 / • 串联：10V 和 5 Ω / • 并联：2Ω、3Ω 和 2A / • 不是串联，也不是并联：5Ω 和 2Ω",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 57,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 58,
+      "extracted_preview": "基尔霍夫定律（Kirchhoff’s Laws） / KCL两种表述：            （流入为正，流出为负） / 1. 流入任一节点（或闭合边界）的支路电流的代数和为0 / 2. 对于任一节点，“流入电流总和 = 流出电流总和” / KCL是电荷 / 守恒的体现",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F1-08"
+      ]
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 59,
+      "extracted_preview": "A     对A节点使用KCL / KCL的应用： / 简化并联电流源                     A / 对A节点使用KCL",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 60,
+      "extracted_preview": "例题 / •  Determine the current I for the circuit shown in the / figure below. / I + 4 - (-3) - 2 = 0 / I = -5 A / This indicates that the / actual current for I",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 61,
+      "extracted_preview": "KVL的两种表述：       （需约定极性） / 1. 沿任一回路，所有支路电压的代数和等于0 / 2. “回路电压升高的总和 = 回路电压降低的总和”或“两节 / 点间若有多条路径，则每条路径上的电压降相等”（电压 / 与路径无关） / 如何确定电压极性？ / • 先随意指定回路电流方向 / （顺时针，或逆时针）和",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F1-09"
+      ]
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 62,
+      "extracted_preview": "View 1：从b节点开始，顺时针写KVL方程 / View 2：分别计算a、b两节点之间的电压降 / KVL的应用： / 简化串联电压源",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 63,
+      "extracted_preview": "例题 / •  Applying the KVL equation for the circuit of the figure / below. / -va + v1 + vb + v2 + v3 = 0 / V1 = IR1 v2 = IR2 v3 = IR3 / va-vb = I(R1 + R2 + R3) /",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 64,
+      "extracted_preview": "欧姆定律 + KCL + KVL / • KCL + KVL 总共可列出 b （支路数） 个独立方程 / • 基本回路对应KVL方程，l 个基本回路构成 l 个KVL方程组，且 / 该 l 个方程互相独立 / • 节点对应KCL方程，n 个节点可写出 n-1 个独立KCL方程（其中 / 一个节点电压设为参考地，不对其写",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 65,
+      "extracted_preview": "软件3（推荐）：LTspice，免费 / ，快速；仿真设置显式呈现于电 / 路（便于交流）",
+      "destination": null,
+      "classification": "software_excluded",
+      "note": "软件操作、界面或工具示例排除；其中独立的方程求解、响应及滤波理论在对应章节保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 66,
+      "extracted_preview": "注意：写KVL时，遇到电阻可约定电流流入的是﹢端（符合关联参考方向） / ，则所有的电阻电压项均为正；只是，这里的vo与约定的电阻电压项相反",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 67,
+      "extracted_preview": "0V电压源的id / 表示该电压源 / 流过的电流",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 68,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 69,
+      "extracted_preview": "小结 / • 电荷、电流 / • 电压、功率、能量 / • 关联参考方向：电流从“+”流入 / – 关联参考方向时，功率计算值为正，表示消耗能量；为负表示提供能量； / • 理想电压源 fix v，可流过任意电流；理想电流源 fix i，可提供任意电压 / • 电路分析：计算（1）流经各元件的电流；（2）各节点电压（或",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 70,
+      "extracted_preview": "小结 / • 电路符号规范 / – 受控源为菱形； / – 电源的电流从“+”流出（提供能量，按关联参考方向计算，功率为负） / – 大写字母表示恒定量；小写字母表示变化量 / • 支路、节点、回路、网孔的概念 / – 支路：电路中的每一个二端元件； / – 节点：支路的连接点； / – 回路：支路构成的闭合路径； /",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 71,
+      "extracted_preview": "小结 / • 串并联 / – 串联：电流相等 / – 并联：电压相等 / •  KCL          N / – 表述1:                            ni = 0        / n =1 / – 表述2: 对任一节点，流入电流 = 流出电流 / M•  KVL           ",
+      "destination": "ch01",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 72,
+      "extracted_preview": "作业 / • 请在学在浙大网站按时提交作业，否则助教无法批改，不能给出平时分数 / • 每周的作业在周日晚 23:59 提交截止",
+      "destination": null,
+      "classification": "assignment_administration",
+      "note": "作业分隔页或提交安排不进入正文。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 73,
+      "extracted_preview": "按关联参考方向（电流从“+”流入）， / 计算各元件消耗的功率 / 注意：电源也有可能是吸收功率的",
+      "destination": "ex-L1-P73",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L1-P73"
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 74,
+      "extracted_preview": "电导、欧姆定律",
+      "destination": "ex-L1-P74",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L1-P74"
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 75,
+      "extracted_preview": "KVL & 欧姆定律",
+      "destination": "ex-L1-P75",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L1-P75"
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 76,
+      "extracted_preview": "KCL & 欧姆定律 / * 该题请同时用LTspice仿真分析 / （作业上传解析版和仿真截图）",
+      "destination": "ex-L1-P76",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L1-P76"
+    },
+    {
+      "chapter": 1,
+      "file": "EC2026-lec1-电路基本概念.pdf",
+      "pdf_page": 77,
+      "extracted_preview": "KVL & KCL & 欧姆定律",
+      "destination": "ex-L1-P77",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L1-P77"
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 1,
+      "extracted_preview": "电子电路基础 / 第二讲：电路分析的基本方法和定 / 理~part1",
+      "destination": "ch02",
+      "classification": "cover",
+      "note": "讲次信息保留为章节标题。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 2,
+      "extracted_preview": "电流相等电阻串联、电阻分压 / 从b点开始顺时针写KVL： / 电阻电压： / 按阻值比例分压 / 等效电阻 = / 各电阻之和",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F2-01"
+      ]
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 3,
+      "extracted_preview": "电阻并联、电阻分流 / 电压相等 / 对a点写KCL / 需熟记 / 电阻电流：按比例分流 / 阻值越大，电流越小 / 等效电导 = 各电导之和",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F2-02"
+      ]
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 4,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 5,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 6,
+      "extracted_preview": "{ } 表示需要进行计算",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 7,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 8,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 9,
+      "extracted_preview": "下面电路如何计算？",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 10,
+      "extracted_preview": "△-Y变换（Delta - Wye） / 等效 / 若两个电路等效，则它们在任何情况下都应该等效，考虑3和4开路的情况： / 同理：",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F2-03"
+      ]
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 11,
+      "extracted_preview": "△-Y变换（Delta - Wye） / 等效",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 12,
+      "extracted_preview": "△-Y变换（Delta - Wye） / 相对容易记忆 / abc    123                                              123    abc / △→Y                           Y → △ / 相邻之积                   ",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 13,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 14,
+      "extracted_preview": "Y → △ / 两两相乘之和 / ———————— / 对面电阻 / △→Y / 相邻之积 / ——————— / 周长之和",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 15,
+      "extracted_preview": "应用： / 模拟万用表 / 电压表 / 电阻表电压表并联（内阻∞） / 电流表串联（内阻0） / 电流表 / Meter / 电流→扭矩→指针动作",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 16,
+      "extracted_preview": "前述基于欧姆定律、KCL、KVL，已可分析任意电阻电路，但方程的建立仍比较 / 随意，不符合 scaling law →本章：介绍两种系统地分析电路的方法 / 教材称此章为整本书最重要的章节 / 节点电压法 / 网孔电流法",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 17,
+      "extracted_preview": "3.1 Motivation (1) / If you are given the following circuit, how can we / determine (1) the voltage across each resistor, (2) / current through each resistor. (",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 18,
+      "extracted_preview": "3.1 Motivation (2) / Things we need to know in solving any resistive / circuit with current and voltage sources only: / • Kirchhoff’s Current Laws (KCL) / • Kir",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 19,
+      "extracted_preview": "3.2 节点电压法Nodal Analysis (1) / It provides a general procedure for analyzing circuits using node / voltages as the circuit variables. / 节点电压法：采用电路中的节点电压作为变量（n-1个",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 20,
+      "extracted_preview": "3.2 Nodal Analysis (2) / Steps to determine the node voltages: / 节点电压法的计算步骤：                                                      3 / 1.  Select a node as the r",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F2-04"
+      ]
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 21,
+      "extracted_preview": "3.2 Nodal Analysis (3) / Example – circuit independent current source only ①仅含独立电流源 / 请同学们根据节点电压法的步骤分析下面的电路（1分钟） / Apply KCl at / node 1 and 2                  ",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 22,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 23,
+      "extracted_preview": "3.2 Nodal Analysis (4) / Example 3.2 – current with dependant current source ②含受控电流源 / 受控电流源的处理方式与独立电流源一样",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 24,
+      "extracted_preview": "解方程的三种方法 / 消除法 / 克莱姆法则",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 25,
+      "extracted_preview": "解方程的三种方法 / 软件4（可选）：Matlab",
+      "destination": null,
+      "classification": "software_excluded",
+      "note": "软件操作、界面或工具示例排除；其中独立的方程求解、响应及滤波理论在对应章节保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 26,
+      "extracted_preview": "Python / Matlab / Matcad",
+      "destination": null,
+      "classification": "software_excluded",
+      "note": "软件操作、界面或工具示例排除；其中独立的方程求解、响应及滤波理论在对应章节保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 27,
+      "extracted_preview": "Nodal Analysis with Voltage Source / Example –circuit with independent voltage source ③含独立电压源 / case 1: 若电压源一端为“地”→直接得 / 到v1值； / case 2: 若电压源两端都不是地 →把电压 / 源当做一个",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F2-05"
+      ]
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 28,
+      "extracted_preview": "方程1 / 方程2 / 以及 v1 = 10 V",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 29,
+      "extracted_preview": "注意：10欧姆电阻没有任何作用！",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 30,
+      "extracted_preview": "④含受控电压源  受控电压源的处理方式与独立电压源一样",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 31,
+      "extracted_preview": "3.4 网孔电流法Mesh Analysis (1) / 1.  A mesh is a loop that has no other loops inside it. 网孔即 / 最小的回路 【回忆 lecture 1：网孔数=独立回路数】 / 2.  Mesh analysis provides another g",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 32,
+      "extracted_preview": "3.4 网孔电流法Mesh Analysis (2) / 网孔电流法仅适用于平面电路；节点 / 看似非平面电路电压法更普适，也能用于非平面电路 / 实则平面电路本课程不考虑非平面电路 / 平面电路           非平面电路",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 33,
+      "extracted_preview": "3.4 Mesh Analysis (3) / Steps to determine the mesh currents: / 网孔电流法的计算步骤： / 1. Assign mesh currents i1, i2, …, il to the l meshes. （l个网 / 孔电流变量, l 是网孔数，也是独立回路",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 34,
+      "extracted_preview": "3.4 Mesh Analysis (4) / Example – circuit with independent voltage sources ①仅含独立电 / 压源 / 注意：要用网 / 孔电流作为变 / 量，而非支路 / 电流 / Note: / i1 and i2 are mesh current (ima",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F2-06"
+      ]
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 35,
+      "extracted_preview": "电阻元件默认看不出正负端（初始放置时上正下负，然 / 后每按一次 Ctrl+R，器件顺时针旋转 90°），所以上 / 图中的R3、R4需按三次Ctrl+R（如果放完R3紧接着放 / R4，则不需要再按Ctrl+R，LTspice保留前序操作）",
+      "destination": null,
+      "classification": "software_excluded",
+      "note": "软件操作、界面或工具示例排除；其中独立的方程求解、响应及滤波理论在对应章节保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 36,
+      "extracted_preview": "②含受控电压源",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 37,
+      "extracted_preview": "3.5 Mesh Analysis with Current / Source (1) / ③含独立电流源 / case 1：若电流源仅在一个mesh中→直接得到 / 该mesh的电流值； / case 2：若电流源被两个mesh共享 →把电流 / 源及与其串联的元件去掉，形成一个超级网孔（ / supermesh） ",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F2-07"
+      ]
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 38,
+      "extracted_preview": "6 = 𝑖2 −𝑖1",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 39,
+      "extracted_preview": "④含受控电流源 / 5 = 𝑖2 −𝑖1    3𝐼𝑜= 𝑖2 −𝑖3     𝐼𝑜= −𝑖4",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 40,
+      "extracted_preview": "3.7 节点电压法 vs 网孔电流法 / • 两种方法都可以解决问题，都可以用 / – 知道了节点电压，可以求出支路电流；反之亦然； / • 区别 / – 独立方程数不同：节点电压法对 n-1 个节点立KCL方程；网孔电 / 流法对 l 个独立回路立KVL方程，选择方程数少的方法有利于手动 / 计算，但对计算机计算无所",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 41,
+      "extracted_preview": "变量：2个网孔电流变量：3个节点电压",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 42,
+      "extracted_preview": "软件5（可选）：Multisim / 商业软件（有学生版）、界 / 面友好 / 软件6（可选）：KiCAD + Ngspice，开源 / 、免费、功能够用，集成于PCB工作流→",
+      "destination": null,
+      "classification": "software_excluded",
+      "note": "软件操作、界面或工具示例排除；其中独立的方程求解、响应及滤波理论在对应章节保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 43,
+      "extracted_preview": "软件7（可选）：Cadence OrCAD (PSpice) → / 商业软件、专业PCB工作流、操作较复杂",
+      "destination": null,
+      "classification": "software_excluded",
+      "note": "软件操作、界面或工具示例排除；其中独立的方程求解、响应及滤波理论在对应章节保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 44,
+      "extracted_preview": "小结 / • 电阻串联：分压 / • 电阻并联：分流 / •  Wye-Delta 变换：Delta阻值较大，三电阻相等时， / △→Y",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 45,
+      "extracted_preview": "小结 / • 节点电压法：n-1个节点电压为变量，对n-1个节点应用KCL列出n-1个 / 独立方程；遇到电压源需要 supernode 处理； / • 网孔电流法：l 个网孔电流为变量，对 l 个网孔应用KVL列出 l 个独立 / 方程；遇到电流源需要 supermesh 处理；",
+      "destination": "ch02",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 46,
+      "extracted_preview": "作业",
+      "destination": null,
+      "classification": "assignment_administration",
+      "note": "作业分隔页或提交安排不进入正文。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 47,
+      "extracted_preview": "相邻之积         两两相乘之和 / △→Y： ——————— 或 Y → △：———————— / 周长之和          对面电阻",
+      "destination": "ex-L2-P47",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L2-P47"
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 48,
+      "extracted_preview": "节点电压法，②含受控电流源情况",
+      "destination": "ex-L2-P48",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L2-P48"
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 49,
+      "extracted_preview": "节点电压法，④含受控电压源情况",
+      "destination": "ex-L2-P49",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L2-P49"
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 50,
+      "extracted_preview": "网孔电流法，②含受控电压源情况 / 10𝐼𝑜",
+      "destination": "ex-L2-P50",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L2-P50"
+    },
+    {
+      "chapter": 2,
+      "file": "EC2026-lec2-电路分析的基本方法和定理-part1.pdf",
+      "pdf_page": 51,
+      "extracted_preview": "网孔电流法，③含电流源情况",
+      "destination": "ex-L2-P51",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L2-P51"
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 1,
+      "extracted_preview": "电子电路基础 / 第三讲：电路分析的基本方法和定 / 理~part2",
+      "destination": "ch03",
+      "classification": "cover",
+      "note": "讲次信息保留为章节标题。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 2,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 3,
+      "extracted_preview": "If you are given the following circuit, are there any / other alternative(s) to determine the voltage across / 2W resistor? / ①节点电压法；②网孔电流法What are they? And ho",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 4,
+      "extracted_preview": "线性性质           4.2 / It is the property of an element describing a linear relationship between / cause and effect. / 【输入和输出呈线性关系！】 / Homogeneity (scaling) prope",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 5,
+      "extracted_preview": "线性性质 / • 电阻是线性元件，因为其电压-电流关系满足①齐 / 次性；②可加性； / 线性电路：仅包含线性元件的电路；• / 功率是线性的吗？• Q: / 内部不包 / 含独立源",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 6,
+      "extracted_preview": "Linear Circuits / • A linear circuit refers to an electrical circuit in / which the circuit elements (like resistors, / capacitors, inductors, etc.) have a line",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 7,
+      "extracted_preview": "验证线性性质 / Io和vs呈线 / 性关系",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 8,
+      "extracted_preview": "内部不包        为何这里要强调内部不包含独立源？ / 含独立源 / 内部没有独立源  内部有独立源 / 满足齐次性   不满足齐次性 / 注：并不是说线性电路不能包含独立源。线性电路可以包含多个独立源；但在讨 / 论某一个输入与输出之间的严格比例关系时，其他独立源必须置零，或者全部显 / 式地视为输入。",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 9,
+      "extracted_preview": "线性性质的应用 / Is 是“因”，Io是“果”， / “因”如果按比例缩放， / “果”也会按比例缩放， / 反之亦然。 / 我们先假设Io为1A，反推 / ，然后根据得到出相应的Is / 的Is与实际Is （15A）的比 / 例关系，相应地缩放之前 / 假设的Io （1A），得到实 / 际的Io",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 10,
+      "extracted_preview": "叠加定理  4.3 Superposition Theorem / It states that the voltage across (or current through) an / element in a linear circuit is the algebraic sum of the / voltage ",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 11,
+      "extracted_preview": "4.3 Superposition Theorem / Steps to apply superposition principle / 1. Turn off all independent sources except one source. Find / the output (voltage or curren",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 12,
+      "extracted_preview": "4.3 Superposition Theorem / We consider the effects of 8A and 20V one by / one, then add the two effects together for final vo. / Consider 8A only: / Consider 2",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F3-01"
+      ]
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 13,
+      "extracted_preview": "节点电压法：     1                                  �1      20 −�1                        = 8 +                              5        5                               ",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 14,
+      "extracted_preview": "4.3 Superposition Theorem / ①不含受控源Example 4.3 / Use the superposition theorem to find v in / the circuit shown below. / 只考虑电压源：                              2 V",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 15,
+      "extracted_preview": "②含受控源",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 16,
+      "extracted_preview": "③含多个独立源（3个及以上） / 注：根据线性叠加原理，可以 / ① 每次考虑一个独立源，计算三次； / ② 一次考虑两个独立源，另一次考虑剩下的一个独立源，计算两次",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 17,
+      "extracted_preview": "端口（port）的概念 / • 电路或网络的一个端口（a port），是指它向外引出的一 / 对端子（a pair of terminals / two wires），这对端子可 / 以与外部电源或其他电路相联结。 / 对一个端口来说，从它的一个端子流入的电流一定等于从• / 另一个端子流出的电流(广义节点的KCL)。",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 18,
+      "extracted_preview": "电路等效 / • An equivalent circuit is one whose v-i characteristics are / 特性保持不   identical with the original circuit. 【等效的原则：v-i / 变，即不能对其余电路产生影响】 / 【概念】当电路中的某一部分用",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 19,
+      "extracted_preview": "4.4 Source Transformation / 电源变换 / 【电压源串联电阻 电流源并联电阻】 / +               + / ①                        不适用于无损电源（R=0 for / 电压源；R=∞ for电流源）； / ②                   ",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F3-02"
+      ]
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 20,
+      "extracted_preview": "①不含受控源",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 21,
+      "extracted_preview": "a        b / ②含受控源 / a、b构成一端口 / （受控源略微往上移） / 变换过程中 vx 始终保持",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 22,
+      "extracted_preview": "本课程重要概念    输入电阻 等效电阻                            / / 从 / 简 / 到 / 繁 / 加电压激励，求电流响应  加电流激励，求电压响应 / 通用规则： / 独立源，①若仅含电阻，则化简；②若还含受控源，则施加激励求响应Turn off",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 23,
+      "extracted_preview": "本课程重要定理      23 / 戴维南定理    4.5 Thevenin’s Theorem / Load一般是 / 固定不变的        可变化的 / It states that a linear two-terminal / (一端口) circuit (Fig. a) can be / replace",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F3-03"
+      ]
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 24,
+      "extracted_preview": "注：一般把除负载之外的电路用戴维南替代      24 / ①不含受控源 / ①  对【32V和4ohm】 用“source transformation”化简电 / 路，得到8A和4ohm；4ohm再和12ohm并联，得到3ohm / ②  8A和2A合并得到10A，再和3ohm并联  30V和3ohm / 串联；",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 25,
+      "extracted_preview": "②含受控电压源 / 大多数情况下，可以直接写出端口出电 / 压电流的关系，从而计算出等效电阻 / 往左流进电路",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 26,
+      "extracted_preview": "③含受控电流源 / 开路电压                   1. / 对a电写KCL，发现流过4ohm电阻的电流为 / 向上的ix；同时根据并联电阻分流，其应为 / 2ohm电阻电流的一半，故ix=0，从而开路 / 电压=0 / 没有独立源，意味着没有激励（输入），也就没有输出，所以开路电压为0 / 等效电阻  ",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 27,
+      "extracted_preview": "诺顿定理  4.6 Norton’s Theorem / （一端口）It states that a linear two-terminal / circuit can be replaced by an equivalent circuit / of a current source IN in parallel w",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F3-04"
+      ]
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 28,
+      "extracted_preview": "The Thevenin’s and Norton equivalent circuits are / 【戴维南定理和诺related by a source transformation. / 顿定理的关系~电源转换】 / ① source transformation 也被称为 / Thevenin-Norton ",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 29,
+      "extracted_preview": "①不含受控源 / 计算短路电流时，可用叠加定理 / 或电源变换",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 30,
+      "extracted_preview": "②含受控源 / 计算短路电流时，ix可先计算得出",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 31,
+      "extracted_preview": "最大功率传输 4.7 Maximum Power Transfer / If the entire circuit (except the load) is / replaced by its Thevenin equivalent, the / power delivered to the load is: / 2 ",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F3-05"
+      ]
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 32,
+      "extracted_preview": "最大功率传输： / 先计算戴维南等效电路",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 33,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": null,
+      "classification": "software_excluded",
+      "note": "软件操作、界面或工具示例排除；其中独立的方程求解、响应及滤波理论在对应章节保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 34,
+      "extracted_preview": "传输效率：负载获得的功率 电源提供的功率                                            / / 最大功率传输的几点说明： / ①最大功率传输定理用于一端口电路给定，负载电阻可调的情况。 / ②一端口等效电阻消耗的功率一般并不等于端口内部消耗的功率， / 因此当负载获取最大功率时，",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 35,
+      "extracted_preview": "应用——实际电源 / • 电压源希望内阻Rs越小越好 / • 电流源希望内阻Rp越大越好 / • Q：如何测量vs、Rs？调节RL使vL= 0.5 voc",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 36,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 37,
+      "extracted_preview": "应用——电阻测量（惠斯通电桥） / •  Rx 是待测电阻；R1、R3已知；R2可调 / • 调节R2，使得电压表VG=0时，电桥平衡 / 适合于1ohm至1Mohm电阻的精确测量",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F3-06"
+      ]
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 38,
+      "extracted_preview": "当电桥不平衡时，用戴维南 / 定理等效a-b端口的网络",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F3-07"
+      ]
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 39,
+      "extracted_preview": "应用——基于惠斯通电桥的温度传感器 / 基于非平衡的惠斯通电桥                                • / • RT是温度敏感的电阻，一般随温度 / 增加，阻值减小（NTC电阻， / negative temperature coefficient） / 通过测量               ",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 40,
+      "extracted_preview": "Ag：正温度 / 系数材料 / PdO：负温度 / 系数材料",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 41,
+      "extracted_preview": "小结 / 线性电路：仅由线性元件构成的电路，比如仅由电源和电阻构成的电• / 路。1）齐次性：输入放大k倍，则输出也放大k倍；2）可加性：输入 / 相加，则输出也相加；3）线性电路的电压、电流具有线性性质，但 / 功率不具有线性性质。 / 如果从“因”推出“果”比较复杂，但从“果”反• 线性性质的应用1: / 推出“因",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 42,
+      "extracted_preview": "小结 / 电源变换• / •  端口port：一对端子terminals / • 一端口网络的输入电阻/等效电阻：turn off独立源，若仅含电阻，则简化； / 若还含独立源，则施加激励求响应； / • 戴维南定理：一端口网络可用开路电压（VTh）串联其等效电阻（RTh）替代 / • 诺顿定理：一端口网络可用短路电流",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 43,
+      "extracted_preview": "小结 / 最大功率传输：【对于纯电阻电路】当负载等于电压源内阻时，功率• / 传输最大； / 实际电源：电压源要求内阻小；电流源要求内阻大；• / 惠斯通电桥：精确测量电阻、温度传感器的基本解决方案•",
+      "destination": "ch03",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 44,
+      "extracted_preview": "作业",
+      "destination": null,
+      "classification": "assignment_administration",
+      "note": "作业分隔页或提交安排不进入正文。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 45,
+      "extracted_preview": "叠加定理",
+      "destination": "ex-L3-P45",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L3-P45"
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 46,
+      "extracted_preview": "电源转换，简化电路再计算",
+      "destination": "ex-L3-P46",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L3-P46"
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 47,
+      "extracted_preview": "戴维南定理",
+      "destination": "ex-L3-P47",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L3-P47"
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 48,
+      "extracted_preview": "诺顿定理，含受控源",
+      "destination": "ex-L3-P48",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L3-P48"
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 49,
+      "extracted_preview": "最大功率传输，先计算戴维南等效电路",
+      "destination": "ex-L3-P49",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L3-P49"
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 50,
+      "extracted_preview": "非理想电源",
+      "destination": "ex-L3-P50",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 3,
+      "file": "EC2026-lec3-电路分析的基本方法和定理-part2.pdf",
+      "pdf_page": 51,
+      "extracted_preview": "Wheatstone bridge",
+      "destination": "ex-L3-P51",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L3-P51"
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 1,
+      "extracted_preview": "电子电路基础 / 第四讲：运算放大器",
+      "destination": "ch04",
+      "classification": "cover",
+      "note": "讲次信息保留为章节标题。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 2,
+      "extracted_preview": "电路分析：主要是获得元件两端的电压和流经的电流。基于已讲述的基本方法和定理， / 结合元件的电压电流约束关系，即可求解。我们将逐步介绍除电阻之外的电子元件。",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 3,
+      "extracted_preview": "放大器基本概念 / 放大器：对信号进行放大的电路，信号可以是电压，也可以是电流，最常见的是输入 / 电压、输出也是电压的放大器，称为“电压-电压放大器”，也简称为电压放大器。 / model of amplifier input terminals    mode",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-01"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 4,
+      "extracted_preview": "放大器符号：          放大器主要关注的三个基本指标： / 增益（信号放大倍数）                                          1. / 输入电阻                                          2. / Why?              ",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 5,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 6,
+      "extracted_preview": "主要关注                                                                         2, 3, 6 / LM741 general purpose op amp / 什么是运算放 / 大器（运放） / 输入信号加在inverting（反相端），输出信",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 7,
+      "extracted_preview": "运放的电压电流约束关系 / 输出电阻 输出端看到 / 的戴维南等 / 效电阻 / 输入电阻 / 输入端看到 / 的戴维南等 / 效电阻 / 电压控制电压源 / ①              Sense the difference：“同相端－反相端”，故下标为 d / ② 开路输出电压 / 电压电流约束关系（3个ter",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-02"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 8,
+      "extracted_preview": "输出电阻 输出端看到     8 / 的戴维南等 / 效电阻 / 输入电阻 / 输入端看到 / 的戴维南等 / 效电阻 / 输出 vo 和输入                  电压控制电压源 / vd 呈线性关系 / 负饱和区 线性区 正饱和区 / 输出电压下限      输出电压上限 / 是负供电电压      是",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 9,
+      "extracted_preview": "闭环增益的概念：因为有了反 / 馈电阻20kohm，从输出O连到 / 运放的三个典型参数：开环              了输入1，形成了一个闭环 / 增益、输入电阻、输出电阻 / 虚线框内为运 / 放等效电路           使用KCL、KVL、元件的电压电 / 流约束关系，可分析任意电路 / ① 对 node ",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 10,
+      "extracted_preview": "理想运放 / 满足这三个条件， / 视为理想运放 / 理想运放的两个重要属性： / 实际运放          （当理想运放构成负反馈并在线性区工作时） / 1. The currents into both input terminals are zero / 【虚断】 / 理想运放 / 因为输入电阻∞ / 2. T",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 11,
+      "extracted_preview": "① 基于虚断（i1 = 0）: / ② 基于虚短（v1 = v2）:",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 12,
+      "extracted_preview": "典型运放电路              1 / 反相放大器 / ① 反馈电阻 / ② 因为要构成负反馈，所以反馈 / ③ 信号接入到反相端，                       电阻接到“－”端（反相端） / 构成反相放大器 / 最常见最基本的运放电路 / Observations： / 闭环增益   仅依赖于",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-03"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 13,
+      "extracted_preview": "思考 / 理想的电压放大器，要求输入阻• / 抗尽可能大  输入阻抗（R1）要 / 尽可能大； / 的值• 大的增益（-R2/R1） R2 / 会大得不切实际  只能牺牲R1， / 取较小的R1值 / 因此，常规的•                 inverting amplifier / 存在输入阻抗较低的缺",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 14,
+      "extracted_preview": "Another Inverting Op-Amp / •  Problem Statement: Consider / the circuit below... / •  Q(a): Derive an expression for the / closed-loop gain vO /vI of this / cir",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-04"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 15,
+      "extracted_preview": "虚短                  ① / 虚断                  ④ / 设计要求：输入电阻              1MΩ R1=1MΩ  ⑦ / 增益100 R2=1MΩ, R4=1MΩ, R3用来 / 实现增益100，取10.2kΩ                  ⑧ / 对比：传统",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 16,
+      "extracted_preview": "PART B: Use this circuit to design                                                16                                                                            ",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 17,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 18,
+      "extracted_preview": "Q3（拓展思考）: 输出8mV的偏差哪里来的？提示 / ：运放模型里输入端到地电阻设为10MΩ / Q4（拓展思考）：如果输入信号不是围绕2V，而 / 是3V呢？ / Q1：放大电路放大的是什么？        A：放大的是与基准电压 v2 （2V）的差 / Q2：How about",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 19,
+      "extracted_preview": "典型运放电路               2 / 同相放大器 / ① 反馈电阻 / ② 因为要构成负反馈，所以反馈 / 电阻接到“－”端（反相端） / ③ 信号接入到同相端 / ，构成同相放大器 / Observations： / 闭环增益     仅依赖于外部电阻元件，与                       ",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-05"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 20,
+      "extracted_preview": "Unity Gain Buffer （Voltage follower）简 / 洁、优雅、广泛使用的电路结构 / Buffer的意思是提供极大的输入电阻、极小 / 的输出电阻、电压不变 / 目的：不放大电压，而是隔离前后级，减 / 小负载效应，并提高驱动能力（思考多级 / 放大器级联时输入输出电阻对整体增益的R1取∞，",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-06"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 21,
+      "extracted_preview": "a / ①  a点电压由v1, v2计算获得，可以用叠加定理，也可以用电阻分压",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 22,
+      "extracted_preview": "典型运放电路           3 / 加法器",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-07"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 23,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 24,
+      "extracted_preview": "典型运放电路              4 / 减法器（差分放大器） / 实现思路        1 / 从反相结构出发，两 / ②次反相即为同相 /  有加有减",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 25,
+      "extracted_preview": "① 反相结构已经实现了“－” / 实现思路        2 / 结合反相结构 / 同相结构& / ③                                但对vi的增益不一样， / 同相的增益大于反相             ② 同相结构已经实现了“＋” / ④ 如果对同相结构的输 / 入预先进行信号衰减呢",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-08"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 26,
+      "extracted_preview": "为何非加权的减法（差分放大）很重要？ / 抗干扰• / – 现实中干扰信号普遍存在且难以消除 / – 此时，若引入一路物理上邻近（处于同样的干扰环境）的参考信号，那么 / – 对两路信号做差，则可消除干扰的影响 / – 对两路信号的差做放大，就是差分放大器",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 27,
+      "extracted_preview": "差分信号 共模信号                 & / 与任意两个信号v1，v2，都可以分解成共模信号（vcmi）  差分信号（Vdi）的叠加 / common-mode input             差分：vdi = v2 - v1                               ",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-09"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 28,
+      "extracted_preview": "从差分、共模的角度重新思考运放• / 运放有一对输入（同相端、反相端），可以拆解为差分和共模   – / 运放的电压电流约束关系         可以写成更普适的   – / 差分增益 差分 共模增益  共模 / 理想情况下，运放只对差分信号放大，共模增益  为   –                         ",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 29,
+      "extracted_preview": "差分放大器的 / 共模输入情况     ② / ②           ⑤ / 平衡时，Acm=0；若不平衡，Acm≠0",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 30,
+      "extracted_preview": "存在的缺点： / 思考                      ② / 差分放大器需要提供较大差分增益 / 输入阻抗                          （R2/R1）  R1要小  / 变小！ / 如何解决这一缺点？ / 差分输入阻抗Rid / 考虑平衡情况",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 31,
+      "extracted_preview": "31                   用于精密测量的差分放大电路，主要 / 典型运放电路      功能是在放大两个输入端电压差的同            5 / 时，抑制两端共同存在的共模信号和 / 仪表放大器      干扰，广泛用于精密仪器仪表。 / • Q: What is one problem asso",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 32,
+      "extracted_preview": "2.4.2. The                              32 / FigureInstrumentation2.20: A popular circuit for an instrumentation amplifier. / Amplifier / stage #1            st",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-10"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 33,
+      "extracted_preview": "transfer function for / instrumentationamplifier of figu re 2.20. / R    R             4         2           additional voltage gain     v          ",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 34,
+      "extracted_preview": "• Advantages优点 of instrumentation amp / 输入阻抗很大   – very high input resistance / 差分增益变大   – high differential gain / – symmetric gain (assuming that A1 and A2 ar",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 35,
+      "extracted_preview": "What is problem / with ACm = A? / vIn1                               vIn1  A = 10 / A = 25 / A = 10 x 25 / vIn2                               vIn2 / differentia",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 36,
+      "extracted_preview": "differential gain >> common-mode gain / vIn1 = 10.02V / vOut= 250 x (10.03-10.02)V / A = 10 x 25 / vOut = 2.5V no problem!!! / vIn2 = 10.03V",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 37,
+      "extracted_preview": "供电电源                                   ±15 V，限制了电路      differential gain = / common-mode gain  中最大允许的电压范围 / saturation                      vOut1= 10 x 10.02 =",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 38,
+      "extracted_preview": "• advantages of instru. amp / – very high input resistance / – high differential gain / – symmetric gain (assuming that A1 and A2 are matched) / • disadvantages",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 39,
+      "extracted_preview": "• Q: How can one fix this (alleviate these / disadvantages)? / – A: Disconnect the two resistors (R1) connected / to node X from ground, making the / configurat",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 40,
+      "extracted_preview": "40Figure 2.20: A popular circuit for an instrumentation amplifier. (b) / The circuit in (a) with the connection between node X and ground / removed and the two ",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-11"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 41,
+      "extracted_preview": "• Q: How can one analyze this circuit?",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 42,
+      "extracted_preview": "对比原先电压 / ①                                      ∙�2              ④    ��1 −���⑤                                 2�1 / ②          ③ / ①          ④ / ⑥           ",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 43,
+      "extracted_preview": "② 一对输入信号为在 / 10V基准上叠加的幅度 / 为10mV的正弦信号， / 相位相反  共模： / 10V，差分：幅度为 / 20mV的正弦信号 / ③ 第一级增益 x10， / 第二级增益 x25  差 / 分信号总计放大250倍 / ① .tran 仿真会 / 先运行.op 仿真",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 44,
+      "extracted_preview": "② 第二级的输入 / 差分为 0， 所以 / 输出也为 0 / ① 第一级有共 / 模增益，导致 / 输出饱和到15V",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 45,
+      "extracted_preview": "典型的商业化仪表放大器芯片• / 芯片内部      个相同阻值的电阻   –         3 个运放，6 / 芯片外部 个调节电阻，用了调节增益   –         1",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 46,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 47,
+      "extracted_preview": "典型运放电路             6 / 数字模拟转换器（DAC）",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F4-12"
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 48,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 49,
+      "extracted_preview": "小结 / • 运算放大器（op amp） / ：高开环增益、高输入 / 电阻、低输出电阻 / – 理想运放：开环增益∞ / 、输入电阻无穷大、输 / 出电阻0 / 虚断、虚短    –          + KCL、 / 可分析任意运     KVL  / 放电路 / 差分放大器• / 差分 共模 的概念    – ",
+      "destination": "ch04",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 50,
+      "extracted_preview": "作业",
+      "destination": null,
+      "classification": "assignment_administration",
+      "note": "作业分隔页或提交安排不进入正文。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 51,
+      "extracted_preview": "见前面               Example 5.1        ppt / 运放等效电路           + KCL、KVL",
+      "destination": "ex-L4-P51",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L4-P51"
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 52,
+      "extracted_preview": "反相接法",
+      "destination": "ex-L4-P52",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L4-P52"
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 53,
+      "extracted_preview": "同相接法",
+      "destination": "ex-L4-P53",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L4-P53"
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 54,
+      "extracted_preview": "加法器",
+      "destination": "ex-L4-P54",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L4-P54"
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 55,
+      "extracted_preview": "仪表放大器",
+      "destination": "ex-L4-P55",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L4-P55"
+    },
+    {
+      "chapter": 4,
+      "file": "EC2026-lec4-运算放大器.pdf",
+      "pdf_page": 56,
+      "extracted_preview": "DAC",
+      "destination": "ex-L4-P56",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L4-P56"
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 1,
+      "extracted_preview": "电子电路基础 / 第五讲：电容电感基本概念",
+      "destination": "ch05",
+      "classification": "cover",
+      "note": "讲次信息保留为章节标题。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 2,
+      "extracted_preview": "本章主要介绍“电容”、“电感”两种电子元件的电压电流约束关系； / 同样，基于电压电流约束关系和 KCL、KVL 就可以分析包含电容电感的电路",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 3,
+      "extracted_preview": "本课程将逐步引入新元件 / • 电阻 / – 消耗能量 / • 电容、电感 / – 储存能量（不消耗能量），且储存的能量后续可以取 / 用； / – 所以电容、电感也称为储能元件； / • 对于新引入的元件 / – 首先要掌握其“电压电流约束关系”",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 4,
+      "extracted_preview": "6.1 Capacitors 电容 / • A capacitor is a passive (无源) element designed / to store energy in its electric field. 储存电场能量 / 电容（器）的物理构成",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-01"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 5,
+      "extracted_preview": "Through-hole / 直插式电容 / SMD / (surface mount device) / 贴片电容",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-02"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 6,
+      "extracted_preview": "6.1 Capacitors (2) / 电容（量）的定义：导板上的电荷和导板之间电势差的比值 / 注意 • Capacitance C is the ratio of the charge q on one plate of / 这两     a capacitor to the voltage difference",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 7,
+      "extracted_preview": "6.1 Capacitors (3) / •   If i is flowing into the +v terminal of C / – 电流从+端流入→充电 Charging / – 电流从+端流出→放电 Discharging / • 电容也是基本的电路元件，我们需要熟悉流过它的电流和它两端电压之 / 间的关系",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-03"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 8,
+      "extracted_preview": "6.1 Capacitors (4) / • The energy, w, stored in the / capacitor is (电容存储的电能)： / 理想电容不会消耗能量，但实际电容有 / 泄漏电阻的存在，导致逐渐消耗能量 / ~ 100 MΩ",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 9,
+      "extracted_preview": "q = C v / 1      2w =  C v",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 10,
+      "extracted_preview": "t   1 / v =        i d t + v (t )                         0      t 0  C",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 11,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 12,
+      "extracted_preview": "电容：直流开路",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 13,
+      "extracted_preview": "6.2 Series and Parallel / Capacitors (1) / • The equivalent capacitance of N parallel-connected / capacitors is the sum of the individual capacitances. / 电容并联： ",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-04"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 14,
+      "extracted_preview": "6.2 Series and Parallel / 若N=2： / Capacitors (2) / • The equivalent capacitance of N series-connected / capacitors is the reciprocal of the sum of the reciproca",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-05"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 15,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 16,
+      "extracted_preview": "补充隐含条件： / 初始未充电（所有电容两端电压为零），然后接入 30 V 电源 / +q ﹣q+q ﹣q / +q / ﹣q / 串联电容的q相等 / q=Cv, v之比等于1/C之比",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 17,
+      "extracted_preview": "错误 / 正确 / 直流稳态分析时，电容可以视为开路。若 / 电容两端节点在直流等效电路中具有确定 / 电位（如p12例题），则可用 .op 求其稳 / 态电压；若存在悬浮节点，则必须考虑初 / 始条件和充放电过程，采用瞬态分析。 / 几点说明： / 1. 不能直接采用 .op 仿真。.op 求解的是直流工作点，在直流",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 18,
+      "extracted_preview": "6.3 Inductors 电感 / •  An inductor is a passive element designed to store energy in its / magnetic field. 储存磁能 / 注意这两个 / 单词的差别                                   ",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-06"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 19,
+      "extracted_preview": "SMD电感",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-07"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 20,
+      "extracted_preview": "6.3 Inductors (2) / • 电感也是基本的电路元件，我们需要熟悉流过它的电流和 / 它两端电压之间的关系，就如熟悉电阻一样。 电感的“ / 电压-电流”关系： / • The unit of inductors is Henry (H), mH (10–3) / and H (10–6).",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 21,
+      "extracted_preview": "6.3 Inductors (3) / • The power stored by an inductor: / 理想电感不消耗能量， / 但实际电感有损耗电阻 / 电感和电容一样，也具有线性、记忆性 / • 电感的两个基本属性： / ①直流短路(di/dt = 0) ；②电流不能突变 / Why？   √     ×",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 22,
+      "extracted_preview": "d i / v = L / d t / 1     2w =  L i",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 23,
+      "extracted_preview": "t   1 / i =     v ( t ) d t + i ( t )                           0      t 0   L",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 24,
+      "extracted_preview": "电容直流开路；电感直流短路",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 25,
+      "extracted_preview": "6.4 Series and Parallel / Inductors (1) / • The equivalent inductance of series-connected / inductors is the sum of the individual inductances. / 电感串联： / 电流相等，电",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-08"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 26,
+      "extracted_preview": "6.4 Series and Parallel / Inductors (2) / • The equivalent capacitance of parallel inductors is the / reciprocal of the sum of the reciprocals of the individual",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-09"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 27,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 28,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 29,
+      "extracted_preview": "① KCL / ② 电压电流约束关系 （电流 to 电压） / ④ 电压电流约束关系（电压 to 电流） / 电感：根据电压求电流，需要先求出各 / 电感的初始电流值 / ③ 分压，电感串联，电流相 / 同，微分操作，故可用分压 / i2(t) 也可以用i – i1(t) 获得 / ⑤ 电感并联 不可用简单分流， / ",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 30,
+      "extracted_preview": "电容电感的应用 / • 因为储能特性，所以 / – 电容可用作短时的电压源 / – 电感可用作短时的电流源 / • 因为电容电压和电感电流不能突变 / – 可抑制或减缓电路中突然施加的外部电压、电流的波动 / • 结合运放，可实现积分、微分等数学运算",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 31,
+      "extracted_preview": "积分器 / 虚短      虚断 / ➢In practice, the op amp integrator requires a / feedback resistor to reduce dc gain and prevent / saturation. / ➢Care must be taken that the",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-10"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 32,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 33,
+      "extracted_preview": "微分器 / 虚短      虚断 / ➢Differentiator circuits are electronically unstable / because any electrical noise within the circuit is / exaggerated by the differentiator",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F5-11"
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 34,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 35,
+      "extracted_preview": "小结 / • 电容：直流开路，电压不能突变 / • 电感：直流短路，电流不能突变 / • 电容并联：C相加；电容串联：相当于电阻并联； / • 电感的串并联相当于电阻的串并联 / • 电容，根据电流求电压，需要先求电容两端电压的初始值； / • 电感，根据电压求电流，需要先求流过电感的电流初始值；",
+      "destination": "ch05",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 36,
+      "extracted_preview": "作业",
+      "destination": null,
+      "classification": "assignment_administration",
+      "note": "作业分隔页或提交安排不进入正文。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 37,
+      "extracted_preview": "电容的电压电流约束关系",
+      "destination": "ex-L5-P37",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 38,
+      "extracted_preview": "电容的串并联",
+      "destination": "ex-L5-P38",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L5-P38"
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 39,
+      "extracted_preview": "电感的电压电流约束关系及储能",
+      "destination": "ex-L5-P39",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 40,
+      "extracted_preview": "电感的串并联",
+      "destination": "ex-L5-P40",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L5-P40"
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 41,
+      "extracted_preview": "电容电感的直流电路分析",
+      "destination": "ex-L5-P41",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L5-P41"
+    },
+    {
+      "chapter": 5,
+      "file": "EC2026-lec5-电容电感基本概念.pdf",
+      "pdf_page": 42,
+      "extracted_preview": "电容电感的记忆性（初始条件）",
+      "destination": "ex-L5-P42",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L5-P42"
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 1,
+      "extracted_preview": "电子电路基础 / 第六讲~过渡过程的经典解法 / ~part1",
+      "destination": "ch06",
+      "classification": "cover",
+      "note": "讲次信息保留为章节标题。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 2,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 3,
+      "extracted_preview": "Introduction / • 到目前为止，我们已经学习了3个无源电子元件、1个有源 / 电子元件 / – 无源：电阻R、电容C、电感L / – 有源：运放 / – 本章分析R+C 和 R+L 电路 / • 分析方法还是“元件的电压电流约束关系”+ KCL + KVL / – 对于纯电阻电路： 解代数方程 / – 对",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 4,
+      "extracted_preview": "动态电路的概念 / • 电感、电容的“电压电流约束关系”与时间 t 有关，所以电感、电容又称 / 为动态元件，含电感、电容的电路也被称为动态电路 / • 动态电路的一个特征是：当电路结构发生变化时（一般通过“开关”的切 / 换来实现），可能使电路从原来的工作状态，转变到一个新的工作状态， / 这种转变往往需要一定的时间",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 5,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 6,
+      "extracted_preview": "① 写出通解（含待定系数） / 常微分方程  ② 结合边界条件求出待定系数 / • 齐次线性微分方程               • 非齐次线性微分方程 / 1）求特征方程           1）求出对应齐次方程的通解 / 获得n个根           2）求出非齐次方程的一个特解 / （电路分析中一般选取 t =",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 7,
+      "extracted_preview": "7.1 一阶电路的概念 / • A first-order circuit is characterized by a first-order / differential equation. / – 数学上：一阶电路的方程为一阶微分方程 / – 直观上：化简后的电路，仅含一个储能元件（L，或C） / By KCL /",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 8,
+      "extracted_preview": "The source-free RC circuit / • A source-free RC circuit occurs when its dc source is / suddenly disconnected. The energy already stored in / the capacitor is re",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F6-01"
+      ]
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 9,
+      "extracted_preview": "• 求解此一阶微分方程，即可得到C 两端电压v(t)，问题解 / 决！                       抓住关键参数（电容电压、电 / 感电流），列出微分方程，剩 / 下的就是数学问题了 / 通用方法： / 特征方程 / 特征根： / 通解： / 边界条件： / • 结论：source-free RC 电路",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 10,
+      "extracted_preview": "电压响应仅与初始储能V0、电路的物理特性RC 有关，是描述电路如 / 何自然地释放自身储能的特性，故称为电路的 natural response (自 / 然响应，此处的“natural”指“由系统自身特性决定”）；又因为 / 0+时刻没有输入（没有外部激励），故也称为零输入响应 / “系统自身特性”可由RC表征 / ",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F6-02"
+      ]
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 11,
+      "extracted_preview": "如何从实测曲线推出时间常数？",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 12,
+      "extracted_preview": "7.1 The Source-Free / RC Circuit (2) / 定义时间常数： / Time constant     = R C / Decays more slowly / Decays faster / • The time constant of a circuit is the time r",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 13,
+      "extracted_preview": "• 电路的其他量可以从v(t)导出 / 电容上的储能指 / 数衰减，最终全 / 部消耗在电阻上",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 14,
+      "extracted_preview": "Soure-free RC 电路求解步骤 / • 求解source-free RC 电路的方法： / – 第一步：求出0+时刻电容两端的初始电压值 V0；（根据0-时刻电 / 路求0-时刻电容电压，再利用不能突变的特性） / – 第二步：求出 时间常数RC； / • R 为 C 两端的等效电阻（即戴维南电阻）； / –",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 15,
+      "extracted_preview": "注意：所有的量都具有相 / 同的时间常数",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 16,
+      "extracted_preview": "①求电容两端 / 的初始电压 / 电容两端电压不能突变 / ②求时间常数",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 17,
+      "extracted_preview": "The source-free RL circuit / •  Consider the series connection of a resistor & a inductor. / • Our goal is to determine the circuit response (the current / i(t)",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F6-03"
+      ]
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 18,
+      "extracted_preview": "• 求解此一阶微分方程，即可得到流经 L 的电流 i(t)，问题 / 解决！                  抓住关键参数（电容电压、电 / 感电流），列出微分方程，剩 / 下的就是数学问题了 / 通用方法： / 特征方程 / 特征根： / 写成与RC对应的LG形式 / 通解： / 边界条件： / • 结论：sour",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 19,
+      "extracted_preview": "电流响应仅与初始储能 I0、电路的物理特性 L/R 有关，是 / 电路的 natural response (自然响应) / 定义时间常数： / *时间常数的另一物理意义： / i(t)在 t=0 时刻的切线与 t / 轴的交点",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 20,
+      "extracted_preview": "• 电路的其他量可以从 i(t) 导出 / 电感上的储能指数 / 衰减，最终也全部 / 消耗在电阻上",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 21,
+      "extracted_preview": "Soure-free RL 电路求解步骤 / • 求解source-free RL 电路的方法： / – 第一步：求出0+时刻流经电感的初始电流值 I0； （根据0-时刻电 / 路求电感电流，再利用不能突变的特性） / – 第二步：求出时间常数 L/R （LG）； / • R 为 L 两端的等效电阻（即戴维南电阻）； ",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 22,
+      "extracted_preview": "7.2 The Source-Free / RL Circuit / Comparison between a RL and RC circuit / A RL source-free circuit          A RC source-free circuit / − t /             L   ",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 23,
+      "extracted_preview": "注意：独立源为外加激励， / 而受控源并不是，所以，该 / 问题还是 source free 问题 / ①求电感两端的等效电阻 / ②写出时间常数 L/R",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 24,
+      "extracted_preview": "①求初始电流值 / ②求时间常数",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 25,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 26,
+      "extracted_preview": "7.3 Singularity Functions 奇异函数 / 函数本身不连续，或者其导数不连续 / • The unit step function u(t) is 0 for negative values of t / and 1 for positive values of t. (undefined at ",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 27,
+      "extracted_preview": "7.3 Unit-Step Function / Represent an abrupt change for: / 1.  voltage source. / 2.  for current source: / 可以利用阶跃函数更简洁地表达电路的开关动作",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F6-04"
+      ]
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 28,
+      "extracted_preview": "Unit impulse /delta function / 单位冲激函数 / （delta函数） / • 单位冲激函数是单位阶跃函数的导数 / • 单位冲激函数在物理上是不能实现的，但在数学上非常有用； / • 单位冲激函数可看成面积为1的时间非常短的脉冲函数；",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 29,
+      "extracted_preview": "• 冲激函数的面积也可以不是1 / ，如右图所示，数字表示面积 / 值，也称为冲激函数的强度 / (strength) / • 冲激函数对其他函数的作用： / • 冲激函数有把某一函数在某一 / 若t0=0： / 时刻的值“筛”出来的本领， / 该性质称为“筛分”性质，也 / 称取样性质。",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 30,
+      "extracted_preview": "Unit ramp function / • 单位斜坡函数是单位阶跃   单位斜坡函数 / 函数的积分 / 单位斜坡函数 → 单位阶跃函数 → 单位冲激函数• 三个奇异函数的关系： / 或",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 31,
+      "extracted_preview": "窗函数 / 窗函数的构成",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F6-05"
+      ]
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 32,
+      "extracted_preview": "锯齿函数",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 33,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 34,
+      "extracted_preview": "Step response of an RC Circuit / • RC 电路的阶跃响应：若一独立直流源 (电压源或电流源) / 突然加到 RC 电路中，则该直流源可以用一个阶跃函数 / 表示，因此，我们把该响应称为阶跃响应 (step / response) / • 阶跃响应，是电路对突然施加的独立直流电流源或电压",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 35,
+      "extracted_preview": "通用方法：       35 / 特征方程 / 特征根： / • 我们的目标：求得 C 两端的电压值 v(t)                         齐次通解： / – 假设 C 两端的初始电压值为 V0       特解，   ： / 通解： / – 电源施加后，应用 KCL： / 边界条件：       ",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 36,
+      "extracted_preview": "• 我们的目标：求得 C 两端的电压值 v(t)",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 37,
+      "extracted_preview": "电路的全响应(观察1） / • 若电容在初始状态是没有储能的，则 V0 = 0，此时的响应 / 称为零状态响应 / V0表示初始储能，表示状态 / Vs是加入的独立源，表示输入 / • 全响应 = 零输入响应 + 零状态响应 / 若 t →无穷大",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 38,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F6-06"
+      ]
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 39,
+      "extracted_preview": "电路的全响应（观察2） / • 全响应 = 瞬态响应（含变量 t ）+ 稳态响应（不含变量 t） / 瞬态响应自然衰减 / 系统级考虑：状态1（V0 ）到状态2（Vs ）之间的状态转移，其差值呈指数衰减 / 该视角可拓展到多状态间转移的问题",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 40,
+      "extracted_preview": "稳态解      瞬态解 / 稳态解 / 初态与稳态的差值 / 呈指数衰减 / 瞬态解",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 41,
+      "extracted_preview": "RC 阶跃响应求解步骤 / ①先写最终态（稳态）  ②再写初始态与最终态的差值 / ③最后添加自然衰减项 / 重要：该页是一阶 / 电路的普适解法 / 1. 三要素法：① C 的初始态电压值；② C 的稳态电压值；③时间常数； / 2. 若电路是在 t = t0 时刻切换，则初始态可视为",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 42,
+      "extracted_preview": "①求初始值 / ③求时间常数 / ②求稳态值",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 43,
+      "extracted_preview": "求0+初始值，要分析0-时刻，并利用电容电压不能突变原则                                              43 / ①求初始值 / ②求稳态值 / ③求时间常数 / *  t < 0时刻的 i / 要单独计算",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 44,
+      "extracted_preview": "RL 阶跃响应~与 RC 类似 / 1. 三要素法：① L 的初始态电流值；② L 的稳态电流值；③时间常数； / 2. 若电路是在 t = t0 时刻切换，则",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 45,
+      "extracted_preview": "求0+初始值，要分析0-时刻，并利用电感电流不能突变原则         45 / ①求初始电流值 / ②求稳态电流值 / ③求时间常数",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 46,
+      "extracted_preview": "①分三个阶段考虑 / ②求初始电流 / ③第二阶段的稳态、时间常数 / ④第三阶段的初始态、稳态、时间常数",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F6-07"
+      ]
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 47,
+      "extracted_preview": "一阶电路+运放",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 48,
+      "extracted_preview": "① 0-时刻，运放v+虚断→没有电流流过v1所接的 / 20k→v1=0 →v- =0 （虚短）→流过运放负端20k / 的电流为零 →流过50k的电流为0 （电容在直流稳 / 态视为开路）→电容两端电压为0 →0+时刻，电容 / 电压初始态为 0V / ② ∞时刻，v1=2V →v- = 2V，电容两端电压为 -5V",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 49,
+      "extracted_preview": "将电容左侧电路用戴维南等效：",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 50,
+      "extracted_preview": "应用——简化的闪光灯电路 / 电容两端电压不能突变 / → 切换到2时，因R2阻值较小， / 可产生瞬间大电流（瞬间闪光）",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 51,
+      "extracted_preview": "小结 / • 动态电路（含有L、C储能元件的电路）的分析 / – 同样基于KCL、KVL，以及“元件的电压电流约束关系”（依次 / 为：电阻、电容、电感） / – 但现在要求解的是微分方程。需要 1）确定初始条件；2）写出通 / 解； / – 初始条件（0+时刻）由0-时刻的电容电压、电感电流确定（利用 / 电容电压不",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 52,
+      "extracted_preview": "小结 / • 一阶电路的“source-free（零输入）”响应 / – 先确定初始条件：0+时刻，电容两端的电压 V0，流过电感的电流 I0 / – 再计算时间常数（R 为C或者L两端的等效电阻） / – 再写出电容电压、电感电流的表达式 / – 计算电路中其他的量 / • 奇异函数： / – 单位斜坡函数、单位阶跃",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 53,
+      "extracted_preview": "小结 / • 一阶电路的“全响应”，两种表述： / – 表述1: 全响应 = 零输入响应（有储能，无输入） + 零状态响应（ / 无储能，有输入） / – 表述2: 全响应 = 稳态响应 + 瞬态响应 / • 表述2的实际求解电路应用【重点】： / – 第一步：求初始值； / – 第二步：求稳态值； / – 第三步：求",
+      "destination": "ch06",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 54,
+      "extracted_preview": "作业",
+      "destination": null,
+      "classification": "assignment_administration",
+      "note": "作业分隔页或提交安排不进入正文。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 55,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ex-L6-P55",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L6-P55"
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 56,
+      "extracted_preview": "Source Free RL / 含受控源情况下求时间常数",
+      "destination": "ex-L6-P56",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L6-P56"
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 57,
+      "extracted_preview": "RC电路 step response & / 三要素法 & / 熟悉阶跃函数在电路描述中的应用",
+      "destination": "ex-L6-P57",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L6-P57"
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 58,
+      "extracted_preview": "RL电路三要素法",
+      "destination": "ex-L6-P58",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L6-P58"
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 59,
+      "extracted_preview": "多开关多阶段分析",
+      "destination": "ex-L6-P59",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L6-P59"
+    },
+    {
+      "chapter": 6,
+      "file": "EC2026-lec6-过渡过程的经典解法-part1.pdf",
+      "pdf_page": 60,
+      "extracted_preview": "运放 + 一阶电路",
+      "destination": "ex-L6-P60",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L6-P60"
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 1,
+      "extracted_preview": "电子电路基础 / 第七讲~过渡过程的经典解法 / ~part2",
+      "destination": "ch07",
+      "classification": "cover",
+      "note": "讲次信息保留为章节标题。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 2,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 3,
+      "extracted_preview": "二阶电路的概念 / • 一阶电路：电路中只有一个储能元件，解一阶微分方程； / • 二阶电路：电路中有两个储能元件，需解二阶微分方程； / *化简之后仍有两个储能元件 / • 两种考虑： / – 零输入响应：无外部独立源，有初始储能 / – 阶跃响应（全响应）：外部独立源突然加入（初始储能可有可无）",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 4,
+      "extracted_preview": "Finding Initial & Final Values / • 解二阶微分方程，需要知道的初始条件为 / – 变量的初始值； / – 变量导数的初始值； / • 二阶电路的初始条件及稳态条件为： / • 需注意的几点： / – 电压和电流的极性； / – 默认时，电压指电容两端的电压；电流指流经电感的电流； / ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 5,
+      "extracted_preview": "①电压电流初始值，看0-时刻 / ②电容两端电压的导数初始值， / 看0+时刻的 iC ,基于外部电路求解 / ③流经电感电流的导数初始值， / 看0+时刻的 vL ,基于外部电路求解 / ④稳态值",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 6,
+      "extracted_preview": "1. 看0-时刻，求iL，vC初始值 / 0+时刻vb=0，2||4 / 2. 看0+时刻，求iL，vC导数初始值",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 7,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 8,
+      "extracted_preview": "① 写出通解（含待定系数） / 常微分方程  ② 结合边界条件求出待定系数 / • 齐次线性微分方程               • 非齐次线性微分方程 / 1）求特征方程           1）求出对应齐次方程的通解 / 获得n个根           2）求出非齐次方程的一个特解 / （电路分析中一般选取 t =",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 9,
+      "extracted_preview": "8.2 Source-Free Series / RLC Circuits / • The solution of the source-free / series RLC circuit is called as the / natural response of the circuit.自然响 / 应（零输入响应）",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F7-01"
+      ]
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 10,
+      "extracted_preview": "二阶微分方程 / 我们的目标：求解上述微分方程，得到 i，从而得到其他量 / 求解二阶微分方程，我们需要两个初始条件：i、i 的导数 / ① i 的初始条件【根据电感电流不能突变原理，从0-时刻找】 / ② i 导数的初始条件【基于     从0+时刻的电 / 感两端电压找】 / 0+时刻：电容电压已知、电阻电流已知 ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 11,
+      "extracted_preview": "8.2 Source-Free Series / RLC Circuits / There are three possible solutions for the following 2nd / 从数学上讲，只有两种情况：   order differential equation: / 有重根①： / d 2 i ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 12,
+      "extracted_preview": "8.2 Source-Free Series / RLC Circuits / There are three possible solutions for the following 2nd / order differential equation: / d 2 i      di      2   + 2  +",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 13,
+      "extracted_preview": "• 阻尼衰减，初始储存于 LC 中的能量逐渐衰减的过程； / – 阻尼衰减的原因：电路中存在表征损耗的电阻 R； / – 若 R = 0，则是无损耗电路（lossless） / – α 决定阻尼衰减的速率；α = 0，R = 0，则 LC 振荡，振荡频率 / – 调节 R 的值，可调节 α 值 → 调节电路是过阻尼、临",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 14,
+      "extracted_preview": "14overdamped > o          critically damped = o / i (t ) = ( A2 + A1t ) e −t / 两项指数衰减叠加 / =                     =  /  =                             ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 15,
+      "extracted_preview": "R = Rx /  = ，R = 10 （ = 5），overdamped /  = ，R = 6 （ = 3）, critically damped /  = ，R = 1 （ = 0.5）, underdamped / critically damped 衰减最快",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F7-02"
+      ]
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 16,
+      "extracted_preview": "串联RLC是特殊的二阶电 / 路，可以直接写出特征方 / 程的根，对于普通二阶电 / 路，需通过KCL、KVL写 / 出二阶微分方程，再得到 / 特征方程及特征根 / s1、s2为两个 / 不同的负实数 / s1、s2为重根， / 等于 -α / s1、s2为一对共轭复数根",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 17,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 18,
+      "extracted_preview": "0+时刻，串联RLC →先求 i 及其导数的初始值 / ①求特征根，写出通解 / 2个待定系数，需2个初始条件求解",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 19,
+      "extracted_preview": "电感电流导数的初始条件由 vL 决定 / ②根据初始条件求出待定系数",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 20,
+      "extracted_preview": "Source-free parallel RLC circuits / 以 v 作为关键变量 / 特征方程：               注意：串并联RLC，相同，不同 / 特征根：",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F7-03"
+      ]
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 21,
+      "extracted_preview": "8.3 Source-Free Parallel / RLC Circuits / There are three possible solutions for the following 2nd / order differential equation: / d 2 v      dv       2       ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 22,
+      "extracted_preview": "并联RLC是特殊的二阶电 / 路，可以直接写出特征方 / 程的根，对于普通二阶电 / 路，需通过KCL、KVL写 / 出二阶微分方程，再得到 / 特征方程及特征根 / s1、s2为两个 / 不同的负实数 / s1、s2为重根， / 等于 -α / s1、s2为一对共轭复数根",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 23,
+      "extracted_preview": "串联 RLC Vs. 并联 RLC / • 串联 RLC                   • 并联 RLC / – 不同                   – 不同 / •                                              • / • 关键变量：电感电流          ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 24,
+      "extracted_preview": "①求特征根 / ，写出通解 / ②根据初始条件 / ，求待定系数",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 25,
+      "extracted_preview": "①求特征根 / ，写出通解 / ②根据初始条件 / ，求待定系数",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 26,
+      "extracted_preview": "①求特征根 / ，写出通解 / ②根据初始条件 / ，求待定系数",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 27,
+      "extracted_preview": "书上插图，貌似overdamped衰减最快 / 实际局部放大后，依然是 critically / damped衰减最快",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 28,
+      "extracted_preview": "0+时刻，并联RLC →先求 v 及 / 其导数的初始值 / 求初始条件",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 29,
+      "extracted_preview": "①求特征根，写出通解",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 30,
+      "extracted_preview": "②根据初始条件 / ，求待定系数",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 31,
+      "extracted_preview": "8.4 Step-Response Series / RLC Circuits / • The step response / is obtained by the / sudden application / of a dc source. / d 2 v  R dv   v    v / +    +   =   ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F7-04"
+      ]
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 32,
+      "extracted_preview": "8.4 Step-Response Series / RLC Circuits / The solution of the equation should have two components: / the transient response vt(t) & the steady-state response vs",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 33,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 34,
+      "extracted_preview": "0+时刻，带激励源的串联RLC / →先求 v及其导数的初始值 / 求初始条件 / ①求特征根，写出通解 / . 与零输入响应比，通解多了 / Vs / . 也可理解为：零输入响应时 / ，变量最终都会衰减到零， / 即vss = 0",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 35,
+      "extracted_preview": "②根据初始条件， / 求待定系数",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 36,
+      "extracted_preview": "critically damped衰减最快",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 37,
+      "extracted_preview": "8.5 Step-Response Parallel / RLC Circuits / • The step response / is obtained by the / sudden application / of a dc source. / * 因为有电流源，所以关键变量采用电流比较合适 / d 2 i   ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F7-05"
+      ]
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 38,
+      "extracted_preview": "8.5 Step-Response Parallel / RLC Circuits / The solution of the equation should have two components: / the transient response it(t) & the steady-state response ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 39,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 40,
+      "extracted_preview": "求初始条件",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 41,
+      "extracted_preview": "①求特征根，写出通解 / . 与零输入响应比，通解多了 / Is / . 也可理解为：零输入响应时 / ，变量最终都会衰减到零， / 即iss = 0",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 42,
+      "extracted_preview": "②根据初始条件， / 求待定系数 / ③ 电路中其他的 / 量可依i(t) 求出",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 43,
+      "extracted_preview": "二阶电路阶跃响应的通用解法 / • 二阶电路除了串联 RLC、并联 RLC 之外，还有其他的电路类型 / 。我们为所有二阶电路提供一种通用解法（当然，该解法也适 / 用于串联 RLC、并联 RLC）： / – 第一步：求变量（电容电压OR电感电流）初始值 / – 第二步：求稳态响应       【非齐次方程在t=∞时的",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 44,
+      "extracted_preview": "0+时刻，电路非简单串并联，非齐次通解 / 无法直接写出 →采用二阶电路通用解法 / ①求初始值和稳态值",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 45,
+      "extracted_preview": "②turn off独立源，求瞬态 / 响应",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 46,
+      "extracted_preview": "③ 将稳态响应和瞬态响应相加，得到全响应 / 结合初始条件，求待定系数 / 再计算其他量",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 47,
+      "extracted_preview": "①求初始值和稳态值 / •   i1 和 i2 作为关键变量； / • 先求一个（i1 ）",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 48,
+      "extracted_preview": "②turn off独立源，求瞬 / 态响应",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 49,
+      "extracted_preview": "③将稳态响应和瞬态响应 / 相加，得到全响应 / ④结合初始条件，求待定系数",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 50,
+      "extracted_preview": "根据 i1 求得 i2 及其他电路量",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 51,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 52,
+      "extracted_preview": "小结 / • 初始值的计算 / – 利用“电容电压不能突变”、“电感电流不能突变”原则，从0- / 时刻发现 / –           根据电感电容的“电流-电压约束关系”， / 导数可以从0+时刻的“电容电流” 、“电感电压”中获得",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 53,
+      "extracted_preview": "小结 / •  Source-free RLC 电路【二阶齐次微分方程】 / 串联RLC               并联RLC / 关键变量       电感电流             电容电压 / 微分方程 / 特征方程 / 特征值 / 系数 / 三种情况 ）  ，一对共轭复数根，欠阻尼，通解： / ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 54,
+      "extracted_preview": "小结 / • RLC 电路阶跃响应（全响应） 【二阶非齐次微分方程】 / 串联RLC               并联RLC / 激励源 &       电压源激励           电流源激励 / 关键变量     关键变量：电容电压       关键变量：电感电流 / 微分方程 / 通解 / 齐次微分方程的通解 ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 55,
+      "extracted_preview": "小结 / • 二阶电路阶跃响应（全响应）的通用解法 / – 选择合适的变量（电容电压，或者电感电流） / – 求该变量的初始值、其导数的初始值 / – 求该变量的稳态响应【非齐次方程的特解】 / – Turn off 独立源，求该变量的瞬态响应【齐次方程通解】 / – 将稳态响应和瞬态响应相加，得到该变量的全响应通解 ",
+      "destination": "ch07",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 56,
+      "extracted_preview": "作业",
+      "destination": null,
+      "classification": "assignment_administration",
+      "note": "作业分隔页或提交安排不进入正文。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 57,
+      "extracted_preview": "串联RLC二阶电路的零输入响应",
+      "destination": "ex-L7-P57",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L7-P57"
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 58,
+      "extracted_preview": "并联RLC二阶电路的零输入响应",
+      "destination": "ex-L7-P58",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L7-P58"
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 59,
+      "extracted_preview": "串联RLC的阶跃响应（全响应）",
+      "destination": "ex-L7-P59",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L7-P59"
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 60,
+      "extracted_preview": "并联RLC的阶跃响应（全响应）",
+      "destination": "ex-L7-P60",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L7-P60"
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 61,
+      "extracted_preview": "二阶电路的通用解法",
+      "destination": "ex-L7-P61",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [
+        "F7-06"
+      ],
+      "question_figure": "L7-P61"
+    },
+    {
+      "chapter": 7,
+      "file": "EC2026-lec7-过渡过程的经典解法-part2.pdf",
+      "pdf_page": 62,
+      "extracted_preview": "运放+二阶电路",
+      "destination": "ex-L7-P62",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L7-P62"
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 1,
+      "extracted_preview": "电子电路基础 / 第八讲~正弦稳态电路",
+      "destination": "ch08",
+      "classification": "cover",
+      "note": "讲次信息保留为章节标题。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 2,
+      "extracted_preview": "Chapter 9 / Sinusoids and Phasors / 这一章，开始从分析交流情况",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 3,
+      "extracted_preview": "9.1 Motivation (1) / How to determine v(t) and i(t)? / vs(t) = 10V cos 4t / How can we apply what we have learned before to / determine i(t) and v(t)?",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 4,
+      "extracted_preview": "9.2 Sinusoids正弦信号 / • A sinusoid is a signal that has the form of the sine or / cosine function. / • A general expression for the sinusoid, / where     The phas",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 5,
+      "extracted_preview": "9.2 Sinusoids (2) / A periodic function （周期函数）is one that satisfies / v(t) = v(t + nT), for all t and for all integers n. / 1. 从时域图中看，靠左的曲线相位超前 / 2. 从表达式看，幅角(t",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 6,
+      "extracted_preview": "• 幅值, VPK 或 VP / • 有效值，计算平均功率时采用有效值 / • 峰峰值，VPP / • 平均值，0 / 有效值：一个时变周期电压在一个周期内消耗在电阻上的功率，可以用一个恒 / 定的电压来等效，该恒定电压就是该时变电压的有效值。当时变电压为正弦函 / 数时，有效值为其峰值的",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F8-01"
+      ]
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 7,
+      "extracted_preview": "9.2 Sinusoids (3) / Example / Given a sinusoid, 5 sin( 4t − 60 o ), calculate its / amplitude, phase, angular frequency, period, and / frequency. / Solution: /",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 8,
+      "extracted_preview": "三角函数关系式",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 9,
+      "extracted_preview": "Step 1：看起点；Step 2：看变化的角度 / 三角函数关系的图示记忆法 / •横坐标为cos（与复平面一致） / •纵坐标向下为sin（与复平面相反） / •逆时针相位增加（与复平面一致）",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 10,
+      "extracted_preview": "比较两个三角函数，要先化简成相同形式的cos或sin / 逆时针超前",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F8-02"
+      ]
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 11,
+      "extracted_preview": "9.3 Phasor 相量 / • A phasor is a complex number / that represents the amplitude / and phase of a sinusoid. 相量是 / 由正弦信号的振幅和相位构成的 / 一个复数 / r / • 复数的三种表述形式: / a. Re",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F8-03"
+      ]
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 12,
+      "extracted_preview": "复 / 数 / 的 / 运 / 算",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 13,
+      "extracted_preview": "复数的运算：加减用直角坐标形式；乘除及其他用极坐标形式",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 14,
+      "extracted_preview": "欧拉等式（Euler’s Identity）: / 注意： / 1.相量V是个复数，由正弦信号v(t)的 / 振幅Vm和相位Φ构成 / 2.因为相量V是复数，故用粗体表示",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 15,
+      "extracted_preview": "9.3 Phasor / • 相量的意义？              时域 → 相量域，好处是少了 / 时间量，代价是需要复数运算 / – 时域→相量域（频域）的相互转换 / – 电路分析中，电压、电流常常是正弦信号，或正弦信号的叠加 / ，我们将其统一用余弦信号      表示，其中振幅和相 / 位是电路分析中主要",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 16,
+      "extracted_preview": "先转换成cos形式 / 先转换成cos形式",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 17,
+      "extracted_preview": "9.3 Phasor / Example / Transform the following sinusoids to phasors: / i = 6cos(50t – 40o) A / v = –4sin(30t + 50o) V / 时域信号→相量信号： / 1.统一表示成 cos 形式 / 2.再用振幅和相位构",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 18,
+      "extracted_preview": "9.3 Phasor / 相量信号→时域信号： / •先将相量表示成极坐标形式， / 再写成 cos 形式； / •或",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 19,
+      "extracted_preview": "相量分析法，先去除 / 时域变量 t ，简化运 / 算，最后再用Re{}函 / 数把 t 加回来。",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 20,
+      "extracted_preview": "9.3 Phasor / 采用 phasor, 可以使微分、积分的计算变得简单",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 21,
+      "extracted_preview": "回到最初的 motivation → / 注意：用相量法，求 / 出的是稳态解。求稳 / 态解不需要初始值。",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 22,
+      "extracted_preview": "9.3 Phasor / The differences between v(t) and V: / •       v(t) is instantaneous or time-domain representation / V is the frequency or phasor-domain representat",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 23,
+      "extracted_preview": "9.4 电路元件的相量表达 / Resistor:                Inductor:                Capacitor: / 电感：I lags V       电容：I leads V / 因为一般是施加电压，求电流，所以在描述相位关系时，常用“电流超前/滞后电压”",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F8-04"
+      ]
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 24,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 25,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 26,
+      "extracted_preview": "9.5 Impedance（阻抗）and Admittance （导纳） / • The impedance Z of a circuit is the ratio of the phasor / voltage V to the phasor current I, measured in ohms Ω. / wher",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 27,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 28,
+      "extracted_preview": "9.5 Impedance and Admittance / = ;0 Z = 0 / Z =  jL             → ; Z →  / = ;0 Z →  / Z =               jC         → ; Z = 0",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 29,
+      "extracted_preview": "电路的相量分析： / ① 时域信号→相量信号； / ② 电路元件用阻抗或导纳表 / 达，计算复电流、复电压； / ③ 相量信号→时域信号 / 容性负载都是电流leads电压",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 30,
+      "extracted_preview": "9.5 频域（相量域）的基尔霍夫定律 / • 将电路中的元件（R、L、C、电源）用相量表述后， / 我们就可以对电路在相量域中进行分析了 / • KCL、KVL定律，以及其他的电路定理，在相量域中 / 也同样适用",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 31,
+      "extracted_preview": "9.6 Kirchhoff’s Laws / in the Frequency Domain (1) / • Both KVL and KCL are hold in the phasor / domain or more commonly called frequency / domain. 以后，我们会更多地称之为",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 32,
+      "extracted_preview": "9.7 Impedance Combinations (1) / • The following principles used for DC circuit / analysis all apply to AC circuit. / • For example: / 频域分析中，这些 / a. voltage div",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 33,
+      "extracted_preview": "串联                 并联 / 分压                 分流",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 34,
+      "extracted_preview": "若阻值相等，则称为平衡，平衡时delta的阻值是wye的3倍",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F8-05"
+      ]
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 35,
+      "extracted_preview": "频域的阻抗计算",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 36,
+      "extracted_preview": "36                 频域分压 / ①将元件写成相量形式 / ②在频域中分析 / ③写回时域表达式",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 37,
+      "extracted_preview": "频域Y-Δ转换",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 38,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 39,
+      "extracted_preview": "10.1 Basic Approach (1) / Steps to Analyze AC Circuits: / 1.  Transform the circuit to the phasor or frequency / domain. / 2.  Solve the problem using circuit t",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 40,
+      "extracted_preview": "频域节点电压法 / ②在频域中分析 / ③写回时域表达式①将元件写成相量形式",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 41,
+      "extracted_preview": "频域节点电压法~supernode",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 42,
+      "extracted_preview": "频域网孔电流法",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 43,
+      "extracted_preview": "频域网孔电流法~supermesh",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 44,
+      "extracted_preview": "10.4 Superposition Theorem (1) / When a circuit has sources operating at different / frequencies, / • The separate phasor circuit for each / frequency must be s",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 45,
+      "extracted_preview": "频域叠加定理： / 注意，电路中若有不同的频率， / 只能时域叠加，不能相量叠加",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 46,
+      "extracted_preview": "10.5 Source Transformation (1)",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 47,
+      "extracted_preview": "频域电源转换定理",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 48,
+      "extracted_preview": "10.6 Thevenin and Norton / Equivalent Circuits (1) / Thevenin transform / Norton transform",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 49,
+      "extracted_preview": "频域戴维南定理",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 50,
+      "extracted_preview": "频域戴维南定理~含受控源",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 51,
+      "extracted_preview": "频域诺顿定理",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 52,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 53,
+      "extracted_preview": "应用——移向电路 / /2- / 先分析 I 与 Vi 的关系，再分析 Vo 与 I 的关系，得出 Vo 与 Vi 的关系",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 54,
+      "extracted_preview": "小结     v2超前v130度 / • 正弦信号的基本参数： / – 振幅（Vm）、角频率（）、幅角（t + ）、相位（）、周 / 期、频率、有效值（Vm/sqrt(2)）、峰峰值（2Vm ）、平均值 / • 相位关系。 / – 不同正弦信号的相位比较 / 1. 从时域图中看，靠左的曲线相位超前 / 2. 从",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 55,
+      "extracted_preview": "小结 / • 相量 / – 从时域信号写出相量：先统一表示成cos形式，再拿出振幅和相位 / ，构成一个复数 / – 从相量复原出时域信号： / – 时域微分、积分在相量域中的对应关系",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 56,
+      "extracted_preview": "小结 / • 相量 / – 元件的“电压电流约束关系”在相量域中的表述；阻抗和导纳的定义",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 57,
+      "extracted_preview": "小结 / • 电路的频域分析法 / ①将元件写成相量形式 / ②在频域中分析 / ③写回时域表达式 / • 基尔霍夫定律，以及其他电路定理，在频域中同样适用 / – 要注意的是，若电路中有不同的频率，只能时域叠加，不能相量 / （频域）叠加",
+      "destination": "ch08",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 58,
+      "extracted_preview": "作业",
+      "destination": null,
+      "classification": "assignment_administration",
+      "note": "作业分隔页或提交安排不进入正文。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 59,
+      "extracted_preview": "时域信号→相量信号： / 统一表示成cos形式，再用幅度和 / 相位构成相量（复数）",
+      "destination": "ex-L8-P59",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 60,
+      "extracted_preview": "复阻抗",
+      "destination": "ex-L8-P60",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L8-P60"
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 61,
+      "extracted_preview": "电路的频域分析法： / ① 时域信号→频域信号； / ② 电路元件用阻抗表达，在频 / 域中分析电路； / ③ 频域信号→时域信号 / 频域节点电压法",
+      "destination": "ex-L8-P61",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [
+        "F8-06"
+      ],
+      "question_figure": "L8-P61"
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 62,
+      "extracted_preview": "频域网孔电流法~supermesh",
+      "destination": "ex-L8-P62",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L8-P62"
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 63,
+      "extracted_preview": "频域叠加定理： / 注意，电路中若有不同的频率， / 只能时域叠加，不能相量叠加",
+      "destination": "ex-L8-P63",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L8-P63"
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 64,
+      "extracted_preview": "频域戴维南定理",
+      "destination": "ex-L8-P64",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L8-P64"
+    },
+    {
+      "chapter": 8,
+      "file": "EC2026-lec8-正弦稳态电路.pdf",
+      "pdf_page": 65,
+      "extracted_preview": "运放的频域分析",
+      "destination": "ex-L8-P65",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L8-P65"
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 1,
+      "extracted_preview": "电子电路基础 / 第九讲~ 频率响应、谐振电路和滤波",
+      "destination": "ch09",
+      "classification": "cover",
+      "note": "讲次信息保留为章节标题。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 2,
+      "extracted_preview": "前面我们分析了正弦稳态电路（频率固定在某一值），本章我们分析频率变化的情况",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 3,
+      "extracted_preview": "频率响应 / 什么是电路的频率响应？ / 电路的频率响应：当正弦激励信号的振幅保持不变，而频率 / 变化时，分析电路特性随频率变化的情况。尤其是分析电路 / 传递函数的幅度（增益）和相位随频率变化的情况。 / - 幅度 vs 频率： 幅频特性（x轴频率，y轴传递函数幅度） / - 相位 vs 频率： 相频特性（x轴频率",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 4,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 5,
+      "extracted_preview": "• 四种可能的传递函数（因为输入输出均可为电压或电流） / V ()                         V () / H () = Voltage gain =    o         H () = Transfer Impedance =    o / V                   ",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 6,
+      "extracted_preview": "对传递函数进行因式分解 / Numerator，分子 / Denominator，分母 / 零点：使得      ，常常描述为       ；使用  的原因是复频域 / 极点：使得      ，常常描述为 / 相量（phasor）分析是在虚频域 𝑠= 𝑗𝜔 / 严格讲，零点和极点是在             上的稳态分",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 7,
+      "extracted_preview": "电压幅度比值与dB对应表           dB / • 对数运算法则 / • 将两个功率的比值用对数表示 →单位为dB / -3dB表示半功率 / – 功率与电压平方关联，所以若表示电压的比值：",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 8,
+      "extracted_preview": "dB",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 9,
+      "extracted_preview": "Bode Plots 波特图 / 波特图• 电路的频率响应                                      实测数据 / – 传递函数幅度 vs 频率 / – 传递函数相位 vs 频率 / • 波特图 / – 描述频率响应的业界标准 / – 频率用对数坐标 （x轴） / – 幅度用dB （y轴",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 10,
+      "extracted_preview": "10                             拉普拉斯变换概述 / 信号的时域表达 / 信号的s域表达(复平面） / 信号的频域表达（   的Y轴） / 观察：①频域是s域的一个特例； → / 在s域中观察信号和系统可以获得更丰 / 富的信息；②若时域信号是实数，则s / 域的上下平面镜像对称（本课程c",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 11,
+      "extracted_preview": "s域中的电路分析 / ① 电路元件在s域中的表达      ② 写出s域中的传递函数，并进行因式分解 / ➢一个 L 或 C 引入一个 s，二阶系统最多有 / 两个零点和两个极点； / ➢极点数量等于独立储能元件的数量，零点 / 数量少于或等于极点数量； / ➢零极点为实数，或者共轭复数；大于两阶 / 的多项式无解析根",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 12,
+      "extracted_preview": "从 s 平面理解电路的频率响应 / ③ 取典型值R=220, C=470p, L=54 μ 计算 / ④s域中的这条 / 黑实线即为电 / 路的频率响应 / ⑤ Observations： / ➢  在传递函数H(s)中代入 𝑠= 0 + 𝑗𝜔,绘制𝜔> 0 的曲线（即 / 三维图中黑色实线）； / ➢  H(s)的值",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 13,
+      "extracted_preview": "This diagram provides an understanding of why the / system behaves as it does, and how it can be changed.",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F9-01"
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 14,
+      "extracted_preview": "应用举例：Sallen-Key 二阶滤波电路 / 取      ，则系统有两个极点： / 自然频率     阻尼比 / 令 / 则 / 显然，极点的轨迹构成一个圆，半径为",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F9-11"
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 15,
+      "extracted_preview": "二阶低通滤波器的典型传递函数         一对共轭极点（if     ）                                                   15 / https://electronics.stackexchange.com/questions/316825/conjugate-n",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 16,
+      "extracted_preview": "有一个极点： / 幅度               相位 / 幅度 / 在s平面中，极点到原点的距离 / 相位",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 17,
+      "extracted_preview": "引入频率响应的一个关键参数：截止频率 / 分母表示频率轴对于一阶极点系统 / 上某频率点到极 / 点p1的距离 / A / O / ①频率为0时，p1到频率 / 点O的距离为 / ②频率为  时，p1到频 / 率点A的距离为   → / 截止频率：",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 18,
+      "extracted_preview": "18Example 2 / Obtain the transfer function Vo / Vs of the RL circuit shown / below, assuming vs = Vmcos(ωt). Sketch its frequency / response.",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 19,
+      "extracted_preview": "有一个极点 / Solution:                  和一个零点 / V                                                                           jL       1      1 + 𝑗𝑅/(𝜔𝐿)             ",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 20,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 21,
+      "extracted_preview": "一阶电路零极点              21 / 二阶电路零极点 / 波特图 / • 分析电路，写出传递函数，转换为以下的标准形式 / 幅度采用dB，增加了数学运算的方便性，在前计算机时代，大幅增 / 加了工程计算便利性：分别画出每一项的波特图，再代数加减即可",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 22,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 23,
+      "extracted_preview": "仅示意零点情 / 况，极点类似 / 经过（1,0）点，斜率为20dB/dec的一条直线",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 24,
+      "extracted_preview": "① 工程上用近似折线（渐进线）     ② 渐近线相交于 / 此时|H|衰减3dB，所以 / we let ϕ ≃ 0°for ω ≤ z1 /10; ϕ ≃ 90° for / ω ≥ 10z1. （波特图的工程近似） / 当     时 / 经过（z1,0）点，斜率为20dB/dec的一条折线",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F9-02"
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 25,
+      "extracted_preview": "仅示意极点情 / 况，零点类似 / 可以看做双重极点 / 经过（  ,0）点，斜率为-40dB/dec的一条折线",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 26,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 27,
+      "extracted_preview": "首先，整理成标 / 准的零极点形式 / ① 分析传递函数，有一个零点和两个极点，从频率低的开始考虑 / ②位于原点的零点，过    的一条直线，斜率为20dB/decade / ③   ④            ③ 极点1，斜率减小 20dB/decade / ④ 极点2，斜率再减小 20dB/decade / 方法1",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 28,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 29,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 30,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 31,
+      "extracted_preview": "谐振电路 / – 谐振时频率响应曲线会出现一个尖峰（sharp peak） / – 电路（或系统）如果有一对共轭极点，则会产生谐振 / – 若电路中至少有一个L和一个C，则会产生谐振 / – 谐振是系统中不同能量之间的来回互换 / – 谐振电路是滤波器的基础",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 32,
+      "extracted_preview": "串联谐振 / 虚部为0 / 谐振频率 / 截止频率为 / 半功率点 / 谐振频率是上下截止频率的几何平均值 / 上下截止频率之差定义为带宽",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F9-03"
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 33,
+      "extracted_preview": "谐振峰的sharpness可以用一个指标来描述： / Quality factor （Q值） / 对于串联RLC电路： / 当 Q ≥ 10 时，谐振频率可近似为上下截止频率的算术平均值 / 更实用的公式",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 34,
+      "extracted_preview": "②                      思考：若不知RLC具体值， / 但可以测量出电流响应曲线 / （频率可直接读取），如何 / 决定Q、B、R、L、C？    ③ / 串联谐振电路的5个基本参数",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 35,
+      "extracted_preview": "并联谐振 / 虚部为0 / 谐振频率 / （和串联谐振一致） / 截止频率为 / 半功率点 / 高Q值时近似 / 和串联谐振对偶： / R →G ; L →C",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F9-04"
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 36,
+      "extracted_preview": "14.4 串并联比较 / Summary of series and parallel resonance circuits: / characteristic           Series circuit             Parallel circuit / 1                      ",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 37,
+      "extracted_preview": "图示页（文字提取较少，请核对原文件）",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 38,
+      "extracted_preview": "当电路不是简单的RLC并联或 / RLC串联时： / 写出传递函数分析谐振频率",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 39,
+      "extracted_preview": "基本滤波器 / 滤波器的分类及其频率响应 / 一、滤波器概述 / 工程上根据输出端口对信号频率范围的要求，设计专门的网络，置于输 / 入和输出端口之间，使输出端口所需要的频率分量能够顺利通过，而抑制 / 或削弱不需要的频率分量，这种具有选频功能的中间网络，工程上称为滤 / 波器。 / ⚫滤波电路的传递函数定义 / V ",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 40,
+      "extracted_preview": "二、滤波电路分类 / ①按所处理信号分      模拟和数字滤波器 / ②按所用元件分       无源和有源滤波器 / ③按滤波特性分        低通滤波器（LPF） / 高通滤波器（HPF） / 带通滤波器（BPF） / 带阻滤波器（BEF）",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 41,
+      "extracted_preview": "三、滤波电路的频率响应（幅频特性）",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 42,
+      "extracted_preview": "5.2.2 无源滤波器简介 / 1、一阶RC无源低通滤波器",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F9-05"
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 43,
+      "extracted_preview": "2、一阶RC无源高通滤波器",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F9-06"
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 44,
+      "extracted_preview": "3、二阶无源带通滤波器",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F9-07"
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 45,
+      "extracted_preview": "4、二阶无源带阻滤波器",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F9-08"
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 46,
+      "extracted_preview": "猜测低通滤波器 / 传递函数的幅度：",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 47,
+      "extracted_preview": "也可按此顺序：中心频率, 带宽 →Q值 →L →C",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 48,
+      "extracted_preview": "有源滤波器 / 二阶有源滤波器见前述 / Sallen-Key 结构",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": [
+        "F9-09"
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 49,
+      "extracted_preview": "49数学仿真              电路仿真",
+      "destination": null,
+      "classification": "software_excluded",
+      "note": "软件操作、界面或工具示例排除；其中独立的方程求解、响应及滤波理论在对应章节保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 50,
+      "extracted_preview": "滤波器的在移动终端中的应用 / 频谱资源越来越紧张 →高性能滤波器需求",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 51,
+      "extracted_preview": "时分复用系统           频分复用系统",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 52,
+      "extracted_preview": "滤波器的主要参数",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 53,
+      "extracted_preview": "小结 / • 频率响应；波特图；零极点概念； / • dB的概念 / • 会根据波特图写出传递函数；也会根据传递函数画出波特图 / • 谐振电路的五个基本参数，注意串并联的Q值公式互为倒数 / 串联 / • 滤波器的类型，以及 special case 判断滤波器类型的方法",
+      "destination": "ch09",
+      "classification": "theory_or_example",
+      "note": "概念、推导与同类例题合并到对应章节；不是原页的逐字转录。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 54,
+      "extracted_preview": "作业 / 阅读材料：https://www.analog.com/media/en/technical-documentation/dsp- / book/dsp_book_Ch32.pdf",
+      "destination": null,
+      "classification": "assignment_administration",
+      "note": "提交安排和作业分隔页不进入正文。L9 的扩展阅读链接不属于本次新增范围。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 55,
+      "extracted_preview": "零极点概念",
+      "destination": "ex-L9-P55",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L9-P55"
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 56,
+      "extracted_preview": "波特图",
+      "destination": "ex-L9-P56",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": []
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 57,
+      "extracted_preview": "串联谐振",
+      "destination": "ex-L9-P57",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L9-P57"
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 58,
+      "extracted_preview": "并联谐振",
+      "destination": "ex-L9-P58",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L9-P58"
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 59,
+      "extracted_preview": "非简单串并联情况计算谐振频率",
+      "destination": "ex-L9-P59",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L9-P59"
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 60,
+      "extracted_preview": "带通滤波器",
+      "destination": "ex-L9-P60",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [],
+      "question_figure": "L9-P60"
+    },
+    {
+      "chapter": 9,
+      "file": "EC2026-lec9-频率响应_谐振电路与滤波.pdf",
+      "pdf_page": 61,
+      "extracted_preview": "Sallen-Key 有源滤波器",
+      "destination": "ex-L9-P61",
+      "classification": "exercise",
+      "note": "公开版保留题面、独立分步解析与必要电路图；完整原页在本地离线包保留。",
+      "theory_figures": [
+        "F9-10"
+      ],
+      "question_figure": "L9-P61"
+    }
+  ]
+}

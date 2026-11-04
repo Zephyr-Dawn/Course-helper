@@ -1,0 +1,17 @@
+{
+  "edition": "public-web",
+  "source_page_images": 0,
+  "chapters": 9,
+  "sections": 95,
+  "exercise_pages": 55,
+  "challenges": 12,
+  "formulas": 39,
+  "formula_selection": "manual-key-formulas",
+  "lecture_display_formulas": 303,
+  "quizzes": 24,
+  "theory_figures": 76,
+  "question_figures": 50,
+  "content_characters": 90093,
+  "html_bytes": 7305232,
+  "draft": false
+}
