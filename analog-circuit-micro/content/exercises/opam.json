@@ -1,0 +1,456 @@
+[
+ {
+  "id": "CH09-KP1-01",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点1：理想运放的特性",
+  "kind": "choice",
+  "question": "关于理想的运算放大器，下列陈述不正确的是 ________ 。\n\nA. 输出阻抗趋于零\n\nB. 开环放大增益趋于无穷大\n\nC. 输入阻抗趋于无穷大\n\nD. 闭环差模增益趋于无穷大",
+  "answer": "D",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP1-02",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点1：理想运放的特性",
+  "kind": "choice",
+  "question": "理想运放的两个输入端可以看成 “ 虚短 ” 是因为 ________ ，“ 虚断 ” 是因为 ________ 。\n\nA．差模增益趋于无穷大\n\nB．输入阻抗趋于无穷大\n\nC．输出阻抗趋于零\n\nD．共模抑制比趋于无穷大",
+  "answer": "A  B",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP1-03",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点1：理想运放的特性",
+  "kind": "choice",
+  "question": "理想运放的输入阻抗和输出阻抗分别为 ________\n\nA. 无穷大和零\n\nB. 零和无穷大\n\nC. 无穷大和无穷大\n\nD. 零和零",
+  "answer": "A",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP1-04",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点1：理想运放的特性",
+  "kind": "choice",
+  "question": "如下图所示电路，假设运放为理想运放，供电电压±5V，不会导致输出出现饱和的输入信号线性范围是________。\n\nA. ±1.0 V\n\nB. ±1.5 V\n\nC. ±2.0 V\n\nD. ±2.5 V\n\n\n\n@@IMG:opam.assets/image-20250823132015092.png@@",
+  "answer": "A\n\n输出电压不超过电压轨，即±5V；放大倍数为5倍；所以输入电压最大允许±1.0 V",
+  "images": [
+   "opam.assets/image-20250823132015092.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-01",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "choice",
+  "question": "欲将方波电压转换成三角波电压，应选用 ________ 。\n\nA. 对数运算电路\n\nB. 加减运算电路\n\nC. 微分运算电路\n\nD. 积分运算电路",
+  "answer": "D",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-02",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "求解下图所示电路的运算关系。\n\n\n\n@@IMG:opam.assets/14-2-2.png@@",
+  "answer": "设 $R_3$、$R_4$、$R_5$ 的公共点为 M。\n\n利用虚短、虚断，列出基尔霍夫定律方程如下：\n\n$\\frac{{{v_{i1}}}}{{{R_1}}} + \\frac{{{v_{i2}}}}{{{R_2}}} = \\frac{{ - {v_M}}}{{{R_3}}}$\n\n$\\frac{{{v_M}}}{{{R_3}}} + \\frac{{{v_M}}}{{{R_5}}} = \\frac{{{v_o} - {v_M}}}{{{R_4}}}$\n\n利用上述两个方程，得到：\n\n${v_o} =  - {R_3}{R_4}(\\frac{1}{{{R_3}}} + \\frac{1}{{{R_4}}} + \\frac{1}{{{R_5}}})(\\frac{{{v_{i1}}}}{{{R_1}}} + \\frac{{{v_{i2}}}}{{{R_2}}}) =  - ({R_3} + {R_4} + \\frac{{{R_3}{R_4}}}{{{R_5}}})(\\frac{{{v_{i1}}}}{{{R_1}}} + \\frac{{{v_{i2}}}}{{{R_2}}})$",
+  "images": [
+   "opam.assets/14-2-2.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-03",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "choice",
+  "question": "如下图所示电路，其输出电压与输入电压的关系近似为 ________ 。\n\n\n\n@@IMG:opam.assets/14-2-3.png@@\n\n\n\nA. $10{v_{I1}} + 10{v_{I2}} + {v_{I3}}$\n\nB. $10{v_{I1}} - 10{v_{I2}} - {v_{I3}}$\n\nC. $-10{v_{I1}} + 10{v_{I2}} + {v_{I3}}$\n\nD. $-10{v_{I1}} - 10{v_{I2}} - {v_{I3}}$",
+  "answer": "C",
+  "images": [
+   "opam.assets/14-2-3.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-04",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "choice",
+  "question": "下列哪个电路是由理想运放器构成的微分电路 ________ 。\n\nA. \n\n@@IMG:opam.assets/14-2-4-A.png@@\n\n\n\nB. \n\n@@IMG:opam.assets/14-2-4-B.png@@\n\n\n\nC. \n\n@@IMG:opam.assets/14-2-4-C.png@@\n\n\n\nD. \n\n@@IMG:opam.assets/14-2-4-D.png@@",
+  "answer": "A",
+  "images": [
+   "opam.assets/14-2-4-A.png",
+   "opam.assets/14-2-4-B.png",
+   "opam.assets/14-2-4-C.png",
+   "opam.assets/14-2-4-D.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-05",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "choice",
+  "question": "以下运算放大器中，哪一个实现积分功能 ________ 。\n\nA. \n\n@@IMG:opam.assets/14-2-7-A.png@@\n\n\n\nB. \n\n@@IMG:opam.assets/14-2-7-B.png@@\n\n\n\nC. \n\n@@IMG:opam.assets/14-2-7-C.png@@\n\n\n\nD. \n\n@@IMG:opam.assets/14-2-7-D.png@@",
+  "answer": "C",
+  "images": [
+   "opam.assets/14-2-7-A.png",
+   "opam.assets/14-2-7-B.png",
+   "opam.assets/14-2-7-C.png",
+   "opam.assets/14-2-7-D.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-06",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "写出如下图所示电路输出电压的表达式 ${v_O} = f\\left( {{v_{I1}} + {v_{I2}} + {v_{I3}}} \\right)$ 。\n\n\n\n@@IMG:opam.assets/14-2-5.png@@",
+  "answer": "$∵υ_{O1} = υ_{I1},  υ_{O2} = υ_{I2},  υ_{O3} = υ_{I3}$\n\n$∴v_O = \\frac{{{R_2}//{R_3}}}{{{R_1} + {R_2}//{R_3}}} \\cdot {v_{I1}} + \\frac{{{R_1}//{R_3}}}{{{R_2} + {R_1}//{R_3}}} \\cdot {v_{I2}} + \\frac{{{R_1}//{R_2}}}{{{R_3} + {R_1}//{R_2}}} \\cdot {v_{I3}}$\n\n或 ${v_O} = \\left( {{R_1}{\\rm{//}}{R_2}{\\rm{//}}{R_3}} \\right)\\left( {\\frac{{{v_{I1}}}}{{{R_{\\rm{1}}}}}{\\rm{ + }}\\frac{{{v_{I{\\rm{2}}}}}}{{{R_{\\rm{2}}}}}{\\rm{ + }}\\frac{{{v_{I{\\rm{3}}}}}}{{{R_{\\rm{3}}}}}} \\right)$\n\n或 ${v_O} = \\frac{{\\frac{{{v_{I1}}}}{{{R_{\\rm{1}}}}}{\\rm{ + }}\\frac{{{v_{I{\\rm{2}}}}}}{{{R_{\\rm{2}}}}}{\\rm{ + }}\\frac{{{v_{I{\\rm{3}}}}}}{{{R_{\\rm{3}}}}}}}{{\\frac{{\\rm{1}}}{{{R_{\\rm{1}}}}}{\\rm{ + }}\\frac{{\\rm{1}}}{{{R_{\\rm{2}}}}}{\\rm{ + }}\\frac{{\\rm{1}}}{{{R_{\\rm{3}}}}}}}{\\rm{ = }}\\frac{{{R_{\\rm{2}}}{R_{\\rm{3}}}{v_{I1}}{\\rm{ + }}{R_{\\rm{1}}}{R_{\\rm{3}}}{v_{I{\\rm{2}}}}{\\rm{ + }}{R_{\\rm{1}}}{R_{\\rm{2}}}{v_{I{\\rm{3}}}}}}{{{R_{\\rm{2}}}{R_{\\rm{3}}}{\\rm{ + }}{R_{\\rm{1}}}{R_{\\rm{3}}}{\\rm{ + }}{R_{\\rm{1}}}{R_{\\rm{2}}}}}$\n\n【注】利用线性叠加原理分析",
+  "images": [
+   "opam.assets/14-2-5.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-07",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "推导下图所示电路的运算关系。\n\n\n\n@@IMG:opam.assets/14-2-6.png@@",
+  "answer": "两级电路\n\n第一级：\n\n${I_{R1}} = \\frac{{{v_{I1}} - {v_{I2}}}}{{{R_1}}}$  方向从上往下\n\n${v_{o1}} = {v_{I1}} + {I_{R1}}{R_2} = {v_{I1}} + \\frac{{{v_{I1}} - {v_{I2}}}}{{{R_1}}}{R_2}$\n\n${v_{o2}} = {v_{I2}} - {I_{R1}}R2={v_{I2}} - \\frac{{{v_{I1}} - {v_{I2}}}}{{{R_1}}}{R_2}$\n\n第二级是差动放大器，故而\n\n${v_o} = \\frac{{{R_4}}}{{{R_3}}}({v_{o2}} - {v_{o1}}) = \\frac{{{R_4}}}{{{R_3}}}\\left( {1 + \\frac{{2{R_2}}}{{R1}}} \\right)({v_{I2}} - {v_{I1}})$",
+  "images": [
+   "opam.assets/14-2-6.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-08",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "如下图所示电路，设电源电压、各电阻阻值和三极管 $\\beta$ 均已知，求输出电压 $V_o$ 的表达式。\n\n\n\n@@IMG:opam.assets/14-2-8.png@@",
+  "answer": "${V_{ + A1}} = {V_{ - A1}} = \\frac{{{V_{CC}}}}{2}$\n\n$I_C=\\frac{V_{CC}-V_{CC}/2}{R_C}=\\frac{V_{CC}}{2R_C}$\n\n$\\frac{{{V_2} - {V_1}}}{{{R_1}}} = \\frac{{{V_1} - {V_B}}}{{{R_1}}} = {I_B}$\n\n$\\therefore {V_1} = {I_B}{R_1} + {V_B},{\\rm{ }}{V_2} = 2{I_B}{R_1} + {V_B}$\n\n$\\frac{{{V_O} - {V_{ - A2}}}}{{{R_2}}} = \\frac{{{V_{ - A2}} - {V_{OA3}}}}{{{R_2}}},{\\rm{  }}\\frac{{{V_{OA3}} - {V_{ - A3}}}}{{{R_3}}} = \\frac{{{V_{ - A3}}}}{{{R_3}}}$\n\n${V_{ - A2}} = {V_{ + A2}} = {V_2},{\\rm{  }}{V_{ - A3}} = {V_{ + A3}} = {V_1}$\n\n化简得到：\n\n${V_O} = 2{I_B}{R_1} = \\frac{{{V_{CC}}{R_1}}}{{\\beta {R_C}}}$\n\n【注】$V_2 - V_1 = I_B R_1$；$V_o = 2(V_2 - V_1)$",
+  "images": [
+   "opam.assets/14-2-8.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-09",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "fill",
+  "question": "设下图为理想集成运放，$u_1=0.5{\\rm V}$，负载电阻 $R_L$ 上的电压 $u_o=$ ________ ，电流 $i_L=$ ________ 。\n\n\n\n@@IMG:opam.assets/14-2-9.png@@",
+  "answer": "-1V  -0.1mA。inverting结构，增益$-2$",
+  "images": [
+   "opam.assets/14-2-9.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-10",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "fill",
+  "question": "下图所示电路中，电压增益 $v_o/v_i$ 的幅度是 ________ dB。\n\n\n\n@@IMG:opam.assets/14-2-10.png@@",
+  "answer": "20",
+  "images": [
+   "opam.assets/14-2-10.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-11",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "如下图所示电路，当电路中各个电阻的阻值相等时，求电路增益 $A=v_o/v_i$ 。\n\n\n\n@@IMG:opam.assets/14-2-11.png@@",
+  "answer": "设从左至右的R排列为1-6，流过的电流分别对应1-6\n\n则 ${i_1} = {i_2} = {i_3}$，${i_4} = {i_2} + {i_3} = 2{i_1}$\n\n又 ${i_4}R + {i_3}R = {i_5}R$\n\n即 ${i_4} + {i_3} = {i_5} = 3{i_1}$\n\n${i_6} = {i_4} + {i_5} = 5{i_1}$\n\n${v_I} = {i_1}R$\n\n${v_O} =  - ({i_2}R + {i_4}R + {i_6}R) =  - 8{i_1}R$\n\n$A = \\frac{{{v_O}}}{{{v_I}}} =  - 8{\\rm{V}}/{\\rm{V}}$",
+  "images": [
+   "opam.assets/14-2-11.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-12",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "fill",
+  "question": "一个反向运算放大器如下图所示，其电压增益为 −4，且所用电阻的总和为 100 kΩ ，则 $R_1$ = ________ ，$R_2$ =  ________ 。\n\n\n\n@@IMG:opam.assets/14-2-12.png@@",
+  "answer": "20 kΩ  80 kΩ。$R_2/R_1 = 4$",
+  "images": [
+   "opam.assets/14-2-12.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-13",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "如下图所示运算放大器组成的应用电路，求\n\n(1)  中频增益 $A_u=\\frac{u_o}{u_{i2}-u_{i1}}$ 的表达式（用符号表示）。\n\n(2)  最大中频增益 $A_{umax}$ 和 最小中频增益 $A_{umin}$。\n\n\n\n@@IMG:opam.assets/14-2-13.png@@",
+  "answer": "(1)  $A_u=\\frac{\\vec{U_o}}{\\vec{U_{i2}}-\\vec{U_{i1}}}=\\frac{{\\vec{U_{o2}}-\\vec{U_{o1}}}}{\\vec{U_{i2}}-\\vec{U_{i1}}} \\times \\frac{\\vec{U_o}}{\\vec{U_{o2}}-\\vec{U_{o1}}}=A_{u1} \\times A_{u2}$\n\n其中\n\n$A_{u1}=\\frac{i_G(R_2+R_G+R_2)}{\\vec{U_{i2}}-\\vec{U_{i1}}}=\\frac{(\\frac{\\vec{U_{i2}}-\\vec{U_{i1}}}{R_G})(R_G+2R_2)}{\\vec{U_{i2}}-\\vec{U_{i1}}}=(1+\\frac{2R_2}{R_G})$  ($R_G=R_1+R_W$)\n\n$A_{u2}=\\frac{\\vec{U_o}}{\\vec{U_{o2}}-\\vec{U_{o1}}}=\\frac{R_4}{R_3}$\n\n故\n\n$A_u=A_{u1} \\times A_{u2}=\\frac{R_4}{R_3}(1+\\frac{2R_2}{R_G})$\n\n(2)  $R_{Gmax}=10{\\rm k \\Omega}$ ，$R_{Gmin}=1{\\rm k \\Omega}$\n\n$A_{umin}=\\frac{R_4}{R_3}(1+\\frac{2R_2}{R_Gmax})=5 \\times (1+\\frac{2 \\times 20}{10})=25$\n\n$A_{umax}=\\frac{R_4}{R_3}(1+\\frac{2R_2}{R_Gmin})=5 \\times (1+\\frac{2 \\times 20}{1})=205$",
+  "images": [
+   "opam.assets/14-2-13.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-14",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "choice",
+  "question": "已知某电路输入电压和输出电压的波形如下图所示，该电路可能是 ________ 。\n\n\n\n@@IMG:opam.assets/14-2-14.png@@\n\n\n\nA. 积分电路\n\nB. 微分电路\n\nC. 过零比较器\n\nD. 迟滞比较器",
+  "answer": "A",
+  "images": [
+   "opam.assets/14-2-14.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-15",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "fill",
+  "question": "如下图所示电路，A1 ~ A5 均为理想运放，当开关 S1 打开以后，电路处于稳态情况下输出电压 $v_o=$ ________ ；当开关闭合时，$v_o=$ ________ 。\n\n\n\n@@IMG:opam.assets/14-2-15.png@@",
+  "answer": "0 V  -6 V。（1）A1out, 2V;  A4out, $2\\times -1.5=-3V$; A5-, -2V; A5out, $-2 + 1\\times 2 = 0V$; （2）A4out, 0V, A5out, $-2 - 2\\times 2 = -6V$;",
+  "images": [
+   "opam.assets/14-2-15.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-16",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "配置下图所示电路中所有电阻的阻值，使电路增益 $A=v_o/v_i=-50$ 。实验能提供阻值小于等于 100 kΩ 的任意电阻，图中每个电阻符号只对应一个电阻，要求使放大器的输入电阻最大，同时要求选择的电阻规格的种类最少，以简化工艺，降低成本。\n\n\n\n@@IMG:opam.assets/14-2-16.png@@",
+  "answer": "@@IMG:opam.assets/image-20221006202535021.png@@\n\n\n\n$R_i=R_1$，取 $R_1=100{\\rm k \\Omega}$\n\n$v_o=-i_2R_2-i_4R_4$\n\n$v_i=R_1i_1$\n\n$i_1=i_2=\\frac{v_i}{R_1}$\n\n${i_3} =  - \\frac{{{R_2}}}{{{R_3}}}{i_2}$\n\n${i_4} = {i_2} - {i_3} = \\frac{{{R_2} + {R_3}}}{{{R_1}{R_3}}}{v_i}$\n\n${v_o} =  - \\frac{{{R_2}{R_3} + {R_2}{R_4} + {R_3}{R_4}}}{{{R_3}}}{v_i}$\n\n$\\therefore A = \\frac{{{v_o}}}{{{v_i}}} =  - \\frac{{{R_2}{R_3} + {R_2}{R_4} + {R_3}{R_4}}}{{{R_1}{R_3}}} =  - 50$\n\n${R_2} + {R_4} + \\frac{{{R_2}{R_4}}}{{{R_3}}} = 5000{\\rm k \\Omega}$\n\n取 $R_2=100{\\rm k \\Omega}$，$R_4=100{\\rm k \\Omega}$，$R_3=2.08{\\rm k \\Omega}$。",
+  "images": [
+   "opam.assets/14-2-16.png"
+  ],
+  "answerImages": [
+   "opam.assets/image-20221006202535021.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-17",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "choice",
+  "question": "由理想运放组成的电路如下图所示，其输出电压 $v_o$ 与输入电压 $v_{i1}$、$v_{i2}$ 的关系为 ________ 。\n\nA. $v_o=8(v_{i1}+v_{i2})$\n\nB. $v_o=8(v_{i1}-v_{i2})$\n\nC. $v_o=8(v_{i2}-v_{i1})$\n\nD. $v_o=4(v_{i1}+v_{i2})$\n\n\n\n@@IMG:opam.assets/image-20240107220007360.png@@",
+  "answer": "C。叠加定理，只考虑 $v_{i1}$, $v_o = v_{i1}\\times (-8)$；只考虑 $v_{i2}$, $v_o = v_{i2}\\times \\frac{8}{9} \\times (1+8)= v_{i2}\\times 8$",
+  "images": [
+   "opam.assets/image-20240107220007360.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-18",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "fill",
+  "question": "下图为运算放大器的两种基本电路，若图中的 $R_1$ 均为 $1{\\rm k \\Omega}$，$R_2$ 均为 $5{\\rm k \\Omega}$，则图（a）和图（b）电路的输入电阻分别为 ________ 和 ________ 。\n\n\n\n@@IMG:opam.assets/14-2-18.png@@",
+  "answer": "1 kΩ  无穷大",
+  "images": [
+   "opam.assets/14-2-18.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-19",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "电路如下图所示，其中运算放大器均为理想运算放大器。\n\n(1)  计算该电路的输出电压与输入电压的运算关系；\n\n(2)  计算该电路的输出电阻。\n\n\n\n@@IMG:opam.assets/14-2-19.png@@",
+  "answer": "$\\frac{{{v_{i1}} - {v_{i4}}}}{{{R_1}}} + \\frac{{{v_{i2}} - {v_{i4}}}}{{{R_1}}} + \\frac{{{v_{i3}} - {v_{i4}}}}{{{R_1}}} = \\frac{{{v_{i4}}}}{{{R_2}}}$\n\n${v_{i4}} = \\frac{{{R_2}}}{{{R_1} + {\\rm{3}}{R_2}}}\\left( {{v_{i1}} + {v_{i2}} + {v_{i3}}} \\right)$\n\n${v_o} = \\frac{{{v_{i4}}}}{{{R_3}}} \\times \\left( {{R_2} + {R_3}} \\right) = \\frac{{{R_2}}}{{{R_1} + {\\rm{3}}{R_2}}}\\left( {{v_{i1}} + {v_{i2}} + {v_{i3}}} \\right)\\frac{{{R_2} + {R_3}}}{{{R_3}}} = {\\rm{10}}\\left( {{v_{i1}} + {v_{i2}} + {v_{i3}}} \\right)$\n\n$R_o=0{\\rm k \\Omega}$",
+  "images": [
+   "opam.assets/14-2-19.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-20",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "试用一个理想运算放大器实现运算电路 $v_o=15v_1+6v_2$ ，要求画出电路，并确定电路元件参数。",
+  "answer": "实现电路如下图所示：\n\n\n\n@@IMG:opam.assets/image-20221006202552372.png@@\n\n\n\n${v_o} = \\left( {1 + \\frac{{{R_f}}}{{{R_4}}}} \\right)\\left( {\\frac{{{R_1}//{R_2}//{R_3}}}{{{R_1}}}{v_1} + \\frac{{{R_1}//{R_2}//{R_3}}}{{{R_2}}}{v_2}} \\right)$\n\n当满足 ${R_1}//{R_2}//{R_3} = {R_4}//{R_f}$ 时，有\n\n${v_o} = \\frac{{{R_f}}}{{{R_1}}}{v_1} + \\frac{{{R_f}}}{{{R_2}}}{v_2}$\n\n则要求 $\\frac{{{R_f}}}{{{R_1}}} = 15,{\\rm{ }}\\frac{{{R_f}}}{{{R_2}}} = 6$\n\n选取 ${R_f} = 30{\\rm{ k}}\\Omega ,{\\rm{ }}{R_1} = 2{\\rm{ k}}\\Omega ,{\\rm{ }}{R_2} = 5{\\rm{ k}}\\Omega ,{\\rm{ }}{R_3} = 3{\\rm{ k}}\\Omega$",
+  "images": [],
+  "answerImages": [
+   "opam.assets/image-20221006202552372.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-21",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "如下图所示放大电路中，已知 $A_1$、$A_2$ 均为理想运算放大器，$R_1=R_2$。\n\n(1)\t推导负载电流 $i_L$ 的表达式；\n\n(2)\t若要求 $i_L=\\frac{v_i}{R}$，$R_3$ 的值应满足什么关系？\n\n\n\n@@IMG:opam.assets/14-2-21.png@@",
+  "answer": "(1)\t运放 $A_1$ 的输出电压\n\n${v_{{\\rm{o1}}}} =  - \\frac{{{R_2}}}{{{R_1}}}{v_{\\rm{i}}} - \\frac{{{R_2}}}{{{R_3}}}{v_{\\rm{o}}} =  - {v_{\\rm{i}}} - \\frac{{{R_2}}}{{{R_3}}}{v_{\\rm{o}}}$\n\n运放 $A_2$ 的输出电压\n\n${v_{{\\rm{o2}}}} =  - \\frac{{{R_2}}}{{{R_1}}}{v_{{\\rm{o1}}}} =  - {v_{{\\rm{o1}}}} = {v_{\\rm{i}}} + \\frac{{{R_2}}}{{{R_3}}}{v_{\\rm{o}}}$\n\n由于虚地，${i_{\\rm{3}}} = \\frac{{{v_{\\rm{o}}}}}{{{R_3}}}$\n\n而 ${i_{\\rm{R}}} = \\frac{{{v_{{\\rm{o2}}}} - {v_{\\rm{o}}}}}{R} = \\frac{{{v_{\\rm{i}}}}}{R} + \\frac{{{R_2} - {R_3}}}{{R{R_3}}}{v_{\\rm{o}}}$\n\n于是 ${i_{\\rm{L}}} = {i_{\\rm{R}}} - {i_3} = \\frac{{{v_{\\rm{i}}}}}{R} + \\frac{{{R_2} - {R_3} - R}}{{R{R_3}}}{v_{\\rm{o}}} = \\frac{{{v_{\\rm{i}}}}}{R} + \\frac{{{R_2} - {R_3} - R}}{{R{R_3}}} \\cdot {i_L}{R_L}$\n\n可解出负载电流 ${i_{\\rm{L}}} = \\frac{{{v_{\\rm{i}}}}}{{R - \\frac{{{R_L}}}{{{R_3}}}({R_2} - {R_3} - R)}}$\n\n(2)\t欲使 ${i_{\\rm{L}}} = \\frac{{{v_{\\rm{i}}}}}{R}$，必须使 ${R_2} - {R_3} - R = 0$ ，即 $R_3$ 的值应满足\n\n${R_3} = {R_2} - R$",
+  "images": [
+   "opam.assets/14-2-21.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-22",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "求由理想运放组成的如下电路的电压增益 $v_o/v_i$ 。\n\n\n\n@@IMG:opam.assets/image-20221006202317675.png@@",
+  "answer": "分别列出运放 1 反相输入端的节点电流方程\n\n$\\frac{{{v_i}}}{{{R_1}}} + \\frac{{{v_{o1}}}}{{{R_2}}} + \\frac{{{v_o}}}{{{R_3}}} = 0$\n\n由理想运放假设可知\n\n${v_{o1}} = \\frac{{{R_4}}}{{{R_4} + {R_5}}}{v_o}$\n\n整理后得到\n\n$\\frac{{{v_o}}}{{{v_i}}} =  - \\frac{{{R_2}{R_3}\\left( {{R_4} + {R_5}} \\right)}}{{{R_1}\\left( {{R_2}{R_4} + {R_2}{R_5} + {R_3}{R_4}} \\right)}}$",
+  "images": [
+   "opam.assets/image-20221006202317675.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-23",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "fill",
+  "question": "右图电路中的运放为理想运放，二极管采用恒压降模型，$V_{D,on}$=0.7 V，供电电压±5 V。\n\n分析 $v_o$和 $v_i$ 的关系：\n\n当 $v_i < 0$ 时，$v_o$ = ________ ；\n\n当 $v_i \\geq 0$ 时，$v_o$ = ________ 。\n\n\n\n@@IMG:opam.assets/image-20250823135816801.png@@",
+  "answer": "0; $v_i$\n\n首先，二极管电流不会反向流过，理想运放也不会有电流输入，所以 $v_o$ 电压不会小于0；然后当 $v_i$ 小于0时，二极管截止， $v_o = 0$；当 $v_i \\geq 0$ 时，二极管导通，$v_o = v_i$",
+  "images": [
+   "opam.assets/image-20250823135816801.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-24",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "fill",
+  "question": "如右图所示电路，当电路中各个电阻的阻值相等时，电路增益为 ________ 。\n\n\n\n@@IMG:opam.assets/image-20250824142818166.png@@",
+  "answer": "$-3$\n\n设流经输入 $R$ 的电流为 $i$，则，输出电压为 $0 - i R - 2i\\times R$，故增益为 $-3$",
+  "images": [
+   "opam.assets/image-20250824142818166.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-25",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "设计如下所示的加法器，要求输出电压 $v_o = 10v_1 + 5v_2 - 0.5v_3 - 2v_4$，已知 $R_a = R_c = 10\\; \\textrm{k}\\Omega$，$R_b = 2\\;\\textrm{k}\\Omega$，请确定其他电阻值。\n\n\n\n@@IMG:opam.assets/image-20250824151102642.png@@",
+  "answer": "@@IMG:opam.assets/image-20250824151312897.png@@",
+  "images": [
+   "opam.assets/image-20250824151102642.png"
+  ],
+  "answerImages": [
+   "opam.assets/image-20250824151312897.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ },
+ {
+  "id": "CH09-KP2-26",
+  "set": "opam",
+  "chapter": 9,
+  "setTitle": "理想运算放大器及其应用电路",
+  "kp": "知识点2：运算放大器的应用及电路分析",
+  "kind": "calc",
+  "question": "一个理想运算放大器组成的线性放大电路如下图所示，已知电阻 $R_1 = 1\\; \\textrm{k}\\Omega$，电源电压 $V_D = 5\\; \\textrm{V}$。\n\n(1) 计算放大器电压增益\n\n(2) 若输入电压范围是 $\\pm 0.5 \\textrm{V}$，欲使输出电压范围是 $0.5 \\sim 4.5\\; \\textrm{V}$，且要求 $R_1 || R_2 = R_3 || R_4$，求 $R_2$、$R_3$ 和 $R_4$\n\n\n\n@@IMG:opam.assets/image-20250824154851573.png@@",
+  "answer": "@@IMG:opam.assets/image-20250824154940361.png@@",
+  "images": [
+   "opam.assets/image-20250824154851573.png"
+  ],
+  "answerImages": [
+   "opam.assets/image-20250824154940361.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/opam"
+ }
+]

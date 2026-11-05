@@ -1,0 +1,83 @@
+[
+ {
+  "id": "KF10-01",
+  "section": "ch10-s01",
+  "title": "通频带、带宽与增益带宽积",
+  "tex": "\\lvert A(f_L)\\rvert=\\lvert A(f_H)\\rvert=\\frac{\\lvert A_M\\rvert}{\\sqrt2},\\quad BW=f_H-f_L\\approx f_H,\\quad GB=\\lvert A_M\\rvert\\,BW",
+  "use": "读出 $f_L$、$f_H$（增益比中频低 $3\\ \\mathrm{dB}$ 处），估算带宽；比较不同放大器的带宽与增益取舍。",
+  "conditions": "$f_H\\gg f_L$ 时 $BW\\approx f_H$；$GB$ 为常数只在高频由单个极点决定、器件参数不变时近似成立。",
+  "pitfall": "$-3\\ \\mathrm{dB}$ 对应幅度 $0.707$ 倍（功率减半），不是下降到零；$GB$ 里的 $A_M$ 取中频增益的绝对值。"
+ },
+ {
+  "id": "KF10-02",
+  "section": "ch10-s03",
+  "title": "一阶低通、高通的幅频与相频",
+  "tex": "H_{LP}=\\frac{1}{1+s/\\omega_n}:\\ \\lvert H\\rvert=\\frac{1}{\\sqrt{1+(\\omega/\\omega_n)^2}},\\ \\angle H=-\\arctan\\frac{\\omega}{\\omega_n};\\quad H_{HP}=\\frac{1}{1+\\omega_n/s}:\\ \\angle H=+\\arctan\\frac{\\omega_n}{\\omega}",
+  "use": "画波特图：转折点 $\\omega_n=1/(RC)$ 处 $-3\\ \\mathrm{dB}$、$\\mp45^\\circ$；低通在转折点之上以 $-20\\ \\mathrm{dB/dec}$ 下降，高通在转折点之下以 $+20\\ \\mathrm{dB/dec}$ 上升。",
+  "conditions": "单个实极点；$s=j\\omega$。折线近似相位在 $0.1\\omega_n\\sim10\\omega_n$ 之间线性变化 $90^\\circ$。",
+  "pitfall": "转折点处精确曲线比渐近线低 $3\\ \\mathrm{dB}$；$\\omega_n$ 单位是 rad/s，换成 Hz 要除以 $2\\pi$。"
+ },
+ {
+  "id": "KF10-03",
+  "section": "ch10-s06",
+  "title": "一阶有源滤波器（反相接法）",
+  "tex": "A_{LP}(s)=\\frac{A_M}{1+s/\\omega_H},\\ \\omega_H=\\frac{1}{R_fC};\\quad A_{HP}(s)=\\frac{A_M}{1+\\omega_L/s},\\ \\omega_L=\\frac{1}{R_1C};\\quad A_M=-\\frac{R_f}{R_1}",
+  "use": "由运放反馈/输入支路的 $R$、$C$ 直接写出转折频率和通带增益；同相接法 $A_M=1+R_f/R_1$，转折频率由 $R_2C$ 决定。",
+  "conditions": "理想运放（虚短、输入电流为零）；单个电容构成一阶滤波器。",
+  "pitfall": "反相低通的 $\\omega_H$ 用反馈电阻 $R_f$，反相高通的 $\\omega_L$ 用输入电阻 $R_1$，不要互换；反相接法还有 $180^\\circ$ 附加相移。"
+ },
+ {
+  "id": "KF10-04",
+  "section": "ch10-s07",
+  "title": "低频短路时间常数与高频开路时间常数",
+  "tex": "\\omega_L\\approx\\sum_i\\frac{1}{C_iR_{is}},\\qquad \\frac{1}{\\omega_H}\\approx\\sum_iC_iR_{io}",
+  "use": "多电容放大器估算 $f_L$、$f_H$：每个电容单独作用，求它两端看进去的电阻，再按公式合成。",
+  "conditions": "独立源置零、受控源保留；低频其余电容短路（$R_{is}$），高频其余电容开路（$R_{io}$）；忽略零点，高频假设有主导极点。",
+  "pitfall": "低频求和的是频率，高频求和的是时间常数（频率取倒数和）；有一项远大于（低频）或远小于（高频）其余时，直接取它。"
+ },
+ {
+  "id": "KF10-05",
+  "section": "ch10-s08",
+  "title": "共射放大器三个低频电容的转折频率",
+  "tex": "\\omega_{LC1}=\\frac{1}{(R+R_i)C_1},\\ \\ \\omega_{LC2}=\\frac{1}{(R_C+R_L)C_2},\\ \\ \\omega_{LCe}=\\frac{1}{R'_EC_e},\\ \\ R'_E=R_E\\parallel\\frac{r_\\pi+R_1\\parallel R_2\\parallel R}{\\beta_0+1}",
+  "use": "$R_i=R_1\\parallel R_2\\parallel r_\\pi$；$f_L\\approx\\sum f_{Li}$，通常 $C_e$ 主导。共源对应 $C_S$：$R'_S=R_S\\parallel 1/g_m$，$R_i=R_{G1}\\parallel R_{G2}$。",
+  "conditions": "忽略 $r_o$ 和 $C_e$ 引入的低频零点；$\\beta_0+1$ 折算只适用于混合 $\\pi$ 模型的发射极。",
+  "pitfall": "$C_e$ 的电阻要含基极侧电阻并除以 $\\beta_0+1$，再与 $R_E$ 并联；只写 $r_e$ 会在基极侧电阻大时低估 $R'_E$。"
+ },
+ {
+  "id": "KF10-06",
+  "section": "ch10-s11",
+  "title": "BJT 截止频率 f_beta 与特征频率 f_T",
+  "tex": "\\beta(s)=\\frac{\\beta_0}{1+s/\\omega_\\beta},\\ \\ \\omega_\\beta=\\frac{1}{r_\\pi(C_\\pi+C_\\mu)},\\ \\ f_T=\\beta_0f_\\beta=\\frac{g_m}{2\\pi(C_\\pi+C_\\mu)}",
+  "use": "衡量晶体管本身的高频能力；FET 对应 $f_T=g_m/[2\\pi(C_{gs}+C_{gd})]$，没有 $\\beta_0$ 和 $f_\\beta$。",
+  "conditions": "输出交流短路、$\\omega\\gg\\omega_\\beta$ 且忽略 $sC_\\mu V_\\pi$（零点 $g_m/C_\\mu$ 远高于 $f_T$）。",
+  "pitfall": "$\\beta_0$ 增大时 $f_\\beta$ 按同比例减小，$f_T$ 不变；放大器的增益带宽积低于 $f_T$。"
+ },
+ {
+  "id": "KF10-07",
+  "section": "ch10-s12",
+  "title": "米勒定理",
+  "tex": "Z_1=\\frac{Z}{1-A},\\quad Z_2=\\frac{A}{A-1}Z;\\qquad C_1=(1-A)C,\\quad C_2=\\frac{A-1}{A}C",
+  "use": "把跨接在输入输出之间的阻抗或电容拆成输入端、输出端各一个对地元件。反相放大器 $A\\approx-g_mR'_L$ 时 $C_1\\approx(1+g_mR'_L)C$，$C_2\\approx C$。",
+  "conditions": "$A$ 取跨接元件两端之间的电压增益，近似为中频值；适用于输入极点主导的情形。",
+  "pitfall": "$A$ 带符号：反相时 $1-A=1+\\lvert A\\rvert$；同相跟随器 $A<1$ 时 $C_1$ 反而小于 $C$。"
+ },
+ {
+  "id": "KF10-08",
+  "section": "ch10-s13",
+  "title": "共射、共源放大器的米勒近似上限频率",
+  "tex": "C_{in}=C_\\pi+\\left(1+g_mR'_L\\right)C_\\mu,\\quad f_H=\\frac{1}{2\\pi R'_{sig}C_{in}},\\quad R'_{sig}=r_\\pi\\parallel\\left[r_x+(R_B\\parallel R_{sig})\\right]",
+  "use": "信号源内阻较大时求 $f_H$。共源：$C_{in}=C_{gs}+C_{gd}(1+g_mR'_L)$，$R'_{sig}=R_{sig}\\parallel R_G$；$R'_L=r_o\\parallel R_C\\parallel R_L$。",
+  "conditions": "输入极点占主导，输出极点和右半平面零点远高于 $f_H$；偏离时改用开路时间常数 $\\tau_H=R'_{sig}C_\\pi+[R'_{sig}(1+g_mR'_L)+R'_L]C_\\mu$。",
+  "pitfall": "$R'_L$ 含负载电阻；米勒近似漏掉输出端的 $R'_LC_\\mu$ 项，会高估 $f_H$，$R_{sig}$ 小时误差更大。"
+ },
+ {
+  "id": "KF10-09",
+  "section": "ch10-s14",
+  "title": "共源放大器 R_sig 很小时的零点与极点",
+  "tex": "\\frac{V_o}{V_{sig}}=-g_mR'_L\\,\\frac{1-sC_{gd}/g_m}{1+s(C_L+C_{gd})R'_L},\\quad f_Z=\\frac{g_m}{2\\pi C_{gd}},\\quad f_H\\approx f_P=\\frac{1}{2\\pi(C_L+C_{gd})R'_L}",
+  "use": "$R_{sig}=0$ 或很小时求 $f_H$，说明带宽受输出端限制，应减小 $C_{gd}$ 与 $C_L$。",
+  "conditions": "$f_Z\\gg f_P$，忽略零点；$C_{gs}$ 被电压源短路，不起作用。",
+  "pitfall": "零点在右半平面（幅度上升同时相位滞后）；$R_{sig}$ 较大时不能用这个式子，要改用米勒输入极点。"
+ }
+]

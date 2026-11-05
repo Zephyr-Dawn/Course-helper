@@ -1,0 +1,391 @@
+{
+ "CH10-KP1-01": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "先从图上读出中频增益是多少 dB，再回忆上、下限频率对应的幅度下降量。"
+  ],
+  "solution": "图中中频段对数增益为 $40\\,\\mathrm{dB}$。上限频率 $f_H$ 和下限频率 $f_L$ 的定义是增益幅度降到中频值的 $1/\\sqrt{2}$，对应 $20\\lg(1/\\sqrt{2})\\approx -3.01\\,\\mathrm{dB}$。所以此处实际增益为 $40-3=37\\,\\mathrm{dB}$。选 C。",
+  "check": "折线（渐近线）图在转折点处仍显示 $40\\,\\mathrm{dB}$，实际曲线在该点低 $3\\,\\mathrm{dB}$：单极点 $\\lvert 1/(1+j)\\rvert = 1/\\sqrt{2}$，$20\\lg\\sqrt{2}=3.01$。",
+  "note": "原答案正确。波特图折线与实际曲线的最大误差 3 dB 就出现在转折频率处。",
+  "tags": [
+   "波特图",
+   "上下限频率",
+   "3dB 点"
+  ]
+ },
+ "CH10-KP1-02": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "两个极点相差十倍，较低的那个极点决定上限频率。",
+   "折线近似下，在 $100\\,\\mathrm{kHz}$ 之前增益保持 $40\\,\\mathrm{dB}$。"
+  ],
+  "solution": "$\\dot A_v=-100/[(1+jf/f_1)(1+jf/f_2)]$，其中 $f_1=100\\,\\mathrm{kHz}$，$f_2=1\\,\\mathrm{MHz}$。中频增益 $100$，即 $40\\,\\mathrm{dB}$，相位 $-180^\\circ$。折线图：$f<f_1$ 平坦 $40\\,\\mathrm{dB}$；$f_1\\sim f_2$ 以 $-20\\,\\mathrm{dB/dec}$ 下降，到 $f_2$ 为 $20\\,\\mathrm{dB}$；$f>f_2$ 以 $-40\\,\\mathrm{dB/dec}$ 下降。相位：从 $10\\,\\mathrm{kHz}$ 开始以 $-45^\\circ/\\mathrm{dec}$ 下降，在 $f_1$ 处为 $-225^\\circ$，最终趋于 $-360^\\circ$。上限频率近似为最低的极点：$f_H\\approx f_1=100\\,\\mathrm{kHz}$。",
+  "check": "精确解 $\\lvert\\dot A_v\\rvert^2$ 降到一半：令 $x=f/f_1$，$(1+x^2)(1+x^2/100)=2$，得 $x^2\\approx 0.983$，$f_H\\approx 99.2\\,\\mathrm{kHz}$，与 $100\\,\\mathrm{kHz}$ 相差不到 1%。",
+  "note": "原答案 $f_H\\approx 100\\,\\mathrm{kHz}$ 正确，题面要求“近似值”。精确 $-3\\,\\mathrm{dB}$ 点约 $99.2\\,\\mathrm{kHz}$。原答案波特图（40 dB 平坦，100 kHz 起 -20 dB/dec，1 MHz 起 -40 dB/dec，相位 -180° 到 -360°）与表达式一致。",
+  "tags": [
+   "波特图",
+   "上限频率",
+   "主极点近似"
+  ]
+ },
+ "CH10-KP1-03": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "每个一阶极点最多贡献多少相移？",
+   "分子是正实数，不引入相移。"
+  ],
+  "solution": "$T(j\\omega)=10^5/[(1+j\\omega/10^2)(1+j\\omega/10^3)(1+j\\omega/10^5)]$，相位为 $-\\arctan(\\omega/10^2)-\\arctan(\\omega/10^3)-\\arctan(\\omega/10^5)$。每一项范围是 $0$ 到 $-90^\\circ$，三个极点叠加，当 $\\omega\\to\\infty$ 时趋于 $-270^\\circ$。波特图中的最大相移为 $-270^\\circ$。选 D。",
+  "check": "极点数减零点数 $=3$，高频渐近斜率 $-60\\,\\mathrm{dB/dec}$，相位 $-90^\\circ\\times 3=-270^\\circ$，两者一致。",
+  "note": "原答案正确。折线相位图中，每个极点在其频率的 0.1 倍到 10 倍之间变化 90°。",
+  "tags": [
+   "相位波特图",
+   "极点"
+  ]
+ },
+ "CH10-KP1-04": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "从图上读出每个转折点的频率：斜率每增加一档 $-20\\,\\mathrm{dB/dec}$ 就多一个极点。",
+   "平坦段的 dB 数换算成倍数，再决定符号（题目说是反相放大）。"
+  ],
+  "solution": "读图（横轴单位 MHz）：平坦段 $80\\,\\mathrm{dB}$，在 $0.1\\,\\mathrm{MHz}=10^5\\,\\mathrm{Hz}$ 处斜率变为 $-20\\,\\mathrm{dB/dec}$；到 $10\\,\\mathrm{MHz}=10^7\\,\\mathrm{Hz}$ 时增益降为 $40\\,\\mathrm{dB}$（两个十倍频程共降 $40\\,\\mathrm{dB}$，吻合），斜率变为 $-40\\,\\mathrm{dB/dec}$；到 $100\\,\\mathrm{MHz}=10^8\\,\\mathrm{Hz}$ 恰好降到 $0\\,\\mathrm{dB}$（一个十倍频程降 $40\\,\\mathrm{dB}$，吻合），此后斜率变为 $-60\\,\\mathrm{dB/dec}$。故三个极点 $f_{p1}=10^5\\,\\mathrm{Hz}$，$f_{p2}=10^7\\,\\mathrm{Hz}$，$f_{p3}=10^8\\,\\mathrm{Hz}$。中频增益 $20\\lg A_0=80\\Rightarrow A_0=10^4$，反相放大取负号：$\\dot A_v=-\\dfrac{10^4}{(1+jf/10^5)(1+jf/10^7)(1+jf/10^8)}$。",
+  "check": "回代：$f=10^7\\,\\mathrm{Hz}$ 时分母模约为 $\\lvert jf/f_{p1}\\rvert\\cdot\\lvert 1+j\\rvert\\approx 100\\times1.41$，增益 $10^4/141\\approx 71$，即 $37\\,\\mathrm{dB}$，比折线的 $40\\,\\mathrm{dB}$ 低约 $3\\,\\mathrm{dB}$（转折点处正常偏差）。",
+  "note": "原答案与读图一致。极点频率写在横轴 MHz 坐标上，换算成 Hz 时要注意 $0.1\\,\\mathrm{MHz}=10^5\\,\\mathrm{Hz}$。",
+  "tags": [
+   "由波特图写传递函数",
+   "反相放大",
+   "三极点"
+  ]
+ },
+ "CH10-KP1-05": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "中频段为 $30\\,\\mathrm{dB}$，把它换算成电压倍数。",
+   "相位图在低频处为 $-90^\\circ$，说明低频有一个极点；写低频极点时用 $1+f_0/(jf)$ 的形式。"
+  ],
+  "solution": "读图：中频增益 $30\\,\\mathrm{dB}$，$\\lvert A_v\\rvert=10^{30/20}=31.6$；中频相位 $-180^\\circ$，所以是反相放大。下限转折频率 $f_L=10\\,\\mathrm{Hz}$（该处相位为 $-135^\\circ$，低频段为 $-90^\\circ$，由 $-180^\\circ+90^\\circ$ 得到，对应低频极点）。上限转折频率 $f_H=10^5\\,\\mathrm{Hz}$（相位 $-225^\\circ$）。低频极点的标准形式 $1/(1+f_L/(jf))$，高频极点的标准形式 $1/(1+jf/f_H)$，所以 $\\dot A_v\\approx\\dfrac{-31.6}{\\left(1+\\dfrac{10}{jf}\\right)\\left(1+\\dfrac{jf}{10^5}\\right)}$。等价形式：$\\dfrac{-3.16\\,jf}{(1+jf/10)(1+jf/10^5)}$。",
+  "check": "低频极限：$f\\ll 10\\,\\mathrm{Hz}$ 时 $\\dot A_v\\approx -31.6\\,jf/10$，幅度 $3.16f$，在 $f=1\\,\\mathrm{Hz}$ 为 $3.16$，即 $10\\,\\mathrm{dB}$，斜率 $+20\\,\\mathrm{dB/dec}$，相位 $-180^\\circ+90^\\circ=-90^\\circ$，与图一致。",
+  "note": "原答案把中频增益取为 $-32$，精确换算为 $10^{1.5}=31.6$（约差 1.2%，属于读图舍入）。两种等价形式的分子应为 $-3.16\\,jf$ 而不是 $-3.2\\,jf$ 才与 $-31.6$ 严格对应，差异在读图误差之内。",
+  "tags": [
+   "由波特图写传递函数",
+   "低频极点",
+   "dB 换算"
+  ]
+ },
+ "CH10-KP1-06": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "先把 $jf$ 与 $1+jf/10$ 相除，看中频增益多大。",
+   "哪个极点最低、哪个最高，分别决定下限和上限。"
+  ],
+  "solution": "$\\dot A_v=\\dfrac{\\pm100\\,jf}{(1+jf/10)(1+jf/10^4)(1+jf/10^5)}$。分子的 $jf$ 与第一个因子 $1+jf/10$ 合并：$\\dfrac{100\\,jf}{1+jf/10}=\\dfrac{1000}{1+10/(jf)}$，这是一个转折频率 $10\\,\\mathrm{Hz}$ 的低频极点。中频增益 $1000$（$60\\,\\mathrm{dB}$）。其余两个极点 $10\\,\\mathrm{kHz}$ 与 $100\\,\\mathrm{kHz}$ 是高频极点。因此 $f_L\\approx10\\,\\mathrm{Hz}$，$f_H\\approx 10\\,\\mathrm{kHz}$（由最低的高频极点决定）。",
+  "check": "精确值：高频侧 $(1+x^2)(1+x^2/100)=2$（$x=f/10\\,\\mathrm{kHz}$）得 $f_H\\approx 9.9\\,\\mathrm{kHz}$；低频侧高频极点在 $10\\,\\mathrm{Hz}$ 处影响可忽略，$f_L\\approx 10.0\\,\\mathrm{Hz}$。",
+  "note": "原答案 10 Hz、10 kHz 正确。提醒：表达式写成 $jf/(1+jf/10)$ 时，$10\\,\\mathrm{Hz}$ 的极点是低频极点，不是高频极点。",
+  "tags": [
+   "上下限频率",
+   "低频极点",
+   "主极点近似"
+  ]
+ },
+ "CH10-KP1-07": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "横轴是角频率 $\\omega$（rad/s），读出转折点后写成关于 $s$ 的极点。",
+   "中频 $60\\,\\mathrm{dB}$ 是多少倍？低频段 $+20\\,\\mathrm{dB/dec}$、相位 $+90^\\circ$ 说明有一个零点在原点。"
+  ],
+  "solution": "读图：中频增益 $60\\,\\mathrm{dB}=1000$，平坦段从 $\\omega=10$ 到 $10^4\\,\\mathrm{rad/s}$。低频 $+20\\,\\mathrm{dB/dec}$ 且相位 $+90^\\circ$：原点处有一个零点，在 $\\omega=10$ 有一个低频极点；$\\omega=10^4$ 处斜率变 $-20\\,\\mathrm{dB/dec}$（极点），$\\omega=10^5$ 处斜率变 $-40\\,\\mathrm{dB/dec}$（极点）。所以 $T(s)=\\dfrac{K\\,s}{(1+s/10)(1+s/10^4)(1+s/10^5)}$，中频时 $\\dfrac{Ks}{s/10}=10K=1000\\Rightarrow K=100$。得 $T(s)=\\dfrac{100\\,s}{(1+s/10)(1+s/10^4)(1+s/10^5)}=\\dfrac{1000}{(1+10/s)(1+s/10^4)(1+s/10^5)}$。",
+  "check": "低频：$\\omega=1$ 时 $\\lvert T\\rvert\\approx100$，即 $40\\,\\mathrm{dB}$，与折线从 $60\\,\\mathrm{dB}$（$\\omega=10$）按 $+20\\,\\mathrm{dB/dec}$ 向下一个十倍频程得到的 $40\\,\\mathrm{dB}$ 一致。相位：低频 $+90^\\circ$，高频 $+90^\\circ-270^\\circ=-180^\\circ$，与图一致。",
+  "note": "原答案两种等价形式均正确。注意横轴标注为 $\\omega$，所以极点单位是 rad/s，不是 Hz。",
+  "tags": [
+   "由波特图写传递函数",
+   "零点在原点",
+   "角频率"
+  ]
+ },
+ "CH10-KP1-08": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "三个极点 $10^3$、$10^5$、$10^6\\,\\mathrm{Hz}$，先画幅度：每过一个极点斜率再减 $20\\,\\mathrm{dB/dec}$。",
+   "相位每个极点从其 $0.1$ 倍频到 $10$ 倍频变化 $-90^\\circ$，起点是 $-180^\\circ$（负号）。"
+  ],
+  "solution": "$T(jf)=-10^4/[(1+jf/10^3)(1+jf/10^5)(1+jf/10^6)]$。中频增益 $10^4$，即 $80\\,\\mathrm{dB}$，相位 $-180^\\circ$（负号）。幅度折线：$f<10^3\\,\\mathrm{Hz}$ 平坦 $80\\,\\mathrm{dB}$；$10^3\\sim10^5\\,\\mathrm{Hz}$ 斜率 $-20\\,\\mathrm{dB/dec}$，在 $10^5$ 处降为 $40\\,\\mathrm{dB}$；$10^5\\sim10^6$ 斜率 $-40\\,\\mathrm{dB/dec}$，在 $10^6$ 处降为 $0\\,\\mathrm{dB}$；$f>10^6$ 斜率 $-60\\,\\mathrm{dB/dec}$。相位折线（起点 $-180^\\circ$）：极点 $10^3$ 从 $10^2$ 到 $10^4$ 变化 $-90^\\circ$，极点 $10^5$ 从 $10^4$ 到 $10^6$，极点 $10^6$ 从 $10^5$ 到 $10^7$。分段斜率：$10^2\\sim10^4$ 为 $-45^\\circ/\\mathrm{dec}$，$10^4\\sim10^5$ 为 $-45^\\circ/\\mathrm{dec}$，$10^5\\sim10^6$ 为 $-90^\\circ/\\mathrm{dec}$，$10^6\\sim10^7$ 为 $-45^\\circ/\\mathrm{dec}$。关键相位值：$10^5\\,\\mathrm{Hz}$ 处 $-315^\\circ$，$10^6\\,\\mathrm{Hz}$ 处 $-405^\\circ$，$10^7\\,\\mathrm{Hz}$ 以后 $-450^\\circ$。",
+  "check": "极点—零点计数：高频斜率应为 $-20\\times3=-60\\,\\mathrm{dB/dec}$，高频相位 $-180^\\circ-270^\\circ=-450^\\circ$，与原答案图一致。",
+  "note": "原答案图与上述折线一致（幅度 80 dB、转折点 10³/10⁵/10⁶ Hz，相位 -180°→-450°）。",
+  "tags": [
+   "波特图",
+   "折线近似",
+   "三极点"
+  ]
+ },
+ "CH10-KP1-09": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "先把分母 $10\\,\\mathrm{Hz}+jf$ 提出 $jf$ 或 $10$，化成标准形式再读零极点。",
+   "分子 $jf$ 与低频极点配合，中频增益是多少？"
+  ],
+  "solution": "$A_v=\\dfrac{jf\\times10^4}{(10+jf)(1+jf/10^5)(1+jf/10^6)}$。提出分母中的 $jf$：$\\dfrac{jf}{10+jf}=\\dfrac{1}{1+10/(jf)}$，所以 $A_v=\\dfrac{10^4}{(1+10/(jf))(1+jf/10^5)(1+jf/10^6)}$：中频增益 $10^4$（$80\\,\\mathrm{dB}$），无负号，中频相位 $0^\\circ$。低频极点 $10\\,\\mathrm{Hz}$，高频极点 $10^5\\,\\mathrm{Hz}$、$10^6\\,\\mathrm{Hz}$。幅度折线：低频 $+20\\,\\mathrm{dB/dec}$ 上升，在 $10\\,\\mathrm{Hz}$ 到达 $80\\,\\mathrm{dB}$（$1\\,\\mathrm{Hz}$ 处 $60\\,\\mathrm{dB}$）；平坦到 $10^5\\,\\mathrm{Hz}$；$10^5\\sim10^6$ 为 $-20\\,\\mathrm{dB/dec}$（到 $60\\,\\mathrm{dB}$）；之后 $-40\\,\\mathrm{dB/dec}$（$10^7$ 处 $20\\,\\mathrm{dB}$）。相位：低频 $+90^\\circ$，$1\\sim100\\,\\mathrm{Hz}$ 以 $-45^\\circ/\\mathrm{dec}$ 降到 $0^\\circ$，$10\\,\\mathrm{Hz}$ 处 $+45^\\circ$；$10^4\\sim10^5$ 为 $-45^\\circ/\\mathrm{dec}$（$10^5$ 处 $-45^\\circ$），$10^5\\sim10^6$ 为 $-90^\\circ/\\mathrm{dec}$（$10^6$ 处 $-135^\\circ$），$10^6\\sim10^7$ 为 $-45^\\circ/\\mathrm{dec}$，$10^7$ 以后 $-180^\\circ$。",
+  "check": "低频极限 $f\\to0$：$A_v\\approx 10^4\\,jf/10$，相位 $+90^\\circ$，$1\\,\\mathrm{Hz}$ 处幅度 $10^3$（$60\\,\\mathrm{dB}$）；高频极限相位 $-180^\\circ$，斜率 $-40\\,\\mathrm{dB/dec}$，与原答案图一致。",
+  "note": "原答案图与上述折线一致。原答案文字“低频极点为 10 Hz，高频极点为 10⁵ Hz 和 10⁶ Hz”正确。",
+  "tags": [
+   "波特图",
+   "标准形式",
+   "低频极点"
+  ]
+ },
+ "CH10-KP2-01": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "写出一阶低通 $1/(1+jf/f_c)$ 和一阶高通 $1/(1+f_c/(jf))$，代入 $f=f_c$。"
+  ],
+  "solution": "低通：$H=\\dfrac{1}{1+jf/f_c}$，$f=f_c$ 时 $H=\\dfrac{1}{1+j}$，相位 $-\\arctan1=-45^\\circ$。高通：$H=\\dfrac{1}{1+f_c/(jf)}=\\dfrac{jf/f_c}{1+jf/f_c}$，$f=f_c$ 时 $H=\\dfrac{j}{1+j}$，相位 $90^\\circ-45^\\circ=+45^\\circ$。答案：$-45^\\circ$，$+45^\\circ$。",
+  "check": "两种滤波器在 $f_c$ 处幅度均为 $1/\\sqrt{2}$。低通相位从 $0^\\circ$ 单调降到 $-90^\\circ$，高通从 $+90^\\circ$ 降到 $0^\\circ$，在 $f_c$ 处正好是各自变化范围的中点。",
+  "note": "原答案正确。",
+  "tags": [
+   "一阶滤波器",
+   "相位",
+   "截止频率"
+  ]
+ },
+ "CH10-KP2-02": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "相移 $-45^\\circ$ 对应哪个特殊频率？该频率上幅度是多少？"
+  ],
+  "solution": "一阶 RC 低通 $H=1/(1+jf/f_c)$，相位 $-\\arctan(f/f_c)=-45^\\circ$ 时 $f=f_c$，幅度 $1/\\sqrt{2}\\approx0.707$，即约 $70\\%$。选 A。B 错：$50\\%$ 对应 $-6\\,\\mathrm{dB}$，在 $f\\approx1.73f_c$，相位约 $-60^\\circ$。C 错：$f_c$ 处只下降 $3\\,\\mathrm{dB}$，没有截止到几乎为零。D 错：频率继续升高，相移趋于 $-90^\\circ$，不是 $0^\\circ$。",
+  "check": "取 $f=1.732f_c$：幅度 $1/\\sqrt{1+3}=0.5$，相位 $-\\arctan1.732=-60^\\circ$，说明 $50\\%$ 不对应 $-45^\\circ$。",
+  "note": "原答案正确。",
+  "tags": [
+   "一阶低通",
+   "3dB 点",
+   "相位"
+  ]
+ },
+ "CH10-KP2-03": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "截止频率处 $\\omega RC$ 等于多少？"
+  ],
+  "solution": "$H(j\\omega)=\\dfrac{1/(j\\omega C)}{R+1/(j\\omega C)}=\\dfrac{1}{1+j\\omega RC}$。截止频率 $\\omega_c=1/(RC)$，此时 $H=1/(1+j)$，相位 $-\\arctan(1)=-45^\\circ$。",
+  "check": "同 CH10-KP2-01：低通在 $f_c$ 处相位恰为 $-45^\\circ$，幅度 $1/\\sqrt{2}$。",
+  "note": "原答案正确。",
+  "tags": [
+   "一阶低通",
+   "相位"
+  ]
+ },
+ "CH10-KP3-01": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "先求 $g_m$ 和 $r_{b'e}$，再把 $C_\\mu$ 按 $1+g_mR_L$ 折算到输入端。",
+   "高频极点的电阻是从 $C'_\\pi$ 两端看进去的等效电阻，$R_s$ 和 $r_{bb'}$ 与 $r_{b'e}$ 的关系是什么？"
+  ],
+  "solution": "图中集电极只接 $R_L$ 到地（交流负载就是 $R_L=5\\,\\mathrm{k\\Omega}$），$R_s$ 串联信号源。$g_m=I_{CQ}/V_T=1/26\\,\\mathrm{S}\\approx38.5\\,\\mathrm{mS}$，$r_{b'e}=\\beta/g_m=2.6\\,\\mathrm{k\\Omega}$。密勒因子 $1+g_mR_L=1+192.3=193.3$。输入端等效电容 $C'_\\pi=C_\\pi+(1+g_mR_L)C_\\mu=14.8+193.3\\times0.5=111.5\\,\\mathrm{pF}$。$C'_\\pi$ 两端的等效电阻 $R=(R_s+r_{bb'})\\parallel r_{b'e}=1.2\\parallel2.6\\approx0.821\\,\\mathrm{k\\Omega}$。$\\omega_H=1/(RC'_\\pi)=1/(821\\times111.5\\times10^{-12})\\approx1.09\\times10^7\\,\\mathrm{rad/s}$，$f_H=\\omega_H/2\\pi\\approx1.74\\,\\mathrm{MHz}$。",
+  "check": "输出侧密勒电容 $C_\\mu(1+1/(g_mR_L))\\approx0.5\\,\\mathrm{pF}$，与 $R_L=5\\,\\mathrm{k\\Omega}$ 构成的极点约 $64\\,\\mathrm{MHz}$，比 $1.74\\,\\mathrm{MHz}$ 高得多，可忽略。用完整的节点方程数值求 $-3\\,\\mathrm{dB}$ 点，得 $f_H\\approx1.70\\,\\mathrm{MHz}$，与密勒近似结果相差约 2%。",
+  "note": "原答案 $C'_\\pi=111.5\\,\\mathrm{pF}$、$\\omega_{H}\\approx10.94\\times10^6\\,\\mathrm{rad/s}$、$f_H\\approx1.74\\,\\mathrm{MHz}$ 正确（我算得 $1.0927\\times10^7$，末位舍入差异）。题面指定用密勒定理，精确 $-3\\,\\mathrm{dB}$ 点约 $1.70\\,\\mathrm{MHz}$。",
+  "tags": [
+   "密勒定理",
+   "共射高频响应",
+   "上限频率"
+  ]
+ },
+ "CH10-KP3-02": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "高频、低频下谁的阻抗变化导致增益下降？"
+  ],
+  "solution": "高频时晶体管极间电容（$C_\\pi$、$C_\\mu$）和分布电容的容抗变小，分流信号使增益下降，选 B。低频时耦合电容、旁路电容的容抗变大，信号在其上损失或负反馈增强，使增益下降，选 A。答案：B，A。",
+  "check": "C（非线性）影响波形失真而不是随频率变化的增益；D（Q 点不合适）造成截止或饱和失真，两者与频率无关。",
+  "note": "原答案正确。",
+  "tags": [
+   "高低频原因",
+   "耦合电容",
+   "极间电容"
+  ]
+ },
+ "CH10-KP3-05": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "结点到地的 $R$ 与 $C$ 构成怎样的一阶网络？频率升高时 $C$ 的作用是什么？"
+  ],
+  "solution": "该结点对地的 $R\\parallel C$ 使节点电压 $V\\propto\\dfrac{1}{1+sRC}$：频率升高时 $C$ 的容抗减小，节点电压下降，转折频率为 $1/(2\\pi RC)$，即引入一个高频极点。选 D。",
+  "check": "低频 $C$ 开路，该网络对增益无影响；高频 $C$ 短路使节点电压趋近 $0$，幅度下降 $-20\\,\\mathrm{dB/dec}$，是极点而不是零点。若 $C$ 是串联电容才会产生低频零点（耦合电容）。",
+  "note": "原答案正确。前提是 $C$ 为对地的寄生电容（并联在节点上），而不是串联的耦合电容。",
+  "tags": [
+   "极点",
+   "节点 RC",
+   "高频极点"
+  ]
+ },
+ "CH10-KP3-07": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "寄生电容并联在信号通路上，耦合与旁路电容串联或并联在偏置/信号通路里。"
+  ],
+  "solution": "晶体管或 MOS 管的寄生电容（$C_\\pi$、$C_\\mu$、$C_{gs}$、$C_{gd}$）在高频时容抗小，导致高频增益衰减。隔直（耦合）电容和旁路电容在低频时容抗大，导致低频增益衰减。答案：高频，低频。",
+  "check": "极限检查：$f\\to\\infty$ 时寄生电容可视为短路，增益趋于零；$f\\to0$ 时耦合电容可视为开路，增益也趋于零。",
+  "note": "原答案正确。",
+  "tags": [
+   "高低频原因",
+   "寄生电容"
+  ]
+ },
+ "CH10-KP3-03": {
+  "verdict": "note",
+  "difficulty": 3,
+  "hints": [
+   "每个电容单独考虑：令其余电容短路，求从该电容两端看进去的等效电阻 $R$，极点 $f=1/(2\\pi RC)$。",
+   "$C_E$ 的等效电阻要把发射极侧的 $r_\\pi/(\\beta+1)$ 与 $R_{E1}$ 并联；注意信号源为理想电压源，基极偏置电阻对地短路。"
+  ],
+  "solution": "本题库中只保留了第 (3) 问，未给 $V_T$。由原答案 $R_{i2}=2.89\\,\\mathrm{k\\Omega}$ 可反推 $V_T=25\\,\\mathrm{mV}$，下面按此取值。\n\n**偏置**：Q1 基极戴维南等效 $V_{BB}=5\\times27/83=1.627\\,\\mathrm{V}$，$R_{BB}=56\\parallel27=18.2\\,\\mathrm{k\\Omega}$。$I_{B1}=\\dfrac{V_{BB}-0.7}{R_{BB}+(\\beta+1)R_{E1}}=\\dfrac{0.927}{18.2+202}=4.21\\,\\mathrm{\\mu A}$，$I_{C1}=0.421\\,\\mathrm{mA}$，$r_{\\pi1}=V_T/I_{B1}=5.94\\,\\mathrm{k\\Omega}$。Q2：$I_{B2}=(5-0.7)/500\\,\\mathrm{k\\Omega}=8.6\\,\\mathrm{\\mu A}$，$r_{\\pi2}=2.907\\,\\mathrm{k\\Omega}$，$R_{i2}=R_{B3}\\parallel r_{\\pi2}=2.89\\,\\mathrm{k\\Omega}$。\n\n**各电容的极点**（$C_L$ 低频开路；信号源理想，内阻为零）：\n\n- $C_1$：$R=R_{B1}\\parallel R_{B2}\\parallel r_{\\pi1}=56\\parallel27\\parallel5.94=4.48\\,\\mathrm{k\\Omega}$，$f_{L1}=\\dfrac{1}{2\\pi\\times4.48\\,\\mathrm{k\\Omega}\\times10\\,\\mathrm{\\mu F}}\\approx3.55\\,\\mathrm{Hz}$。\n- $C_2$：$R=R_{C1}+R_{i2}=2+2.89=4.89\\,\\mathrm{k\\Omega}$，$f_{L2}\\approx3.25\\,\\mathrm{Hz}$。\n- $C_E$：$R=R_{E1}\\parallel\\dfrac{r_{\\pi1}}{\\beta+1}=2000\\parallel58.8=57.1\\,\\Omega$，$f_{LE}=\\dfrac{1}{2\\pi\\times57.1\\,\\Omega\\times100\\,\\mathrm{\\mu F}}\\approx27.8\\,\\mathrm{Hz}$。\n- $C_3$：$R=R_{C2}+R_L=6\\,\\mathrm{k\\Omega}$，$f_{L3}\\approx2.65\\,\\mathrm{Hz}$。\n\n$C_E$ 对应的极点最高，是主导的低频极点。",
+  "check": "检验 $C_E$ 的电阻：从发射极看进去，基极侧电阻为 $r_{\\pi1}$（基极偏置电阻被理想信号源短路到地），除以 $(\\beta+1)$ 得 $58.8\\,\\Omega$，与 $R_{E1}$ 并联后 $57.1\\,\\Omega$；此值远小于 $R_{E1}=2\\,\\mathrm{k\\Omega}$，说明 $C_E$ 极点由 $1/g_m$ 量级的电阻决定。",
+  "note": "原答案 $f_{LC2}=3.25\\,\\mathrm{Hz}$、$f_{LC3}=2.65\\,\\mathrm{Hz}$ 与我一致；$f_{LC1}=3.80\\,\\mathrm{Hz}$、$f_{LCE}=30.4\\,\\mathrm{Hz}$ 用了 $r_{\\pi1}=5.43\\,\\mathrm{k\\Omega}$，对应用 $I_E\\approx(V_B-0.7)/R_{E1}$ 的估算偏置（忽略基极电流在 $R_{BB}$ 上的压降）。若按戴维南等效精确求偏置，$r_{\\pi1}=5.94\\,\\mathrm{k\\Omega}$，得 $3.55\\,\\mathrm{Hz}$ 与 $27.8\\,\\mathrm{Hz}$，原答案分别偏大约 7% 与 9%，处于估算精度内。题面缺第 (1)(2) 问和 $V_T$，$V_T=25\\,\\mathrm{mV}$ 为反推。其中 $C_E$ 的极点电阻形式（$R_{E1}\\parallel r_\\pi/(\\beta+1)$）是对的。",
+  "tags": [
+   "低频极点",
+   "旁路电容",
+   "短路时间常数"
+  ]
+ },
+ "CH10-KP3-04": {
+  "verdict": "note",
+  "difficulty": 3,
+  "hints": [
+   "中频增益别忘了信号源内阻 $R_{ss}$ 与 $R_g$ 的分压。",
+   "低频：哪个电容对应的时间常数最短（极点最高）？高频：密勒电容有多大？"
+  ],
+  "solution": "设 $r_o\\to\\infty$，由图 $R_{ss}=2\\,\\mathrm{k\\Omega}$，$R_g=1\\,\\mathrm{M\\Omega}$，$R_d=10\\,\\mathrm{k\\Omega}$，$R_L=3.3\\,\\mathrm{k\\Omega}$，$R_s=1\\,\\mathrm{k\\Omega}$。\n\n**中频增益**：$R'_L=R_d\\parallel R_L=2.48\\,\\mathrm{k\\Omega}$，$g_mR'_L=12.4$。$A_m=-\\dfrac{R_g}{R_{ss}+R_g}\\,g_mR'_L=-0.998\\times12.4\\approx-12.4$。\n\n**低频**：三个电容各自的极点（其余电容短路）：$C_1$：$\\omega=\\dfrac{1}{(R_{ss}+R_g)C_1}\\approx0.1\\,\\mathrm{rad/s}$；$C_2$：$\\omega=\\dfrac{1}{(R_d+R_L)C_2}=7.5\\,\\mathrm{rad/s}$；$C_S$：$\\omega=\\dfrac{1}{(R_s\\parallel1/g_m)C_S}=\\dfrac{1}{166.7\\,\\Omega\\times10\\,\\mathrm{\\mu F}}=600\\,\\mathrm{rad/s}$。$C_S$ 极点最高，$f_L\\approx600/2\\pi\\approx95.5\\,\\mathrm{Hz}$。\n\n**高频**：$C'_{gs}=C_{gs}+(1+g_mR'_L)C_{gd}=5+13.4\\times5\\approx72\\,\\mathrm{pF}$，输入端电阻 $R_{ss}\\parallel R_g\\approx2\\,\\mathrm{k\\Omega}$，$f_H=\\dfrac{1}{2\\pi\\times2\\,\\mathrm{k\\Omega}\\times72\\,\\mathrm{pF}}\\approx1.1\\,\\mathrm{MHz}$。",
+  "check": "完整节点方程数值计算（含全部电容，$r_o\\to\\infty$）：$f_L\\approx92.8\\,\\mathrm{Hz}$，$f_H\\approx1.02\\,\\mathrm{MHz}$，$\\lvert A_m\\rvert=12.38$。开路时间常数法：$\\tau_H=C_{gs}R_{ss}'+C_{gd}[R_{ss}'(1+g_mR'_L)+R'_L]=10+146=156\\,\\mathrm{ns}$，$f_H\\approx1.02\\,\\mathrm{MHz}$。",
+  "note": "中频增益 $-12.4$ 和 $f_L=95.5\\,\\mathrm{Hz}$（精确 $92.8\\,\\mathrm{Hz}$，差 3%）正确。$f_H\\approx1.1\\,\\mathrm{MHz}$ 只考虑了密勒折算后的输入极点，忽略输出节点的极点（$C_{gd}$ 与 $R'_L$ 约 $12\\,\\mathrm{MHz}$），精确 $-3\\,\\mathrm{dB}$ 点为 $1.02\\,\\mathrm{MHz}$，原答案偏高约 8%，未超过 10%，题面要求估算，故判为 note。答案文字中还有笔误：高频部分写的 $C_{ds}$ 应为 $C_{gd}$，$R'_s$ 应为 $R_{ss}\\parallel R_g$。",
+  "tags": [
+   "共源放大器",
+   "密勒定理",
+   "低频极点",
+   "源极旁路电容"
+  ]
+ },
+ "CH10-KP3-06": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "开路时间常数法：令其他电容开路，求每个电容两端看进去的电阻。",
+   "$C_{gd}$ 跨接在栅极与漏极之间，它看到的电阻不只是 $R'_{sig}$。"
+  ],
+  "solution": "$g_mR'_L=1.25\\times10=12.5$。令其余电容开路：\n\n- $C_{gs}$：$R_{gs}=R'_{sig}=10\\,\\mathrm{k\\Omega}$，$\\tau_{gs}=20\\,\\mathrm{fF}\\times10\\,\\mathrm{k\\Omega}=200\\,\\mathrm{ps}$。\n- $C_{gd}$：$R_{gd}=R'_{sig}+R'_L+g_mR'_{sig}R'_L=10(1+12.5)+10=145\\,\\mathrm{k\\Omega}$，$\\tau_{gd}=5\\,\\mathrm{fF}\\times145\\,\\mathrm{k\\Omega}=725\\,\\mathrm{ps}$。\n- $C_L$：$R_{C_L}=R'_L=10\\,\\mathrm{k\\Omega}$，$\\tau_{C_L}=250\\,\\mathrm{ps}$。\n\n$\\tau_H=200+725+250=1175\\,\\mathrm{ps}$，$f_H=\\dfrac{1}{2\\pi\\tau_H}=135.5\\,\\mathrm{MHz}$。",
+  "check": "密勒法交叉验证：输入侧 $C_{in}=20+13.5\\times5=87.5\\,\\mathrm{fF}$，$\\tau=875\\,\\mathrm{ps}$；输出侧 $C_{gd}+C_L=30\\,\\mathrm{fF}$，$\\tau=300\\,\\mathrm{ps}$；和为 $1175\\,\\mathrm{ps}$，与开路时间常数法一致。完整二阶传递函数数值求 $-3\\,\\mathrm{dB}$ 点为 $142.9\\,\\mathrm{MHz}$，开路时间常数法偏低约 5%（它是保守估计）。",
+  "note": "原答案两种方法数值一致且正确（$1/(2\\pi\\times1175\\,\\mathrm{ps})=135.45\\,\\mathrm{MHz}$）。方法二中输出侧精确的密勒电容为 $C_{gd}(1+1/12.5)=5.4\\,\\mathrm{fF}$，原解答用 $5\\,\\mathrm{fF}$ 求出 $30\\,\\mathrm{fF}$ 是近似，对总时间常数无影响，因为两种折算相加后与开路时间常数法一致。",
+  "tags": [
+   "开路时间常数法",
+   "密勒定理",
+   "共源放大器"
+  ]
+ },
+ "CH10-KP3-08": {
+  "verdict": "ok",
+  "difficulty": 3,
+  "hints": [
+   "先用戴维南等效求 $I_B$，再得 $I_E=(\\beta+1)I_B$。",
+   "$C_E$ 对应的电阻：从发射极看，基极回路总电阻（$r_{be}$ 加上与信号源内阻等并联的偏置电阻）除以 $(\\beta+1)$，再与 $R_E$ 并联。"
+  ],
+  "solution": "**(1)** $V_{BB}=9\\times15/42=3.21\\,\\mathrm{V}$，$R_{BB}=27\\parallel15=9.64\\,\\mathrm{k\\Omega}$。$I_B=\\dfrac{3.21-0.7}{9.64+101\\times1.2}=19.2\\,\\mathrm{\\mu A}$，$I_C=1.92\\,\\mathrm{mA}$，$I_E=(\\beta+1)I_B\\approx1.94\\,\\mathrm{mA}$。\n\n**(2)** $r_{be}=r_{bb'}+V_T/I_B=0+25\\,\\mathrm{mV}/19.2\\,\\mathrm{\\mu A}=1.30\\,\\mathrm{k\\Omega}$（等价于 $(\\beta+1)V_T/I_E$）。$R_i=R_1\\parallel R_2\\parallel r_{be}=9.64\\parallel1.30=1.15\\,\\mathrm{k\\Omega}$。$R_o=R_C=2.2\\,\\mathrm{k\\Omega}$（忽略 $r_o$）。$A_v=\\dfrac{v_o}{v_i}=-\\dfrac{\\beta(R_C\\parallel R_L)}{r_{be}}=-\\dfrac{100\\times1.048}{1.30}=-80.5$。$A_{vs}=A_v\\dfrac{R_i}{R_i+R_s}=-80.5\\times\\dfrac{1.146}{11.146}\\approx-8.28$。\n\n**(3)** 从 $C_E$ 看进去：$R_{C_E}=R_E\\parallel\\dfrac{r_{be}+R_1\\parallel R_2\\parallel R_s}{\\beta+1}=1.2\\,\\mathrm{k\\Omega}\\parallel\\dfrac{1.30+4.91}{101}\\,\\mathrm{k\\Omega}=1200\\parallel61.5=58.5\\,\\Omega$。$f_{C_E}=\\dfrac{1}{2\\pi\\times58.5\\,\\Omega\\times10\\,\\mathrm{\\mu F}}\\approx272\\,\\mathrm{Hz}$。",
+  "check": "回代校验直流：$V_E=I_ER_E=2.33\\,\\mathrm{V}$，$V_B=V_E+0.7=3.03\\,\\mathrm{V}$，与 $V_B=V_{BB}-I_BR_{BB}=3.21-0.185=3.03\\,\\mathrm{V}$ 一致；$V_C=9-1.92\\times2.2=4.78\\,\\mathrm{V}>V_B$，管子处于放大区。",
+  "note": "原答案正确。数值差异为舍入：原答案取 $R_C\\parallel R_L=1.05\\,\\mathrm{k\\Omega}$、$r_{be}=1.30\\,\\mathrm{k\\Omega}$ 得 $A_v=-80.77$、$A_{vs}=-8.33$；用未舍入值为 $-80.5$、$-8.28$（相差不到 1%）。$f_{C_E}$ 精确值 $272.1\\,\\mathrm{Hz}$。",
+  "tags": [
+   "共射放大器",
+   "偏置",
+   "旁路电容极点",
+   "输入输出电阻"
+  ]
+ },
+ "CH10-KP3-09": {
+  "verdict": "corrected",
+  "difficulty": 3,
+  "hints": [
+   "(2) 的相移要数清楚：哪些电容在 $s=0$ 处产生零点，哪个电容的零点在有限频率？",
+   "(1) 先求 $V_B$，再 $V_E=V_B-0.7$，$R_E=V_E/I_E$。"
+  ],
+  "solution": "**(1)** 基极戴维南等效 $V_{BB}=5\\,\\mathrm{V}$，$R_{BB}=4\\parallel4=2\\,\\mathrm{k\\Omega}$。$I_B=I_E/(\\beta+1)=49.8\\,\\mathrm{\\mu A}$，基极回路压降 $I_BR_{BB}=0.1\\,\\mathrm{V}$，所以 $V_E=5-0.1-0.7=4.2\\,\\mathrm{V}$，$R_E=4.2\\,\\mathrm{V}/10\\,\\mathrm{mA}=0.42\\,\\mathrm{k\\Omega}$（若忽略 $I_B$，$V_E=4.3\\,\\mathrm{V}$，$R_E=0.43\\,\\mathrm{k\\Omega}$，取标称值 $430\\,\\Omega$ 即可）。$g_m=I_C/V_T\\approx10\\,\\mathrm{mA}/25\\,\\mathrm{mV}=0.4\\,\\mathrm{S}$，$r_\\pi=\\beta/g_m=500\\,\\Omega$。$A_v=-g_m(R_C\\parallel R_L)=-0.4\\times333=-133$，$R_{in}=R_{B1}\\parallel R_{B2}\\parallel r_\\pi=400\\,\\Omega$，$A_{vs}=A_v\\dfrac{R_{in}}{R_{sig}+R_{in}}=-133\\times\\dfrac{400}{1400}\\approx-38.1$。\n\n**(2)** 各电容极点：$C_1$：$f=\\dfrac{1}{2\\pi(R_{sig}+R_{in})C_1}=11.4\\,\\mathrm{Hz}$；$C_2$：$f=\\dfrac{1}{2\\pi(R_C+R_L)C_2}=10.6\\,\\mathrm{Hz}$；$C_E$：$R'_E=R_E\\parallel\\dfrac{r_\\pi+R_{B1}\\parallel R_{B2}\\parallel R_{sig}}{\\beta+1}\\approx5.7\\,\\Omega$，$f=\\dfrac{1}{2\\pi R'_EC_E}\\approx2.8\\,\\mathrm{kHz}$。$C_E$ 的极点远高于另两个，所以 $f_L\\approx2.8\\,\\mathrm{kHz}$。\n\n**相移**：耦合电容 $C_1$、$C_2$ 串联在信号通路中，各在 $s=0$ 处产生一个零点；旁路电容 $C_E$ 并联在 $R_E$ 上，产生的是一对有限频率的零极点，零点在 $\\dfrac{1}{2\\pi R_EC_E}\\approx37.9\\,\\mathrm{Hz}$，极点在 $2.8\\,\\mathrm{kHz}$，当 $f\\to0$ 时这对零极点的相位贡献互相抵消，趋于 $0^\\circ$。所以 $f\\to0$ 时只有两个原点零点起作用，相对中频多出 $+90^\\circ\\times2=+180^\\circ$ 的超前。中频相位为 $-180^\\circ$（共射反相），故 $f\\to0$ 时总相位约为 $-180^\\circ+180^\\circ=0^\\circ$（相对中频超前 $180^\\circ$）。\n\n**(3)** 密勒：$C_{in}=C_\\pi+(1+\\lvert A_v\\rvert)C_\\mu=100+134\\times10=1.44\\,\\mathrm{nF}$。$R=R_{sig}\\parallel R_{B1}\\parallel R_{B2}\\parallel r_\\pi=1000\\parallel2000\\parallel500=286\\,\\Omega$。$f_H=\\dfrac{1}{2\\pi RC_{in}}\\approx387\\,\\mathrm{kHz}$。",
+  "check": "对整个电路（含三个电容、$r_\\pi$、$g_m$）的节点方程做数值扫描：$f_L=2.78\\,\\mathrm{kHz}$；$f=0.01\\,\\mathrm{Hz}$ 处输出相对于输入的相位为 $-0.15^\\circ$，中频（$100\\,\\mathrm{kHz}$ 附近）相位 $-178.4^\\circ$（含 $C_\\pi$ 的微小滞后），说明低频极限相位确实趋近 $0^\\circ$，相对中频超前约 $180^\\circ$，不是 $270^\\circ$。高频：含 $C_\\pi$、$C_\\mu$ 的完整节点方程 $-3\\,\\mathrm{dB}$ 点为 $384\\,\\mathrm{kHz}$，与密勒估算 $387\\,\\mathrm{kHz}$ 相差不到 1%。",
+  "final": "(1) $R_E\\approx0.42\\,\\mathrm{k\\Omega}$（忽略 $I_B$ 时 $0.43\\,\\mathrm{k\\Omega}$），$A_{vs}\\approx-38$；(2) $f_L\\approx2.8\\,\\mathrm{kHz}$，$f\\to0$ 时信号相对中频超前 $180^\\circ$（总相位约 $0^\\circ$），不是 $270^\\circ$；(3) $f_H\\approx387\\,\\mathrm{kHz}$。",
+  "note": "原答案 (1)(2) 的数值（$0.43\\,\\mathrm{k\\Omega}$、$-38.1$、$2.8\\,\\mathrm{kHz}$）与 (3) 的 $387\\,\\mathrm{kHz}$ 均正确（$R_E$ 差 2% 是忽略 $I_B$ 的近似）。错误在“频率接近 0 时的相移”：原答案说“一共有 3 个零点组成高通滤波器，因此相移是 270°”，把 $C_E$ 也算成原点零点。实际上 $C_E$ 的零点在有限频率 $1/(2\\pi R_EC_E)\\approx38\\,\\mathrm{Hz}$，不在原点，只有 $C_1$、$C_2$ 的两个零点在原点，低频相位超前应为 $180^\\circ$。",
+  "tags": [
+   "多电容低频响应",
+   "旁路电容零点",
+   "共射放大器",
+   "密勒定理"
+  ]
+ },
+ "CH10-KP3-10": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "信号源内阻大时，输入回路的时间常数最大，输入极点最低。",
+   "把 $C_{gd}$ 用密勒定理折到输入端，折算系数用什么增益？"
+  ],
+  "solution": "图为共源放大器（漏极接 $R_D$，$R_{G1}$、$R_{G2}$ 偏置，$C_S$ 旁路 $R_S$，$C_{C1}$、$C_{C2}$ 耦合）。中高频时耦合电容和旁路电容短路，输入回路电阻 $R'_{sig}=R_{sig}\\parallel R_{G1}\\parallel R_{G2}$。共源放大的中频增益 $-g_mR'_L$，$R'_L=r_o\\parallel R_D\\parallel R_L$，密勒折算后输入电容 $C_{in}=C_{gs}+C_{gd}(1+g_mR'_L)$。当 $R_{sig}$ 较大时输入极点远低于输出极点，成为主极点，$f_H=\\dfrac{1}{2\\pi C_{in}R'_{sig}}$，与原答案一致。",
+  "check": "量纲：$R\\cdot C$ 为时间，其倒数为角频率，除以 $2\\pi$ 得 Hz。极限：$R_{sig}\\to\\infty$ 时 $R'_{sig}\\to R_{G1}\\parallel R_{G2}$，没有 $R_{sig}$ 的限制，与“较大”前提相容；$C_{gd}\\to0$ 时 $C_{in}\\to C_{gs}$，回到最简单的 $RC$ 低通。",
+  "note": "原答案正确，但它只在“输入极点是主极点”的前提下成立，忽略了输出节点极点（约 $1/(2\\pi R'_L(C_{gd}+C_L))$）；$R_{sig}$ 较小时需要用开路时间常数法或完整的两极点公式。",
+  "tags": [
+   "共源放大器",
+   "密勒定理",
+   "主极点",
+   "上限频率"
+  ]
+ },
+ "CH10-KP4-01": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "密勒定理：跨接阻抗 $Z$ 两端电压比 $K=V_{out}/V_{in}$，折算到输入端的阻抗为 $Z/(1-K)$，输出端为 $Z/(1-1/K)$。"
+  ],
+  "solution": "图中放大器增益为 $-A_0$，所以 $K=V_{out}/V_{in}=-A_0$。输入端：$Z_1=\\dfrac{Z}{1-K}=\\dfrac{1/(sC_F)}{1+A_0}$，即等效电容 $C_{in}=C_F(1+A_0)$。输出端：$Z_2=\\dfrac{Z}{1-1/K}=\\dfrac{1/(sC_F)}{1+1/A_0}$，即等效电容 $C_{out}=C_F(1+1/A_0)$。答案：$C_F(1+A_0)$，$C_F(1+1/A_0)$。",
+  "check": "设 $A_0=100$：输入端流过 $C_F$ 的电流为 $s C_F(V_{in}-V_{out})=sC_F\\cdot101\\,V_{in}$，对应 $101C_F$；输出端：$V_{in}=-V_{out}/100$，$sC_F(V_{out}-V_{in})=sC_F\\cdot1.01\\,V_{out}$，对应 $1.01C_F$，与公式一致。",
+  "note": "原答案正确。前提：$A_0$ 为增益的绝对值，放大器为反相（图中 $-A_0$）。",
+  "tags": [
+   "密勒定理",
+   "等效电容"
+  ]
+ },
+ "CH10-KP4-02": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "上限截止频率的定义是增益幅度下降多少 dB？"
+  ],
+  "solution": "上限截止频率处增益下降 $3\\,\\mathrm{dB}$，即幅度为中频增益的 $10^{-3/20}\\approx0.708$，精确为 $1/\\sqrt{2}=0.7071$。答案：约 $0.707$ 倍。",
+  "check": "单极点：$\\lvert1/(1+j)\\rvert=1/\\sqrt{2}=0.7071$，$20\\lg0.7071=-3.01\\,\\mathrm{dB}$。",
+  "note": "原答案正确。",
+  "tags": [
+   "上限频率",
+   "3dB 点"
+  ]
+ },
+ "CH10-KP4-03": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "截止频率是增益比最大（中频）值低多少 dB 的地方？"
+  ],
+  "solution": "截止频率定义为幅度降到中频（最大）值的 $1/\\sqrt{2}\\approx70.7\\%$（$-3\\,\\mathrm{dB}$）处的频率。选 B。A 描述的是增益最大处，不是截止点；C 的 $90^\\circ$ 相移与幅度 $3\\,\\mathrm{dB}$ 点无关（一阶系统截止点处相移为 $45^\\circ$）。",
+  "check": "一阶低通在 $f_c$：幅度 $0.707$，相位 $-45^\\circ$。",
+  "note": "原答案正确。对放大器指的是相对于中频增益的 -3 dB 点；带通放大器有两个截止频率。",
+  "tags": [
+   "截止频率",
+   "3dB 点"
+  ]
+ }
+}

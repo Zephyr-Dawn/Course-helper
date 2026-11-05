@@ -1,0 +1,83 @@
+[
+ {
+  "id": "KF8-01",
+  "section": "ch08-s04",
+  "title": "饱和区与三极管区电流方程（NMOS）",
+  "tex": "V_{OV}=V_{GS}-V_t,\\quad i_D=k_n'\\frac{W}{L}\\left[V_{OV}\\,v_{DS}-\\frac12 v_{DS}^2\\right]\\ (v_{DS}<V_{OV}),\\quad i_D=\\frac12 k_n'\\frac{W}{L}V_{OV}^2\\ (v_{DS}\\ge V_{OV})",
+  "use": "先由 $v_{GS}$、$v_{DS}$ 判断工作区，再选公式求 $i_D$；放大器必须工作在饱和区。",
+  "conditions": "$v_{GS}>V_t$；$k_n'=\\mu_nC_{ox}$；PMOS 用 $v_{SG}$、$v_{SD}$、$\\lvert V_{tp}\\rvert$ 代入同形式。",
+  "pitfall": "饱和区公式与 $v_{DS}$ 无关；偏置二次方程的两个根要用 $V_{GS}>V_t$ 和 $v_{DS}\\ge V_{OV}$ 检验。"
+ },
+ {
+  "id": "KF8-02",
+  "section": "ch08-s05",
+  "title": "沟道长度调制与输出电阻",
+  "tex": "i_D=\\frac12 k_n'\\frac{W}{L}V_{OV}^2\\,(1+\\lambda v_{DS}),\\quad \\lambda=\\frac1{V_A},\\quad r_o=\\left(\\frac{\\partial i_D}{\\partial v_{DS}}\\right)^{-1}\\approx\\frac{V_A}{I_D}",
+  "use": "估算饱和区 $r_o$，在小信号模型中与受控源并联。",
+  "conditions": "饱和区；$\\lambda v_{DS}\\ll1$；$\\lambda\\propto1/L$。",
+  "pitfall": "题目未给 $V_A$ 或 $\\lambda$ 时默认 $\\lambda=0$，$r_o\\to\\infty$；$I_D$ 越大 $r_o$ 越小。"
+ },
+ {
+  "id": "KF8-03",
+  "section": "ch08-s06",
+  "title": "跨导 g_m 的三种算法",
+  "tex": "g_m=\\frac{\\partial i_D}{\\partial v_{GS}}\\Big|_Q=k_nV_{OV}=\\frac{2I_D}{V_{OV}}=\\sqrt{2k_nI_D},\\quad k_n=k_n'\\frac{W}{L}",
+  "use": "已知 $V_{OV}$、$I_D$ 或 $k_n$ 中任意两个即可求 $g_m$。",
+  "conditions": "饱和区，忽略 $\\lambda$；要求 $V_{OV}$ 是静态值。",
+  "pitfall": "$g_m\\propto\\sqrt{I_D}$，与 BJT 的 $g_m=I_C/V_T\\propto I_C$ 不同；同电流下 MOS 的 $g_m$ 小得多。"
+ },
+ {
+  "id": "KF8-04",
+  "section": "ch08-s08",
+  "title": "体效应与背栅跨导",
+  "tex": "V_t=V_{t0}+\\gamma\\left(\\sqrt{2\\phi_F+V_{SB}}-\\sqrt{2\\phi_F}\\right),\\quad g_{mb}=\\chi g_m,\\quad \\chi=\\frac{\\gamma}{2\\sqrt{2\\phi_F+V_{SB}}}",
+  "use": "体与源不等电位时修正阈值，并在小信号模型中加 $g_{mb}v_{bs}$。",
+  "conditions": "NMOS 的 $V_{SB}\\ge0$（PN 结不正偏）；$\\chi$ 通常远小于 1。",
+  "pitfall": "源极电位随信号变化而体接地时，源极看进去的电阻为 $1/(g_m+g_{mb})$；源接地的共源级不受影响。"
+ },
+ {
+  "id": "KF8-05",
+  "section": "ch08-s09",
+  "title": "小信号模型（π 型与 T 型）",
+  "tex": "i_d=g_mv_{gs}\\ (v_{gs}\\ll2V_{OV}),\\quad i_g=0,\\quad R_{S,\\mathrm{in}}=\\frac1{g_m},\\quad R_{D,\\mathrm{in}}=r_o",
+  "use": "先求静态点得 $g_m$、$r_o$，再换成线性模型：π 型是 D–S 间受控源 $g_mv_{gs}$ 并 $r_o$；T 型是 G–S 间接 $1/g_m$。",
+  "conditions": "饱和区，信号幅度远小于 $2V_{OV}$；栅极开路（$i_g=0$）。",
+  "pitfall": "栅极没有电流，模型比 BJT 少 $r_\\pi$；T 型里 $1/g_m$ 连在 G–S 之间，但电流不是从栅极流入。"
+ },
+ {
+  "id": "KF8-06",
+  "section": "ch08-s10",
+  "title": "常用偏置关系",
+  "tex": "V_G=\\frac{R_{G2}}{R_{G1}+R_{G2}}V_{DD},\\quad V_{GS}=V_G-I_DR_S,\\quad V_{DD}=V_{GS}+R_DI_D,\\quad I_{REF}=\\frac{V_{DD}-V_{GS}-V_{SS}}{R}",
+  "use": "依次是分压偏置、源极电阻、栅漏反馈偏置、镜像电流源参考电流；与 $I_D=\\frac12k_n(V_{GS}-V_t)^2$ 联立求静态点，镜像输出 $I_0=I_{REF}(W/L)_2/(W/L)_1$。",
+  "conditions": "栅极电流为零；管子饱和（栅漏反馈偏置自动饱和）。",
+  "pitfall": "解二次方程后必须检验 $V_{GS}>V_t$ 与 $V_{DS}\\ge V_{OV}$，舍去不合理的根。"
+ },
+ {
+  "id": "KF8-07",
+  "section": "ch08-s11",
+  "title": "共源放大器指标",
+  "tex": "A_v=-g_m(R_D/\\!/R_L),\\quad R_i=R_G,\\quad R_o=R_D,\\quad A_v'=-\\frac{g_m(R_D/\\!/R_L)}{1+g_mR_S}",
+  "use": "计算电压增益，源信号增益还要乘 $R_G/(R_{sig}+R_G)$；$A_v'$ 是源极电阻 $R_S$ 未旁路时的增益。",
+  "conditions": "饱和区，忽略 $r_o$；计入 $r_o$ 时把 $R_D$ 换成 $r_o/\\!/R_D$。",
+  "pitfall": "$R_i$ 要计入偏置电阻；$R_S$ 未旁路使增益下降 $1+g_mR_S$ 倍，$g_mR_S\\gg1$ 时 $A_v\\approx-R_D/R_S$。"
+ },
+ {
+  "id": "KF8-08",
+  "section": "ch08-s14",
+  "title": "共漏与共栅放大器指标",
+  "tex": "A_{v,\\mathrm{CD}}=\\frac{g_mR'}{1+g_mR'},\\ R_{o,\\mathrm{CD}}=R_S/\\!/\\frac1{g_m};\\quad A_{v,\\mathrm{CG}}=g_m(R_D/\\!/R_L),\\ R_{i,\\mathrm{CG}}=\\frac1{g_m}",
+  "use": "共漏（CD）作电压缓冲，$R'=R_S/\\!/R_L$，$R_i=R_G$；共栅（CG）作电流缓冲，$R_o=R_D$，$A_{vs}=R_D/(R_{sig}+1/g_m)$（$R_L=\\infty$）。",
+  "conditions": "饱和区，忽略 $r_o$ 和体效应；体效应显著时 $g_m$ 换成 $g_m+g_{mb}$。",
+  "pitfall": "CD 的 $R_o$ 与 $R_{sig}$ 无关；CG 的 $R_i$ 很小，要求信号源内阻也小。"
+ },
+ {
+  "id": "KF8-09",
+  "section": "ch08-s15",
+  "title": "cascode 增益与输出电阻",
+  "tex": "A_v=-g_{m1}R_D,\\quad R_{out}=R_S+r_{o2}+(g_{m2}+g_{mb2})\\,r_{o2}R_S,\\quad R_S=r_{o1}",
+  "use": "估算共源共栅级的输出电阻，约为 $(g_{m2}+g_{mb2})r_{o1}r_{o2}$。",
+  "conditions": "两管都饱和；$A_v$ 为 $r_o\\to\\infty$ 的理想值；总输出电阻再与 $R_D$ 并联。",
+  "pitfall": "$M_2$ 的源极随信号变化，必须计入 $g_{mb2}$；输出电阻大，增益不一定同比例增大，取决于负载。"
+ }
+]

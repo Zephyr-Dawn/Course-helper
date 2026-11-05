@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data: blob:; style-src 'unsafe-inline'; font-src data:; script-src 'unsafe-inline'">
+<title>模拟电路（下半学期）互动复习</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%230d7c86%22%2F%3E%3Cpath%20d%3D%22M7%2016h5l2-5%204%2010%202-5h5%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<style>/*KATEX_CSS*/</style>
+<style>/*STYLE_CSS*/</style>
+</head>
+<body>
+<header class="topbar">
+  <button id="menu-btn" class="icon-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+  <a class="brand" href="#/home">模拟电路 · 下半学期复习</a>
+  <div class="search-wrap">
+    <input id="search" type="search" placeholder="搜索知识点、题号、公式（Ctrl/⌘+K）" autocomplete="off" aria-label="搜索">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="top-actions">
+    <button id="font-dec" class="icon-btn" title="缩小字号" aria-label="缩小字号">A−</button>
+    <button id="font-inc" class="icon-btn" title="放大字号" aria-label="放大字号">A+</button>
+    <button id="print-btn" class="icon-btn" title="打印当前页" aria-label="打印当前页">⎙</button>
+  </div>
+</header>
+<div class="layout">
+  <nav id="sidenav" class="sidenav" aria-label="主导航"></nav>
+  <main id="main" class="main" tabindex="-1"></main>
+  <aside id="toc" class="toc" aria-label="本页目录"></aside>
+</div>
+<div id="print-all" class="print-all"></div>
+<dialog id="zoom-dlg" class="zoom-dlg">
+  <div class="zoom-bar">
+    <button data-z="-1" aria-label="缩小">−</button><button data-z="0" aria-label="适合窗口">适合</button><button data-z="1" aria-label="放大">＋</button>
+    <span class="zoom-cap"></span>
+    <button data-z="x" class="zoom-close" aria-label="关闭">✕</button>
+  </div>
+  <div class="zoom-body"><img alt="放大图"></div>
+</dialog>
+<script type="application/json" id="course-data">/*COURSE_DATA*/</script>
+<script type="application/json" id="image-data">/*IMAGE_DATA*/</script>
+<script>/*MODELS_JS*/</script>
+<script>/*LABS_JS*/</script>
+<script>/*APP_JS*/</script>
+</body>
+</html>

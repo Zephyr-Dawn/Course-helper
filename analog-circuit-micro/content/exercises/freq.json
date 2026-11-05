@@ -1,0 +1,368 @@
+[
+ {
+  "id": "CH10-KP1-01",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点1：传输函数与波特图",
+  "kind": "choice",
+  "question": "一个放大电路的对数幅频特性如下图所示。当信号频率恰好为上限频率或下限频率时，实际的电压增益为 ________ 。\n\n\n\n@@IMG:freq.assets/11-1-1.png@@\n\n\n\nA. 43dB\n\nB. 40dB\n\nC. 37dB\n\nD. 3dB",
+  "answer": "C。实际有 3dB 的偏差。",
+  "images": [
+   "freq.assets/11-1-1.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP1-02",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点1：传输函数与波特图",
+  "kind": "calc",
+  "question": "某放大电路电压放大倍数高频段的频率特性表达式为 ${\\dot A_v} = \\frac{{ - 100}}{{\\left( {1 + jf/100{\\rm{ kHz}}} \\right)\\left( {1 + jf/1{\\rm{ MHz}}} \\right)}}$ ，画出其波特图，求其上限截止频率 $f_H$ 的近似值。",
+  "answer": "波特图为：\n\n\n\n@@IMG:freq.assets/image-20221006192200942.png@@\n\n\n\n由图可知，上限截止频率 $f_H$ ≈ 100 kHz。",
+  "images": [],
+  "answerImages": [
+   "freq.assets/image-20221006192200942.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP1-03",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点1：传输函数与波特图",
+  "kind": "choice",
+  "question": "某放大电路的传输函数为 $T(s)=\\frac{10^5}{(1+\\frac{s}{10^2})(1+\\frac{s}{10^3})(1+\\frac{s}{10^5})}$，其相位波特图中最大相移为 ________ 。\n\nA. 0°\n\nB. −90°\n\nC. −180°\n\nD. −270°",
+  "answer": "D。每经过一个极点，相位变化90度。",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP1-04",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点1：传输函数与波特图",
+  "kind": "fill",
+  "question": "已知某反相放大电路电压放大倍数的对数幅频特性曲线如下图所示，则该放大电路电压放大倍数的频率特性表达式为 ________ 。\n\n\n\n@@IMG:freq.assets/11-1-4.png@@",
+  "answer": "由波特图可知：\n\n$f_{p1}= 10^5{\\rm Hz}$，$f_{p2}= 10^7{\\rm Hz}$，$f_{p3}= 10^8{\\rm Hz}$\n\n$20\\lg{A_0}=80 \\Rightarrow A_0=10^4$\n\n又因为该放大电路为反相放大电路\n\n因此， ${\\dot A_v} = - \\frac{{{{10}^4}}}{{(1 + jf/{{10}^5}{\\rm{Hz}})(1 + jf/{{10}^7}{\\rm{Hz}})(1 + jf/{{10}^8}{\\rm{Hz}})}}$",
+  "images": [
+   "freq.assets/11-1-4.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP1-05",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点1：传输函数与波特图",
+  "kind": "fill",
+  "question": "已知某基本共射放大电路的波特图如下图所示，则 $A_v$ 的表达式为 ________ 。\n\n\n\n@@IMG:freq.assets/11-1-6.png@@",
+  "answer": "${\\dot A_v} \\approx \\frac{{ - 32}}{{\\left( {1 + \\frac{{10}}{{{\\rm{j}}f}}} \\right)\\left( {1 + {\\rm{j}}\\frac{f}{{{{10}^5}}}} \\right)}}$ 或 ${\\dot A_v} \\approx \\frac{{ - 3.2j{\\rm{ }}f}}{{\\left( {1 + j\\frac{f}{{10}}} \\right)\\left( {1 + j\\frac{f}{{{{10}^5}}}} \\right)}}$\n\n【注】高频极点的形式 $\\frac{K}{1+\\frac{jf}{f_0}}$：低频极点的形式：$\\frac{K}{1+\\frac{f_0}{jf}}$",
+  "images": [
+   "freq.assets/11-1-6.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP1-06",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点1：传输函数与波特图",
+  "kind": "fill",
+  "question": "已知某放大电路的增益为 ${\\dot A_v} = \\frac{{ \\pm 100jf}}{{\\left( {1 + j\\frac{f}{{10}}} \\right)\\left( {1 + j\\frac{f}{{{{10}^4}}}} \\right)\\left( {1 + j\\frac{f}{{{{10}^5}}}} \\right)}}$ ，则电路的下限频率 ${f_L} \\approx$  ________ Hz，上限频率 ${f_H} \\approx$  ________ kHz。",
+  "answer": "10  10",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP1-07",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点1：传输函数与波特图",
+  "kind": "fill",
+  "question": "某放大电路的频率响应如下图所示，该电路的增益频率响应 $A_v$ 的表达式为 ________ 。\n\n\n\n@@IMG:freq.assets/11-1-8.png@@",
+  "answer": "$\\frac{{100s}}{{\\left( {1 + \\frac{s}{{10}}} \\right)\\left( {1 + \\frac{s}{{{{10}^4}}}} \\right)\\left( {1 + \\frac{s}{{{{10}^5}}}} \\right)}}$  或  $\\frac{{1000}}{{\\left( {1 + \\frac{{10}}{s}} \\right)\\left( {1 + \\frac{s}{{{{10}^4}}}} \\right)\\left( {1 + \\frac{s}{{{{10}^5}}}} \\right)}}$",
+  "images": [
+   "freq.assets/11-1-8.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP1-08",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点1：传输函数与波特图",
+  "kind": "calc",
+  "question": "某放大器的传递函数 $T(jf)=\\frac{-10^4}{(1+\\frac{jf}{10^3})(1+\\frac{jf}{10^5})(1+\\frac{jf}{10^6})}$ ，分别画出其幅度和相位波特图（用折线近似法，并注意标明关键位置的坐标和折线斜率）。",
+  "answer": "@@IMG:freq.assets/11-2-9.png@@",
+  "images": [],
+  "answerImages": [
+   "freq.assets/11-2-9.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP1-09",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点1：传输函数与波特图",
+  "kind": "calc",
+  "question": "某放大电路的电压增益为 $A_v = \\dfrac{jf\\times10^4}{(10\\;\\textrm{Hz} + jf)(1+\\dfrac{jf}{10^5\\;\\textrm{Hz}})(1+\\dfrac{jf}{10^6\\;\\textrm{Hz}})}$ ，画出其幅度和相位波特图。",
+  "answer": "整理成 $\\dfrac{K}{1+\\dfrac{jf}{f_0}}$ 和$\\dfrac{K}{1+\\dfrac{f_0}{jf}}$的标准形式，可发现低频极点为 10 Hz，高频极点为 $10^5\\;\\textrm{Hz}$ 和 $10^6\\;\\textrm{Hz}$。故：\n\n\n\n@@IMG:freq.assets/image-20250825093450992.png@@",
+  "images": [],
+  "answerImages": [
+   "freq.assets/image-20250825093450992.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP2-01",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点2：滤波器及其频率响应",
+  "kind": "fill",
+  "question": "一阶无源低通滤波器的传递函数在截止频率处的相位等于 ________ ；一阶无源高通滤波器的传递函数在截止频率处的相位等于 ________ 。",
+  "answer": "-45°  45°",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP2-02",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点2：滤波器及其频率响应",
+  "kind": "choice",
+  "question": "当一阶RC无源低通滤波器输出信号的相移是 $-45^{\\circ}$ 时，________。\n\nA. 输出信号的幅度大约是输入信号的70 %。\n\nB. 输出信号的幅度大约是输入信号的50 %。\n\nC. 滤波器已经截止，输出信号的幅度几乎为0。\n\nD. 随着信号频率的继续增加，输出信号相移逐渐逼近0°。",
+  "answer": "A\n\n3 dB 点，幅度降至 $1/\\sqrt{2}$ 倍",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP2-03",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点2：滤波器及其频率响应",
+  "kind": "fill",
+  "question": "一阶无源低通滤波器的传递函数在截止频率处的相位等于________。",
+  "answer": "$-45^{\\circ}$\n\n以RC低通滤波器为例，$\\dfrac{\\frac{1}{j\\omega C}}{R + \\frac{1}{j\\omega C}} = \\dfrac{1}{1 + j\\omega RC}$，截止频率处，$\\omega RC = 1$，相位为 $-45^{\\circ}$",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP3-01",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点3：放大器的频率响应",
+  "kind": "calc",
+  "question": "如下图所示共射放大电路，其中 $R_s$ = 1 kΩ，$r_{bb'}$( or $r_x$ ) = 0.2 kΩ，*β* = 100，$C_\\mu$ = 0.5 pF, $C_\\pi$ =14.8 pF，$R_L$ = 5 kΩ，静态集电极电流 $I_{CQ}$ = 1 mA，取 $V_T=26{\\rm{mV}}$ ，利用米勒定理，画出米勒等效后的小信号等效电路，并求该电路的上限截止频率 $f_H$。\n\n\n\n@@IMG:freq.assets/11-2-1.png@@",
+  "answer": "(1) 画出高频微变等效电路求模型参数。\n\n\n\n@@IMG:freq.assets/image-20221006192801544.png@@\n\n\n\n由 $I_{CQ}$ 可以计算出跨导 $g_m$ :\n\n${g_m} = \\frac{{{I_{CQ}}}}{{{V_T}}} = \\frac{{1mA}}{{26mV}} = \\frac{1}{{26\\Omega }}$\n\n${r_{b'e}} = \\frac{\\beta }{{{g_m}}} = 100 \\times 26 = 2600\\Omega$\n\n$C_\\pi ^{'} = {C_\\pi } + (1 + {g_m}{R_L}){C_\\mu } = 111.5{\\rm{pF}}$\n\n(2) 求上限频率 $\\omega_{H1}$。\n\n${\\omega _{H1}} = \\frac{1}{{RC'_\\pi}} = \\frac{1}{{[({R_s} + {r_{bb'}})//{r_{b'e}}]C'_\\pi}} = 10.94 \\times {10^6}{\\rm{rad/s}}$\n\n${f_H} = \\frac{{{\\omega _H}}}{{2\\pi }} = \\frac{{10.94 \\times {{10}^6}}}{{2\\pi }} = 1.74{\\rm{MHz}}$",
+  "images": [
+   "freq.assets/11-2-1.png"
+  ],
+  "answerImages": [
+   "freq.assets/image-20221006192801544.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP3-02",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点3：放大器的频率响应",
+  "kind": "choice",
+  "question": "放大电路在高频信号作用时放大倍数数值下降的主要原因是 ________ ，而低频信号作用时放大倍数数值下降的原因是 ________ 。\n\nA. 耦合电容和旁路电容的存在\n\nB. 晶体管极间电容和分布电容的存在\n\nC. 晶体管的非线性特性\n\nD. 放大电路的静态工作点不合适",
+  "answer": "B A",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP3-03",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点3：放大器的频率响应",
+  "kind": "calc",
+  "question": "如下图所示电路，已知 $\\beta  = 100$，${V_{BE}} = 0.7{\\rm{ V}}$。\n\n(3)  求 ${C_1}$，${C_2}$，${C_E}$ 和 ${C_3}$ 对应的低频截止频率。\n\n\n\n@@IMG:freq.assets/11-2-3.png@@",
+  "answer": "(3)  ${f_{LC1}} = \\frac{1}{{2\\pi \\left( {{R_{B1}}//{R_{B2}}//{r_{\\pi 1}}} \\right){C_1}}} = \\frac{1}{{2\\pi \\left( {56//27//5.43} \\right) \\times 10 \\times {{10}^{ - 3}}}} \\approx 3.80{\\rm{ Hz}}$\n\n${f_{LC2}} = \\frac{1}{{2\\pi \\left( {{R_{C1}} + {R_{i2}}} \\right){C_2}}} = \\frac{1}{{2\\pi \\left( {2 + 2.89} \\right) \\times 10 \\times {{10}^{ - 3}}}} \\approx 3.25{\\rm{ Hz}}$\n\n${f_{L{C_E}}} = \\frac{1}{{2\\pi \\left( {{R_{E1}}//\\frac{{{r_{\\pi 1}}}}{{\\beta  + 1}}} \\right){C_E}}} = \\frac{1}{{2\\pi \\left( {2//\\frac{{5.43}}{{100 + 1}}} \\right) \\times 0.1}} \\approx 30.40{\\rm{ Hz}}$\n\n由于 $C_L$ 极小，在低频段用开路等效。\n\n${f_{Lc3}} = \\frac{1}{{2\\pi \\left( {{R_{C2}} + {R_L}} \\right){C_3}}} = \\frac{1}{{2\\pi \\left( {3 + 3} \\right) \\times 10 \\times {{10}^{ - 3}}}} \\approx 2.65{\\rm{ Hz}}$",
+  "images": [
+   "freq.assets/11-2-3.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP3-04",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点3：放大器的频率响应",
+  "kind": "calc",
+  "question": "如下图所示电路，已知 $C_{gs}=C_{gd}=5{\\rm pF}$，$g_m=5{\\rm mS}$，$C_1=C_2=C_S=10{\\rm {\\mu F}}$，求中频电压增益 $A_m=v_o/v_s$、高频截止频率 $f_H$ 和低频截止频率 $f_L$ 。\n\n\n\n@@IMG:freq.assets/11-2-4.png@@",
+  "answer": "$f_H$、$f_L$ 的表达式分析如下：\n\n${A_{\\rm{m}}} = \\frac{{{R_g}}}{{{R_{\\rm{ss}}} + {R_g}}}( - {g_{\\rm{m}}}{R_d}{\\rm{//}}{R_L}) \\approx  - {g_{\\rm{m}}}{R_d}{\\rm{//}}{R_L} \\approx  - 12.4$\n\n$R_s \\rm{//} \\frac{1}{g_m} \\ll R_s+R_{ss}$ ， $R_s \\rm{//} \\frac{1}{g_m} \\ll R_d+R_L$\n\n${f_{\\rm{L}}} \\approx \\frac{1}{{2{\\rm{\\pi }}\\left( {{R_{\\rm{s}}}{\\rm{//}}\\frac{1}{{{g_m}}}} \\right){C_{\\rm{s}}}}} \\approx 95.5{\\rm{ Hz}}$\n\n${{C'}_{gs}} = {C_{{\\rm{gs}}}} + (1 + {g_{\\rm{m}}}{R_d}{\\rm{//}}{R_L}){C_{{\\rm{gd}}}} \\approx 72{\\rm{pF}}$\n\n${f_{\\rm{H}}} = \\frac{1}{{2\\pi ({R_{\\rm{ss}}}{\\rm{//}}{R_{\\rm{g}}})C_{{\\rm{gs}}}^{\\rm{'}}}} \\approx \\frac{1}{{2{\\rm{\\pi }}{R_{\\rm{ss}}}C_{{\\rm{gs}}}^{\\rm{'}}}} \\approx 1.1{\\rm{MHz}}$\n\n(关于 $f_L$ 和 $f_H$ 的详细计算过程如下)\n\n\n\n@@IMG:freq.assets/image-20221006192910784.png@@\n\n\n\n低频时：\n\n$C_1$ 作用，其他短路\n\n${R_i} = {R_g} = 1M\\Omega$\n\n${\\omega _{L1}} = \\frac{1}{{(R + {R_i}){C_1}}} = \\frac{1}{{(2 + 1000) \\times {{10}^3} \\times 10 \\times {{10}^{ - 6}}}} = 0.1{\\rm rad/s}$\n\n$C_2$ 作用，其他短路\n\n${\\omega _{L2}} = \\frac{1}{{({R_D} + {R_L}){C_2}}} = \\frac{1}{{(10 + 3.3) \\times {{10}^3} \\times 10 \\times {{10}^{ - 6}}}} = 7.5{\\rm rad/s}$\n\n$C_S$ 作用，其他短路\n\n${\\omega _{LS}} = \\frac{1}{{({R_S}//\\frac{1}{{{g_m}}}){C_S}}} = \\frac{1}{{\\frac{1}{6} \\times {{10}^3} \\times 10 \\times {{10}^{ - 6}}}} = 600{\\rm rad/s}$\n\n因此下限截止频率近似为\n\n${\\omega _L} = {\\omega _S} = 600{\\rm rad/s}$\n\n${f_L} = \\frac{{{\\omega _L}}}{{2\\pi }} = 95.5{\\rm Hz}$\n\n高频时：\n\n${C_T} = {C_{gs}} + (1 + {g_m}{R_L}'){C_{ds}} = 72{\\rm pF}$\n\n${R_s}' = R//{R_g} \\approx R$\n\n${\\omega _H} = \\frac{1}{{{R_s}'{C_T}}} = \\frac{1}{{2*72}} = 6.95 \\times {10^6}{\\rm rad/s}$\n\n${f_H} = \\frac{{{\\omega _H}}}{{2\\pi }} = 1.1{\\rm MHz}$",
+  "images": [
+   "freq.assets/11-2-4.png"
+  ],
+  "answerImages": [
+   "freq.assets/image-20221006192910784.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP3-05",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点3：放大器的频率响应",
+  "kind": "choice",
+  "question": "放大器的小信号通路中，某一结点有一到地的等效电容 *C* 和一到地的等效电阻 *R* ，则该 *RC* 对放大器频率响应的影响为 ________ 。\n\nA. 引入一个低频零点\n\nB. 引入一个低频极点\n\nC. 引入一个高频零点\n\nD. 引入一个高频极点",
+  "answer": "D",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP3-06",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点3：放大器的频率响应",
+  "kind": "calc",
+  "question": "有一 IC 内部的共源 NMOS 放大器，其高频小信号等效电路如下图所示，小信号参数为：$g_m=1.25{\\rm mA/V}$，$C_{gs}=20{\\rm fF}$，$C_{gd}=5{\\rm fF}$；负载 $C_L=25{\\rm fF}$，$R'_L=10{\\rm k \\Omega}$，信号源等效内阻 $R'_{sig}=10{\\rm k \\Omega}$，用开路时间常数法计算该电路的上限截止频率。\n\n\n\n@@IMG:freq.assets/11-2-7.png@@",
+  "answer": "方法一：\n\n$R_{gs}=R'_{sig}=10{\\rm k \\Omega}$\n\n$R_{gd}=R'_{sig}(1+g_mR'_L)+R'_L=10(1+1.25\\times10)+10=145{\\rm k \\Omega}$\n\n$R_{C_L}=R'_L=10{\\rm k \\Omega}$\n\n$\\tau_{gs}=C_{gs}R_{gs}=20 \\times 10^{-15} \\times 10 \\times 10^3=200{\\rm ps}$\n\n$\\tau_{gd}=C_{gd}R_{gd}=5 \\times 10^{-15} \\times 145 \\times 10^3=725{\\rm ps}$\n\n$\\tau_{C_L}=C_{L}R_{C_L}=25 \\times 10^{-15} \\times 10 \\times 10^3=250{\\rm ps}$\n\n$\\tau_H=\\tau_{gs}+\\tau_{gd}+\\tau_{C_L}=200+725+250=1175{\\rm ps}$\n\n$f_H=\\frac{1}{2\\pi\\tau_H}=\\frac{1}{2\\pi\\times1175\\times10^{-12}}=135.5{\\rm MHz}$\n\n方法二：\n\n先 Miller 等效，再计算\n\n$C_{in}=C_{gs}+(1+g_mR'_L) \\times C_{gd}=87.5{\\rm fF}$\n\n$R'_{sig} \\times C_{in}=875{\\rm ps}$\n\n$C_{out}=C_{gd}||C_L=30{\\rm fF}$\n\n$R'_L \\times C_{out}=300{\\rm ps}$\n\n$\\sum_i R_iC_i=1175{\\rm ps}$\n\n$f_H=\\frac{1}{2\\pi\\tau_H}=\\frac{1}{2\\pi\\times1175\\times10^{-12}}=135.5{\\rm MHz}$",
+  "images": [
+   "freq.assets/11-2-7.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP3-07",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点3：放大器的频率响应",
+  "kind": "fill",
+  "question": "三极管或 MOS 管的寄生电容导致放大电路的 ________ （高频/低频）增益衰减，隔直电容和旁路电容导致放大电路的 ________ （高频/低频）增益衰减。",
+  "answer": "高频  低频",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP3-08",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点3：放大器的频率响应",
+  "kind": "calc",
+  "question": "如下图所示的共发射极电路，已知 $V_{CC}=9{\\rm V}$，$R_1=27{\\rm k \\Omega}$，$R_2=15{\\rm k \\Omega}$，$R_E=1.2{\\rm k \\Omega}$，$R_C=2.2{\\rm k \\Omega}$。晶体管的 $\\beta=100$，$V_{BE}=0.7{\\rm V}$，$V_T=25{\\rm mV}$。信号源内阻 $R_s=10{\\rm k \\Omega}$，负载阻值 $R_L=2{\\rm k \\Omega}$，晶体管的 $r_{bb'}=0{\\rm \\Omega}$ （即 $r_x=0{\\rm \\Omega}$ ）\n\n(1)\t计算直流偏置电流 $I_E$ ；\n\n(2)\t假定耦合电容 $C_1$ 、$C_2$  和 $C_E$ 的电容值均为无穷大。计算微变等效电路的 $r_{be}$ （即 $r_{\\pi}$ ），将晶体管用其低频小信号等效电路替代，画出该电路的交流等效电路，求输入电阻 $R_i$ 、输出电阻 $R_o$ 和电压增益 $v_o/v_s$ 。\n\n(3)\t若 $C_E=10{\\rm \\mu F}$ ，考虑到电路的低频效应，求由电容 $C_E$ 确定的低频极点的频率。\n\n\n\n@@IMG:freq.assets/image-20221006192720929.png@@",
+  "answer": "直流分析：\n\n${V_{BB}} = \\frac{{{R_2}}}{{{R_1} + {R_2}}}{V_{CC}} = \\frac{{15}}{{15 + 27}} \\times 9 = 3.21V$\n\n${R_{BB}} = \\frac{{{R_1}{R_2}}}{{{R_1} + {R_2}}} = 9.64{\\rm k \\Omega}$\n\n${I_B} = \\frac{{{V_{BB}} - 0.7}}{{{R_{BB}} + \\left( {1 + \\beta } \\right){R_E}}} = \\frac{{3.21 - 0.7}}{{9.64 + 101 \\times 1.2}} = 0.0192mA$\n\n${I_C} = \\beta {I_B} = 1.92mA$\n\n${I_E} \\approx 1.94{\\rm{ mA}}$\n\n${V_C} = {V_{CC}} - {I_C}{R_C} = 9 - 1.92 \\times 2.2 = 4.78V$\n\n交流分析\n\n\n\n@@IMG:freq.assets/image-20221006193011635.png@@\n\n\n\n${r_{be}} = {r_{bb'}} + \\frac{{{V_T}}}{{{I_B}}} = 0 + \\frac{{25}}{{0.0192}} \\times \\frac{1}{{1000}} \\approx {\\rm{1}}{\\rm{.30 k\\Omega }}$\n\n${R_i} = {R_1}//{R_2}//{r_{be}} \\approx {\\rm{1}}{\\rm{.15 k\\Omega }}$\n\n${R_o} = {R_C} = 2.2{\\rm{ k}}\\Omega$\n\n${A_v} = \\frac{{{v_o}}}{{{v_i}}} =  - \\frac{{\\beta \\left( {{R_C}//{R_L}} \\right)}}{{{r_{be}}}} =  - \\frac{{100 \\times 1.05}}{{1.30}} \\approx  - 80.{\\rm{77 V/V}}$\n\n${A_{vs}} = {A_v}\\frac{{{R_i}}}{{{R_i} + {R_s}}} =  - 8.{\\rm{33 V/V}}$\n\n从 $C_E$ 看进去的电阻：\n\n${R_{{C_E}}} = {R_E}{\\rm{//}}\\frac{{{r_{be}} + {R_1}{\\rm{//}}{R_2}{\\rm{//}}{R_s}}}{{\\beta  + 1}} = \\left( {1.2{\\rm{//}}\\frac{{1.30 + 27{\\rm{//15//10}}}}{{100 + 1}}} \\right) \\times 1000 \\approx 58.48{\\rm{ }}\\Omega$\n\n由 $C_E$ 确定的低频极点的频率\n\n${f_{{C_E}}} = \\frac{1}{{2\\pi {C_E}{R_{{C_E}}}}} = \\frac{1}{{2\\pi  \\times 10 \\times {{10}^{ - 6}} \\times 58.48}} \\approx {\\rm{272}}{\\rm{.3 Hz}}$",
+  "images": [
+   "freq.assets/image-20221006192720929.png"
+  ],
+  "answerImages": [
+   "freq.assets/image-20221006193011635.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP3-09",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点3：放大器的频率响应",
+  "kind": "calc",
+  "question": "如下图所示的三极管放大电路，已知图中所有电容都是 $10\\;\\mu\\textrm{F}$， $V_{CC} = 10\\;\\textrm{V}$，$R_{B1} = R_{B2} = 4\\;\\textrm{k}\\Omega$，$R_C = 500\\; \\Omega$， $R_L=R_{sig} = 1\\;\\textrm{k}\\Omega$，$V_T = 25\\; \\textrm{mV}$，$\\beta = 200$， 问：\n\n(1) 若要求 $I_E = 10\\;\\textrm{mA}$，计算 $R_E$ ，并求解此时的中频增益 $A_{vs} = \\dfrac{v_o}{v_{sig}}$ 。\n\n(2) 估算电路的低频截止频率。频率接近 0 时信号的相移是多少？\n\n(3) 设三极管寄生电容 $C_{\\mu} = 10\\;\\textrm{pF}$， $C_{\\pi} = 100\\;\\textrm{pF}$，估算电路的高频截止频率。\n\n\n\n@@IMG:freq.assets/image-20250824160137357.png@@",
+  "answer": "@@IMG:freq.assets/image-20250824160249846.png@@\n\n\n\n\n\n@@IMG:freq.assets/image-20250824160421488.png@@\n\n\n\n$C_{in} = C_{\\pi} + (1+A_v)C_{\\mu} = 1.44\\; \\textrm{nF}$\n\n$f_H = \\dfrac{1}{2\\pi(R_{sig}||R_{in})C_{in}} = 387\\;\\textrm{kHz}$",
+  "images": [
+   "freq.assets/image-20250824160137357.png"
+  ],
+  "answerImages": [
+   "freq.assets/image-20250824160249846.png",
+   "freq.assets/image-20250824160421488.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP3-10",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点3：放大器的频率响应",
+  "kind": "fill",
+  "question": "当信号源内阻 $R_{sig}$ 较大时，下面电路的高频截止频率的表达式为________ 。\n\n\n\n@@IMG:freq.assets/image-20250824143824302.png@@",
+  "answer": "@@IMG:freq.assets/image-20250824144029658.png@@",
+  "images": [
+   "freq.assets/image-20250824143824302.png"
+  ],
+  "answerImages": [
+   "freq.assets/image-20250824144029658.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP4-01",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点4：其他",
+  "kind": "fill",
+  "question": "根据 miller 定理，下图电路中跨接电容等效到输入端和输出端的电容分别为 ________ 和 ________ 。\n\n\n\n@@IMG:freq.assets/11-3-1.png@@",
+  "answer": "$C_F(1+A_0)$  $C_F(1+1/A_0)$ 。",
+  "images": [
+   "freq.assets/11-3-1.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP4-02",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点4：其他",
+  "kind": "fill",
+  "question": "当信号频率等于放大电路上限截止频率时，电路增益约下降为中频增益的约 ________ 倍。",
+  "answer": "0.707。3dB偏差",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ },
+ {
+  "id": "CH10-KP4-03",
+  "set": "freq",
+  "chapter": 10,
+  "setTitle": "频率响应",
+  "kp": "知识点4：其他",
+  "kind": "choice",
+  "question": "在频率响应分析中，截止频率定义为________ 。\n\nA. 电压增益幅度达到最大值时对应的频率。\n\nB. 电压增益幅度下降到约为最大值70.7%时对应的频率。\n\nC. 电压增益相位偏移为90度时对应的频率。",
+  "answer": "B\n\n3 dB",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/freq"
+ }
+]

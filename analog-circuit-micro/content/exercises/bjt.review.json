@@ -1,0 +1,467 @@
+{
+ "CH07-KP1-01": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "饱和的含义是两个 PN 结同时处于哪种偏置？"
+  ],
+  "solution": "三极管有三种工作状态：截止（发射结、集电结均反偏）、放大（发射结正偏、集电结反偏）、饱和（两个结均正偏）。该结论对 NPN 和 PNP 都成立，只是电压极性相反。PNP 饱和时 $V_{EB}>0$ 且 $V_{CB}>0$（集电结正偏要求集电极电位高于基极）。故选 A。",
+  "check": "逐项排除：B 是放大，C 是反向放大（实用价值很小），D 是截止。",
+  "note": "原答案正确。BJT 的“放大区”对应 MOSFET 的“饱和区”（恒流区），不要把两个“饱和”混用。",
+  "tags": [
+   "工作区判断",
+   "PNP"
+  ]
+ },
+ "CH07-KP1-02": {
+  "verdict": "note",
+  "difficulty": 2,
+  "hints": [
+   "放大状态下，发射结电压差约 $0.7\\,\\mathrm{V}$，哪两个电极差 $0.7\\,\\mathrm{V}$？",
+   "PNP 放大时电位关系为 $V_E>V_B>V_C$。"
+  ],
+  "solution": "三个电位：$V_A=-9\\,\\mathrm{V}$，$V_B=-6\\,\\mathrm{V}$，$V_C=-6.7\\,\\mathrm{V}$。放大时发射结电压约 $0.7\\,\\mathrm{V}$，只有 $B$ 与 $C$ 两点相差 $0.7\\,\\mathrm{V}$，所以这两点是发射极和基极，$A$ 是集电极。再看电位：集电极 $A$（$-9\\,\\mathrm{V}$）电位最低，说明是 PNP 管（PNP 放大时 $V_E>V_B>V_C$）。PNP 的发射极电位最高，故 $B$（$-6\\,\\mathrm{V}$）是发射极，$C$（$-6.7\\,\\mathrm{V}$）是基极，$V_{EB}=-6-(-6.7)=0.7\\,\\mathrm{V}$。结果：A 为集电极，B 为发射极，C 为基极，PNP 管。",
+  "check": "集电结：$V_{CB}=-9-(-6.7)=-2.3\\,\\mathrm{V}<0$，对 PNP 是反偏，发射结 $V_{EB}=0.7\\,\\mathrm{V}$ 正偏，与放大状态一致。",
+  "note": "最终答案（集电极、发射极、基极、PNP）正确。但原解释里“C 点电压最低”有误：电位最低的是 A 点（$-9\\,\\mathrm{V}$），C 点是基极（$-6.7\\,\\mathrm{V}$）。解释中的“C”与题中电极名 C 容易混淆，建议以“集电极电位最低 → PNP”表述。",
+  "tags": [
+   "管型判断",
+   "PNP",
+   "电位法"
+  ]
+ },
+ "CH07-KP1-03": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "先算 $V_{BE}$ 和 $V_{BC}$，看两个结的偏置。"
+  ],
+  "solution": "NPN 管：$V_{BE}=2.8-2.1=0.7\\,\\mathrm{V}$，发射结正偏。$V_{BC}=2.8-4.4=-1.6\\,\\mathrm{V}<0$，集电结反偏。发射结正偏、集电结反偏，工作在放大区，选 A。电位顺序 $V_C>V_B>V_E$ 也符合 NPN 放大。",
+  "check": "$V_{CE}=4.4-2.1=2.3\\,\\mathrm{V}>V_{CE(\\mathrm{sat})}\\approx0.2\\,\\mathrm{V}$，没有进入饱和。",
+  "note": "原答案正确。原判据 $V_C>V_B-0.4$ 是“集电结不超过轻微正偏”的经验阈值，严格说放大区要求集电结不正偏。",
+  "tags": [
+   "工作区判断",
+   "NPN"
+  ]
+ },
+ "CH07-KP1-04": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "先找电位差 $0.7\\,\\mathrm{V}$ 的一对电极作发射结，再看剩下一极是最高还是最低。"
+  ],
+  "solution": "三个电位 $0$、$-10\\,\\mathrm{V}$、$-9.3\\,\\mathrm{V}$。相差 $0.7\\,\\mathrm{V}$ 的是 $-10\\,\\mathrm{V}$ 与 $-9.3\\,\\mathrm{V}$，这是发射结，数值 $0.7\\,\\mathrm{V}$ 说明是硅管；$0$ 是集电极。集电极电位最高，故是 NPN 管：发射极 $-10\\,\\mathrm{V}$，基极 $-9.3\\,\\mathrm{V}$，集电极 $0$。$V_{BE}=0.7\\,\\mathrm{V}$，$V_{CB}=9.3\\,\\mathrm{V}>0$，集电结反偏，处于放大状态。选 A（NPN 硅管）。",
+  "check": "若假设是 PNP，则发射极应为最高电位 $0$，基极应约 $-0.7\\,\\mathrm{V}$（硅）或 $-0.3\\,\\mathrm{V}$（锗），与 $-9.3\\,\\mathrm{V}$、$-10\\,\\mathrm{V}$ 都对不上，所以不是 PNP。",
+  "note": "原答案正确。常见错误是把 $-10\\,\\mathrm{V}$ 当作集电极判成 PNP：PNP 放大时发射极电位最高，需要基极比发射极低约 $0.7\\,\\mathrm{V}$，本题数据不满足。",
+  "tags": [
+   "管型判断",
+   "硅管锗管",
+   "电位法"
+  ]
+ },
+ "CH07-KP1-05": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "放大状态的偏置条件，与管型无关。"
+  ],
+  "solution": "放大区的条件是发射结正偏、集电结反偏，对 NPN 即 $V_{BE}\\approx0.7\\,\\mathrm{V}$ 且 $V_{C}>V_{B}$，选 B。",
+  "check": "与 CH07-KP1-01 对照：两个结都正偏是饱和，都反偏是截止。",
+  "note": "原答案正确。",
+  "tags": [
+   "工作区判断",
+   "NPN"
+  ]
+ },
+ "CH07-KP1-06": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "三个电位中最高的是不是集电极？先算 $V_{BE}$ 与 $V_{BC}$。"
+  ],
+  "solution": "$V_C=-4\\,\\mathrm{V}$ 最高，$V_E=-7\\,\\mathrm{V}$ 最低，按 NPN 判断：$V_{BE}=-6.3-(-7)=0.7\\,\\mathrm{V}$，发射结正偏；$V_{CB}=-4-(-6.3)=2.3\\,\\mathrm{V}>0$，集电结反偏。故为 NPN 管，放大区，选 D。",
+  "check": "若是 PNP，则要求 $V_E>V_B>V_C$，与数据相反，排除 A、B、C 中的 PNP 选项；NPN 饱和要求 $V_{CB}\\le0.3\\,\\mathrm{V}$ 左右，而这里是 $2.3\\,\\mathrm{V}$，所以 A 也不对。",
+  "note": "原答案正确。",
+  "tags": [
+   "管型判断",
+   "工作区判断"
+  ]
+ },
+ "CH07-KP1-07": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "“双极”指什么？"
+  ],
+  "solution": "“双极型”指电子和空穴两种极性的载流子同时参与导电：发射区向基区注入多子，同时基区多子也向发射区扩散，复合与漂移都涉及两种载流子。与之相对，MOSFET 只有一种载流子（多子）导电，称为单极型。",
+  "check": "对照 MOSFET 的名称“单极型”，可以确认这是按参与导电的载流子种类命名。",
+  "note": "原答案正确。严格地说，NPN 管主要电流是电子（发射区多子注入基区后成为基区少子），空穴电流（基区向发射区）只占很小一部分，但两种载流子都参与。",
+  "tags": [
+   "双极型",
+   "载流子"
+  ]
+ },
+ "CH07-KP1-08": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "电子在 NPN 基区是多子还是少子？"
+  ],
+  "solution": "NPN 管放大时，发射区电子注入 P 型基区，在基区中电子是少子（少数载流子）。这些电子在基区扩散，大部分被集电结电场扫入集电区，形成集电极电流 $I_C$，所以 $I_C$ 是少子运动产生的。答案：少数。",
+  "check": "这也解释了 $I_C$ 受温度影响明显：少子浓度对温度敏感。",
+  "note": "原答案正确。",
+  "tags": [
+   "载流子",
+   "少子"
+  ]
+ },
+ "CH07-KP2-01": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "高内阻源接低阻负载，需要大输入电阻、小输出电阻的缓冲级。"
+  ],
+  "solution": "高内阻信号源直接接低阻负载时，两处分压使信号大量损失。应在中间插入缓冲级：输入电阻大（不拉低信号源电压），输出电阻小（带得动低阻负载），电压增益约为 $1$。共集（射极跟随器）满足：$R_i\\approx r_\\pi+(\\beta+1)(R_E\\parallel R_L)$ 大，$R_o\\approx R_E\\parallel(r_e+R_s/(\\beta+1))$ 小。选 C。",
+  "check": "共射输出电阻约 $R_C$，不小；共基输入电阻只有 $r_e$ 级，很小，都不适合。",
+  "note": "原答案正确。",
+  "tags": [
+   "共集电路",
+   "缓冲器"
+  ]
+ },
+ "CH07-KP2-02": {
+  "verdict": "ok",
+  "difficulty": 3,
+  "hints": [
+   "(b) 把发射极看成一个有 $R_E\\parallel r_\\pi$ 的负反馈节点，加到 $r_o$ 上。",
+   "(c) 从基极看进去，发射极电阻要乘以电流比 $(\\beta+1)$。"
+  ],
+  "solution": "**(b)** 基极交流接地，从集电极看进去。设集电极外加电压 $v_x$、电流 $i_x$。基极接地时 $v_\\pi=-v_e$，发射极电流经 $R_E$ 和 $r_\\pi$ 到地，所以 $v_e=i_x\\,(R_E\\parallel r_\\pi)$。集电极支路：\n\n$$i_x=g_m v_\\pi+\\frac{v_x-v_e}{r_o}=-g_m v_e+\\frac{v_x-v_e}{r_o}$$\n\n解出 $v_x=i_x\\left[r_o+(1+g_m r_o)(R_E\\parallel r_\\pi)\\right]$，即\n\n$$R_{(b)}=r_o+(1+g_m r_o)\\,(R_E\\parallel r_\\pi)$$\n\n**(c)** 基极看进去，$V_A=\\infty$ 即 $r_o\\to\\infty$。设基极电流 $i_b$，则发射极电流 $(\\beta+1)i_b$ 流过 $R_E$：\n\n$$v_b=i_b r_\\pi+(\\beta+1)i_b R_E\\ \\Rightarrow\\ R_{(c)}=r_\\pi+(\\beta+1)R_E$$",
+  "check": "(b) 令 $R_E\\to0$ 得 $R=r_o$（共射输出电阻），令 $R_E\\to\\infty$ 得 $R=r_o+(1+g_m r_o)r_\\pi=r_o(1+\\beta)+r_\\pi$（$g_m r_\\pi=\\beta$），与共射带大射极电阻的极限一致。(c) 令 $R_E\\to0$ 得 $R=r_\\pi$。",
+  "note": "原答案正确。图 (b) 没有标 $V_A$，答案按含 $r_o$ 处理；若 $r_o\\to\\infty$，(b) 的输出电阻趋于无穷。",
+  "tags": [
+   "小信号电阻",
+   "共基",
+   "射极负反馈"
+  ]
+ },
+ "CH07-KP2-03": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "“电流放大、电压基本不变”：增益是电流增益还是电压增益？"
+  ],
+  "solution": "共射和共基对应电压增益大；共集电压增益约为 $1$（电压不放大，输出跟随输入），但电流增益约 $\\beta+1$。满足“电流放大、电压基本不变”的是共集放大器（射极跟随器），选 B。共基的电流增益约 $\\alpha\\approx1$，没有电流放大，所以不是 C。",
+  "check": "共集：$A_v=\\dfrac{(\\beta+1)R_L'}{r_\\pi+(\\beta+1)R_L'}\\to1$，$A_i\\approx\\beta+1$，与题意吻合。",
+  "note": "原答案正确。",
+  "tags": [
+   "共集电路",
+   "电流增益"
+  ]
+ },
+ "CH07-KP2-04": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "零点漂移是没有输入时输出缓慢变化，最主要的外部因素是什么？"
+  ],
+  "solution": "直接耦合放大电路没有隔直电容，前级静态工作点的缓慢变化会逐级放大并出现在输出端，这就是零点漂移。引起 Q 点变化的主要原因是晶体管参数（$V_{BE}$、$\\beta$、$I_{CBO}$）随温度变化，因此也叫温漂。选 C。",
+  "check": "B“参数分散性”只造成不同管子的 Q 点不一致，是固定偏差，不是随时间变化的漂移；A 同理；D 是信号，不是漂移。",
+  "note": "原答案正确。原解析还提到电源波动、元件老化，这些也会漂移，但课本标准结论是温度为主因。",
+  "tags": [
+   "零点漂移",
+   "温度"
+  ]
+ },
+ "CH07-KP2-05": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "输入电阻和信号源内阻是串联分压关系。"
+  ],
+  "solution": "输入端：信号源内阻 $R_s$ 与放大器输入电阻 $R_i$ 串联分压，实际输入电压 $v_i=v_sR_i/(R_s+R_i)$。$R_i$ 越小，分得的电压越少，对信号源的影响（负载效应）越大。输出端：$R_o$ 与负载 $R_L$ 分压，$v_L=v_{o}'R_L/(R_o+R_L)$，$R_o$ 越小，负载上分得电压越接近开路电压，带负载能力越强。选 A。",
+  "check": "极限：$R_i\\to\\infty$ 时 $v_i=v_s$，信号源不受影响；$R_o\\to0$ 时 $v_L=v_o'$，与 $R_L$ 无关，带载能力最强。",
+  "note": "原答案正确。",
+  "tags": [
+   "输入电阻",
+   "输出电阻",
+   "分压"
+  ]
+ },
+ "CH07-KP2-06": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "静态点靠近特性曲线的哪一边就容易出哪种失真？",
+   "输出摆幅由 Q 点到截止边和到饱和边的距离中较小者决定。"
+  ],
+  "solution": "图中共有三条直流负载线：一条在纵轴约 $1.8\\,\\mathrm{mA}$ 与横轴 $9\\,\\mathrm{V}$ 间（经过 $Q_1$），一条在纵轴 $3\\,\\mathrm{mA}$ 与横轴 $9\\,\\mathrm{V}$ 间（经过 $Q_3$ 和 $Q_2$），一条在纵轴 $4\\,\\mathrm{mA}$ 与横轴 $12\\,\\mathrm{V}$ 间（经过 $Q_4$）。读图得各点：$Q_1(4\\,\\mathrm{V},1\\,\\mathrm{mA})$，$Q_2(6\\,\\mathrm{V},1\\,\\mathrm{mA})$，$Q_3(3\\,\\mathrm{V},2\\,\\mathrm{mA})$，$Q_4(6\\,\\mathrm{V},2\\,\\mathrm{mA})$。\n\n- 截止失真：$Q$ 点离截止（$i_B\\to0$，右下方）最近。$Q_2$ 的 $I_C=1\\,\\mathrm{mA}$、$I_B=10\\,\\mu\\mathrm{A}$，而所在负载线最大电流 $3\\,\\mathrm{mA}$，$V_{CE}=6\\,\\mathrm{V}$ 已偏向右侧，最易截止，对应 B。\n- 饱和失真：$Q$ 点离饱和（左上方，$V_{CE}\\approx0.7\\,\\mathrm{V}$）最近。$Q_3$ 的 $V_{CE}=3\\,\\mathrm{V}$ 且 $I_C=2\\,\\mathrm{mA}$ 靠近 $3\\,\\mathrm{mA}$ 端，最易饱和，对应 C。\n- 摆幅最大：$Q_4$ 在 $12\\,\\mathrm{V}$ 负载线中点，$V_{CE}=6\\,\\mathrm{V}$，向饱和方向有 $6-0.7=5.3\\,\\mathrm{V}$ 空间，向截止方向有 $6\\,\\mathrm{V}$ 空间，两边最均衡且最大，对应 D。\n\n答案：B、C、D。",
+  "check": "以 $V_{CE}$ 方向估计不失真摆幅 $\\min(V_{CEQ}-0.7,\\ V_{CC}-V_{CEQ})$：$Q_1$ 为 $\\min(3.3,5)=3.3\\,\\mathrm{V}$，$Q_2$ 为 $\\min(5.3,3)=3\\,\\mathrm{V}$，$Q_3$ 为 $\\min(2.3,6)=2.3\\,\\mathrm{V}$，$Q_4$ 为 $\\min(5.3,6)=5.3\\,\\mathrm{V}$，$Q_4$ 最大。（各线 $V_{CC}$ 按横轴截距取 $9\\,\\mathrm{V}$ 或 $12\\,\\mathrm{V}$。）",
+  "note": "原答案正确。电路图中 $V_{BB}$、$R_B$、$R_C$、$V_{CC}$ 未给数值，不同 Q 点对应不同负载线，答案由图上位置判断；$Q_2$ 同时也最靠近截止的结论依赖对负载线的读图。",
+  "tags": [
+   "静态工作点",
+   "截止失真",
+   "饱和失真",
+   "输出摆幅"
+  ]
+ },
+ "CH07-KP2-07": {
+  "verdict": "note",
+  "difficulty": 2,
+  "hints": [
+   "看 Q 点在负载线上靠近截止端、还是靠近曲线的拐点（可变电阻区边界）。"
+  ],
+  "solution": "题图的坐标是 $i_D$、$v_{DS}$、$v_{GS}$、$V_{DD}$，画的是场效应管（MOSFET）的输出特性，虚线是预夹断轨迹，其左侧是可变电阻区（变阻区），右侧是恒流（饱和）区。判断思路与 BJT 完全相同：放大要求 Q 点落在恒流区中部，信号摆动时不离开该区。\n\n- $Q_1$ 所在的负载线较陡，$Q_1$ 靠近 $v_{DS}=V_{DD}$ 一端，电流小，离截止端近。信号向负半周摆动时 $i_D$ 很快减小到 $0$，易截止，且向上摆幅受限，输出摆幅受限。\n- $Q_2$ 所在的负载线较平，$Q_2$ 靠近预夹断轨迹（虚线），离变阻区很近。信号正半周使 $v_{DS}$ 减小时会进入变阻区（对应 BJT 的饱和区），易失真，输出摆幅受限。\n\n所以 $Q_1$：易截止或输出摆幅受限；$Q_2$：易进入变阻区（饱和）或输出摆幅受限。",
+  "check": "理想最佳 Q 点在恒流区中央：向截止端留 $v_{DS}$ 余量约 $V_{DD}-V_{DSQ}$，向变阻区留余量约 $V_{DSQ}-(V_{GS}-V_{th})$，两者接近时摆幅最大；$Q_1$ 的前者小，$Q_2$ 的后者小。",
+  "note": "答案思路正确。题图是 MOSFET 输出特性（出现在 BJT 习题集里），所以答案用“变阻区”一词；对应到 BJT 即饱和区。$Q_1$、$Q_2$ 只由图位置判断，并无具体数值。注意区分：BJT 的“饱和区”对应 MOSFET 的“变阻区”，而 BJT 的“放大区”对应 MOSFET 的“饱和区”（恒流区）。",
+  "tags": [
+   "静态工作点",
+   "负载线",
+   "变阻区"
+  ]
+ },
+ "CH07-KP2-08": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "输出开路时，输出电压 $=A_v\\,v_i$，所以 $v_o$ 小意味着什么变小了？"
+  ],
+  "solution": "两放大器 $A_v$ 相同，输出开路时 $v_o=A_v v_i$，$v_o$ 小说明 $v_i$ 小。输入电压来自信号源内阻 $R_s$ 与输入电阻 $R_i$ 的分压 $v_i=v_s\\,R_i/(R_s+R_i)$，$v_i$ 小说明 $R_i$ 小。故 X 的输入电阻较小，选 B。输出开路，$R_o$ 对 $v_o$ 没有影响，所以 C、D 无关。",
+  "check": "极限：若 $R_i\\to0$，则 $v_i\\to0$，$v_o\\to0$，是最小的情形，符合“输入电阻小 → 输出小”。",
+  "note": "原答案正确。这里的“放大倍数相同”理解为以 $v_i$ 为参考的开路电压增益 $A_{vo}$。",
+  "tags": [
+   "输入电阻",
+   "分压"
+  ]
+ },
+ "CH07-KP2-09": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "电流缓冲器要求输入电阻小、输出电阻大，才能让电流信号几乎不损失地传输。"
+  ],
+  "solution": "电流缓冲器（电流增益约 $1$，输入电阻小，输出电阻大）对应共基接法：从发射极看进去的输入电阻为 $r_e\\approx1/g_m$（小），从集电极看进去的输出电阻为 $r_o$ 量级（大，带射极电阻时更大）。答案：共基，小，大。",
+  "check": "电流源驱动时，电流在源内阻 $R_s$ 与 $R_i$ 之间分流，$R_i$ 小则电流几乎全进入放大器；输出端电流在 $R_o$ 与 $R_L$ 之间分流，$R_o$ 大则电流几乎全进入负载。",
+  "note": "原答案正确。",
+  "tags": [
+   "共基电路",
+   "电流缓冲器"
+  ]
+ },
+ "CH07-KP2-10": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "开路电压 $2\\,\\mathrm{V}$ 是戴维南等效电压，接负载后 $R_o$ 与 $R_L$ 分压。"
+  ],
+  "solution": "戴维南等效：$v_o=v_{oc}\\,\\dfrac{R_L}{R_o+R_L}$。代入 $0.5=2\\times\\dfrac{1}{R_o+1}$（$R_o$ 单位 $\\mathrm{k\\Omega}$），得 $R_o+1=4$，$R_o=3\\,\\mathrm{k\\Omega}$，选 C。",
+  "check": "$R_o$ 上降落 $2-0.5=1.5\\,\\mathrm{V}$，电流 $0.5\\,\\mathrm{V}/1\\,\\mathrm{k\\Omega}=0.5\\,\\mathrm{mA}$，$R_o=1.5/0.5=3\\,\\mathrm{k\\Omega}$。",
+  "note": "原答案正确。",
+  "tags": [
+   "输出电阻",
+   "戴维南等效"
+  ]
+ },
+ "CH07-KP3-01": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "小信号增益由交流量之比决定，不能用直流量 $V_{CE}$、$V_{BE}$、$I_C$ 相除。",
+   "共射增益可写成 $-g_mR_c$，其中 $g_m=I_C/V_T$。"
+  ],
+  "solution": "小信号增益是交流（增量）量之比，A、B 用了直流量 $V_{CE}$、$V_{BE}$、$I_C R_c$，错误。C 的分母把输入电阻 $R_b\\parallel r_{be}$ 当作产生 $i_b$ 的电阻：交流时 $i_b=v_i/r_{be}$（$v_i$ 直接加在 B-E 两端，$R_b$ 接在电源与基极之间，对交流只是并联在输入端，不影响 $i_b$），所以 C 错误。\n\nD：$g_m=I_C/V_T=1\\,\\mathrm{mA}/26\\,\\mathrm{mV}=38.5\\,\\mathrm{mS}$，\n\n$$A_v=-g_mR_c=-38.5\\,\\mathrm{mS}\\times2\\,\\mathrm{k\\Omega}=-76.9$$\n\n并且 $g_m=\\beta/r_{be}$，所以 $-g_mR_c=-\\beta R_c/r_{be}$，与 D 一致。选 D。",
+  "check": "量级自检：$V_{CC}=V_{CE}+I_CR_c=7+2=9\\,\\mathrm{V}$，$I_B=(9-0.7)/470\\,\\mathrm{k\\Omega}=17.7\\,\\mu\\mathrm{A}$，$\\beta=I_C/I_B\\approx57$，$r_{be}=\\beta V_T/I_C\\approx1.47\\,\\mathrm{k\\Omega}$，与给定的 $1.6\\,\\mathrm{k\\Omega}$ 接近，共射增益约 $-70\\sim-77$ 量级一致。",
+  "note": "原答案正确。题图未标 $V_{CC}$，由 $V_{CE}$、$I_C$、$R_c$ 可得 $9\\,\\mathrm{V}$。题给 $r_{be}=1.6\\,\\mathrm{k\\Omega}$ 与 $V_T=26\\,\\mathrm{mV}$、$I_C=1\\,\\mathrm{mA}$ 严格对应的 $\\beta=g_mr_{be}\\approx61.5$，而由 $R_b$ 算出 $\\beta\\approx57$，数据略有出入，不影响选 D。",
+  "tags": [
+   "共射放大",
+   "跨导",
+   "小信号增益"
+  ]
+ },
+ "CH07-KP3-02": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "$\\beta$ 很大时 $I_B\\to0$，分压器电流可视为全部流过 $R_1$、$R_2$。",
+   "(b) 把分压器做戴维南等效，基极回路里 $R_{th}$ 上的压降要计入。"
+  ],
+  "solution": "**(a)** $V_{CC}=9\\,\\mathrm{V}$，$R_E$、$R_C$ 上各降 $3\\,\\mathrm{V}$，所以 $V_E=3\\,\\mathrm{V}$，$V_C=6\\,\\mathrm{V}$。$I_E=0.5\\,\\mathrm{mA}$：\n\n$$R_E=\\frac{3\\,\\mathrm{V}}{0.5\\,\\mathrm{mA}}=6\\,\\mathrm{k\\Omega},\\quad R_C=\\frac{3\\,\\mathrm{V}}{I_C}=\\frac{3}{0.5}=6\\,\\mathrm{k\\Omega}\\ (I_C\\approx I_E)$$\n\n分压器电流 $I=0.2I_E=0.1\\,\\mathrm{mA}$：$R_1+R_2=9\\,\\mathrm{V}/0.1\\,\\mathrm{mA}=90\\,\\mathrm{k\\Omega}$。$V_B=V_E+0.7=3.7\\,\\mathrm{V}=IR_2$，所以 $R_2=37\\,\\mathrm{k\\Omega}$，$R_1=53\\,\\mathrm{k\\Omega}$。\n\n**(b)** 戴维南等效：\n\n$$V_{th}=V_{CC}\\frac{R_2}{R_1+R_2}=3.7\\,\\mathrm{V},\\quad R_{th}=R_1\\parallel R_2=\\frac{53\\times37}{90}=21.8\\,\\mathrm{k\\Omega}$$\n\n基极回路：$V_{th}=I_BR_{th}+0.7+I_ER_E$，$I_B=I_E/(\\beta+1)=I_E/101$：\n\n$$I_E\\left(\\frac{21.8}{101}+6\\right)\\mathrm{k\\Omega}=3.0\\,\\mathrm{V}\\ \\Rightarrow\\ I_E=\\frac{3.0}{6.216}=0.483\\,\\mathrm{mA}$$",
+  "check": "回代：$I_B=0.483/101=4.78\\,\\mu\\mathrm{A}$，$V_B=3.7-4.78\\,\\mu\\mathrm{A}\\times21.8\\,\\mathrm{k\\Omega}=3.596\\,\\mathrm{V}$，$V_E=3.596-0.7=2.896\\,\\mathrm{V}$，$I_E=2.896/6=0.483\\,\\mathrm{mA}$，一致；$V_{CE}=9-(0.478\\times6)-2.896\\approx3.2\\,\\mathrm{V}>0.3\\,\\mathrm{V}$，仍在放大区。",
+  "note": "原答案正确。$R_1=53.3\\,\\mathrm{k\\Omega}$、$R_2=37\\,\\mathrm{k\\Omega}$ 取整；$\\beta=100$ 时 $I_E$ 只比理想值 $0.5\\,\\mathrm{mA}$ 小约 $3\\%$，说明该分压偏置对 $\\beta$ 不敏感。",
+  "tags": [
+   "分压偏置",
+   "戴维南等效",
+   "Q点"
+  ]
+ },
+ "CH07-KP3-03": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "射极有 $0.2\\,\\mathrm{mA}$ 恒流源，交流时发射极只剩 $125\\,\\Omega$ 到地；输入电阻用 $r_\\pi+(\\beta+1)R_E$。",
+   "$v_{be}$ 即 $r_\\pi$ 上的电压，先用它反推 $i_b$，再推 $v_s$。"
+  ],
+  "solution": "直流：恒流源使 $I_E=0.2\\,\\mathrm{mA}$，$\\alpha=\\beta/(\\beta+1)=50/51=0.980$，$I_C=\\alpha I_E=0.196\\,\\mathrm{mA}$。\n\n$$g_m=\\frac{I_C}{V_T}=\\frac{0.196\\,\\mathrm{mA}}{26\\,\\mathrm{mV}}=7.54\\,\\mathrm{mS},\\quad r_\\pi=\\frac{\\beta}{g_m}=6.63\\,\\mathrm{k\\Omega}$$\n\n交流：恒流源开路（交流电阻视为无穷大），电容 $\\infty$ 短路，射极经 $125\\,\\Omega$ 接地；集电极 $10\\,\\mathrm{k\\Omega}$ 与 $R_L=10\\,\\mathrm{k\\Omega}$ 并联得 $5\\,\\mathrm{k\\Omega}$。\n\n$$R_{in}=r_\\pi+(\\beta+1)\\times0.125\\,\\mathrm{k\\Omega}=6.63+6.375=13.0\\,\\mathrm{k\\Omega}$$\n\n$$A_{vs}=\\frac{v_o}{v_s}=-\\frac{\\beta\\,(R_C\\parallel R_L)}{R_s+R_{in}}=-\\frac{50\\times5}{10+13.0}=-10.9$$\n\n限制 $v_{be}$ 幅度为 $5\\,\\mathrm{mV}$：$i_b=v_{be}/r_\\pi$，$v_s=i_b(R_s+R_{in})$：\n\n$$v_{s,max}=5\\,\\mathrm{mV}\\times\\frac{23.0}{6.63}=17.4\\,\\mathrm{mV}$$\n\n$$v_{o,max}=\\lvert A_{vs}\\rvert\\,v_{s,max}=10.87\\times17.35\\,\\mathrm{mV}\\approx188\\,\\mathrm{mV}$$",
+  "check": "另一路：$i_c=\\beta i_b=50\\times(5\\,\\mathrm{mV}/6.63\\,\\mathrm{k\\Omega})=37.7\\,\\mu\\mathrm{A}$，$v_o=i_c\\times5\\,\\mathrm{k\\Omega}=188.5\\,\\mathrm{mV}$，与上式一致。小信号条件：$v_{be}\\le5\\,\\mathrm{mV}\\ll4V_T$ 的量级，线性近似可接受。",
+  "note": "原答案正确，仅末位舍入不同：精确值 $A_{vs}=-10.87$，$v_{s,max}=17.35\\,\\mathrm{mV}$，$v_{o,max}=188.5\\,\\mathrm{mV}$。题图中基极串联的 $10\\,\\mathrm{k\\Omega}$ 是信号源内阻 $R_s$，$R_{in}$ 箭头在其右侧，不含 $R_s$。",
+  "tags": [
+   "共射放大",
+   "射极电阻",
+   "输入电阻",
+   "小信号线性范围"
+  ]
+ },
+ "CH07-KP3-04": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "开路电压 $3\\,\\mathrm{V}$ 是等效源电压，接 $2\\,\\mathrm{k\\Omega}$ 后与 $R_o$ 分压。"
+  ],
+  "solution": "$v_L=v_{oc}\\dfrac{R_L}{R_o+R_L}$，即 $1=3\\times\\dfrac{2}{R_o+2}$，$R_o+2=6$，$R_o=4\\,\\mathrm{k\\Omega}$，选 D。",
+  "check": "$R_o$ 上压降 $3-1=2\\,\\mathrm{V}$，电流 $1\\,\\mathrm{V}/2\\,\\mathrm{k\\Omega}=0.5\\,\\mathrm{mA}$，$R_o=2/0.5=4\\,\\mathrm{k\\Omega}$。",
+  "note": "原答案正确。",
+  "tags": [
+   "输出电阻",
+   "戴维南等效"
+  ]
+ },
+ "CH07-KP3-05": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "与上一题同样的分压关系。"
+  ],
+  "solution": "$4=6\\times\\dfrac{6}{R_o+6}$，$R_o+6=9$，$R_o=3\\,\\mathrm{k\\Omega}$。",
+  "check": "$R_o$ 上压降 $2\\,\\mathrm{V}$，电流 $4\\,\\mathrm{V}/6\\,\\mathrm{k\\Omega}=0.667\\,\\mathrm{mA}$，$R_o=2/0.667=3\\,\\mathrm{k\\Omega}$。",
+  "note": "原答案正确。",
+  "tags": [
+   "输出电阻"
+  ]
+ },
+ "CH07-KP3-06": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "先用第一次接 $3\\,\\mathrm{k\\Omega}$ 的数据求 $R_o$，再用 $R_o$ 预测接 $0.5\\,\\mathrm{k\\Omega}$ 的输出。"
+  ],
+  "solution": "$4=6\\times\\dfrac{3}{R_o+3}$，$R_o+3=4.5$，$R_o=1.5\\,\\mathrm{k\\Omega}$。接 $0.5\\,\\mathrm{k\\Omega}$ 负载：$V_o=6\\times\\dfrac{0.5}{1.5+0.5}=1.5\\,\\mathrm{V}$。",
+  "check": "电流 $6\\,\\mathrm{V}/(1.5+0.5)\\,\\mathrm{k\\Omega}=3\\,\\mathrm{mA}$，负载压降 $3\\,\\mathrm{mA}\\times0.5\\,\\mathrm{k\\Omega}=1.5\\,\\mathrm{V}$。",
+  "note": "原答案正确。",
+  "tags": [
+   "输出电阻",
+   "戴维南等效"
+  ]
+ },
+ "CH07-KP3-07": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "输出开路时负载不起作用，谁决定 $v_i$？"
+  ],
+  "solution": "输出开路，$v_o=A_{vo}v_i$。两放大器增益相同，X 的 $v_o$ 小，所以 $v_i$ 小。$v_i=v_s\\dfrac{R_i}{R_s+R_i}$，信号源相同，$v_i$ 小意味着 $R_i$ 小。选 B。",
+  "check": "极端：$R_i=0$ 则 $v_i=0$；$R_i\\to\\infty$ 则 $v_i=v_s$。$R_o$ 在开路时不分压，选项 C、D 无关。",
+  "note": "原答案正确，与 CH07-KP2-08 是同一题。",
+  "tags": [
+   "输入电阻",
+   "分压"
+  ]
+ },
+ "CH07-KP3-08": {
+  "verdict": "ok",
+  "difficulty": 3,
+  "hints": [
+   "图中是 PNP 射极跟随器：基极电流经 $R_s$ 流入地，基极电位为正。写出从 $+5\\,\\mathrm{V}$ 经 $R_e$、发射结、$R_s$ 到地的直流回路。",
+   "输出电阻要把信号源内阻 $R_s$ 折算到射极侧，除以 $(\\beta+1)$。"
+  ],
+  "solution": "**直流**：$v_s$ 直流为 $0$，PNP 基极电流 $I_B=I_E/(\\beta+1)$ 从基极流出，经 $R_s$ 到地，所以 $V_B=I_BR_s$。回路 $+5\\,\\mathrm{V}\\to R_e\\to$ 发射结 $\\to R_s\\to$ 地：\n\n$$5=3.3I_E+0.7+\\frac{I_E}{121}\\times100\\ \\Rightarrow\\ I_E=\\frac{4.3}{3.3+0.826}=1.04\\,\\mathrm{mA}$$\n\n（单位：$I_E$ 为 $\\mathrm{mA}$，电阻为 $\\mathrm{k\\Omega}$。）\n\n**小信号**：$r_e=V_T/I_E=25\\,\\mathrm{mV}/1.042\\,\\mathrm{mA}=24.0\\,\\Omega$。$R_e\\parallel R_L=3.3\\parallel1=0.767\\,\\mathrm{k\\Omega}$（耦合电容视为短路）。\n\n$$R_i=(\\beta+1)\\left(r_e+R_e\\parallel R_L\\right)=121\\times(0.024+0.767)=95.8\\,\\mathrm{k\\Omega}$$\n\n输出电阻（从电容右侧、$R_L$ 左边看进去，不含 $R_L$，含 $R_s$）：\n\n$$R_o=R_e\\parallel\\left(r_e+\\frac{R_s}{\\beta+1}\\right)=3.3\\parallel(0.024+0.826)=0.676\\,\\mathrm{k\\Omega}$$\n\n电压增益（$R_s$ 在基极侧折算 $R_s/(\\beta+1)$）：\n\n$$A_v=\\frac{v_o}{v_s}=\\frac{R_e\\parallel R_L}{\\dfrac{R_s}{\\beta+1}+r_e+R_e\\parallel R_L}=\\frac{0.767}{0.826+0.024+0.767}=0.474$$",
+  "check": "直流回代：$I_B=1.042/121=8.6\\,\\mu\\mathrm{A}$，$V_B=8.6\\,\\mu\\mathrm{A}\\times100\\,\\mathrm{k\\Omega}=0.86\\,\\mathrm{V}$，$V_E=0.86+0.7=1.56\\,\\mathrm{V}$，同时 $5-3.3\\times1.042=1.56\\,\\mathrm{V}$，一致；$V_C=-5\\,\\mathrm{V}$，集电结反偏，放大成立。另一路求 $A_v$：$A_v=\\dfrac{R_i}{R_s+R_i}\\cdot\\dfrac{(\\beta+1)(R_e\\parallel R_L)}{(\\beta+1)(r_e+R_e\\parallel R_L)}=0.489\\times0.970=0.474$。",
+  "note": "原答案正确。精确值：$I_E=1.042\\,\\mathrm{mA}$，$R_i=95.76\\,\\mathrm{k\\Omega}$，$R_o=0.676\\,\\mathrm{k\\Omega}$，$A_v=0.474$。图中管子为 PNP，射极跟随的结论与 NPN 相同，只是直流电流方向相反。",
+  "tags": [
+   "共集电路",
+   "射极跟随器",
+   "PNP",
+   "输入输出电阻"
+  ]
+ },
+ "CH07-KP3-09": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "不计 Early 效应与基区电阻时，共射增益 $-g_m R_L'$，$R_L'$ 是交流总负载。"
+  ],
+  "solution": "$g_m=I_C/V_T=1\\,\\mathrm{mA}/25\\,\\mathrm{mV}=40\\,\\mathrm{mS}$。交流负载 $R_C\\parallel R_L=5\\parallel5=2.5\\,\\mathrm{k\\Omega}$。\n\n$$A_v=-g_m\\,(R_C\\parallel R_L)=-40\\,\\mathrm{mS}\\times2.5\\,\\mathrm{k\\Omega}=-100\\ \\mathrm{V/V}$$",
+  "check": "另一路：$r_\\pi=\\beta/g_m=2.5\\,\\mathrm{k\\Omega}$，$A_v=-\\beta R_L'/r_\\pi=-100\\times2.5/2.5=-100$，一致。",
+  "note": "原答案正确。题面中 $\\beta=100$ 在此题只作为一致性检验，用 $g_m$ 求解时不需要。",
+  "tags": [
+   "共射放大",
+   "跨导",
+   "小信号增益"
+  ]
+ },
+ "CH07-KP3-10": {
+  "verdict": "corrected",
+  "difficulty": 3,
+  "hints": [
+   "先算分压 $V_B$，再 $V_E=V_B-0.7$，$I_E=V_E/R_E$（近似法）。想一想：$I_B$ 与分压器电流比起来可以忽略吗？",
+   "$C_E$ 旁路使交流射极接地，所以 $A_v=-\\beta(R_C\\parallel R_L)/r_{be}$，其中 $r_{be}=r_{bb'}+(\\beta+1)V_T/I_E$。"
+  ],
+  "solution": "**(1) 近似法（原答案采用）**：忽略 $I_B$ 对分压的影响。\n\n$$V_B=\\frac{39}{120+39}\\times12=2.94\\,\\mathrm{V},\\quad V_E=V_B-0.7=2.24\\,\\mathrm{V},\\quad I_{EQ}=\\frac{2.24}{2.1}=1.07\\,\\mathrm{mA}$$\n\n（原答案取 $V_B\\approx2.9\\,\\mathrm{V}$，得 $1.05\\,\\mathrm{mA}$。）$I_{BQ}=I_{EQ}/(\\beta+1)\\approx21\\,\\mu\\mathrm{A}$，$V_{CEQ}=12-6\\times1.05=5.7\\,\\mathrm{V}$。\n\n**(1') 戴维南法（较严格）**：\n\n$$V_{th}=2.94\\,\\mathrm{V},\\quad R_{th}=120\\parallel39=29.4\\,\\mathrm{k\\Omega}$$\n\n$$I_{EQ}=\\frac{V_{th}-0.7}{R_E+R_{th}/(\\beta+1)}=\\frac{2.24}{2.1+0.577}=0.838\\,\\mathrm{mA}$$\n\n$$I_{BQ}=\\frac{0.838}{51}=16.4\\,\\mu\\mathrm{A},\\quad I_{CQ}=0.822\\,\\mathrm{mA},\\quad V_{CEQ}=12-3.9\\times0.822-2.1\\times0.838=7.04\\,\\mathrm{V}$$\n\n**(2) 动态指标（按近似法 $I_C=1.05\\,\\mathrm{mA}$）**：\n\n$$r_{be}=r_{bb'}+(\\beta+1)\\frac{V_T}{I_{EQ}}\\approx0.2+51\\times\\frac{25}{1.05}\\times10^{-3}\\approx1.4\\,\\mathrm{k\\Omega}$$\n\n$$A_v=-\\frac{\\beta(R_C\\parallel R_L)}{r_{be}}=-\\frac{50\\times1.95}{1.4}\\approx-70$$\n\n$$R_i=R_{B1}\\parallel R_{B2}\\parallel r_{be}=29.4\\parallel1.4=1.35\\,\\mathrm{k\\Omega},\\quad R_o\\approx R_C=3.9\\,\\mathrm{k\\Omega}$$\n\n戴维南法 $I_{EQ}=0.838\\,\\mathrm{mA}$ 下：$r_{be}=0.2+51\\times25/0.838\\times10^{-3}\\approx1.72\\,\\mathrm{k\\Omega}$，$A_v\\approx-56.7$，$R_i\\approx1.63\\,\\mathrm{k\\Omega}$，$R_o=3.9\\,\\mathrm{k\\Omega}$。",
+  "check": "检验近似条件：分压器电流 $12/159=75\\,\\mu\\mathrm{A}$，而 $I_B\\approx16\\sim21\\,\\mu\\mathrm{A}$，约占 $22\\%\\sim28\\%$，不满足 $I_B\\ll I_{div}$（通常要求 $\\le10\\%$）。判据 $R_{th}\\ll(\\beta+1)R_E$：$29.4\\,\\mathrm{k\\Omega}$ 对 $51\\times2.1=107\\,\\mathrm{k\\Omega}$ 也不够小。回代戴维南解：$V_B=2.94-16.4\\,\\mu\\mathrm{A}\\times29.4\\,\\mathrm{k\\Omega}=2.46\\,\\mathrm{V}$，$V_E=1.76\\,\\mathrm{V}$，$I_E=1.76/2.1=0.838\\,\\mathrm{mA}$，一致。",
+  "note": "原答案按标准“估算法”给出，结论对应近似法，并在注中已说明应用戴维南更严格。数值差别较大：近似法 $I_{CQ}\\approx1.05\\,\\mathrm{mA}$、$V_{CEQ}\\approx5.7\\,\\mathrm{V}$、$A_v\\approx-70$；戴维南法 $I_{CQ}\\approx0.82\\,\\mathrm{mA}$、$V_{CEQ}\\approx7.0\\,\\mathrm{V}$、$A_v\\approx-57$。考试若无特别说明，按近似法与原答案作答；$\\beta$ 较小（50）时近似误差明显，需要写明所用近似。$r_{be}$ 中 $(\\beta+1)V_T/I_E$ 与 $\\beta V_T/I_C$ 相等，原答案用 $I_C$ 代替 $I_E$ 也无影响。",
+  "tags": [
+   "分压偏置",
+   "戴维南等效",
+   "共射放大",
+   "射极旁路电容"
+  ],
+  "final": "题面未要求估算，按戴维南等效精确计算：$V_{BB}=2.94\\,\\mathrm{V}$，$R_B=R_{B1}\\parallel R_{B2}=29.4\\,\\mathrm{k\\Omega}$，$I_{BQ}=\\dfrac{V_{BB}-0.7}{R_B+(\\beta+1)R_E}\\approx16.4\\,\\mathrm{\\mu A}$，$I_{CQ}\\approx0.82\\,\\mathrm{mA}$，$V_{CEQ}\\approx7.0\\,\\mathrm{V}$；$r_{be}\\approx1.72\\,\\mathrm{k\\Omega}$，$A_v\\approx-57$，$R_i\\approx1.63\\,\\mathrm{k\\Omega}$，$R_o\\approx3.9\\,\\mathrm{k\\Omega}$。原答案的近似值（$I_{CQ}\\approx1.05\\,\\mathrm{mA}$、$V_{CEQ}\\approx5.7\\,\\mathrm{V}$、$A_v\\approx-70$）忽略了 $I_B$，本题分压电流仅约为 $I_B$ 的 4~5 倍，误差约 22%。"
+ },
+ "CH07-KP3-11": {
+  "verdict": "note",
+  "difficulty": 2,
+  "hints": [
+   "假设放大，$I_C=\\beta I_B$，$V_{CE}=V_{CC}-I_CR_C$，看 $V_{CE}$ 是否仍大于约 $0.3\\,\\mathrm{V}$。",
+   "题图没给 $V_{CC}$，试着把 $V_{CC}$ 留作符号，看四个选项的结论是否依赖它。"
+  ],
+  "solution": "图为固定偏置共射电路。设 $V_{BE}=0.7\\,\\mathrm{V}$，$I_B=(V_{CC}-0.7)/R_B$，若在放大区，\n\n$$V_{CE}=V_{CC}-\\beta\\,\\frac{R_C}{R_B}\\,(V_{CC}-0.7)$$\n\n四个选项的 $\\beta R_C/R_B$ 为：A：$100\\times5.6/10=56$；B：$100\\times5.6/510=1.10$；C：$100\\times5.6/1000=0.56$；D：$100\\times100/1000=10$。\n\n- A、D：比值远大于 $1$，$V_{CE}$ 算出为负，实际深度饱和。\n- B：$V_{CE}=V_{CC}-1.10(V_{CC}-0.7)=0.77-0.10\\,V_{CC}$。要求 $V_{CE}\\ge0.3\\,\\mathrm{V}$ 需 $V_{CC}\\le4.8\\,\\mathrm{V}$，对常用的 $V_{CC}\\ge5\\,\\mathrm{V}$（如 $12\\,\\mathrm{V}$）已饱和（例如 $V_{CC}=12\\,\\mathrm{V}$：$I_B=22\\,\\mu\\mathrm{A}$，$\\beta I_BR_C=12.3\\,\\mathrm{V}>V_{CC}$）。\n- C：$V_{CE}=V_{CC}-0.56(V_{CC}-0.7)=0.44\\,V_{CC}+0.39$，$V_{CC}\\ge1\\,\\mathrm{V}$ 时即 $V_{CE}>0.8\\,\\mathrm{V}$，放大。例如 $V_{CC}=12\\,\\mathrm{V}$：$I_B=11.3\\,\\mu\\mathrm{A}$，$I_C=1.13\\,\\mathrm{mA}$，$V_{CE}=12-6.3=5.7\\,\\mathrm{V}$。\n\n选 C。",
+  "check": "以 $V_{CC}=12\\,\\mathrm{V}$ 逐项数值验证：A：$I_B=1.13\\,\\mathrm{mA}$，$\\beta I_B R_C=633\\,\\mathrm{V}$，饱和；B：$12.3\\,\\mathrm{V}>12\\,\\mathrm{V}$，饱和；C：$V_{CE}=5.7\\,\\mathrm{V}$，放大；D：$\\beta I_BR_C=113\\,\\mathrm{V}$，饱和。",
+  "note": "结论 C 正确，原解释只给了定性理由（$R_B$ 大、$R_C$ 小）。题图没有标出 $V_{CC}$：结论 C 对所有 $V_{CC}\\ge1\\,\\mathrm{V}$ 成立，B 仅在 $V_{CC}\\le4.8\\,\\mathrm{V}$ 时才放大，因此隐含了 $V_{CC}$ 为常用数值（如 $5\\,\\mathrm{V}$ 以上）的前提。",
+  "tags": [
+   "固定偏置",
+   "工作区判断",
+   "饱和"
+  ]
+ },
+ "CH07-KP3-12": {
+  "verdict": "note",
+  "difficulty": 2,
+  "hints": [
+   "直流负载线只含 $R_c$（$R_L$ 被 $C_2$ 隔开），斜率 $-1/R_c$，端点 $(V_{CC},0)$ 与 $(0,V_{CC}/R_c)$。",
+   "先由 $R_b$ 求 $I_B$，再在对应曲线上找负载线交点。"
+  ],
+  "solution": "**(1)** 直流通路：$I_{BQ}=\\dfrac{V_{CC}-0.7}{R_b}=\\dfrac{9.3}{510\\,\\mathrm{k\\Omega}}=18.2\\,\\mu\\mathrm{A}$。直流负载线 $v_{CE}=10-i_C\\times1\\,\\mathrm{k\\Omega}$，端点 $(10\\,\\mathrm{V},0)$、$(0,10\\,\\mathrm{mA})$。它与 $I_B\\approx18\\,\\mu\\mathrm{A}$（略低于 $20\\,\\mu\\mathrm{A}$ 曲线）的交点约为 $I_{CQ}\\approx1\\,\\mathrm{mA}$、$V_{CEQ}\\approx9\\,\\mathrm{V}$。Q 点贴近截止区，静态电流太小，输出摆幅小且易截止失真，不合适。\n\n**(2)** 要 $V_{CEQ}=5\\,\\mathrm{V}$：$I_{CQ}=\\dfrac{10-5}{1\\,\\mathrm{k\\Omega}}=5\\,\\mathrm{mA}$，在曲线上对应 $I_B\\approx90\\,\\mu\\mathrm{A}$（$80\\sim100\\,\\mu\\mathrm{A}$ 曲线之间的 $Q'$）。$R_b=\\dfrac{10-0.7}{90\\,\\mu\\mathrm{A}}=103\\,\\mathrm{k\\Omega}\\approx100\\,\\mathrm{k\\Omega}$（此时 $I_B=93\\,\\mu\\mathrm{A}$）。即把 $R_b$ 由 $510\\,\\mathrm{k\\Omega}$ 减小到约 $100\\,\\mathrm{k\\Omega}$。\n\n**(3)** 要 $I_{CQ}=2\\,\\mathrm{mA}$、$V_{CEQ}=2\\,\\mathrm{V}$：$R_c=\\dfrac{10-2}{2\\,\\mathrm{mA}}=4\\,\\mathrm{k\\Omega}$（负载线端点变为 $(10\\,\\mathrm{V},0)$、$(0,2.5\\,\\mathrm{mA})$，即图中虚线）。$Q''$ 在 $I_B=40\\,\\mu\\mathrm{A}$ 曲线上，$R_b=\\dfrac{10-0.7}{40\\,\\mu\\mathrm{A}}=233\\,\\mathrm{k\\Omega}\\approx240\\,\\mathrm{k\\Omega}$。",
+  "check": "(2) 回代：$R_b=100\\,\\mathrm{k\\Omega}$ 时 $I_B=93\\,\\mu\\mathrm{A}$，$\\beta\\approx I_C/I_B\\approx5.3\\,\\mathrm{mA}/100\\,\\mu\\mathrm{A}\\approx53$，$I_C\\approx4.9\\,\\mathrm{mA}$，$V_{CE}\\approx5.1\\,\\mathrm{V}$，接近 $5\\,\\mathrm{V}$。(3) 回代：$R_b=240\\,\\mathrm{k\\Omega}$ 时 $I_B=38.8\\,\\mu\\mathrm{A}$，$I_C\\approx2\\,\\mathrm{mA}\\times38.8/40\\approx1.94\\,\\mathrm{mA}$，$V_{CE}=10-4\\times1.94=2.2\\,\\mathrm{V}$。",
+  "note": "结论正确。原答案 (1) 只给出 $I_B$ 并判定不合适，未写出 $I_{CQ}$、$V_{CEQ}$ 的读数，这里补充（图读数，约 $1\\,\\mathrm{mA}$、$9\\,\\mathrm{V}$）。(2) 中“$I_B=90\\,\\mu\\mathrm{A}$”是图读数，精确 $R_b=103\\,\\mathrm{k\\Omega}$ 取整为 $100\\,\\mathrm{k\\Omega}$。图解题答案有读图误差，数值允许 $\\pm$ 少量偏差。$R_L=1.5\\,\\mathrm{k\\Omega}$ 只影响交流负载线，对静态点无影响。",
+  "tags": [
+   "图解法",
+   "直流负载线",
+   "固定偏置",
+   "Q点"
+  ]
+ },
+ "CH07-KP3-13": {
+  "verdict": "note",
+  "difficulty": 2,
+  "hints": [
+   "(1) 先假设放大，把 $V_C$ 写成 $V_{CC}$ 的函数，看 $V_C>V_B-0.4$ 能否对任意 $V_{CC}$ 成立。",
+   "(2) 想想每个选项会让 $I_C$ 变成什么。"
+  ],
+  "solution": "**(1)** 假设放大：$I_B=(V_{CC}-0.7)/100\\,\\mathrm{k\\Omega}$，$V_C=V_{CC}-\\beta I_BR_C=V_{CC}-1.2\\,(V_{CC}-0.7)=0.84-0.2\\,V_{CC}$。放大要求集电结不正偏（经验阈值 $V_C>V_B-0.4=0.3\\,\\mathrm{V}$），即 $0.84-0.2V_{CC}>0.3$，$V_{CC}<2.7\\,\\mathrm{V}$（对应 $I_B<20\\,\\mu\\mathrm{A}$）。所以状态取决于未给出的 $V_{CC}$：$V_{CC}$ 很小时（约 $0.7\\sim2.7\\,\\mathrm{V}$）放大，大于 $2.7\\,\\mathrm{V}$ 就饱和，更小时截止。故选 D（状态不定）。\n\n**(2)** $V_{CE}\\approx V_{CC}$ 表示 $R_C$ 上几乎没有压降，$I_C\\approx0$。\n- A：$R_B$ 开路，$I_B=0$，三极管截止，$I_C=0$，$V_{CE}=V_{CC}$，符合。\n- B：$R_L$ 经 $C_2$ 隔直，短路只影响交流，静态点不变。\n- C：$R_C$ 开路，集电极悬空，两个结都将正偏，$V_{CE}\\approx0.2\\,\\mathrm{V}$ 以内，不是 $V_{CC}$。\n- D：$R_B$ 过小，$I_B$ 过大，饱和，$V_{CE}\\approx0.2\\,\\mathrm{V}$。\n选 A。",
+  "check": "(1) 取 $V_{CC}=12\\,\\mathrm{V}$ 代入：$I_B=113\\,\\mu\\mathrm{A}$，$\\beta I_BR_C=13.6\\,\\mathrm{V}>12\\,\\mathrm{V}$，饱和，印证 $V_{CC}>2.7\\,\\mathrm{V}$ 时饱和。(2) A 时 $I_B=0$、$I_C=0$，$V_{CE}=V_{CC}-0=V_{CC}$。",
+  "note": "原答案 D、A 成立，但 (1) 的依据是题图没有给出 $V_{CC}$。若原题本意带有常见电源值（$5\\,\\mathrm{V}$ 以上），则 (1) 应为 B（饱和）；考试时请先看题目是否给出 $V_{CC}$。(2) 原解释“$I_C$ 很小但不是开路”表述含糊，准确地说是 $I_C\\approx0$（$R_B$ 开路使基极开路）。",
+  "tags": [
+   "固定偏置",
+   "工作区判断",
+   "故障分析"
+  ]
+ }
+}

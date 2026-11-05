@@ -1,0 +1,420 @@
+[
+ {
+  "id": "CH06-KP1-01",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点1：二极管的结构与工作原理",
+  "kind": "choice",
+  "question": "二极管的正向电压变化 ________ 时，电流约变化 10 倍。\n\nA. 20 mV\n\nB. 40 mV\n\nC. 60 mV\n\nD. 80 mV",
+  "answer": "C。$26 \\times ln(10) \\approx 60$  ，由二极管指数模型（根据电流求电压）推导可得",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP1-02",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点1：二极管的结构与工作原理",
+  "kind": "choice",
+  "question": "当稳压管在正常稳压工作时，其工作状态（两端施加的外部电压的特点）为 ________ 。\n\nA. 反向偏置但不击穿\n\nB. 正向偏置但不击穿\n\nC. 反向偏置且被击穿\n\nD. 正向偏置且被击穿",
+  "answer": "C。击穿，但非破坏性击穿。",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP1-03",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点1：二极管的结构与工作原理",
+  "kind": "choice",
+  "question": "稳压二极管处在稳压工作状态是工作在 ________ 。\n\nA. 导通状态\n\nB. 截止状态\n\nC. 反向击穿状态\n\nD. 任意状态",
+  "answer": "C。同上",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP1-04",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点1：二极管的结构与工作原理",
+  "kind": "fill",
+  "question": "所谓理想二极管，就是当其正偏时，其电阻为 ________ ；当其反偏时，其电阻为 ________ 。",
+  "answer": "0  无穷。正向导通，反向截止。",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP1-05",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点1：二极管的结构与工作原理",
+  "kind": "choice",
+  "question": "稳压二极管稳压和发光二极管发光时，它们分别工作在 ________ 。\n\nA. 正向导通区、反向截止区\n\nB. 反向截止区、正向导通区\n\nC. 正向导通区、反向击穿区\n\nD. 反向击穿区、正向导通区",
+  "answer": "D。稳压二极管根据定义工作于反向击穿区，发光二极管有较大电流，因此工作于正向导通区。",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP1-06",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点1：二极管的结构与工作原理",
+  "kind": "choice",
+  "question": "若温度不变，二极管加正向电压时，其动态电阻 $r_d$ 随工作电流的增大而 ________ 。\n\nA. 增大\n\nB. 减小\n\nC. 不变\n\nD. 按对数规律变化",
+  "answer": "B。$r_d = 1/g_m$, $g_m = \\frac{I_D}{V_T}$",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP1-07",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点1：二极管的结构与工作原理",
+  "kind": "choice",
+  "question": "以下关于齐纳二极管的描述正确的是  ________ 。\n\nA. 齐纳二极管用于信号放大\n\nB. 齐纳二极管通常工作于正向击穿区间\n\nC. 齐纳二极管通常用于电压稳定\n\nD. 齐纳二极管不能用于交流电路",
+  "answer": "C\n\n齐纳二极管工作于反向击穿区，用于稳压。",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-01",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "calc",
+  "question": "下图所示电路中稳压管的稳定电压 $V_Z=6{\\rm{V}}$ ，最小稳定电流 $I_{Zmin}=5{\\rm{mA}}$ ，最大稳定电流 $I_{Zmax}=25{\\rm{mA}}$ 。\n\n（1）分别计算 ${V_I}$ 分别为 10 V、15 V 和 35 V 三种情况下输出电压 ${V_O}$ 的值；\n\n（2）若 ${V_I} = {\\rm{35 V}}$ 时负载开路，则会出现什么现象？为什么？\n\n\n\n@@IMG:diode.assets/7-2-1.png@@",
+  "answer": "(1)  只有当加在稳压管两端的电压大于其稳压值时，输出电压才为6V。\n\n所以 当 $V_I=10{\\rm{V}}$ 时， ${V_O} = \\frac{{{R_L}}}{{R + {R_L}}}{V_I} = 3.3{\\rm{V}}$ ；\n\n当 $V_I=15{\\rm{V}}$ 时， ${V_O} = \\frac{{{R_L}}}{{R + {R_L}}}{V_I} = 5{\\rm{V}}$ ；\n\n当 $V_I=35{\\rm{V}}$ 时， ${V_O} = \\frac{{{R_L}}}{{R + {R_L}}}{V_I} \\approx {\\rm{11}}{\\rm{.7V}} > {V_Z}$ ；$∴V_O=V_Z=6{\\rm{V}}$ 。\n\n(2)  当负载开路时，${I_Z} = \\frac{{{V_I} - {V_Z}}}{R} = 2{\\rm{9mA}} > {I_{Z\\max }} = 25{\\rm{mA}}$，稳压管将被烧毁。",
+  "images": [
+   "diode.assets/7-2-1.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-02",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "二极管整流电路主要有 ________ 整流、 ________ 整流和 ________ 整流三种类型。",
+  "answer": "半波  全波  桥式",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-03",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "如右图所示电路，已知 ${u_i} = \\sin \\left( t \\right){\\rm V}$ ，二极管导通电压 $U_D=0.7 {\\rm V}$ ，输出电压 $u_o$ 的最大值为 ________ ，最小值为 ________ 。\n\n\n\n@@IMG:diode.assets/7-2-4.png@@",
+  "answer": "+1V  - 1V。两个二极管均没有机会导通。",
+  "images": [
+   "diode.assets/7-2-4.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-04",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "calc",
+  "question": "如下图所示电路，假设二极管和 3 V 齐纳二极管导通时的压降为 0 V，求 $- 10{\\rm{ V}} \\le {v_i} \\le  + 10{\\rm{ V}}$ 时输出电压 $v_o$ 、输入电流 $i_i$ 与输入电压 $v_i$ 的关系。\n\n\n\n@@IMG:diode.assets/7-2-6.png@@",
+  "answer": "当 $- 10{\\rm{ V}} \\le {v_i} < 0{\\rm{ V}}$ 时，二极管和齐纳二极管均正向导通，则\n\n${v_O} = 0{\\rm{ V}}$\n\n$i_i=v_i/10=0.1 v_i {\\rm mA}$\n\n当 $0{\\rm{ V}} \\le {v_i} < 3{\\rm{ V}}$ 时，齐纳二极管截止，则\n\n${v_O} = 0{\\rm{ V}}$\n\n${i_i} = 0{\\rm{ mA}}$\n\n当 $3{\\rm{ V}} \\le {v_i} \\le 10{\\rm{ V}}$ 时，二极管截止，齐纳二极管工作在反向击穿区，则输出电压 $v_o$ 为\n\n${v_O} = \\left( {{v_i} - {V_Z}} \\right) \\times \\frac{{10}}{{10 + 10}} = \\frac{{{v_i} - 3}}{2}{\\rm{ V}}$\n\n输入电流 $i_i$ 为\n\n${i_i} = \\frac{{{v_i} - {V_Z}}}{{10 + 10}} = \\frac{{{v_i} - 3}}{{20}}{\\rm{ mA}}$",
+  "images": [
+   "diode.assets/7-2-6.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-05",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "choice",
+  "question": "关于稳压器，以下哪个说法是正确的 ________ 。\n\nA. 在电源电压波动时，可以提供恒定的输出电压；\n\nB. 在负载变化时，可以提供恒定的输出电压；\n\nC. 可以与整流器、滤波器配合工作；\n\nD. 以上说法都对。",
+  "answer": "D。 根据稳压器的定义和实际电路实现，ABC均对",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-06",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "右图所示电路中，若流经二极管电流为 1 mA，其两端的电压降约为 0.7 V，现假设电阻 *R* = 10 kΩ，那么流经该电阻的 $I_D$ = ________ mA；若 10 V 供电电压上附加有 50 Hz、峰值 1 V 的干扰电压信号，那么该干扰信号在输出端表现为频率 50 Hz、电压峰值 ________ mV 的交变信号。（ $V_T$ ≈ 25 mV ）\n\n\n\n@@IMG:diode.assets/7-2-8.png@@",
+  "answer": "0.93  2.68。$(10-0.7)/10k = 0.93$；$r_d = \\frac{1}{g_m} = \\frac{25mV}{0.93mA}=26.88\\Omega$，再分压可得。",
+  "images": [
+   "diode.assets/7-2-8.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-07",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "calc",
+  "question": "采用恒压降模型（$V_{D,on}$）分析下方二极管电路，画出输入输出特性曲线（$V_{D,on}=0.7{\\rm V}$，$R_1=R_2$，图中必须标注线段的斜率和端点坐标）。\n\n\n\n@@IMG:diode.assets/7-2-9.png@@",
+  "answer": "@@IMG:diode.assets/解-7-2-9.png@@",
+  "images": [
+   "diode.assets/7-2-9.png"
+  ],
+  "answerImages": [
+   "diode.assets/解-7-2-9.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-08",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "calc",
+  "question": "采用恒压降模型（$V_{D,on}$）分析下方二极管电路，画出输入输出特性曲线（$V_{D,on}=0.7{\\rm V}$，$R_1=R_2$，图中必须标注线段的斜率和端点坐标）。\n\n\n\n@@IMG:diode.assets/7-2-11.png@@",
+  "answer": "@@IMG:diode.assets/解-7-2-11.png@@",
+  "images": [
+   "diode.assets/7-2-11.png"
+  ],
+  "answerImages": [
+   "diode.assets/解-7-2-11.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-09",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "下图中，电容为容值较大的隔直电容，已知二极管的导通电压为 0.7 V，常温下 $V_T$ ≈ 25 mV，请问，当输入 $v_i$ 为有效值是 10 mV 的正弦波小信号时，试求二极管中流过的交流电流的有效值是 ________ 。\n\n\n\n@@IMG:diode.assets/7-2-10.png@@",
+  "answer": "2 mA。二极管的直流电流为5.7mA，因此小信号电阻为 $\\frac{25mV}{5mA}=5\\Omega$，故电流有效值为 2 mA。",
+  "images": [
+   "diode.assets/7-2-10.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-10",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "choice",
+  "question": "假设下图所示二极管是理想的，下列所述正确的是 ________ 。\n\n\n\n@@IMG:diode.assets/7-2-12.png@@\n\n\n\nA. $D_1$ 和 $D_2$ 均截止\n\nB.$D_1$ 导通， $D_2$ 截止\n\nC. $D_1$ 截止， $D_2$ 导通\n\nD. $D_1$  和 $D_2$  均导通",
+  "answer": "C。二极管负极处电压高于0V。",
+  "images": [
+   "diode.assets/7-2-12.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-11",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "choice",
+  "question": "二极管电路下图所示，二极管的工作状态是 ________。\n\nA. $D_1$导通， $D_2$ 导通\n\nB. $D_1$ 导通， $D_2$ 截止\n\nC. $D_1$ 截止， $D_2$  导通\n\nD. $D_1$ 截止， $D_2$ 截止\n\n\n\n@@IMG:diode.assets/7-2-13.png@@",
+  "answer": "B。假设最下面节点电压为15 V，则D1正极处为15V，D2正极处为0V，R1和V2连接节点为3V，因此D1导通，D2截止。",
+  "images": [
+   "diode.assets/7-2-13.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-12",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "若桥式整流电路的交流输入电压有效值为 10 V ，则其中每个二极管的反峰电压约为 ________ （二极管的压降恒定为 0.7 V ）。",
+  "answer": "13.44 V。最大反向电压被两个二极管平摊，$(2\\times V_s - 2\\times V_D)/2$。",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-13",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "下图所示为将交流电转换成直流电的电源，其中 A、B、C 三个主要组成部分分别是 ________ 、 ________ 和稳压器。\n\n\n\n@@IMG:diode.assets/7-2-15.png@@",
+  "answer": "整流器  滤波器",
+  "images": [
+   "diode.assets/7-2-15.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-14",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "calc",
+  "question": "分析下图所示电路，已知二极管 $D_1$ 的反向饱和电流是二极管 $D_2$ 的 10 倍，求电压 $V$ ；若要求 $V=50{\\rm mV}$ ，则需要调整电流源 $I_2$ 为何值。（取 $V_T=25{\\rm mV}$ ）\n\n\n\n@@IMG:diode.assets/7-2-16.png@@",
+  "answer": "设 $D_2$ 的反向饱和电流为$I_S$，\n\n对于 $D_1$，$10{I_S}{e^{\\frac{{{V_{D2}} - V}}{{{V_T}}}}} \\approx 2$\n\n对于 $D_2$，${I_S}{e^{\\frac{{{V_{D2}}}}{{{V_T}}}}} \\approx 10 - 2$\n\n两式相除，$V = {V_T}\\ln 40 \\approx 92.22{\\rm{ mV}}$\n\n$10{e^{ - \\frac{V}{{{V_T}}}}} = \\frac{{{I_2}}}{{10 - {I_2}}}$\n\n${I_2} \\approx 5.75{\\rm{ mA}}$",
+  "images": [
+   "diode.assets/7-2-16.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-15",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "calc",
+  "question": "如下图所示电路中，输入电压 $V_I=20{\\rm V}$，限流电阻 $R=510{\\rm \\Omega}$，稳压管 $\\rm 2CW16$ 具有下列特性：稳定电压 $\\rm 9 V$，允许最大耗散功率 $\\rm 250 mW$，稳压管电流小于 $\\rm 1 mA$ 时不能稳压，且动态电阻不大于 $20 \\Omega$ 。\n\n(1)  当 $R_L=1{\\rm k \\Omega}$ ，求电流 $I_R$ 、$I_Z$ 和 $I_L$ 。\n\n(2)  当电源电压 $V_I \\pm 20\\%$ 时，输出电压 $V_O$ 最多变化几伏？\n\n(3)  在输入电压 $V_I$ 和负载电阻 $R_L$ 变化至何值时稳压管功耗最大？其值是否已超过其允许值？（ $V_I$ 的变化范围不超过 $\\pm20\\%$ ，$R_L$ 可任意变化。）\n\n\n\n@@IMG:diode.assets/7-2-18.png@@",
+  "answer": "(1)\t${I_R} = \\frac{{20 - 9}}{{510}} = 21.6{\\rm mA}$\n\n${I_L} = \\frac{{9{\\rm{V}}}}{{1{\\rm{k}}\\Omega }} = 9{\\rm mA}$\n\n${I_Z} = 21.6 - 9 = 12.6{\\rm{ mA}}$\n\n(2)\t$\\Delta {V_O} = \\frac{{20\\Omega //1{\\rm{k}}\\Omega }}{{510\\Omega  + (20\\Omega //1{\\rm{k}}\\Omega {\\rm{)}}}} \\times ( \\pm 4{\\rm{V}}) \\approx  \\pm 0.15{\\rm V}$\n\n(3)\t当 $V_I$ 变化 +20% 和 $R_L \\rightarrow \\infty$ 时稳压管的功耗最大。\n\n$P_{Z(max)}=\\frac{{24 - 9}}{{510}} \\times 9 = 265{\\rm mW} > P_{Zmax}$ ，超过允许的最大耗散功率。",
+  "images": [
+   "diode.assets/7-2-18.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-16",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "下图所示为包含理想二极管的电路及其输入信号曲线，则输出信号曲线应为 ________ 。\n\n\n\n@@IMG:diode.assets/7-2-19.png@@\n\n\n\n\n\n@@IMG:diode.assets/解-7-2-19.png@@",
+  "answer": "D。正负周期均导通，且电阻分压导致最大峰值电压为5V",
+  "images": [
+   "diode.assets/7-2-19.png",
+   "diode.assets/解-7-2-19.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-17",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "choice",
+  "question": "在桥式整流电源电路中，滤波电容的电容值不能选择过大，主要原因是 ________ 。\n\nA. 大电容不安全\n\nB. 通过二极管的整流电流太大\n\nC. 充电时间太长\n\nD. 滤波输出电压平均值增大过多",
+  "answer": "B。当电容值过大时，充放电电流会增大。在整流电路的电源刚刚开启时，大电容将如同短路一般，导致瞬间流过大电流，这可能损坏整流桥或保险管。",
+  "images": [],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-18",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "如下图所示电路，已知集成二极管导通时的压降 $V_D=800{\\rm mV}$，取 $V_T=25{\\rm mV}$，则电源电压 $V_{ad}$ 变化时 $100{\\rm mV}$ 时，输出电压 $V_{out}$ 的变化量约为 ________ 。\n\n\n\n@@IMG:diode.assets/7-2-21.png@@",
+  "answer": "11.1 mV。二极管的直流电流为6mA，因此 $r_d = \\frac{25mV}{6mA} = 4.167\\Omega$，再分压可得。",
+  "images": [
+   "diode.assets/7-2-21.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-19",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "choice",
+  "question": "在线性直流电源中，由理想二极管组成桥式整流电路，在没有加入滤波电容时，二极管的导通角 ________ 180°；加入滤波电容后，二极管的导通角 ________180°。\n\nA. =, <\n\nB. =, >\n\nC. <, >\n\nD. >, <",
+  "answer": "A。忽略二极管导通压降，无滤波电容时，二极管半周期导通；加入滤波电容后，仅充电时二极管导通，小于半周期。有滤波电容时的导通角参考下图\n\n\n\n@@IMG:diode.assets/image-20240107131254708.png@@",
+  "images": [],
+  "answerImages": [
+   "diode.assets/image-20240107131254708.png"
+  ],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-20",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "假设二极管的导通电压 $V_{on}$ 为 0.7 V，则下图所示电路中节点 A 的电压 $V_A$ 等于 ________ ，支路电流 $I_D$ 等于 ________ 。\n\n\n\n@@IMG:diode.assets/7-2-23.png@@",
+  "answer": "-5.3 V  1.295 mA。先计算 A 点电压，再对 A 点 KCL。",
+  "images": [
+   "diode.assets/7-2-23.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-21",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "设下图电路中所有二极管的导通电压均为0.7 V，则输出电压$V_{o1} =$  __________ V,  $V_{o2} =$ __________ V,\n\n\n\n@@IMG:diode.assets/image-20250823124045269.png@@",
+  "answer": "1.3, -2\n\n二极管导通，$2 - 0.7 = 1.3$\n\n二极管截止，流过R的电流为0",
+  "images": [
+   "diode.assets/image-20250823124045269.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ },
+ {
+  "id": "CH06-KP2-22",
+  "set": "diode",
+  "chapter": 6,
+  "setTitle": "二极管及其应用电路",
+  "kp": "知识点2：二极管应用电路的分析计算",
+  "kind": "fill",
+  "question": "设下图电路中所有二极管的导通电压均为0.7 V，则输出电压$V_{o1} =$  ______ V,  $V_{o2} =$ ______ V,\n\n\n\n@@IMG:diode.assets/image-20250823125028886.png@@",
+  "answer": "2, -1.3\n\n二极管截止，流过R的电流为0\n\n二极管导通，$-2 + 0.7 = -1.3$",
+  "images": [
+   "diode.assets/image-20250823125028886.png"
+  ],
+  "answerImages": [],
+  "url": "https://bc0403.github.io/EC2024/diode"
+ }
+]

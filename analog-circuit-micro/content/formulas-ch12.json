@@ -1,0 +1,74 @@
+[
+ {
+  "id": "KF12-01",
+  "section": "ch12-s01",
+  "title": "功率放大器的功率平衡与效率",
+  "tex": "P_S=P_L+P_D,\\quad \\eta=\\frac{P_L}{P_S},\\quad P_L=\\frac{\\hat V_O^{2}}{2R_L}",
+  "use": "$P_L$ 为正弦输出时负载平均功率（$\\hat V_O$ 为幅值），$P_S$ 为电源平均功率，$P_D$ 为晶体管总管耗。已知两项求第三项。",
+  "conditions": "正弦稳态；$\\hat V_O$ 是峰值，用有效值时 $P_L=V_{o,rms}^2/R_L$。",
+  "pitfall": "不要把 $\\hat V_O$ 当有效值代入，会多出 2 倍。"
+ },
+ {
+  "id": "KF12-02",
+  "section": "ch12-s04",
+  "title": "甲类射随输出级的功率与效率",
+  "tex": "P_S=2V_{CC}I,\\quad I\\ge\\frac{V_{CC}}{R_L},\\quad P_{L\\max}=\\frac{V_{CC}^{2}}{2R_L},\\quad \\eta_{\\max}=25\\%",
+  "use": "恒流源偏置的射极跟随输出级，由 $I$ 和 $V_{CC}$ 求电源功率，由满摆幅条件取最小的 $I$。",
+  "conditions": "忽略饱和压降；$I$ 取最小值 $V_{CC}/R_L$ 时才得 $25\\%$，含 $V_{CE(\\mathrm{sat})}$ 时更低。",
+  "pitfall": "$P_S$ 与信号大小无关，静态也耗 $2V_{CC}I$；甲类管耗在无信号时最大。"
+ },
+ {
+  "id": "KF12-03",
+  "section": "ch12-s07",
+  "title": "乙类互补推挽的功率与效率",
+  "tex": "P_S=\\frac{2}{\\pi}\\frac{V_{CC}\\hat V_O}{R_L},\\quad \\eta=\\frac{\\pi}{4}\\frac{\\hat V_O}{V_{CC}},\\quad \\eta_{\\max}=\\frac{\\pi}{4}\\approx78.5\\%",
+  "use": "已知输出幅值 $\\hat V_O$ 求电源功率和效率；满幅 $\\hat V_O=V_{CC}$ 时 $P_{L\\max}=V_{CC}^2/(2R_L)$。",
+  "conditions": "理想对称双电源推挽，正弦输出，忽略饱和压降和静态电流。",
+  "pitfall": "$P_S$ 随输出幅度线性增大，不是常数；不要套用甲类的 $2V_{CC}I$。"
+ },
+ {
+  "id": "KF12-04",
+  "section": "ch12-s07",
+  "title": "乙类的管耗与最大管耗点",
+  "tex": "P_D=\\frac{2}{\\pi}\\frac{V_{CC}\\hat V_O}{R_L}-\\frac{\\hat V_O^{2}}{2R_L},\\quad P_{D\\max}=\\frac{2V_{CC}^{2}}{\\pi^{2}R_L}\\ \\ \\left(\\hat V_O=\\frac{2V_{CC}}{\\pi}\\right)",
+  "use": "选管：每管 $P_{D1\\max}=P_{D\\max}/2=V_{CC}^2/(\\pi^2R_L)\\approx0.2P_{L\\max}$；$V_{(BR)CEO}\\ge2V_{CC}$。",
+  "conditions": "理想乙类；要求 $2V_{CC}/\\pi$ 不超过可达到的最大幅值。该点效率 $\\eta=50\\%$。",
+  "pitfall": "管耗最大在中等幅度，不在满幅，也不在无信号；$P_{D\\max}$ 的值与饱和压降无关。"
+ },
+ {
+  "id": "KF12-05",
+  "section": "ch12-s08",
+  "title": "含饱和压降的乙类功率与效率",
+  "tex": "V_{om}=V_{CC}-V_{CES},\\quad P_{om}=\\frac{V_{om}^{2}}{2R_L},\\quad \\eta=\\frac{\\pi}{4}\\frac{V_{om}}{V_{CC}}",
+  "use": "习题中给出 $V_{CES}$ 时，把幅值换成 $V_{om}$，电源功率仍为 $P_S=\\dfrac{2}{\\pi}\\dfrac{V_{CC}V_{om}}{R_L}$。",
+  "conditions": "饱和压降为常数，输出为不削波的正弦。",
+  "pitfall": "电源功率中的电压是 $V_{CC}$，不是 $V_{om}$。"
+ },
+ {
+  "id": "KF12-06",
+  "section": "ch12-s11",
+  "title": "AB 类偏置电压与两管电流关系",
+  "tex": "V_{BB}=2V_T\\ln\\frac{I_Q}{I_S},\\quad i_Ni_P=I_Q^{2},\\quad i_N-i_P=i_L",
+  "use": "由 $I_Q$ 求偏置电压 $V_{BB}$；已知 $i_L$ 时联立解出 $i_N=\\dfrac{i_L+\\sqrt{i_L^2+4I_Q^2}}{2}$、$i_P=i_N-i_L$。",
+  "conditions": "两管指数模型、参数匹配，$v_{BEN}+v_{EBP}=V_{BB}$，忽略基极电流和 Early 效应。",
+  "pitfall": "$i_P$ 不会为 0，只是随 $i_L$ 增大按指数规律减小；两管电流不是相加为常数。"
+ },
+ {
+  "id": "KF12-07",
+  "section": "ch12-s11",
+  "title": "AB 类输出电阻与电压增益",
+  "tex": "R_O=\\frac{V_T}{i_N+i_P}=\\frac{V_T}{\\sqrt{i_L^{2}+4I_Q^{2}}},\\quad A_v=\\frac{R_L\\parallel r_o}{R_O+R_L\\parallel r_o}\\approx\\frac{R_L}{R_L+R_O}",
+  "use": "$v_I=0$ 时 $R_O=V_T/(2I_Q)$；用来判断增益是否接近 1、交越失真是否消除。",
+  "conditions": "小信号；$R_O\\ll R_L$ 时 $A_v\\approx1$；$R_O\\approx$ 常数仅当 $\\lvert i_L\\rvert\\ll2I_Q$。",
+  "pitfall": "$R_O$ 是两个 $r_e$ 的并联，不是单管 $V_T/I_E$；大电流时 $R_O$ 变小，增益随之变化。"
+ },
+ {
+  "id": "KF12-08",
+  "section": "ch12-s12",
+  "title": "VBE 倍增器偏置",
+  "tex": "V_{BB}=V_{BE}\\left(1+\\frac{R_2}{R_1}\\right)",
+  "use": "设计两管基极间偏置电压：由所需 $V_{BB}$ 与 $V_{BE}$ 求 $R_2/R_1$。复合管输出级需 $V_{BB}\\approx4V_{BE}$，则 $R_2/R_1=3$。",
+  "conditions": "忽略倍增管 $Q_1$ 的基极电流，$R_1$ 上电压等于 $V_{BE}$。",
+  "pitfall": "要和输出管热耦合（靠近放置）才能抑制热失控；$I_{BIAS}$ 必须大于流过 $R_1,R_2$ 的电流。"
+ }
+]
