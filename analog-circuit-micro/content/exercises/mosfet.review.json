@@ -1,0 +1,296 @@
+{
+ "CH08-KP1-01": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "看曲线在 $v_{GS}=0$ 处 $i_D$ 是否为零，以及曲线随 $v_{GS}$ 增大是上升还是下降。"
+  ],
+  "solution": "题图中曲线随 $v_{GS}$ 增大而上升，说明 $i_D$ 为正、由栅压增强，是 N 沟道。曲线在 $v_{GS}=0$ 处 $i_D$ 已不为零，要到 $v_{GS}=-4\\,\\mathrm{V}$ 附近才降到零，说明沟道预先存在，$V_t=-4\\,\\mathrm{V}<0$，是耗尽型。图中 $v_{GS}$ 可取正值而曲线继续上升，也说明不是结型管（结型管栅结不能正偏）。因此是 N 沟道耗尽型 MOS 管，选 D。",
+  "check": "逐项排除：A、C 的增强型在 $v_{GS}=0$ 时 $i_D=0$，与图不符；B 为结型管，栅压只能反偏，曲线不会延伸到 $v_{GS}>0$ 并继续上升。",
+  "note": "原答案正确。",
+  "tags": [
+   "管型判断",
+   "耗尽型",
+   "转移特性"
+  ]
+ },
+ "CH08-KP1-02": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "对比 $v_{GS}=0$ 时沟道是预先存在还是需要栅压才能形成。"
+  ],
+  "solution": "耗尽型 MOSFET 制造时在沟道区预掺杂，$v_{GS}=0$ 时源漏之间已有导电沟道。增强型 MOSFET 在 $v_{GS}=0$ 时没有沟道，必须 $v_{GS}$ 超过阈值电压 $V_t$ 才形成反型层沟道。答案：耗尽；增强。",
+  "check": "与阈值电压符号对照（NMOS）：耗尽型 $V_t<0$（$v_{GS}=0$ 时已超过 $V_t$），增强型 $V_t>0$。",
+  "note": "原答案正确。",
+  "tags": [
+   "增强型与耗尽型",
+   "沟道"
+  ]
+ },
+ "CH08-KP1-03": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "曲线在 $v_{GS}=0$ 附近 $i_D$ 为零吗？电流在 $v_{GS}$ 为正还是为负时才出现？"
+  ],
+  "solution": "题图中曲线在 $v_{GS}$ 轴上某个正值处才开始抬起，$i_D$ 为正，且随 $v_{GS}$ 增大而上升。$v_{GS}=0$ 时 $i_D=0$，说明无预先沟道，是增强型；$v_{GS}$ 为正才导通、电流为正，是 N 沟道。因此是 N 沟道增强型，选 B。",
+  "check": "若是 P 沟道，转移特性要在 $v_{GS}<0$（增强型）或以 $-i_D$ 向左延伸，与图不符。",
+  "note": "原答案正确。题图未标刻度，只能从曲线形状和阈值位置判断。",
+  "tags": [
+   "管型判断",
+   "增强型",
+   "转移特性"
+  ]
+ },
+ "CH08-KP1-04": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "增强型 NMOS 需要正栅压才形成沟道；耗尽型 NMOS 需要负栅压才把沟道夹断。"
+  ],
+  "solution": "增强型 n-MOSFET：$v_{GS}>V_{th}$ 才有沟道，且 $v_{GS}=0$ 时无沟道，所以 $V_{th}>0$。耗尽型 n-MOSFET：$v_{GS}=0$ 时沟道已存在，要加负栅压把沟道关断，所以 $V_{th}<0$。答案：$>$；$<$。",
+  "check": "对应转移特性：增强型曲线在 $v_{GS}$ 轴正半轴起升，耗尽型曲线在负半轴起升。",
+  "note": "原答案正确。该结论只对 NMOS 成立，PMOS 符号相反。",
+  "tags": [
+   "阈值电压",
+   "增强型与耗尽型"
+  ]
+ },
+ "CH08-KP1-05": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "预夹断时 $v_{GD}=V_t$，即 $v_{DS}=v_{GS}-V_t$。夹断之后电流还随 $v_{DS}$ 变化吗？"
+  ],
+  "solution": "漏端沟道刚好消失（预夹断）时 $v_{DS}=v_{GS}-V_t$。$v_{DS}$ 继续增大，夹断点向源端移动，夹断点电压固定为 $V_{OV}$，电流几乎不随 $v_{DS}$ 变化，这是饱和区（恒流区）。三极管区（可变电阻区）沟道未夹断，截止区没有沟道。选 A。",
+  "check": "判据：饱和区 $v_{DS}\\ge v_{GS}-V_t$；变阻区 $v_{DS}<v_{GS}-V_t$；两者在 $v_{DS}=V_{OV}$ 处电流连续。",
+  "note": "原答案正确。选项 B 和 D 指同一个区域（线性区即可变电阻区）。MOSFET 的“饱和”是放大区，与 BJT 的“饱和”相反。",
+  "tags": [
+   "工作区判断",
+   "沟道夹断"
+  ]
+ },
+ "CH08-KP1-06": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "栅极直流电流为零，控制量是什么，被控量又是什么？"
+  ],
+  "solution": "MOSFET 栅极与沟道之间有绝缘层，$i_G=0$，漏极电流 $i_D$ 由栅源电压 $v_{GS}$ 控制，饱和区小信号关系 $i_d=g_mv_{gs}$。控制量是电压、被控量是电流，所以是电压控制电流源（VCCS），选 A。",
+  "check": "量纲：$g_m=i_d/v_{gs}$ 的单位是 $\\mathrm{A/V}$（西门子），是电压控制电流的比例系数。",
+  "note": "原答案正确。BJT 常看作电流控制电流源（$\\beta$）或电压控制电流源（$g_m$），MOSFET 只有电压控制一种说法。",
+  "tags": [
+   "受控源模型",
+   "跨导"
+  ]
+ },
+ "CH08-KP1-07": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "先判断 NMOS 的两种，再把 PMOS 的符号全部取反。"
+  ],
+  "solution": "NMOS：增强型 $V_t>0$，耗尽型 $V_t<0$。PMOS 所有电压极性取反：增强型 $V_t<0$，耗尽型 $V_t>0$。依次填 $>$、$<$、$<$、$>$，对应选项 A。",
+  "check": "PMOS 增强型需 $v_{GS}<V_t<0$ 才导通，$v_{GS}=0$ 时截止，所以 $V_t$ 必为负；耗尽型 PMOS 在 $v_{GS}=0$ 时导通，需 $v_{GS}>V_t$ 才关断，所以 $V_t$ 为正。",
+  "note": "原答案正确。",
+  "tags": [
+   "阈值电压",
+   "PMOS",
+   "增强型与耗尽型"
+  ]
+ },
+ "CH08-KP2-01": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "先算 $V_{OV}=v_{GS}-V_t$，再比较 $v_{DS}$ 与 $V_{OV}$ 判断工作区。"
+  ],
+  "solution": "$V_{OV}=v_{GS}-V_t=3-1=2\\,\\mathrm{V}$，$k_n=k_n'W/L=0.05\\,\\mathrm{mA/V^2}$。\n\n**$v_{DS}=1\\,\\mathrm{V}$**：$1<2$，三极管区。\n$$i_D=k_n\\left[V_{OV}v_{DS}-\\tfrac12 v_{DS}^2\\right]=0.05\\times(2-0.5)=0.075\\,\\mathrm{mA}$$\n\n**$v_{DS}=4\\,\\mathrm{V}$**：$4>2$，饱和区（不计沟道长度调制）。\n$$i_D=\\tfrac12 k_nV_{OV}^2=\\tfrac12\\times0.05\\times4=0.1\\,\\mathrm{mA}$$",
+  "check": "边界 $v_{DS}=2\\,\\mathrm{V}$ 时三极管公式给 $0.05\\times(4-2)=0.1\\,\\mathrm{mA}$，与饱和公式相等，两段连续，$0.075<0.1$ 符合电流随 $v_{DS}$ 单调上升。",
+  "note": "原答案正确。题面给出的 $V_T=26\\,\\mathrm{mV}$ 与本题无关（BJT 热电压）。饱和区默认 $\\lambda=0$。",
+  "tags": [
+   "工作区判断",
+   "电流方程",
+   "三极管区",
+   "饱和区"
+  ]
+ },
+ "CH08-KP2-02": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "饱和条件 $v_{DS}\\ge v_{GS}-V_t$，把它改写成漏极电位与栅极电位的关系。"
+  ],
+  "solution": "NMOS 饱和条件 $v_{DS}\\ge v_{GS}-V_t$。两边加上源极电位 $V_S$：$V_D\\ge V_G-V_t$。即漏极电压不得低于“栅极电压减 $V_t$”，选 D。",
+  "check": "等价写法 $v_{GD}\\le V_t$：漏端栅沟电压差不超过阈值，沟道在漏端夹断。",
+  "note": "原答案正确。严格取等号 $V_D=V_G-V_t$ 是饱和边界。",
+  "tags": [
+   "饱和条件",
+   "工作区判断"
+  ]
+ },
+ "CH08-KP2-03": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "在测试端口加电压 $v_t$，求流入的电流 $i_t$，电阻 $=v_t/i_t$。",
+   "先写出每个电路里 $v_{gs}$ 与测试电压的关系。"
+  ],
+  "solution": "**(a)** 栅极交流接地，源极为测试端，$v_g=0$，$v_{gs}=-v_t$。$\\lambda=0$，$r_o\\to\\infty$，流入源极的电流（沿箭头方向）$i_t=-g_mv_{gs}=g_mv_t$，漏极电阻只改变漏极电压，不影响电流。所以\n$$R_a=\\frac{v_t}{i_t}=\\frac{1}{g_m}$$\n\n**(d)** 栅极和源极都交流接地，$v_{gs}=0$，受控电流源 $g_mv_{gs}=0$，漏极测试电压只在 $r_o$ 上产生电流：\n$$R_d=r_o$$",
+  "check": "(a) 与 T 型模型直接对应：源极看进去等于 $1/g_m$。(d) 与 $r_o=(\\partial i_D/\\partial v_{DS})^{-1}$ 的定义一致。",
+  "note": "原答案正确。(a) 的结论在 $\\lambda=0$ 时成立；若 $\\lambda\\ne0$，源极看进去的电阻为 $(r_o+R_D)/(1+g_mr_o)$。不计体效应；计入时 $1/g_m$ 换为 $1/(g_m+g_{mb})$。",
+  "tags": [
+   "小信号等效电阻",
+   "T 型模型",
+   "输出电阻"
+  ]
+ },
+ "CH08-KP2-04": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "放大要求输出特性曲线上电流几乎不随 $v_{DS}$ 变，这在哪个区？"
+  ],
+  "solution": "场效应管作放大管时必须工作在饱和区（恒流区）。该区 $i_D=\\tfrac12k_n(v_{GS}-V_t)^2$，主要取决于栅极和源极之间的电压 $v_{GS}$，几乎与 $v_{DS}$ 无关，所以栅源电压的变化能控制漏极电流，$i_d=g_mv_{gs}$。答案：饱和；栅极和源极。",
+  "check": "若工作在三极管区，$i_D$ 同时依赖 $v_{DS}$，管子等效为受控电阻，不能作线性放大；截止区 $i_D=0$ 无放大。",
+  "note": "原答案正确。“饱和区”是 MOSFET 的放大区，不要与 BJT 的饱和区混淆。",
+  "tags": [
+   "工作区判断",
+   "饱和区",
+   "放大条件"
+  ]
+ },
+ "CH08-KP3-01": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "T2 的栅极为固定偏置 $V_G$，交流接地，T2 在交流下只剩什么？",
+   "先由 $I_D$ 和 $(W/L)_1$ 求 $g_{m1}$，再用 $g_{m1}R_o$。"
+  ],
+  "solution": "T1 是 NMOS 共源管，T2 是 PMOS，栅极接固定偏置 $V_G$，作电流源负载。\n\n**输出电阻**：T2 的 $v_{sg2}$ 不变，小信号下受控源电流为零，只剩 $r_{o2}$。两管 $I_D=200\\,\\mu\\mathrm{A}$、$V_A=50\\,\\mathrm{V}$：\n$$r_{o1}=r_{o2}=\\frac{V_A}{I_D}=\\frac{50}{200\\times10^{-6}}=250\\,\\mathrm{k\\Omega}$$\n$$R_o=r_{o1}/\\!/r_{o2}=125\\,\\mathrm{k\\Omega}$$\n\n**跨导**：\n$$g_{m1}=\\sqrt{2\\mu C_{ox}\\left(\\tfrac WL\\right)_1I_D}=\\sqrt{2\\times20\\times10^{-6}\\times1\\times200\\times10^{-6}}=89.4\\,\\mu\\mathrm{S}$$\n\n**增益**：\n$$A_v=-g_{m1}R_o=-89.4\\times10^{-6}\\times125\\times10^{3}=-11.18$$",
+  "check": "$V_{OV1}=2I_D/g_{m1}=4.47\\,\\mathrm{V}$，由 $I_D=\\tfrac12\\mu C_{ox}(W/L)_1V_{OV}^2=\\tfrac12\\times20\\,\\mu\\mathrm{A/V^2}\\times20=200\\,\\mu\\mathrm{A}$ 回代成立。",
+  "note": "原答案正确。使用 $r_o\\approx V_A/I_D$（忽略 $V_{DS}$ 项，$r_o=(V_A+V_{DS})/I_D$ 会略大）。$(W/L)_2=1/4$ 只用于决定 $V_G$，不影响增益；$V_{OV1}\\approx4.5\\,\\mathrm{V}$ 偏大，是练习数据。",
+  "tags": [
+   "电流源负载",
+   "共源放大器",
+   "输出电阻",
+   "沟道长度调制"
+  ]
+ },
+ "CH08-KP3-02": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "栅极电流为零，先求 $V_G$，再写 $V_{GS}=V_G-I_DR_S$。",
+   "二次方程有两个根，用 $V_{GS}>V_t$ 检验。"
+  ],
+  "solution": "栅极电流为零：\n$$V_G=15\\times\\frac{7}{8+7}=7\\,\\mathrm{V},\\qquad k_n=\\mu_nC_{ox}\\frac WL=0.2\\times5=1\\,\\mathrm{mA/V^2}$$\n电流单位用 mA、电阻用 k$\\Omega$：$V_{GS}=7-10I_D$。设饱和：\n$$I_D=\\tfrac12\\times1\\times(6-10I_D)^2\\ \\Rightarrow\\ 50I_D^2-61I_D+18=0\\ \\Rightarrow\\ I_D=\\frac{61\\pm11}{100}$$\n得 $0.72\\,\\mathrm{mA}$ 或 $0.50\\,\\mathrm{mA}$。$I_D=0.72$ 时 $V_{GS}=-0.2\\,\\mathrm{V}<V_t$，沟道不存在，舍去。取 $I_D=0.5\\,\\mathrm{mA}$，$V_{GS}=2\\,\\mathrm{V}$。\n\n**检验**：$V_D=15-5=10\\,\\mathrm{V}$，$V_S=5\\,\\mathrm{V}$，$V_{DS}=5\\,\\mathrm{V}>V_{OV}=1\\,\\mathrm{V}$，饱和成立。\n\n答案：$I_D=0.5\\,\\mathrm{mA}$。",
+  "check": "回代：$V_{GS}=7-10\\times0.5=2\\,\\mathrm{V}$，$\\tfrac12\\times1\\times(2-1)^2=0.5\\,\\mathrm{mA}$，与假设一致。",
+  "note": "原答案 0.5 正确。",
+  "tags": [
+   "直流偏置",
+   "分压偏置",
+   "饱和假设检验"
+  ]
+ },
+ "CH08-KP3-03": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "画交流通路：$C_1$、$C_2$ 短路，$V_{DD}$ 接地，这是共漏还是共源？",
+   "栅极无电流，$R_1$ 上没有压降。"
+  ],
+  "solution": "交流通路中漏极接 $V_{DD}$（交流地），信号从栅极输入、从源极输出，是共漏（源极跟随器）。$R_2$ 与 $R_3$ 在交流下并联到地，$R_1$ 串在栅极与该点之间。\n\n**电压增益**：输出端除 $R_4$ 外无其他负载（$C_2$ 之后开路）：\n$$A_u=\\frac{g_mR_4}{1+g_mR_4}=\\frac{0.9\\times12}{1+0.9\\times12}=\\frac{10.8}{11.8}=0.915\\approx0.92$$\n\n**输入电阻**（栅极不取电流）：\n$$R_i=R_1+R_2/\\!/R_3=2000+\\frac{300\\times100}{400}=2075\\,\\mathrm{k\\Omega}$$\n\n**输出电阻**（令 $v_i=0$，源极看进去为 $1/g_m$ 与 $R_4$ 并联）：\n$$R_o=R_4/\\!/\\frac1{g_m}=\\frac{1}{1/12+0.9}\\,\\mathrm{k\\Omega}=1.017\\,\\mathrm{k\\Omega}\\approx1.02\\,\\mathrm{k\\Omega}$$",
+  "check": "极限：$g_mR_4\\to\\infty$ 时 $A_u\\to1$，$R_o\\to1/g_m=1.11\\,\\mathrm{k\\Omega}$；本题 $R_4=12\\,\\mathrm{k\\Omega}$ 并联使 $R_o$ 略小，$1.02\\,\\mathrm{k\\Omega}$ 合理。",
+  "note": "原答案正确。精确值 $A_u=0.9153$，$R_o=1.0169\\,\\mathrm{k\\Omega}$。忽略 $r_o$ 和体效应（题目只给 $g_m$）；输出电阻不含信号源内阻，因为栅极无电流。",
+  "tags": [
+   "共漏放大器",
+   "源极跟随器",
+   "输入电阻",
+   "输出电阻"
+  ]
+ },
+ "CH08-KP3-04": {
+  "verdict": "ok",
+  "difficulty": 2,
+  "hints": [
+   "栅漏相连有什么性质？此时管子一定在哪个区？",
+   "由 $V_D$ 得 $V_{GS}$，再求 $I_D$，最后由电阻上的压降求 $R$。"
+  ],
+  "solution": "栅漏短接，$V_{GS}=V_{DS}=V_D=0.7\\,\\mathrm{V}$，$V_{OV}=0.7-0.5=0.2\\,\\mathrm{V}<V_{DS}$，饱和（栅漏连接的管子必在饱和区）。\n$$k_n=\\mu_nC_{ox}\\frac WL=0.4\\times\\frac{0.72}{0.18}=0.4\\times4=1.6\\,\\mathrm{mA/V^2}$$\n$$I_D=\\tfrac12k_nV_{OV}^2=\\tfrac12\\times1.6\\times0.2^2=0.032\\,\\mathrm{mA}$$\n$$R=\\frac{1.8-0.7}{0.032\\,\\mathrm{mA}}=34.375\\,\\mathrm{k\\Omega}\\approx34.4\\,\\mathrm{k\\Omega}$$",
+  "check": "回代：$I_DR=0.032\\times34.375=1.1\\,\\mathrm{V}=1.8-0.7$。",
+  "note": "原答案 34.4 kΩ 正确（精确值 34.375 kΩ）。",
+  "tags": [
+   "直流偏置",
+   "栅漏反馈偏置",
+   "饱和区"
+  ]
+ },
+ "CH08-KP3-05": {
+  "verdict": "note",
+  "difficulty": 2,
+  "hints": [
+   "(a) 中 $C_s$ 旁路了 $R_s$，源极交流接地；$R_g$ 连到分压点，该点交流接地。",
+   "(b) 栅极无电流，所以 $R_g$ 上无压降。"
+  ],
+  "solution": "**(a)** 共源，源极旁路到地，$v_{gs}=v_i$：\n$$A_v=-g_m(R_d/\\!/R_L)=-2\\times(5.1/\\!/5.1)=-2\\times2.55=-5.1\\,\\mathrm{V/V}$$\n输入电阻：栅极不取电流，$R_g$ 一端接栅极，另一端接 $R_{g1}$、$R_{g2}$ 分压点（交流接地，两电阻并联）：\n$$R_i=R_g+R_{g1}/\\!/R_{g2}=5\\,\\mathrm{M\\Omega}+\\frac{200\\times62}{262}\\,\\mathrm{k\\Omega}=5\\,\\mathrm{M\\Omega}+47.3\\,\\mathrm{k\\Omega}\\approx5.05\\,\\mathrm{M\\Omega}$$\n输出电阻（$r_o\\to\\infty$）：$R_o=R_d=5.1\\,\\mathrm{k\\Omega}$。\n\n**(b)** 共漏，$R_g$ 中无电流，$v_{gs}=v_g-v_o$：\n$$A_{vs}=\\frac{g_mR_s}{1+g_mR_s}=\\frac{2\\times2}{1+4}=0.8$$\n输入电阻：栅极电流为零，信号源看到 $R_i=\\infty$（不计栅极电容）。\n输出电阻：\n$$R_o=R_s/\\!/\\frac1{g_m}=2/\\!/0.5=0.4\\,\\mathrm{k\\Omega}$$",
+  "check": "(b) 极限：$g_mR_s=4$ 时 $A_v=4/5=0.8$；$R_o$ 与 $R_s$ 并联 $1/g_m=0.5\\,\\mathrm{k\\Omega}$ 小于二者；(a) 若 $R_s$ 未旁路则增益降为 $-5.1/(1+2\\times3)$，说明旁路电容的作用。",
+  "note": "结果均正确。原解中 $R_i=5+200/\\!/62/1000=5+47\\approx5\\,\\mathrm{M\\Omega}$ 单位书写混乱：$R_{g1}/\\!/R_{g2}=47.3\\,\\mathrm{k\\Omega}=0.0473\\,\\mathrm{M\\Omega}$，精确值 $R_i=5.047\\,\\mathrm{M\\Omega}$，约 $5\\,\\mathrm{M\\Omega}$ 成立。(b) 的 $R_i=\\infty$ 指从信号源端看进去，$R_g=10\\,\\mathrm{M\\Omega}$ 无电流；($r_o$ 与电容均忽略)。",
+  "tags": [
+   "共源放大器",
+   "共漏放大器",
+   "输入电阻",
+   "输出电阻"
+  ]
+ },
+ "CH08-KP3-06": {
+  "verdict": "note",
+  "difficulty": 3,
+  "hints": [
+   "第一级输出点的负载包含哪些电阻？第二级共栅的输入电阻是多少？",
+   "第二级共栅的输入信号就是第一级输出电压。"
+  ],
+  "solution": "第一级是共漏（源极跟随器），两管源极经无穷大耦合电容相连，第二级是共栅（栅极接地，从源极输入，漏极输出）。\n\n**第一级**：共漏的源极节点负载 $R'$ 为自身 $10\\,\\mathrm{k\\Omega}$、第二级源极偏置电阻 $10\\,\\mathrm{k\\Omega}$ 与共栅输入电阻 $1/g_m=0.1\\,\\mathrm{k\\Omega}$ 并联：\n$$R'=10/\\!/10/\\!/0.1=\\frac{5\\times0.1}{5.1}=0.098\\,\\mathrm{k\\Omega}$$\n$$A_{v1}=\\frac{R'}{1/g_m+R'}=\\frac{0.098}{0.1+0.098}=0.495$$\n\n**第二级**：共栅同相，负载 $R_D/\\!/R_L=5/\\!/2=1.43\\,\\mathrm{k\\Omega}$：\n$$A_{v2}=g_m(5/\\!/2)=10\\times1.4286=14.29$$\n\n**总增益**：\n$$A_v=A_{v1}A_{v2}=0.495\\times14.29=7.07\\approx7.1\\,\\mathrm{V/V}$$",
+  "check": "直接对源极节点列 KCL（单位 mS）：$g_m(v_i-v_{s})=v_s(0.1+0.1)+g_mv_s\\Rightarrow10v_i=20.2v_s$，$v_s=0.495v_i$。第二级漏极电流 $g_mv_s$ 流过 $5/\\!/2$，$v_o=10\\times0.495\\times1.4286\\,v_i=7.07v_i$，与分级结果一致。",
+  "note": "方法与结论正确，原答案 $\\approx7.0$ 是用 $0.49\\times14.29$ 取整所致，精确值 $7.07$（约 $7.1$）。需注意第二级是共栅，其输入电阻 $1/g_m$ 作为第一级负载已计入，因此 $A_{v2}$ 不应再乘分压项。",
+  "tags": [
+   "多级放大器",
+   "共漏放大器",
+   "共栅放大器",
+   "负载效应"
+  ]
+ },
+ "CH08-KP3-07": {
+  "verdict": "ok",
+  "difficulty": 1,
+  "hints": [
+   "源极跟随器的信号从哪个电极输入、从哪个电极输出？公共端是什么？"
+  ],
+  "solution": "源极跟随器 $A_v=\\dfrac{g_mR'}{1+g_mR'}$，$g_mR'\\gg1$ 时接近 1，即电压增益接近 1。输入加在栅极、输出取自源极，漏极为交流公共端，所以是共漏接法。答案：电压；共漏。",
+  "check": "BJT 对照：共集电极放大器（射极跟随器）同样电压增益接近 1，电流增益大。",
+  "note": "原答案正确。原文附加的英文说明（source follower、common drain）是对答案的解释，非题目要求。",
+  "tags": [
+   "共漏放大器",
+   "源极跟随器"
+  ]
+ },
+ "CH08-KP3-08": {
+  "verdict": "corrected",
+  "difficulty": 3,
+  "hints": [
+   "先由 $I_D=\\tfrac12k_n'(W/L)V_{OV}^2$ 求 $V_{GS}$，再由源极电位求 $R_S$。",
+   "漏极电压下摆和上摆各有一个限制：下摆不能进入三极管区，上摆不能超过电源（电流不能减到零）。"
+  ],
+  "solution": "**求 $R_S$**：$k_n'W/L=2\\,\\mathrm{mA/V^2}$，$V_t=2\\,\\mathrm{V}$，$I_D=1\\,\\mathrm{mA}$：\n$$1=\\tfrac12\\times2\\times(V_{GS}-2)^2\\Rightarrow V_{GS}-2=\\pm1\\Rightarrow V_{GS}=3\\,\\mathrm{V}\\ \\mathrm{or}\\ 1\\,\\mathrm{V}$$\n$1\\,\\mathrm{V}<V_t$ 舍去，取 $V_{GS}=3\\,\\mathrm{V}$。栅极直流电位为 0，$V_S=-3\\,\\mathrm{V}$，$R_S$ 接 $-V_{SS}=-10\\,\\mathrm{V}$：\n$$R_S=\\frac{-3-(-10)}{1\\,\\mathrm{mA}}=7\\,\\mathrm{k\\Omega}$$\n\n**求 $R_D$ 范围**：漏极信号峰峰值 $2\\,\\mathrm{V}$，即摆幅 $\\pm1\\,\\mathrm{V}$，$V_{D,Q}=10-R_D$（$\\mathrm{V}$，$R_D$ 单位 k$\\Omega$）。\n\n(1) 下摆不进三极管区（饱和条件 $V_D\\ge V_G-V_t=-2\\,\\mathrm{V}$）：\n$$10-R_D-1\\ge-2\\ \\Rightarrow\\ R_D\\le11\\,\\mathrm{k\\Omega}$$\n(2) 上摆不超过电源，即漏极电流摆幅 $\\lvert i_d\\rvert=1\\,\\mathrm{V}/R_D$ 不超过 $I_D$（否则管子截止）：\n$$\\frac{1\\,\\mathrm{V}}{R_D}\\le1\\,\\mathrm{mA}\\ \\Rightarrow\\ R_D\\ge1\\,\\mathrm{k\\Omega}$$\n\n结果：$R_S=7\\,\\mathrm{k\\Omega}$，$1\\,\\mathrm{k\\Omega}\\le R_D\\le11\\,\\mathrm{k\\Omega}$。",
+  "check": "边界验证：$R_D=11\\,\\mathrm{k\\Omega}$ 时 $V_{D,Q}=-1\\,\\mathrm{V}$，下摆到 $-2\\,\\mathrm{V}$ 恰为饱和边界（$V_{DS}=V_{OV}=1\\,\\mathrm{V}$，$V_S=-3\\,\\mathrm{V}$）。$R_D=1\\,\\mathrm{k\\Omega}$ 时 $V_{D,Q}=9\\,\\mathrm{V}$，上摆到 $10\\,\\mathrm{V}=V_{DD}$，$R_D$ 上压降为零，电流为零。",
+  "final": "$R_S=7\\,\\mathrm{k\\Omega}$；$1\\,\\mathrm{k\\Omega}\\le R_D\\le11\\,\\mathrm{k\\Omega}$（原答案只给出上限 $R_D\\le11\\,\\mathrm{k\\Omega}$，缺下限 $R_D\\ge1\\,\\mathrm{k\\Omega}$）。",
+  "note": "$R_S=7\\,\\mathrm{k\\Omega}$ 与上限 $11\\,\\mathrm{k\\Omega}$ 正确，但题问“取值范围”，原答案缺少由电流摆幅不超过 $I_D$ 得到的下限 $1\\,\\mathrm{k\\Omega}$。另外上限 11 忽略了栅极信号：$V_{DG}$ 的信号分量应为 $v_d-v_g$，若 $R_G$ 无旁路、增益 $A_v=-g_mR_D/(1+g_mR_S)$，则上限约 $10.3\\,\\mathrm{k\\Omega}$（与 11 相差不到 10%，视为合理近似）。",
+  "tags": [
+   "直流偏置",
+   "信号摆幅",
+   "双电源偏置",
+   "饱和条件"
+  ]
+ }
+}

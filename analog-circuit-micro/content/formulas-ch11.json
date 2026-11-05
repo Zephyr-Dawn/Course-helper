@@ -1,0 +1,83 @@
+[
+ {
+  "id": "KF11-01",
+  "section": "ch11-s03",
+  "title": "闭环增益与深度负反馈",
+  "tex": "A_f=\\frac{x_o}{x_s}=\\frac{A}{1+AF},\\quad x_i=\\frac{x_s}{1+AF},\\quad \\lvert1+AF\\rvert\\gg1:\\ A_f\\approx\\frac1F,\\ x_f\\approx x_s,\\ x_i\\to0",
+  "use": "已知开环增益 $A$ 和反馈系数 $F=x_f/x_o$，求闭环增益；深度负反馈下直接用 $1/F$ 估算增益，并令净输入为零（串联 $V_i'\\approx0$，并联 $I_i'\\approx0$）。",
+  "conditions": "负反馈，$AF$ 为正实数（中频）；方框图单向传输；深度负反馈要 $\\lvert1+AF\\rvert\\gg1$，一般取 $1+AF\\gtrsim10$。",
+  "pitfall": "条件是环路增益 $AF$ 大，不是单独 $A$ 大；$1/F$ 近似的相对误差约 $1/(1+AF)$。"
+ },
+ {
+  "id": "KF11-02",
+  "section": "ch11-s04",
+  "title": "负反馈提高增益稳定性",
+  "tex": "\\frac{dA_f}{dA}=\\frac{1}{(1+AF)^2},\\qquad \\frac{dA_f}{A_f}=\\frac{1}{1+AF}\\cdot\\frac{dA}{A}",
+  "use": "估计 $A$ 受温度、器件离散影响变化时闭环增益的相对变化；由稳定性指标反求所需的 $1+AF$。",
+  "conditions": "$dA/A$ 为小量（微分近似）；$F$ 由电阻网络决定，不随 $A$ 变化。",
+  "pitfall": "变化很大（如 $\\pm20\\%$）时线性化有误差，要用 $A_f=A/(1+AF)$ 代精确值校核；稳定性提高的代价是增益降为 $1/(1+AF)$。"
+ },
+ {
+  "id": "KF11-03",
+  "section": "ch11-s05",
+  "title": "单极点放大器加负反馈后的带宽",
+  "tex": "A_{Mf}=\\frac{A_M}{1+A_MF},\\quad f_{Hf}=(1+A_MF)f_H,\\quad f_{Lf}=\\frac{f_L}{1+A_MF},\\quad A_{Mf}f_{Hf}=A_Mf_H",
+  "use": "已知开环 $A_M$、$f_H$、$f_L$ 和反馈深度，求闭环中频增益与上下限频率；增益带宽积在反馈前后相等。",
+  "conditions": "基本放大器为单个高频（或低频）极点，反馈网络为纯电阻；带宽 $\\approx f_H$ 要求 $f_H\\gg f_L$。",
+  "pitfall": "下限频率是除以 $(1+A_MF)$（变低），不是乘；多极点放大器的闭环带宽受第二极点和稳定性限制，不能直接套用。"
+ },
+ {
+  "id": "KF11-04",
+  "section": "ch11-s02",
+  "title": "四种组态的 A 与 F",
+  "tex": "\\begin{array}{lll}\\mathrm{VS}:& A_v=\\dfrac{V_o}{V_i},& F=\\dfrac{V_f}{V_o}\\\\ \\mathrm{IS}:& A_s=\\dfrac{I_o}{V_i},& F=\\dfrac{V_f}{I_o}\\\\ \\mathrm{IP}:& A_i=\\dfrac{I_o}{I_i'},& F=\\dfrac{I_f}{I_o}\\\\ \\mathrm{VP}:& A_r=\\dfrac{V_o}{I_i'},& F=\\dfrac{I_f}{V_o}\\end{array}",
+  "use": "判定组态后确定基本放大器的类型（电压/跨导/电流/跨阻放大器）和反馈系数的定义与量纲。行标记：VS 电压串联，IS 电流串联，IP 电流并联，VP 电压并联。",
+  "conditions": "$A$ 与 $F$ 按同一组态定义，环路增益 $AF$ 一定无量纲。",
+  "pitfall": "$F$ 的量纲随组态变化：电流串联 $F$ 是电阻（$\\Omega$），电压并联 $F$ 是电导（S），不要都当成无量纲数。"
+ },
+ {
+  "id": "KF11-05",
+  "section": "ch11-s07",
+  "title": "输入电阻：串联增大，并联减小",
+  "tex": "R_{if}=R_i(1+AF),\\qquad R_{if}=\\frac{R_i}{1+AF}",
+  "use": "前式为串联接入（输入电阻增大），后式为并联接入（输入电阻减小）；放大器本身的 $R_{in}$：串联 $R_{in}=R_{if}-R_s$，并联 $1/R_{in}=1/R_{if}-1/R_s$。",
+  "conditions": "$R_i$ 为拆环后 $A$ 电路的输入电阻（含 $R_s$、$R_{11}$）；与采样对象无关。",
+  "pitfall": "输入电阻只由串联或并联决定，与电压采样、电流采样无关；$R_{if}$ 含信号源内阻，最后要扣除。"
+ },
+ {
+  "id": "KF11-06",
+  "section": "ch11-s08",
+  "title": "输出电阻：电压采样减小，电流采样增大",
+  "tex": "R_{of}=\\frac{R_o}{1+AF},\\qquad R_{of}=R_o(1+AF)",
+  "use": "前式为电压采样（输出电阻减小），后式为电流采样（输出电阻增大）；放大器本身的 $R_{out}$：电压采样 $1/R_{out}=1/R_{of}-1/R_L$，电流采样 $R_{out}=R_{of}-R_L$。",
+  "conditions": "$R_o$ 为拆环后 $A$ 电路的输出电阻（含 $R_{22}$、$R_L$）；与输入端接入方式无关。",
+  "pitfall": "输出电阻只看采样对象；电压采样稳定输出电压（接近电压源），电流采样稳定输出电流（接近电流源）。"
+ },
+ {
+  "id": "KF11-07",
+  "section": "ch11-s14",
+  "title": "自激条件",
+  "tex": "\\dot A\\dot F=-1:\\quad \\lvert\\dot A\\dot F\\rvert=1,\\quad \\varphi_A+\\varphi_F=\\pm(2n+1)\\pi",
+  "use": "判断负反馈在什么条件下变成正反馈而振荡；起振条件是 $\\lvert\\dot A\\dot F\\rvert>1$ 且相移满足 $\\pm180^\\circ$。",
+  "conditions": "$F$ 可以是复数；幅值平衡与相位平衡必须在同一频率上同时满足。",
+  "pitfall": "一个或两个极点的放大器加纯电阻反馈不会自激，三个及以上极点才可能；$\\dot A\\dot F=-1$ 不是 $+1$。"
+ },
+ {
+  "id": "KF11-08",
+  "section": "ch11-s15",
+  "title": "稳定性判据与裕度",
+  "tex": "20\\lg\\lvert AF\\rvert=20\\lg\\lvert A\\rvert-20\\lg\\frac1F,\\quad \\Delta\\varphi=180^\\circ+\\varphi(f_0),\\quad L=-20\\lg\\lvert AF\\rvert\\Big|_{f=f_c}",
+  "use": "在 $A$ 的波特图上画水平线 $20\\lg(1/F)$，交点为 $f_0$（$\\lvert AF\\rvert=1$）；$f_0<f_c$ 稳定。读相位得相位裕度 $\\Delta\\varphi$，读 $f_c$（相位 $-180^\\circ$）处增益得幅值裕度 $L$。要求 $\\Delta\\varphi>45^\\circ$（一般 $60^\\circ$）、$L\\ge10\\ \\mathrm{dB}$。",
+  "conditions": "反馈网络为纯电阻，$F$ 与频率无关；交点落在 $-20\\ \\mathrm{dB}$/十倍频程线段时折线法至少保证约 $45^\\circ$。",
+  "pitfall": "$f_0$ 是幅度到 0 dB 的频率，$f_c$ 是相位到 $-180^\\circ$ 的频率；反馈越深（$20\\lg(1/F)$ 越小）越不稳定；折线读数与精确值相差几 dB。"
+ },
+ {
+  "id": "KF11-09",
+  "section": "ch11-s16",
+  "title": "滞后补偿",
+  "tex": "f_{H1}'=\\frac{1}{2\\pi(R_{o1}/\\!/R_{i2})(C_{i2}+C)},\\quad A_mF_m\\,f_{H1}'\\approx f_{H2},\\quad C_1=(1+\\lvert k\\rvert)C",
+  "use": "简单滞后补偿：把最低上限频率降到 $f_{H1}'$，使 $f_0\\approx f_{H2}$，相位裕度约 $45^\\circ$。密勒补偿：跨接在增益 $-k$ 的一级两端，电容缩小 $(1+\\lvert k\\rvert)$ 倍。",
+  "conditions": "直接耦合放大器，反馈网络为电阻，开环有三个实极点；补偿电容接在最低上限频率所在回路。",
+  "pitfall": "补偿以频带变窄为代价；RC 补偿用零点抵消第二极点，带宽损失更小；讲义中 $-135^\\circ$ 未计第三极点。"
+ }
+]

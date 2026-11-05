@@ -1,0 +1,16 @@
+{
+ "built": "2026-11-05",
+ "counts": {
+  "chapters": 6,
+  "sections": 89,
+  "figures": 157,
+  "exercises": 191,
+  "reviewed": 191,
+  "formulas": 52,
+  "quizzes": 38,
+  "images": 303
+ },
+ "unusedFigures": [],
+ "sha256": "2212bf8cda70e7e6a3dd58beaafc4fc08e955295c0d3d95ae5c763a4028adbba",
+ "bytes": 36483883
+}

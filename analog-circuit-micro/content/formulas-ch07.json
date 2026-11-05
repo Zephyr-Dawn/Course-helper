@@ -1,0 +1,83 @@
+[
+ {
+  "id": "KF7-01",
+  "section": "ch07-s02",
+  "title": "放大区电流关系",
+  "tex": "i_C=I_S\\,e^{v_{BE}/V_T},\\quad i_B=\\frac{i_C}{\\beta},\\quad i_E=(1+\\beta)\\,i_B=\\frac{i_C}{\\alpha},\\quad \\alpha=\\frac{\\beta}{1+\\beta},\\ \\beta=\\frac{\\alpha}{1-\\alpha}",
+  "use": "由 $v_{BE}$ 求 $i_C$，再由 $\\beta$ 得到 $i_B$、$i_E$。",
+  "conditions": "发射结正偏、集电结反偏（放大区）；$V_T$ 室温约 $26\\,\\mathrm{mV}$。",
+  "pitfall": "饱和时 $i_C<\\beta i_B$；$v_{BE}$ 每增加约 $60\\,\\mathrm{mV}$，$i_C$ 增为 10 倍。"
+ },
+ {
+  "id": "KF7-02",
+  "section": "ch07-s03",
+  "title": "Early 效应与输出电阻",
+  "tex": "i_C=I_S\\,e^{v_{BE}/V_T}\\left(1+\\frac{v_{CE}}{V_A}\\right),\\quad r_o=\\frac{\\partial v_{CE}}{\\partial i_C}\\approx\\frac{V_A}{I_C}",
+  "use": "估算 $r_o$，判断它对增益和输出电阻的影响。",
+  "conditions": "放大区；$V_A\\gg v_{CE}$。",
+  "pitfall": "$I_C$ 越大 $r_o$ 越小；多数手算题忽略 $r_o$，但题目给出 $V_A$ 时必须计入。"
+ },
+ {
+  "id": "KF7-03",
+  "section": "ch07-s05",
+  "title": "小信号参数 gm、rπ、re",
+  "tex": "g_m=\\frac{I_C}{V_T},\\quad r_\\pi=\\frac{\\beta}{g_m}=\\frac{V_T}{I_B},\\quad r_e=\\frac{\\alpha}{g_m}=\\frac{V_T}{I_E}=\\frac{r_\\pi}{\\beta+1}",
+  "use": "先求静态 $I_C$，再算小信号模型参数。",
+  "conditions": "$v_{be}\\ll V_T$（峰值约 $5\\sim10\\,\\mathrm{mV}$ 以内）。",
+  "pitfall": "$r_\\pi$ 对应基极电流，$r_e$ 对应发射极电流，二者差 $\\beta+1$ 倍，不能混用。"
+ },
+ {
+  "id": "KF7-04",
+  "section": "ch07-s07",
+  "title": "分压式偏置的发射极电流",
+  "tex": "V_{BB}=\\frac{R_2}{R_1+R_2}V_{CC},\\quad R_B=R_1/\\!/R_2,\\quad I_E=\\frac{V_{BB}-V_{BE}}{R_E+R_B/(1+\\beta)}",
+  "use": "求静态 $I_E$，再得 $I_C=\\alpha I_E$、$V_{CE}=V_{CC}-I_C R_C-I_E R_E$。",
+  "conditions": "放大区，$V_{BE}\\approx0.7\\,\\mathrm{V}$；当 $R_B/(1+\\beta)\\ll R_E$ 时 $I_E\\approx(V_{BB}-V_{BE})/R_E$，与 $\\beta$ 无关。",
+  "pitfall": "近似 $V_B\\approx V_{BB}$ 忽略了基极电流，$R_B$ 较大时会使 $I_E$ 偏高。"
+ },
+ {
+  "id": "KF7-05",
+  "section": "ch07-s09",
+  "title": "放大器输出电阻与输入分压",
+  "tex": "v_L=v_{oc}\\frac{R_L}{R_o+R_L},\\quad R_o=R_L\\left(\\frac{v_{oc}}{v_L}-1\\right),\\quad v_i=v_s\\frac{R_i}{R_s+R_i}",
+  "use": "由空载与带载电压求 $R_o$，或计算信号源内阻造成的衰减。",
+  "conditions": "线性小信号，$R_i$ 不含 $R_s$，$R_o$ 不含 $R_L$。",
+  "pitfall": "电压放大器要求 $R_i$ 大、$R_o$ 小；$A_v$ 空载值与带载值不同。"
+ },
+ {
+  "id": "KF7-06",
+  "section": "ch07-s10",
+  "title": "共射放大器指标",
+  "tex": "A_v=-g_m\\,(R_C/\\!/R_L),\\quad R_i=R_B/\\!/r_\\pi,\\quad R_o=R_C",
+  "use": "单级共射增益与输入输出电阻；考虑 $r_o$ 时把 $r_o$ 并入 $R_C/\\!/R_L$。",
+  "conditions": "发射极旁路电容足够大，工作在放大区。",
+  "pitfall": "$R_i$ 不含信号源内阻；对信号源的增益还要乘 $R_i/(R_s+R_i)$。"
+ },
+ {
+  "id": "KF7-07",
+  "section": "ch07-s11",
+  "title": "射极接 Re 的共射放大器",
+  "tex": "A_v=-\\alpha\\frac{R_C}{r_e+R_e}\\approx-\\frac{g_m R_C}{1+g_m R_e},\\quad R_i=(\\beta+1)(r_e+R_e)\\approx r_\\pi(1+g_m R_e)",
+  "use": "用 T 型模型分析发射极未被旁路的共射级。",
+  "conditions": "$R_i$ 为从基极看进去的电阻，不含偏置电阻；$R_o\\approx R_C$。",
+  "pitfall": "$R_e$ 使增益降低、输入电阻升高同样的倍数，$R_e\\gg r_e$ 时 $A_v\\approx-R_C/R_e$。"
+ },
+ {
+  "id": "KF7-08",
+  "section": "ch07-s13",
+  "title": "共集与共基放大器",
+  "tex": "A_v=\\frac{R_L'}{r_e+R_L'},\\ R_i=(\\beta+1)(r_e+R_L'),\\ R_o=r_o/\\!/\\left(r_e+\\frac{R_s}{\\beta+1}\\right)\\quad(\\mathrm{CC});\\qquad A_v=g_m R_C,\\ R_i=r_e,\\ R_o=R_C\\quad(\\mathrm{CB})",
+  "use": "缓冲级选共集，电流缓冲选共基。",
+  "conditions": "$R_L'=R_L/\\!/r_o$；忽略 $r_o$ 时可略去。",
+  "pitfall": "共集 $A_v<1$ 且同相；共基 $A_i=\\alpha\\approx1$，$R_i$ 很小。"
+ },
+ {
+  "id": "KF7-09",
+  "section": "ch07-s15",
+  "title": "多级放大器指标",
+  "tex": "A_v=A_{v1}A_{v2}\\cdots A_{vn}=\\frac{R_L}{R_i}A_{i1}A_{i2}\\cdots A_{in},\\quad R_i=R_{i1},\\quad R_o=R_{on}",
+  "use": "逐级求增益时，每级的负载取后一级的输入电阻。",
+  "conditions": "各级在带后级负载下计算；阻容耦合各级 $Q$ 点独立，直接耦合需联立求解 $Q$ 点。",
+  "pitfall": "漏掉级间负载效应会使总增益偏大。"
+ }
+]
