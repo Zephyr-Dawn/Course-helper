@@ -1,0 +1,277 @@
+[
+  {
+    "id": "EX10-01",
+    "section": "s10-1",
+    "difficulty": 1,
+    "source": "课件第4讲 · PDF 第 149–150 页 · 例10.1 & 例10.2",
+    "title": "无限长带电金属圆柱与带电金属球的表面场强与电荷面密度关系",
+    "page": 149,
+    "crop": [
+      0.64,
+      0.09,
+      0.9,
+      0.72
+    ],
+    "problem": "（1）半径为 $R$ 的无限长带电金属圆柱体处于静电平衡状态，设其沿轴线单位长度所带电荷量（线电荷密度）为 $\\lambda$，求柱外距轴线 $r$（$r>R$）处的场强，并验证柱面附近场强与电荷面密度 $\\sigma$ 满足 $\\vec{E} = \\dfrac{\\sigma}{\\varepsilon_0}\\vec{e}_n$。\n\n（2）半径为 $R$、带总电量为 $Q$ 的孤立金属导体球处于静电平衡状态，同样验证其球面附近场强满足 $\\vec{E} = \\dfrac{\\sigma}{\\varepsilon_0}\\vec{e}_n$。",
+    "hints": [
+      "静电平衡时导体内部无净电荷，全部电荷均匀分布在圆柱外表面或球外表面。",
+      "分别写出柱面面积 $2\\pi R l$ 与球面面积 $4\\pi R^2$ 上的面电荷密度 $\\sigma$，再对外部场强取 $r \\to R^+$ 极限。"
+    ],
+    "steps": [
+      "**无限长金属圆柱**：电荷全部分布在半径为 $R$ 的柱面上，柱外 $r > R$ 处场强大小为 $E_P = \\dfrac{\\lambda}{2\\pi\\varepsilon_0 r}$。取 $r \\to R^+$ 得柱面紧邻处场强 $E_R = \\dfrac{\\lambda}{2\\pi\\varepsilon_0 R}$。又因长为 $l$ 的柱面面积为 $2\\pi R l$，表面电荷面密度为 $\\sigma = \\dfrac{\\lambda l}{2\\pi R l} = \\dfrac{\\lambda}{2\\pi R}$，故 $\\vec{E}_R = \\dfrac{\\sigma}{\\varepsilon_0}\\vec{e}_n$。",
+      "**孤立带电金属球**：球外 $r > R$ 处场强大小为 $E_P = \\dfrac{Q}{4\\pi\\varepsilon_0 r^2}$。在球面 $r \\to R^+$ 处有 $E_R = \\dfrac{Q}{4\\pi\\varepsilon_0 R^2}$。由于球面电荷面密度 $\\sigma = \\dfrac{Q}{4\\pi R^2}$，考虑径向外法向 $\\vec{e}_n$，同样得到 $\\vec{E}_R = \\dfrac{\\sigma}{\\varepsilon_0}\\vec{e}_n$。"
+    ],
+    "answer": "两种几何构型在导体表面紧邻处均严格满足 $\\vec{E} = \\dfrac{\\sigma}{\\varepsilon_0}\\vec{e}_n$。",
+    "check": "量纲检验：$[\\sigma/\\varepsilon_0] = (\\mathrm{C\\cdot m^{-2}})/(\\mathrm{C^2\\cdot N^{-1}\\cdot m^{-2}}) = \\mathrm{N/C}$，与电场强度量纲完全一致。",
+    "note": "关系式 $\\vec{E} = (\\sigma/\\varepsilon_0)\\vec{e}_n$ 对任意形状静电平衡导体的局部表面普遍成立，其中 $\\vec{E}$ 是所有电荷共同产生的合场强。",
+    "questionImage": "ex/EX10-01.webp"
+  },
+  {
+    "id": "EX10-02",
+    "section": "s10-1",
+    "difficulty": 2,
+    "source": "课件第4讲 · PDF 第 152–153 页 · 例10.3",
+    "title": "长导线连接的远距大小金属球表面电荷面密度与曲率关系",
+    "page": 152,
+    "crop": [
+      0.18,
+      0.5,
+      0.88,
+      0.68
+    ],
+    "problem": "两个半径分别为 $R$ 和 $r$ 的球形金属导体（$R > r$），相距很远（彼此间的静电感应影响可忽略），用一根很长的细导线将它们连接起来并使该导体组带电。已知达到静电平衡后大球表面电势为 $U$（以无穷远为电势零点），试求两球所带电荷量之比 $Q/q$、表面电荷面密度之比 $\\sigma_R/\\sigma_r$ 以及表面场强之比 $E_R/E_r$，并说明尖端放电的物理机制。",
+    "hints": [
+      "细导线将两球连成一个等势体，故两球电势相等：$U_R = U_r = U$。",
+      "因两球相距很远，各自表面电荷近似均匀分布，可用孤立球电势公式 $U = Q/(4\\pi\\varepsilon_0 R)$。"
+    ],
+    "steps": [
+      "**由等势条件求电量之比**：无穷远为电势零点，导线连接使两球电势相等：$$U = \\frac{Q}{4\\pi\\varepsilon_0 R} = \\frac{q}{4\\pi\\varepsilon_0 r} \\implies \\frac{Q}{q} = \\frac{R}{r}$$可见半径越大的导体球储存的电荷量越多（电容 $C \\propto R$）。",
+      "**求面电荷密度与表面场强之比**：两球表面电荷面密度分别为 $\\sigma_R = \\dfrac{Q}{4\\pi R^2}$ 和 $\\sigma_r = \\dfrac{q}{4\\pi r^2}$，因此：$$\\frac{\\sigma_R}{\\sigma_r} = \\frac{Q}{q}\\cdot\\frac{r^2}{R^2} = \\frac{R}{r}\\cdot\\frac{r^2}{R^2} = \\frac{r}{R},\\qquad \\frac{E_R}{E_r} = \\frac{\\sigma_R}{\\sigma_r} = \\frac{r}{R}$$"
+    ],
+    "answer": "$\\dfrac{Q}{q} = \\dfrac{R}{r}$，$\\dfrac{\\sigma_R}{\\sigma_r} = \\dfrac{E_R}{E_r} = \\dfrac{r}{R}$（面电荷密度与曲率半径成反比，即与曲率 $1/R$ 成正比）。",
+    "check": "极限检验：当 $r \\ll R$（小球极其尖锐）时，$q \\ll Q$，但小球表面场强 $E_r = (R/r)E_R = U/r \\gg E_R$，极易超过空气击穿场强（约 $3\\times 10^6\\,\\mathrm{V/m}$）引发电晕放电。",
+    "note": "避雷针正是利用尖端曲率极大、表面场强极高的特性优先诱发空气电离导电，将雷云电荷安全引入大地；反之，高压设备表面均需做成光滑球面或圆环以防尖端放电。",
+    "questionImage": "ex/EX10-02.webp"
+  },
+  {
+    "id": "EX10-03",
+    "section": "s10-2",
+    "difficulty": 2,
+    "source": "课件第4讲 · PDF 第 158–162 页 · 空腔导体与静电屏蔽综合",
+    "title": "不接地与接地空腔导体内外电荷激发的电场与电势屏蔽分析",
+    "page": 159,
+    "crop": [
+      0.12,
+      0.09,
+      0.82,
+      0.56
+    ],
+    "problem": "半径为 $R_1$（内表面）和 $R_2$（外表面）的同心金属球壳原本不带电，球壳空腔内放有一点电荷 $+q$。\n\n（1）若球壳不接地，且球壳外无其他带电体，求球壳内、外表面感应电荷量 $q_{\\mathrm{in}}, q_{\\mathrm{out}}$；若把 $+q$ 从球心移到偏心位置，球壳内、外表面的电荷分布及壳外电场是否改变？\n\n（2）若将球壳接地，重回答第（1）问。",
+    "hints": [
+      "在球壳金属肉内（$R_1 < r < R_2$）作高斯面，由 $\\vec{E}=0$ 知高斯面内总电荷必为零。",
+      "壳外空间仅受『腔内 $+q$ + 内表面 $-q$』组合（总电量为零，在导体肉内已被完全屏蔽）之外的『外表面电荷』影响。"
+    ],
+    "steps": [
+      "**不接地空腔导体**：在 $R_1 < r < R_2$ 导体内部作高斯面 $S$，由 $\\oint_S \\vec{E}\\cdot\\mathrm{d}\\vec{S}=0$ 得 $q + q_{\\mathrm{in}} = 0 \\implies q_{\\mathrm{in}} = -q$。由球壳电荷守恒得 $q_{\\mathrm{out}} = +q$。当腔内 $+q$ 偏离球心时，内表面 $-q$ 的面密度随 $+q$ 位置非均匀调整以保证 $r > R_1$ 处腔内与内表面电荷合场强始终为零；因此外表面 $+q$ 不受内部位置影响，始终保持球对称均匀分布，壳外场强 $E(r>R_2) = \\dfrac{q}{4\\pi\\varepsilon_0 r^2}$ 保持不变。",
+      "**接地空腔导体**：球壳接地后电势固定为 $U_{\\mathrm{shell}} = 0$，内表面仍感应 $q_{\\mathrm{in}} = -q$ 以屏蔽腔内场，而外表面电荷流入大地，故 $q_{\\mathrm{out}} = 0$，壳外场强处处为 $E(r>R_2) = 0$，无论腔内 $+q$ 如何移动，对壳外均无任何影响。"
+    ],
+    "answer": "（1）不接地时：$q_{\\mathrm{in}}=-q,\\;q_{\\mathrm{out}}=+q$；偏心移动 $+q$ 会改变内表面电荷分布，但外表面仍均匀分布、壳外电场不变。（2）接地时：$q_{\\mathrm{in}}=-q,\\;q_{\\mathrm{out}}=0$，壳外场强与电势恒为零。",
+    "check": "物理自检：腔内电荷 $+q$ 与内表面感应电荷 $-q$ 构成一对『零通量屏蔽子系统』，在 $r > R_1$ 的一切区域合场强恒为零。",
+    "note": "未接地空腔只能单向屏蔽『外场对腔内电场』以及『腔内电荷位置对腔外电场分布』的影响；唯有将空腔外壳接地，才能彻底切断腔内电荷量对腔外电场与电势的影响。",
+    "questionImage": "ex/EX10-03.webp"
+  },
+  {
+    "id": "EX10-04",
+    "section": "s10-2",
+    "difficulty": 2,
+    "source": "课件第4讲 · PDF 第 163–170 页 · 例10.4",
+    "title": "两平行带电金属板四表面电荷分布、三区域场强及单板接地分析",
+    "page": 163,
+    "crop": [
+      0.72,
+      0.22,
+      0.96,
+      0.66
+    ],
+    "problem": "如图所示，两块大小相同的平行金属板 $A$ 和 $B$，面积均为 $S$，所带电荷量分别为 $Q_1$ 和 $Q_2$（$Q_1 > Q_2 > 0$）。略去边缘效应，试求：\n\n（1）静电平衡时两金属板从左至右四个表面（1、2、3、4 面）的电荷面密度 $\\sigma_1, \\sigma_2, \\sigma_3, \\sigma_4$；\n\n（2）板左侧 $\\mathrm{I}$ 区、两板间 $\\mathrm{II}$ 区、板右侧 $\\mathrm{III}$ 区的电场强度矢量；\n\n（3）若将 $B$ 板右侧接地，重新求四个表面的电荷面密度及三个区域的电场强度。",
+    "hints": [
+      "每个无限大带电平面在两侧激发场强大小均为 $\\sigma_i/(2\\varepsilon_0)$，取向右为正方向列出导体 $A$ 内部点 $a$ 和导体 $B$ 内部点 $b$ 处 $E_a=0, E_b=0$ 的方程。",
+      "也可对跨越两板内侧面的闭合高斯柱面用高斯定理直接得出 $\\sigma_2 + \\sigma_3 = 0$。"
+    ],
+    "steps": [
+      "**未接地时的四表面电荷面密度**：规定向右为正方向。在 $A$ 板内部点 $a$（1 面之右，2、3、4 面之左）与 $B$ 板内部点 $b$（1、2、3 面之右，4 面之左）合场强均为零：$$E_a = \\frac{\\sigma_1 - \\sigma_2 - \\sigma_3 - \\sigma_4}{2\\varepsilon_0} = 0,\\qquad E_b = \\frac{\\sigma_1 + \\sigma_2 + \\sigma_3 - \\sigma_4}{2\\varepsilon_0} = 0$$两式相加减并结合电荷守恒 $(\\sigma_1+\\sigma_2)S = Q_1$、$(\\sigma_3+\\sigma_4)S = Q_2$，解得：$$\\sigma_1 = \\sigma_4 = \\frac{Q_1 + Q_2}{2S},\\qquad \\sigma_2 = -\\sigma_3 = \\frac{Q_1 - Q_2}{2S}$$",
+      "**未接地时三区域场强**：由四个带电平面的场强叠加（或由外侧表面场强 $E=\\sigma/\\varepsilon_0$，其中 $E_{\\mathrm{I}}$ 方向向左，$E_{\\mathrm{II}}, E_{\\mathrm{III}}$ 方向向右）：$$E_{\\mathrm{I}} = \\frac{Q_1 + Q_2}{2\\varepsilon_0 S},\\qquad E_{\\mathrm{II}} = \\frac{Q_1 - Q_2}{2\\varepsilon_0 S},\\qquad E_{\\mathrm{III}} = \\frac{Q_1 + Q_2}{2\\varepsilon_0 S}$$",
+      "**$B$ 板接地后的重分布**：$B$ 板接地使电势与无穷远相同，右侧 $\\mathrm{III}$ 区场强变为 $E_{\\mathrm{III}}' = 0$，结合 $B$ 板内部 $E_b' = 0$ 得 $\\sigma_4' = 0$。再由 $E_a' = 0$ 及内侧高斯面 $\\sigma_2' + \\sigma_3' = 0$ 得 $\\sigma_1' = 0$。由 $A$ 板电荷守恒 $(\\sigma_1'+\\sigma_2')S = Q_1$ 得：$$\\sigma_1' = \\sigma_4' = 0,\\qquad \\sigma_2' = -\\sigma_3' = \\frac{Q_1}{S},\\qquad Q_B' = -Q_1$$此时 $E_{\\mathrm{I}}' = E_{\\mathrm{III}}' = 0$，板间 $E_{\\mathrm{II}}' = \\dfrac{Q_1}{\\varepsilon_0 S}$（方向向右）。"
+    ],
+    "answer": "（1）$\\sigma_1=\\sigma_4=\\dfrac{Q_1+Q_2}{2S}$，$\\sigma_2=-\\sigma_3=\\dfrac{Q_1-Q_2}{2S}$；（2）$E_{\\mathrm{I}}=E_{\\mathrm{III}}=\\dfrac{Q_1+Q_2}{2\\varepsilon_0 S}$（向外），$E_{\\mathrm{II}}=\\dfrac{Q_1-Q_2}{2\\varepsilon_0 S}$（向右）；（3）$B$ 板接地后 $\\sigma_1'=\\sigma_4'=0$，$\\sigma_2'=-\\sigma_3'=\\dfrac{Q_1}{S}$，$E_{\\mathrm{I}}'=E_{\\mathrm{III}}'=0$，$E_{\\mathrm{II}}'=\\dfrac{Q_1}{\\varepsilon_0 S}$（向右）。",
+    "check": "当 $Q_2 = -Q_1$（标准平行板电容器带等量异号电荷）时，自动退化为 $\\sigma_1=\\sigma_4=0,\\;\\sigma_2=-\\sigma_3=Q_1/S$，与 $B$ 板接地情形的场分布完全一致。",
+    "note": "任意多块平行金属板达到静电平衡时，恒满足两大铁律：① 最左表面与最右表面电荷面密度恒相等（$\\sigma_{\\mathrm{left}} = \\sigma_{\\mathrm{right}} = \\sum Q_i / (2S)$）；② 任意相邻两板相对的内侧表面电荷面密度恒等量异号。",
+    "questionImage": "ex/EX10-04.webp"
+  },
+  {
+    "id": "EX10-05",
+    "section": "s10-2",
+    "difficulty": 3,
+    "source": "课件第4讲 · PDF 第 171–172 页 · 例10.5",
+    "title": "带电导体薄球壳内含同心接地导体球的感应电荷、场强与电势分布",
+    "page": 171,
+    "crop": [
+      0.66,
+      0.42,
+      0.95,
+      0.78
+    ],
+    "problem": "如图所示，半径为 $R_2$ 的导体薄球壳带总电量 $+Q$，其内部同心地放置一个半径为 $R_1$（$R_1 < R_2$）的实心导体球。现用一根细绝缘导线穿过外球壳上的极小孔将内导体球接地（无穷远为电势零点），试求：\n\n（1）内导体球所带的感应电荷量 $Q_x$；\n\n（2）全空间各区域（$r < R_1$、$R_1 < r < R_2$、$r > R_2$）的电场强度分布 $E(r)$ 和电势分布 $U(r)$。",
+    "hints": [
+      "内球接地表示内球是电势为 $0$ 的等势体，其球心 $O$ 处电势 $U_O = 0$。",
+      "球面半径为 $r_0$ 的任意电荷 $q$ 在球心处产生的电势恒为 $q/(4\\pi\\varepsilon_0 r_0)$，据此一步写出 $U_O = 0$ 方程求出 $Q_x$。"
+    ],
+    "steps": [
+      "**由球心零电势条件求内球电荷 $Q_x$**：设内球带电量为 $Q_x$。由于整个系统呈球对称，外球壳总电荷为 $Q$，由电势叠加原理得球心 $O$ 的电势为：$$U_O = \\frac{Q_x}{4\\pi\\varepsilon_0 R_1} + \\frac{Q}{4\\pi\\varepsilon_0 R_2} = 0 \\implies Q_x = -\\frac{R_1}{R_2}Q$$此时外球壳内表面带 $+\\dfrac{R_1}{R_2}Q$，外表面带 $Q - \\dfrac{R_1}{R_2}Q = \\dfrac{R_2 - R_1}{R_2}Q$。",
+      "**由高斯定理求全空间场强分布**：取径向向外 $\\vec{e}_r$ 为正方向：$$\\vec{E}(r) = \\begin{cases} 0, & r < R_1 \\\\[4pt] -\\dfrac{R_1 Q}{4\\pi\\varepsilon_0 R_2 r^2}\\vec{e}_r, & R_1 < r < R_2 \\\\[6pt] \\dfrac{(R_2 - R_1)Q}{4\\pi\\varepsilon_0 R_2 r^2}\\vec{e}_r, & r > R_2 \\end{cases}$$",
+      "**由电势定义（或球面电势叠加）求电势分布**：对 $R_1 < r < R_2$，因 $U(R_1)=0$，有 $U(r) = \\int_r^{R_1} E_r\\,\\mathrm{d}r$；对 $r > R_2$，有 $U(r) = \\int_r^{\\infty} E_r\\,\\mathrm{d}r$，汇总得：$$U(r) = \\begin{cases} 0, & r \\le R_1 \\\\[4pt] \\dfrac{Q}{4\\pi\\varepsilon_0 R_2}\\left(1 - \\dfrac{R_1}{r}\\right), & R_1 < r \\le R_2 \\\\[6pt] \\dfrac{(R_2 - R_1)Q}{4\\pi\\varepsilon_0 R_2 r}, & r > R_2 \\end{cases}$$"
+    ],
+    "answer": "内球带电量 $Q_x = -\\dfrac{R_1}{R_2}Q$；场强与电势分布见解析分段式。",
+    "check": "连续性检验：在 $r = R_1$ 处，$U(R_1^+) = 0 = U(R_1^-)$；在 $r = R_2$ 处，$U(R_2^-) = \\dfrac{Q(R_2-R_1)}{4\\pi\\varepsilon_0 R_2^2} = U(R_2^+)$，电势在两个球面上均连续。",
+    "note": "本题深刻揭示了『接地 $\\iff U=0 \\neq Q=0$』：当接地导体并非处于最外层屏蔽面时，外部带电体会在接地导体上感应出异号电荷以维持其零电势。",
+    "questionImage": "ex/EX10-05.webp"
+  },
+  {
+    "id": "EX10-06",
+    "section": "s10-3",
+    "difficulty": 1,
+    "source": "课件第5讲 · PDF 第 185–186 页 · 例10.6 & 例10.7",
+    "title": "孤立半球面电容的对称性计算与平行板电容器插入厚导体板的等效电容",
+    "page": 186,
+    "crop": [
+      0.62,
+      0.26,
+      0.96,
+      0.52
+    ],
+    "problem": "（1）已知真空（或空气）中半径为 $R$ 的孤立金属球电容为 $C = 4\\pi\\varepsilon_0 R$，试利用对称性與并联等效思想求半径为 $R$ 的金属半球面的电容 $C'$。\n\n（2）极板面积为 $S$、极板间距为 $d$ 的平行板电容器，若平行于极板插入一块面积也为 $S$、厚度为 $d/2$ 的不带电金属导体平板，忽略边缘效应，求插入导体平板后的总电容 $C$。",
+    "hints": [
+      "完整的球面可视为两个完全对称的半球面在等电势条件下合拢（并联）而成。",
+      "金属导体板内部场强为零、整体为等势体，插入后将原间隙分成上下两段空气间隙 $d_{ab}$ 和 $d_{cd}$ 串联。"
+    ],
+    "steps": [
+      "**孤立半球面的电容**：半径为 $R$ 的完整球面电容 $C = 4\\pi\\varepsilon_0 R$ 可看作两个电势相同（均为 $U$）、带电量相等（均为 $q = Q/2$）的半球面并联（$C = C' + C' = 2C'$），故单个半球面（忽略切口边缘畸变近似）电容为：$$C' = \\frac{C}{2} = 2\\pi\\varepsilon_0 R$$",
+      "**平行板电容器插入厚导体板**：设导体板上表面距上极板为 $d_{ab}$，下表面距下极板为 $d_{cd}$，则 $d_{ab} + d_{cd} = d - d/2 = d/2$。由于导体板内部场强为零，系统等效为电容 $C_{ab} = \\dfrac{\\varepsilon_0 S}{d_{ab}}$ 与 $C_{cd} = \\dfrac{\\varepsilon_0 S}{d_{cd}}$ 的串联：$$\\frac{1}{C} = \\frac{1}{C_{ab}} + \\frac{1}{C_{cd}} = \\frac{d_{ab} + d_{cd}}{\\varepsilon_0 S} = \\frac{d}{2\\varepsilon_0 S} \\implies C = \\frac{2\\varepsilon_0 S}{d} = 2C_0$$"
+    ],
+    "answer": "（1）$C' = 2\\pi\\varepsilon_0 R$；（2）$C = \\dfrac{2\\varepsilon_0 S}{d} = 2C_0$（与导体平板插入的具体上下位置无关）。",
+    "check": "极限检验：若插入的是一张厚度趋于零（$t \\to 0$）的极薄金属箔，则 $d_{ab}+d_{cd}=d$，电容 $C = \\varepsilon_0 S/d = C_0$ 保持不变。",
+    "note": "在平行板电容器间平行插入厚度为 $t$ 的金属板，其唯一效果就是将有效气隙厚度从 $d$ 缩减为 $d - t$，故 $C = \\varepsilon_0 S/(d-t)$。",
+    "questionImage": "ex/EX10-06.webp"
+  },
+  {
+    "id": "EX10-07",
+    "section": "s10-5",
+    "difficulty": 2,
+    "source": "课件第6讲 · PDF 第 200–204 页 · 平行板充入电介质全量分析",
+    "title": "平行板电容器充满均匀电介质：断电恒荷与接电源恒压两种情形的对比",
+    "page": 201,
+    "crop": [
+      0.6,
+      0.24,
+      0.95,
+      0.72
+    ],
+    "problem": "平行板电容器极板面积为 $S$、极板间距为 $d$。无电介质时极板自由电荷面密度为 $\\pm\\sigma_0$，场强为 $E_0 = \\sigma_0/\\varepsilon_0$，电势差为 $U_0 = E_0 d$，电容为 $C_0 = \\varepsilon_0 S/d$。现向极板间完全充满电极化率为 $\\chi_{\\mathrm{e}}$（相对介电常数 $\\varepsilon_{\\mathrm{r}} = 1 + \\chi_{\\mathrm{e}}$）的各向同性均匀电介质，试求：\n\n（1）充电后**断开电源**（自由电荷面密度 $\\sigma_0$ 不变）充入电介质，求介质内合场强 $E$、极化强度 $P$、束缚电荷面密度 $\\sigma'$、电位移 $D$、电势差 $U$ 及电容 $C$；\n\n（2）若**始终接在电压为 $U_0$ 的恒压电源上**充入电介质，重新求上述各物理量。",
+    "hints": [
+      "利用介质内合场强 $E = E_0 - E' = \\sigma_0/\\varepsilon_0 - \\sigma'/\\varepsilon_0$ 及 $\\sigma' = P = \\chi_{\\mathrm{e}}\\varepsilon_0 E$ 解出 $E$。",
+      "恒压情形下 $U = U_0$，故合场强 $E = U_0/d = E_0$ 保持不变，而自由电荷面密度增为 $\\varepsilon_{\\mathrm{r}}\\sigma_0$。"
+    ],
+    "steps": [
+      "**断电恒荷（$\\sigma_0$ 不变）**：由自由电荷场 $E_0 = \\sigma_0/\\varepsilon_0$ 与束缚电荷退极化场 $E' = -\\sigma'/\\varepsilon_0 = -P/\\varepsilon_0 = -\\chi_{\\mathrm{e}}E$ 叠加：$$E = E_0 - \\chi_{\\mathrm{e}}E \\implies E = \\frac{E_0}{1 + \\chi_{\\mathrm{e}}} = \\frac{E_0}{\\varepsilon_{\\mathrm{r}}} = \\frac{\\sigma_0}{\\varepsilon_0\\varepsilon_{\\mathrm{r}}}$$进而得 $D = \\varepsilon_0\\varepsilon_{\\mathrm{r}}E = \\sigma_0$（不变），$P = \\sigma' = \\varepsilon_0(\\varepsilon_{\\mathrm{r}}-1)E = \\dfrac{\\varepsilon_{\\mathrm{r}}-1}{\\varepsilon_{\\mathrm{r}}}\\sigma_0$，电势差 $U = Ed = \\dfrac{U_0}{\\varepsilon_{\\mathrm{r}}}$，电容 $C = \\dfrac{Q_0}{U} = \\varepsilon_{\\mathrm{r}}C_0$。",
+      "**接电源恒压（$U = U_0$ 不变）**：板间合场强 $E = U_0/d = E_0$ 保持不变；电位移增为 $D = \\varepsilon_0\\varepsilon_{\\mathrm{r}}E_0 = \\varepsilon_{\\mathrm{r}}\\sigma_0$，故极板上自由电荷面密度增至 $\\sigma = D = \\varepsilon_{\\mathrm{r}}\\sigma_0$；极化强度与束缚电荷面密度为 $P = \\sigma' = \\varepsilon_0(\\varepsilon_{\\mathrm{r}}-1)E_0 = (\\varepsilon_{\\mathrm{r}}-1)\\sigma_0$，电容仍为 $C = \\varepsilon_{\\mathrm{r}}C_0$。"
+    ],
+    "answer": "（1）恒荷时：$E=E_0/\\varepsilon_{\\mathrm{r}},\\;D=\\sigma_0,\\;\\sigma'=(1-1/\\varepsilon_{\\mathrm{r}})\\sigma_0,\\;U=U_0/\\varepsilon_{\\mathrm{r}},\\;C=\\varepsilon_{\\mathrm{r}}C_0$；（2）恒压时：$E=E_0,\\;D=\\sigma=\\varepsilon_{\\mathrm{r}}\\sigma_0,\\;\\sigma'=(\\varepsilon_{\\mathrm{r}}-1)\\sigma_0,\\;U=U_0,\\;C=\\varepsilon_{\\mathrm{r}}C_0$。",
+    "check": "检验净电荷面密度：无论恒荷还是恒压，极板与介质交界处的净电荷面密度恒满足 $\\sigma_{\\mathrm{free}} - \\sigma' = \\varepsilon_0 E$。",
+    "note": "切记：『场强与电势差减弱为 $1/\\varepsilon_{\\mathrm{r}}$』这一结论仅在『自由电荷分布不变（断电恒荷且介质充满等势面间）』的条件下成立；而『全充满介质使电容增为 $\\varepsilon_{\\mathrm{r}}C_0$』与是否接电源无关。",
+    "questionImage": "ex/EX10-07.webp"
+  },
+  {
+    "id": "EX10-08",
+    "section": "s10-6",
+    "difficulty": 3,
+    "source": "课件第6讲 · PDF 第 213–218 页 · 例10.8",
+    "title": "双层同心球形电介质电容器的场分布与交界面极化电荷面密度",
+    "page": 213,
+    "crop": [
+      0.68,
+      0.56,
+      0.96,
+      0.94
+    ],
+    "problem": "如图所示，一球形电容器由半径为 $R_1$ 的实心金属球及与它同心的内径为 $R_2$ 的金属球壳组成。两极板间分层充满两层同心均匀电介质，相对介电常数分别为 $\\varepsilon_{\\mathrm{r1}}$（$R_1 < r < R$）和 $\\varepsilon_{\\mathrm{r2}}$（$R < r < R_2$），其分界面是半径为 $R$ 的同心球面。当内球带自由电荷 $+Q$、外球壳带 $-Q$ 时，求：\n\n（1）全空间各区域的电位移 $\\vec{D}$、电场强度 $\\vec{E}$ 和电极化强度 $\\vec{P}$；\n\n（2）内层电介质内表面（$r = R_1$）的极化电荷面密度 $\\sigma_{\\mathrm{nn}}'$ 以及两层电介质交界面（$r = R$）上的总极化电荷面密度 $\\sigma_{\\mathrm{jj}}'$；\n\n（3）该双层球形电容器的总电容 $C$。",
+    "hints": [
+      "自由电荷和电介质分布均具有球对称性，直接作半径为 $r$ 的同心球高斯面用 $\\oint_S \\vec{D}\\cdot\\mathrm{d}\\vec{S} = \\sum q_0$ 求出 $\\vec{D}(r)$。",
+      "计算极化电荷面密度 $\\sigma' = \\vec{P}\\cdot\\vec{e}_n$ 时，严密注意外法线 $\\vec{e}_n$ 的方向：内表面 $r=R_1$ 处指向球心（$-\\vec{e}_r$），交界面 $r=R$ 处内层取 $+\\vec{e}_r$、外层取 $-\\vec{e}_r$。"
+    ],
+    "steps": [
+      "**由有介质高斯定理求各区域 $\\vec{D}, \\vec{E}, \\vec{P}$**：在 $r < R_1$ 与 $r > R_2$ 区域，$\\sum q_0 = 0 \\implies \\vec{D} = \\vec{E} = \\vec{P} = 0$。在 $R_1 < r < R_2$ 的整个介质区内，同心球面包含的自由电荷恒为 $+Q$，故两层电介质中的 $\\vec{D}$ 完全连续：$$\\vec{D}_1 = \\vec{D}_2 = \\frac{Q}{4\\pi r^2}\\vec{e}_r\\quad (R_1 < r < R_2)$$由 $\\vec{E}_i = \\dfrac{\\vec{D}_i}{\\varepsilon_0\\varepsilon_{\\mathrm{r}i}}$ 与 $\\vec{P}_i = \\varepsilon_0(\\varepsilon_{\\mathrm{r}i}-1)\\vec{E}_i$，得：$$\\vec{E}_1 = \\frac{Q}{4\\pi\\varepsilon_0\\varepsilon_{\\mathrm{r1}}r^2}\\vec{e}_r,\\quad \\vec{P}_1 = \\frac{(\\varepsilon_{\\mathrm{r1}}-1)Q}{4\\pi\\varepsilon_{\\mathrm{r1}}r^2}\\vec{e}_r\\quad (R_1 < r < R)$$ $$\\vec{E}_2 = \\frac{Q}{4\\pi\\varepsilon_0\\varepsilon_{\\mathrm{r2}}r^2}\\vec{e}_r,\\quad \\vec{P}_2 = \\frac{(\\varepsilon_{\\mathrm{r2}}-1)Q}{4\\pi\\varepsilon_{\\mathrm{r2}}r^2}\\vec{e}_r\\quad (R < r < R_2)$$",
+      "**求内表面与分界面极化电荷面密度**：内层电介质内表面（$r = R_1$）的外法线指向介质外部即球心（$\\vec{e}_n = -\\vec{e}_r$，夹角 $\\theta = \\pi$）：$$\\sigma_{\\mathrm{nn}}' = \\vec{P}_1(R_1)\\cdot(-\\vec{e}_r) = -\\frac{(\\varepsilon_{\\mathrm{r1}}-1)Q}{4\\pi\\varepsilon_{\\mathrm{r1}}R_1^2} = \\frac{(1 - \\varepsilon_{\\mathrm{r1}})Q}{4\\pi\\varepsilon_{\\mathrm{r1}}R_1^2}$$在两介质分界面（$r = R$）上，内层介质外法线为 $+\\vec{e}_r$（$\\theta=0$），外层介质外法线为 $-\\vec{e}_r$（$\\theta=\\pi$），合成极化面密度为：$$\\sigma_{\\mathrm{jj}}' = \\sigma_1' + \\sigma_2' = P_1(R)\\cos 0^\\circ + P_2(R)\\cos\\pi = \\frac{Q}{4\\pi R^2}\\left(\\frac{1}{\\varepsilon_{\\mathrm{r2}}} - \\frac{1}{\\varepsilon_{\\mathrm{r1}}}\\right)$$",
+      "**求双层球形电容器总电容 $C$**：由电势差 $U = \\int_{R_1}^R E_1\\,\\mathrm{d}r + \\int_R^{R_2} E_2\\,\\mathrm{d}r$（或两球壳电容串联）得：$$U = \\frac{Q}{4\\pi\\varepsilon_0}\\left[\\frac{1}{\\varepsilon_{\\mathrm{r1}}}\\left(\\frac{1}{R_1}-\\frac{1}{R}\\right) + \\frac{1}{\\varepsilon_{\\mathrm{r2}}}\\left(\\frac{1}{R}-\\frac{1}{R_2}\\right)\\right],\\quad C = \\frac{Q}{U}$$"
+    ],
+    "answer": "（1）$D_1=D_2=\\dfrac{Q}{4\\pi r^2}$，$E_i=\\dfrac{Q}{4\\pi\\varepsilon_0\\varepsilon_{\\mathrm{r}i}r^2}$，$P_i=\\dfrac{(\\varepsilon_{\\mathrm{r}i}-1)Q}{4\\pi\\varepsilon_{\\mathrm{r}i}r^2}$（均沿 $+\\vec{e}_r$）；（2）$\\sigma_{\\mathrm{nn}}'=-\\dfrac{\\varepsilon_{\\mathrm{r1}}-1}{\\varepsilon_{\\mathrm{r1}}}\\dfrac{Q}{4\\pi R_1^2}$，$\\sigma_{\\mathrm{jj}}'=\\dfrac{Q}{4\\pi R^2}\\left(\\dfrac{1}{\\varepsilon_{\\mathrm{r2}}}-\\dfrac{1}{\\varepsilon_{\\mathrm{r1}}}\\right)$。",
+    "check": "当 $\\varepsilon_{\\mathrm{r1}} = \\varepsilon_{\\mathrm{r2}}$（两层为同种介质）时，交界面极化电荷面密度 $\\sigma_{\\mathrm{jj}}' = 0$，结果完全自洽。",
+    "note": "在分层串联电介质中，电位移线跨界面连续（$D_{1n} = D_{2n}$），而电场强度与介电常数成反比（$E_1/E_2 = \\varepsilon_{\\mathrm{r2}}/\\varepsilon_{\\mathrm{r1}}$）。工程上常在内圈高场区选用较大 $\\varepsilon_{\\mathrm{r1}}$ 的介质以均衡场强、提高耐压。",
+    "questionImage": "ex/EX10-08.webp"
+  },
+  {
+    "id": "EX10-09",
+    "section": "s10-6",
+    "difficulty": 3,
+    "source": "课件第6讲 · PDF 第 219–223 页 · 例10.9（含错解辨析）",
+    "title": "半充入电介质的平行板电容器：错解辨析、自由电荷重分布与并联等效",
+    "page": 221,
+    "crop": [
+      0.58,
+      0.24,
+      0.94,
+      0.44
+    ],
+    "problem": "一个极板面积为 $S$、间距为 $d$ 的平行板电容器，带总电量为 $Q$。若在电容器左半部分（面积为 $S/2$、厚度为 $d$）充有相对介电常数为 $\\varepsilon_{\\mathrm{r}}$ 的各向同性均匀电介质，右半部分仍为真空，忽略边缘效应。求：\n\n（1）辨析课件第 219 页给出的如下解法是否正确：『设插入前 $E_0 = Q/(\\varepsilon_0 S)$，插入后左区 $E_1 = E_0/\\varepsilon_{\\mathrm{r}} = Q/(\\varepsilon_0\\varepsilon_{\\mathrm{r}}S)$，右区 $E_2 = E_0 = Q/(\\varepsilon_0 S)$』；\n\n（2）正确求出电容器左、右两区域的 $\\vec{D}, \\vec{E}, \\vec{P}$、极板自由电荷面密度 $\\sigma_1, \\sigma_2$、介质表面极化电荷面密度 $\\sigma_1'$ 以及总电容 $C$。",
+    "hints": [
+      "上下两块金属极板各自都是等势体，左半区和右半区连接在同一对极板之间，电势差 $U = E_1 d = E_2 d$ 必须相等！",
+      "用扁圆柱高斯面分别对左、右极板下表面积分得 $D_1 = \\sigma_1, D_2 = \\sigma_2$，再联立 $E_1 = E_2$ 和 $(\\sigma_1+\\sigma_2)S/2 = Q$。"
+    ],
+    "steps": [
+      "**错解辨析（PDF p219–220）**：该解法**完全错误**！原因在于公式 $E = E_0/\\varepsilon_{\\mathrm{r}}$ 成立的前提是『充入电介质前后导体上的自由电荷分布保持不变』。而在左半部充入电介质后，极化电荷吸引更多自由电荷向左半极板聚集（$\\sigma_1 \\neq \\sigma_2$）；若按错解 $E_1 \\neq E_2$，则由 $U = Ed$ 将推出同一金属极板左右两半电势不等，违背导体静电平衡等势体基本性质。",
+      "**由等势体条件与高斯定理求正确场量（PDF p221–222）**：在左、右两区分别跨上极板下表面作高斯柱面，得 $D_1 = \\sigma_1,\\;D_2 = \\sigma_2$。由金属极板等势性得两区场强必相等（方向均垂直极板向下）：$$U_1 - U_2 = E_1 d = E_2 d \\implies E_1 = E_2 \\implies \\frac{\\sigma_1}{\\varepsilon_0\\varepsilon_{\\mathrm{r}}} = \\frac{\\sigma_2}{\\varepsilon_0} \\implies \\sigma_1 = \\varepsilon_{\\mathrm{r}}\\sigma_2$$结合上极板自由电荷守恒 $\\sigma_1\\dfrac{S}{2} + \\sigma_2\\dfrac{S}{2} = Q$，解得：$$\\sigma_1 = D_1 = \\frac{2\\varepsilon_{\\mathrm{r}}Q}{(\\varepsilon_{\\mathrm{r}}+1)S},\\qquad \\sigma_2 = D_2 = \\frac{2Q}{(\\varepsilon_{\\mathrm{r}}+1)S}$$两区场强相等：$$E_1 = E_2 = \\frac{2Q}{\\varepsilon_0(\\varepsilon_{\\mathrm{r}}+1)S}$$极化强度与束缚电荷面密度：右区（真空）$P_2 = 0,\\;\\sigma_2' = 0$；左区（介质）$P_1 = \\varepsilon_0(\\varepsilon_{\\mathrm{r}}-1)E_1 = \\dfrac{2(\\varepsilon_{\\mathrm{r}}-1)Q}{(\\varepsilon_{\\mathrm{r}}+1)S}$，介质上表面 $\\sigma_{1\\mathrm{u}}' = -P_1 = -\\dfrac{2(\\varepsilon_{\\mathrm{r}}-1)Q}{(\\varepsilon_{\\mathrm{r}}+1)S}$，下表面 $\\sigma_{1\\mathrm{d}}' = +P_1 = \\dfrac{2(\\varepsilon_{\\mathrm{r}}-1)Q}{(\\varepsilon_{\\mathrm{r}}+1)S}$。",
+      "**求总电容 $C$（定义法与并联法，PDF p223）**：由 $U_1 - U_2 = E_1 d = \\dfrac{2Qd}{\\varepsilon_0(\\varepsilon_{\\mathrm{r}}+1)S}$ 得：$$C = \\frac{Q}{U_1 - U_2} = \\frac{\\varepsilon_0(\\varepsilon_{\\mathrm{r}}+1)S}{2d} = \\frac{\\varepsilon_0\\varepsilon_{\\mathrm{r}}(S/2)}{d} + \\frac{\\varepsilon_0(S/2)}{d} = C_{\\mathrm{left}} + C_{\\mathrm{right}}$$"
+    ],
+    "answer": "（1）错解违背了金属极板等势条件（误设自由电荷仍均匀分布）；（2）正确解为 $E_1=E_2=\\dfrac{2Q}{\\varepsilon_0(\\varepsilon_{\\mathrm{r}}+1)S}$，$D_1=\\sigma_1=\\dfrac{2\\varepsilon_{\\mathrm{r}}Q}{(\\varepsilon_{\\mathrm{r}}+1)S}$，$D_2=\\sigma_2=\\dfrac{2Q}{(\\varepsilon_{\\mathrm{r}}+1)S}$，$\\sigma_{1\\mathrm{d}}'=-\\sigma_{1\\mathrm{u}}'=\\dfrac{2(\\varepsilon_{\\mathrm{r}}-1)Q}{(\\varepsilon_{\\mathrm{r}}+1)S}$，电容 $C=\\dfrac{\\varepsilon_0(\\varepsilon_{\\mathrm{r}}+1)S}{2d}$。",
+    "check": "当 $\\varepsilon_{\\mathrm{r}} = 1$ 时，$\\sigma_1 = \\sigma_2 = Q/S$，$E_1 = E_2 = Q/(\\varepsilon_0 S)$，$\\sigma_1' = 0$，$C = \\varepsilon_0 S/d$，完全回归真空平行板电容器。",
+    "note": "并排填充介质对应『等电势差并联模型』（$E_1 = E_2,\\; D_1/D_2 = \\varepsilon_{\\mathrm{r1}}/\\varepsilon_{\\mathrm{r2}}$）；分层叠放介质对应『等自由电荷串联模型』（$D_1 = D_2,\\; E_1/E_2 = \\varepsilon_{\\mathrm{r2}}/\\varepsilon_{\\mathrm{r1}}$）。",
+    "questionImage": "ex/EX10-09.webp"
+  },
+  {
+    "id": "EX10-10",
+    "section": "s10-7",
+    "difficulty": 3,
+    "source": "课件第7讲 · PDF 第 232–236 页 · 例10.10",
+    "title": "均匀带电非导体球静电能的三种求法（相互作用能法、能量密度法、外力做功法）",
+    "page": 235,
+    "crop": [
+      0.76,
+      0.12,
+      0.96,
+      0.9
+    ],
+    "problem": "设一半径为 $R$ 的均匀带电非导体实心球，所带总电荷量为 $q$，球体相对介电常数为 $\\varepsilon_{\\mathrm{r}} = 1$，球外为真空。试分别用以下三种方法计算该带电球体的总静电能 $W_e$：\n\n（1）**方法一（电荷相互作用能法）**：利用 $W_e = \\dfrac{1}{2}\\iiint_V U\\rho\\,\\mathrm{d}V$；\n\n（2）**方法二（静电场能量密度法）**：对全空间体积 $V$ 利用 $W_e = \\iiint_{V} \\dfrac{1}{2}\\varepsilon_0 E^2\\,\\mathrm{d}V$；\n\n（3）**方法三（逐层搬运电荷外力做功法）**：将球体看作从半径 $0$ 到 $R$ 逐层从无穷远搬运球壳电荷 $\\mathrm{d}q = \\rho\\cdot 4\\pi r^2\\mathrm{d}r$ 组装而成，积分外力克服电场力所做的功；并思考若球体相对介电常数为 $\\varepsilon_{\\mathrm{r}} \\neq 1$，结果应如何修正？",
+    "hints": [
+      "球内（$r < R$）场强 $E_{\\mathrm{in}} = \\dfrac{qr}{4\\pi\\varepsilon_0 R^3}$，球外（$r > R$）场强 $E_{\\mathrm{out}} = \\dfrac{q}{4\\pi\\varepsilon_0 r^2}$。",
+      "球内电势为 $U(r) = \\int_r^R E_{\\mathrm{in}}\\,\\mathrm{d}r + \\int_R^{\\infty} E_{\\mathrm{out}}\\,\\mathrm{d}r = \\dfrac{q}{8\\pi\\varepsilon_0 R}\\left(3 - \\dfrac{r^2}{R^2}\\right)$。"
+    ],
+    "steps": [
+      "**方法一（相互作用能法，PDF p232–233）**：电荷体密度 $\\rho = \\dfrac{q}{\\frac{4}{3}\\pi R^3}$。球内距球心 $r$（$r<R$）处的电势为 $U(r) = \\dfrac{3q}{8\\pi\\varepsilon_0 R} - \\dfrac{qr^2}{8\\pi\\varepsilon_0 R^3}$。代入自能积分：$$W_e = \\frac{1}{2}\\int_0^R U(r)\\rho\\cdot 4\\pi r^2\\,\\mathrm{d}r = \\frac{1}{2}\\int_0^R \\left(\\frac{9q^2}{8\\pi\\varepsilon_0 R^4}r^2 - \\frac{3q^2}{8\\pi\\varepsilon_0 R^6}r^4\\right)\\mathrm{d}r = \\frac{3q^2}{20\\pi\\varepsilon_0 R}$$",
+      "**方法二（能量密度法，PDF p234）**：球内与球外均存在电场，将全空间分为 $0 \\le r < R$ 和 $r > R$ 两段积分：$$W_e = \\frac{\\varepsilon_0}{2}\\int_0^R \\left(\\frac{qr}{4\\pi\\varepsilon_0 R^3}\\right)^2 4\\pi r^2\\,\\mathrm{d}r + \\frac{\\varepsilon_0}{2}\\int_R^{\\infty} \\left(\\frac{q}{4\\pi\\varepsilon_0 r^2}\\right)^2 4\\pi r^2\\,\\mathrm{d}r = \\frac{q^2}{40\\pi\\varepsilon_0 R} + \\frac{q^2}{8\\pi\\varepsilon_0 R} = \\frac{3q^2}{20\\pi\\varepsilon_0 R}$$可见球内电场储能占总能量的 $1/6$，球外空间储能占 $5/6$。",
+      "**方法三（外力做功组装法，PDF p235–236）及 $\\varepsilon_{\\mathrm{r}}\\neq 1$ 修正**：当已形成半径为 $r$ 的带电球（电量 $q_r = \\frac{4}{3}\\pi r^3\\rho$）时，其表面电势为 $U_r = \\dfrac{q_r}{4\\pi\\varepsilon_0 r} = \\dfrac{\\rho r^2}{3\\varepsilon_0}$。从无穷远再搬来厚 $\\mathrm{d}r$ 的薄球壳电量 $\\mathrm{d}q = \\rho\\cdot 4\\pi r^2\\mathrm{d}r$，外力做元功 $\\mathrm{d}W_e = U_r\\,\\mathrm{d}q = \\dfrac{4\\pi\\rho^2 r^4}{3\\varepsilon_0}\\mathrm{d}r$。从 $0$ 到 $R$ 积分得：$$W_e = \\int_0^R \\frac{4\\pi\\rho^2 r^4}{3\\varepsilon_0}\\,\\mathrm{d}r = \\frac{4\\pi\\rho^2 R^5}{15\\varepsilon_0} = \\frac{3q^2}{20\\pi\\varepsilon_0 R}$$**思考题修正**：若球体相对介电常数为 $\\varepsilon_{\\mathrm{r}} \\neq 1$，则球外（$r>R$）场强与能量不变，仅球内（$r<R$）场强变为原来的 $1/\\varepsilon_{\\mathrm{r}}$、球内能量密度 $w_e = \\frac{1}{2}\\varepsilon_0\\varepsilon_{\\mathrm{r}}E_{\\mathrm{in}}^2$ 变为原来的 $1/\\varepsilon_{\\mathrm{r}}$，故总静电能修正为 $W_e = \\dfrac{q^2}{40\\pi\\varepsilon_0\\varepsilon_{\\mathrm{r}}R} + \\dfrac{q^2}{8\\pi\\varepsilon_0 R} = \\dfrac{q^2(5\\varepsilon_{\\mathrm{r}}+1)}{40\\pi\\varepsilon_0\\varepsilon_{\\mathrm{r}}R}$。"
+    ],
+    "answer": "三种方法均得 $W_e = \\dfrac{3q^2}{20\\pi\\varepsilon_0 R}$（其中球内占 $\\dfrac{q^2}{40\\pi\\varepsilon_0 R}$，球外占 $\\dfrac{q^2}{8\\pi\\varepsilon_0 R}$）；当球体 $\\varepsilon_{\\mathrm{r}} \\neq 1$ 时修正为 $W_e = \\dfrac{q^2}{40\\pi\\varepsilon_0 R}\\left(\\dfrac{1}{\\varepsilon_{\\mathrm{r}}} + 5\\right)$。",
+    "check": "对比均匀带电导体球面（全部电荷在表面，$r<R$ 内场强为零）：其静电能仅为球外积分项 $W_{\\mathrm{shell}} = \\dfrac{q^2}{8\\pi\\varepsilon_0 R} = \\dfrac{Q^2}{2(4\\pi\\varepsilon_0 R)}$；实心非导体球多出了球内电场能 $\\dfrac{q^2}{40\\pi\\varepsilon_0 R}$。",
+    "note": "计算带电体静电能时，『能量密度体积分法』物理图像最清晰、最不易漏项（只需分段写出 $E(r)$ 与 $\\varepsilon(r)$ 再对全空间积分）。",
+    "questionImage": "ex/EX10-10.webp"
+  }
+]

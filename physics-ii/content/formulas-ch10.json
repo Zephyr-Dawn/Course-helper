@@ -1,0 +1,58 @@
+[
+  {
+    "name": "导体静电平衡条件与表面场强定理",
+    "section": "s10-1",
+    "tex": "\\vec{E}_{\\mathrm{in}} = 0,\\quad \\rho_{\\mathrm{in}} = 0,\\quad \\vec{E}_{\\mathrm{surf}} = \\frac{\\sigma}{\\varepsilon_0}\\vec{e}_n",
+    "use": "判断金属导体在静电场中的电势等势性，并由导体表面附近的电场强度直接求解局部面电荷密度 $\\sigma$（或反之）。",
+    "conditions": "处于宏观静电平衡状态的金属导体；$\\vec{e}_n$ 为导体表面指向外部真空的外法线单位矢量。",
+    "pitfall": "表面场强 $E = \\sigma/\\varepsilon_0$（无系数 $2$）是空间所有电荷共同激发的合场强，而单个无限大带电平面的自场才是 $\\sigma/(2\\varepsilon_0)$，切勿混用。"
+  },
+  {
+    "name": "平行金属板四表面电荷分布与接地屏蔽规律",
+    "section": "s10-2",
+    "tex": "\\sigma_1 = \\sigma_4 = \\frac{Q_1 + Q_2}{2S},\\quad \\sigma_2 = -\\sigma_3 = \\frac{Q_1 - Q_2}{2S},\\quad Q_{\\mathrm{in,surf}} = -q_{\\mathrm{cav}}",
+    "use": "快速求解带电平行金属板四个表面的面电荷密度、板间与板外场强，以及空腔导体内外表面感应电荷守恒关系。",
+    "conditions": "平行板满足板间距远小于板线度（忽略边缘效应）；空腔导体处于静电平衡状态。",
+    "pitfall": "导体接地只保证其电势 $U = 0$，绝不意味着其总电荷一定为零（例如同心球壳周围存在其他带电体时，接地导体上必然感应出异号电荷以维持 $U=0$）。"
+  },
+  {
+    "name": "三种典型电容器电容与串并联等效公式",
+    "section": "s10-3",
+    "tex": "C = \\frac{Q}{U_A - U_B},\\quad C_{\\mathrm{plate}} = \\frac{\\varepsilon S}{d},\\quad C_{\\mathrm{cyl}} = \\frac{2\\pi\\varepsilon l}{\\ln(R_B/R_A)},\\quad C_{\\mathrm{sph}} = \\frac{4\\pi\\varepsilon R_A R_B}{R_B - R_A}",
+    "use": "计算平行板、同轴圆柱面、同心球面电容器及孤立导体球（$R_B \\to \\infty$ 时 $C=4\\pi\\varepsilon_0 R_A$）的电容，并结合串联（$1/C=\\sum 1/C_i$）与并联（$C=\\sum C_i$）求复合电容。",
+    "conditions": "平行板与圆柱形电容器均需忽略边缘效应；公式中 $\\varepsilon = \\varepsilon_0\\varepsilon_{\\mathrm{r}}$ 为充满两极板间均匀电介质的介电常数。",
+    "pitfall": "串联电容器各单元带电量 $Q$ 相等、分压与电容成反比（$U_i \\propto 1/C_i$），总耐压升高但薄弱单元可能先达到击穿电压。"
+  },
+  {
+    "name": "电极化强度矢量与极化（束缚）电荷面密度",
+    "section": "s10-4",
+    "tex": "\\vec{P} = \\frac{\\sum \\vec{p}_i}{\\Delta V} = \\chi_{\\mathrm{e}}\\varepsilon_0\\vec{E} = \\varepsilon_0(\\varepsilon_{\\mathrm{r}} - 1)\\vec{E},\\quad \\sigma' = \\vec{P}\\cdot\\vec{e}_n = P\\cos\\theta",
+    "use": "由电介质内部的宏观合场强 $\\vec{E}$ 计算电极化强度 $\\vec{P}$，并求电介质边界或两介质交界面上的极化电荷面密度 $\\sigma'$。",
+    "conditions": "本构关系 $\\vec{P} = \\chi_{\\mathrm{e}}\\varepsilon_0\\vec{E}$ 适用于各向同性线性电介质；$\\sigma' = \\vec{P}\\cdot\\vec{e}_n$ 适用于均匀电介质表面（内部体束缚电荷 $\\rho' = 0$）。",
+    "pitfall": "决定 $\\vec{P}$ 的 $\\vec{E}$ 是自由电荷与束缚电荷共同激发的宏观合场强，而非外加原场强 $\\vec{E}_0$；求交界面总束缚电荷面密度时需对两侧介质分别取指向各自外部的法向 $\\vec{e}_{n1}=-\\vec{e}_{n2}$ 求和。"
+  },
+  {
+    "name": "电位移矢量定义与有电介质的高斯定理",
+    "section": "s10-5",
+    "tex": "\\vec{D} = \\varepsilon_0\\vec{E} + \\vec{P} = \\varepsilon_0\\varepsilon_{\\mathrm{r}}\\vec{E},\\quad \\oint_S \\vec{D}\\cdot\\mathrm{d}\\vec{S} = \\sum_{S\\mathrm{in}} q_0,\\quad \\oint_S \\vec{P}\\cdot\\mathrm{d}\\vec{S} = -\\sum_{S\\mathrm{in}} q'",
+    "use": "在存在电介质且具有球对称、柱对称或面对称的系统中，绕开未知的束缚电荷 $q'$，直接由自由电荷 $q_0$ 求解 $\\vec{D}$，进而顺序求得 $\\vec{E}$、$\\vec{P}$ 和 $\\sigma'$。",
+    "conditions": "$\\vec{D}=\\varepsilon_0\\vec{E}+\\vec{P}$ 及积分高斯定理普遍成立；唯有当自由电荷分布与电介质分布同时具备高对称性时，才能把 $D$ 提出积分号直接求场。",
+    "pitfall": "高斯面内只计入自由电荷 $q_0$，切勿重复加上束缚电荷 $q'$；若电介质呈非对称或并排填充导致极板上自由电荷重新分布，需先联立等势条件确定各区自由电荷面密度。"
+  },
+  {
+    "name": "分层串联与并排并联电介质电容器场量对比",
+    "section": "s10-6",
+    "tex": "D_{\\mathrm{series,1}} = D_{\\mathrm{series,2}} = \\sigma_0,\\quad E_{\\mathrm{parallel,1}} = E_{\\mathrm{parallel,2}} = \\frac{U}{d},\\quad \\frac{\\sigma_{01}}{\\sigma_{02}} = \\frac{\\varepsilon_{\\mathrm{r1}}}{\\varepsilon_{\\mathrm{r2}}}",
+    "use": "分析电介质沿电场方向分层填充（等效串联，$\\vec{D}$ 法向连续）或沿垂直极板方向并排填充（等效并联，$\\vec{E}$ 切向连续）时的场强、电容与最大安全耐压。",
+    "conditions": "忽略边缘效应的平行板、同轴圆柱或同心球电容器系统。",
+    "pitfall": "并排填充半块电介质时（例 10.9），极板是等势体使得真空区与介质区场强相等（$E_1=E_2$），自由电荷按 $\\varepsilon_{\\mathrm{r}}$ 比例重新分配，绝不能套用 $E_1 = E_0/\\varepsilon_{\\mathrm{r}}$！"
+  },
+  {
+    "name": "带电体系静电能、电容器储能与静电场能量密度",
+    "section": "s10-7",
+    "tex": "W_e = \\frac{1}{2}\\sum_i q_i U_i = \\frac{1}{2}\\int U\\,\\mathrm{d}q = \\frac{Q^2}{2C} = \\frac{1}{2}CU^2,\\quad w_e = \\frac{1}{2}\\vec{E}\\cdot\\vec{D} = \\frac{1}{2}\\varepsilon E^2,\\quad W_e = \\iiint_V w_e\\,\\mathrm{d}V",
+    "use": "计算点电荷系、连续带电体（如均匀带电球体）、电容器的静电能，并通过恒荷（$Q$ 不变）或恒压（$U$ 不变）条件下的能量变化判别介质受力及外力做功。",
+    "conditions": "$w_e = \\frac{1}{2}\\varepsilon E^2$ 适用于线性各向同性介质中的任意静电场，体积分 $V$ 必须遍及所有存在电场的空间（包含球体内部与无穷远外部）。",
+    "pitfall": "插入电介质或拉开极板时，必须严格区分『断电恒 $Q$』（用 $W_e = Q^2/(2C)$，外力做功 $A_{\\mathrm{ext}} = \\Delta W_e$）与『接电源恒 $U$』（用 $W_e = \\frac{1}{2}CU^2$，还需计入电源做功 $A_{\\mathrm{batt}} = U\\Delta Q$）。"
+  }
+]

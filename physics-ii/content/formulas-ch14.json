@@ -1,0 +1,58 @@
+[
+  {
+    "name": "法拉第电磁感应定律与感生电荷量",
+    "section": "s14-1",
+    "tex": "\\varepsilon_i = -\\frac{\\mathrm{d}\\Psi}{\\mathrm{d}t} = -N\\frac{\\mathrm{d}\\Phi_B}{\\mathrm{d}t}, \\quad q = \\int_{t_1}^{t_2} I_i\\,\\mathrm{d}t = \\frac{\\Psi_1 - \\Psi_2}{R}",
+    "use": "由闭合回路全磁通 $\\Psi = \\sum \\Phi_{Bi}$ 的时间变化率求感应电动势 $\\varepsilon_i$，以及一段时间内流过回路截面的总感生电荷量 $q$。",
+    "conditions": "回路法向 $\\vec{n}$ 与感应电动势参考正方向必须满足右手螺旋定则；求感生电荷量 $q$ 时回路总电阻 $R$ 需保持恒定。",
+    "pitfall": "感生电荷量 $q = \\Delta\\Psi / R$ 仅取决于初末态全磁通之差，与磁通量变化快慢（经历时间 $\\Delta t$）无关；切勿漏掉匝数 $N$。"
+  },
+  {
+    "name": "动生电动势微元积分式与典型运动导体公式",
+    "section": "s14-2",
+    "tex": "\\varepsilon_i = \\int_a^b (\\vec{v} \\times \\vec{B}) \\cdot \\mathrm{d}\\vec{l}, \\quad \\varepsilon_{\\mathrm{trans}} = B v l_{\\perp}, \\quad \\varepsilon_{\\mathrm{rot}} = \\frac{1}{2} B \\omega L^2",
+    "use": "计算运动导体棒、弯曲导线或旋转导体/法拉第圆盘在磁场中切割磁感线产生的动生电动势及两端电势差。",
+    "conditions": "微元积分式适用于任意非匀强磁场与任意变速/旋转运动；$\\varepsilon_{\\mathrm{trans}} = B v l_{\\perp}$ 与 $\\varepsilon_{\\mathrm{rot}} = \\frac{1}{2}B\\omega L^2$ 仅适用于匀强磁场。",
+    "pitfall": "开路导体棒两端电势差 $U_{ab} = U_a - U_b$ 的正负取决于哪一端为电源正极（$\\vec{v}\\times\\vec{B}$ 指向高电势端）；若 $\\varepsilon_{ab} > 0$ 表示非静电力由 $a$ 指向 $b$，则 $U_b > U_a$，即 $U_{ab} = -\\varepsilon_{ab}$。"
+  },
+  {
+    "name": "麦克斯韦涡旋电场环路定理与感生电动势",
+    "section": "s14-3",
+    "tex": "\\varepsilon_i = \\oint_L \\vec{E}_i \\cdot \\mathrm{d}\\vec{l} = -\\iint_S \\frac{\\partial \\vec{B}}{\\partial t} \\cdot \\mathrm{d}\\vec{S}",
+    "use": "计算时变磁场激发的涡旋电场 $\\vec{E}_i$ 空间分布，以及静止导体棒或闭合回路中的感生电动势。",
+    "conditions": "回路 $L$ 静止不动，回路绕行正方向与曲面 $S$ 的法向 $\\mathrm{d}\\vec{S}$ 成右手螺旋关系（$\\vec{E}_i$ 方向与 $\\partial\\vec{B}/\\partial t$ 成左手螺旋关系）。",
+    "pitfall": "涡旋电场 $\\vec{E}_i$ 是非保守有旋场（$\\oint \\vec{E}_i\\cdot\\mathrm{d}\\vec{l} \\neq 0$），不存在单值标量电势；即便在 $B=0$ 的局域磁场外部，只要包围磁通变化，依然存在涡旋电场。"
+  },
+  {
+    "name": "圆柱形均匀时变磁场内外的涡旋电场分布",
+    "section": "s14-3",
+    "tex": "E_i(r) = \\begin{cases} \\dfrac{r}{2}\\left|\\dfrac{\\mathrm{d}B}{\\mathrm{d}t}\\right|, & r \\le R \\\\[8pt] \\dfrac{R^2}{2r}\\left|\\dfrac{\\mathrm{d}B}{\\mathrm{d}t}\\right|, & r > R \\end{cases}, \\quad \\varepsilon_{\\mathrm{chord}} = \\frac{1}{2} h L \\left|\\frac{\\mathrm{d}B}{\\mathrm{d}t}\\right|",
+    "use": "直接求解半径为 $R$ 的圆柱形均匀变化磁场柱内（$r \\le R$）与柱外（$r > R$）的感生电场大小，以及圆内弦状导体棒（弦长 $L$、弦心距 $h$）的感生电动势。",
+    "conditions": "磁场局限于半径为 $R$ 的无限长圆柱内且空间均匀分布；连接圆心 $O$ 的径向辅助线与同心圆切向 $\\vec{E}_i$ 正交，径向线上感生电动势恒为零。",
+    "pitfall": "径向辅助线法要求辅助线严格通过磁场对称中心 $O$；若在动生+感生复合问题中辅助线随导体平动，则辅助线会切割磁感线产生动生电动势，建议优先采用“动生+感生分解法”。"
+  },
+  {
+    "name": "自感系数、自感电动势与典型结构电感",
+    "section": "s14-4",
+    "tex": "L = \\frac{\\Psi_B}{I}, \\quad \\varepsilon_L = -L\\frac{\\mathrm{d}I}{\\mathrm{d}t}, \\quad L_{\\mathrm{sol}} = \\mu n^2 V = \\frac{\\mu N^2 S}{l}, \\quad L_{\\mathrm{coax},0} = \\frac{\\mu l}{2\\pi}\\ln\\frac{R_2}{R_1}",
+    "use": "由先设电流 $I$ 求磁场与全磁通 $\\Psi_B$ 确定自感系数 $L$，计算长直螺线管、同轴电缆及平行双线传输线的电感。",
+    "conditions": "回路几何形状不变且周围无铁磁质（线性介质 $\\mu = \\text{const}$）；螺线管需满足细长密绕条件 $l \\gg R$。",
+    "pitfall": "长直螺线管 $L \\propto N^2$（匝数加倍而长度不变时自感变为 4 倍）；若同轴电缆内导体为半径 $R_1$ 的实心圆柱且电流均匀分布，需加上芯线内自感 $\\mu_1 l / (8\\pi)$。"
+  },
+  {
+    "name": "互感系数、互感电动势与共轴螺线管耦合",
+    "section": "s14-4",
+    "tex": "M = M_{21} = M_{12} = \\frac{\\Psi_{21}}{I_1} = \\frac{\\Psi_{12}}{I_2}, \\quad \\varepsilon_{21} = -M\\frac{\\mathrm{d}I_1}{\\mathrm{d}t}, \\quad M = K\\sqrt{L_1 L_2}",
+    "use": "计算两耦合回路间的互感系数 $M$ 与互感电动势，或利用互易定理 $M_{12} = M_{21}$ 简化非对称线圈互感求解。",
+    "conditions": "线性磁介质中互易定理 $M_{12} = M_{21}$ 恒成立，耦合系数满足 $0 \\le K \\le 1$。",
+    "pitfall": "对半径不等（$R_1 > R_2$）的共轴长直螺线管，内管通电流时磁场仅局限于内管截面 $\\pi R_2^2$，穿过外管的磁通仍按 $\\pi R_2^2$ 计算，故 $M = (R_2/R_1)\\sqrt{L_1 L_2}$，切勿误写为 $(R_1/R_2)\\sqrt{L_1 L_2}$。"
+  },
+  {
+    "name": "RL 电路暂态过程、自感磁能与磁场能量密度",
+    "section": "s14-5",
+    "tex": "i_{\\mathrm{grow}}(t) = I_m\\left(1 - e^{-t/\\tau}\\right), \\quad i_{\\mathrm{decay}}(t) = I_0 e^{-t/\\tau} \\;\\left(\\tau = \\frac{L}{R}\\right), \\quad W_m = \\frac{1}{2}LI^2 = \\iiint_V \\frac{B^2}{2\\mu}\\,\\mathrm{d}V",
+    "use": "分析 $RL$ 电路通断电暂态电流演化、弛豫时间常数 $\\tau = L/R$，以及由磁场能量密度 $w_m = \\frac{1}{2}\\vec{B}\\cdot\\vec{H} = \\frac{B^2}{2\\mu}$ 积分求总磁能与总自感。",
+    "conditions": "线性非铁磁介质（$\\mu$ 为常数），积分区域 $V$ 必须涵盖空间所有 $B \\neq 0$ 的区域（含导体内部与外部介质）。",
+    "pitfall": "注意区分 $RC$ 电路时间常数 $\\tau = RC$ 与 $RL$ 电路时间常数 $\\tau = L/R$：$RL$ 电路中电阻 $R$ 越大，能量耗散越快，弛豫时间 $\\tau$ 反而越小；用 $L = 2W_m/I^2$ 求自感是计入导体内部磁能（内自感）最简便的方法。"
+  }
+]

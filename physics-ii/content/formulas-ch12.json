@@ -1,0 +1,58 @@
+[
+  {
+    "name": "毕奥-萨伐尔定律与运动点电荷磁场",
+    "tex": "\\mathrm{d}\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{I\\mathrm{d}\\vec{l}\\times\\hat{r}}{r^2} = \\frac{\\mu_0}{4\\pi}\\frac{I\\mathrm{d}\\vec{l}\\times\\vec{r}}{r^3}, \\qquad \\vec{B}_{q} = \\frac{\\mu_0}{4\\pi}\\frac{q\\vec{v}\\times\\vec{r}}{r^3}",
+    "use": "计算任意几何形状载流导线或单个低速运动点电荷在空间任意场点激发的磁感应强度矢量。",
+    "conditions": "真空（或非铁磁均匀介质中换为 $\\mu$）、稳恒电流或非相对论准静态运动电荷（$v \\ll c$）；位矢 $\\vec{r}$ 必须从源点（电流元或运动电荷）指向待求场点 $P$。",
+    "pitfall": "叉积顺序不可颠倒：$I\\mathrm{d}\\vec{l}\\times\\hat{r}$ 服从右手定则，误写成 $\\hat{r}\\times I\\mathrm{d}\\vec{l}$ 会导致磁场方向完全反向；对负电荷（如电子 $q = -e$），$\\vec{B}_q$ 方向与 $\\vec{v}\\times\\vec{r}$ 相反。",
+    "section": "s12-1"
+  },
+  {
+    "name": "载流直导线与载流薄导体片的磁场",
+    "tex": "B_{\\mathrm{line}} = \\frac{\\mu_0 I}{4\\pi a}(\\cos\\theta_1 - \\cos\\theta_2), \\qquad B_{\\infty} = \\frac{\\mu_0 I}{2\\pi a}, \\qquad B_{\\mathrm{strip}} = \\frac{\\mu_0 I}{\\pi a}\\arctan\\frac{a}{2y}",
+    "use": "求解有限长/无限长/半无限长直导线、多边形导线框以及宽为 $a$ 的无限长均匀载流薄片（及其无限宽极限 $B = \\frac{1}{2}\\mu_0 i$）的磁场。",
+    "conditions": "$a$ 为场点到直导线的垂直距离；$\\theta_1, \\theta_2$ 统一取沿电流方向与起点/终点到场点连线的内夹角（或首尾仰角代数余弦差）。",
+    "pitfall": "在载流直导线的延长线上（$\\theta_1 = \\theta_2 = 0$ 或 $\\pi$），$\\mathrm{d}\\vec{l}\\parallel\\vec{r}$，磁感应强度恒为 $0$，切勿盲目套用 $\\frac{\\mu_0 I}{2\\pi a}$；半无限长直导线仅在过端点垂面上才有 $B = \\frac{\\mu_0 I}{4\\pi a}$。",
+    "section": "s12-2"
+  },
+  {
+    "name": "载流圆线圈、圆弧、磁偶极矩与直螺线管轴线磁场",
+    "tex": "B_{\\mathrm{axis}} = \\frac{\\mu_0 I R^2}{2(R^2 + x^2)^{3/2}} = \\frac{\\mu_0 p_m}{2\\pi(R^2 + x^2)^{3/2}}, \\quad B_{O,\\mathrm{arc}} = \\frac{\\mu_0 I \\varphi}{4\\pi R}, \\quad B_{\\mathrm{sol}} = \\frac{\\mu_0 n I}{2}(\\cos\\beta_2 - \\cos\\beta_1)",
+    "use": "计算圆环轴线及圆心磁场、张角为 $\\varphi$（弧度）的圆弧电流圆心磁场、旋转带电体圆心磁场，以及有限长/无限长（$\\mu_0 n I$）/半无限长端点（$\\frac{1}{2}\\mu_0 n I$）螺线管轴线磁场。",
+    "conditions": "磁矩 $\\vec{p}_m = N I S \\hat{n}_e$ 的法向 $\\hat{n}_e$ 与电流环绕方向满足右手螺旋关系；$\\varphi$ 必须用弧度制代入；$n = N/L$ 为单位长度匝数。",
+    "pitfall": "旋转带电圆盘或扇形片求总磁矩时，由于不同半径环元的面积 $\\pi r^2$ 不同，必须先对微元 $\\mathrm{d}p_m = \\pi r^2 \\mathrm{d}I$ 积分（得 $p_m \\propto R^4$），严禁先算总等效电流再乘总面积 $\\pi R^2$。",
+    "section": "s12-2"
+  },
+  {
+    "name": "磁通量与磁场高斯定理",
+    "tex": "\\Phi_B = \\iint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S} = \\iint_S B\\cos\\theta\\,\\mathrm{d}S, \\qquad \\oiint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S} = 0",
+    "use": "计算穿过平面或曲面的磁通量（非均匀场用条带面元积分），或利用闭合曲面净磁通量为零间接求复杂曲面的磁通量。",
+    "conditions": "非闭合曲面需预先规定法向 $\\hat{n}$ 的正侧；闭合曲面统一规定外法线方向为正（穿出为正、穿入为负）。",
+    "pitfall": "磁场高斯定理恒等于 $0$ 表明稳恒磁场是无源场（磁感线闭合、不存在磁单极子），切勿与静电场高斯定理 $\\oiint \\vec{E}\\cdot\\mathrm{d}\\vec{S} = \\sum q/\\varepsilon_0$ 混淆。",
+    "section": "s12-3"
+  },
+  {
+    "name": "安培环路定理与高对称性电流磁场分布",
+    "tex": "\\oint_L \\vec{B}\\cdot\\mathrm{d}\\vec{l} = \\mu_0 \\sum_{\\mathrm{in}} I_i, \\qquad B_{\\mathrm{cyl}}(r) = \\begin{cases} \\dfrac{\\mu_0 I r}{2\\pi R^2}, & r < R \\\\[6pt] \\dfrac{\\mu_0 I}{2\\pi r}, & r \\ge R \\end{cases}, \\qquad B_{\\mathrm{toroid}} = \\frac{\\mu_0 N I}{2\\pi r}",
+    "use": "求解无限长圆柱载流导体（实心/空心/偏心腔挖补）、载流螺绕环、无限长密绕螺线管及无限大载流厚板（板内 $B = \\mu_0 j y$、板外 $B = \\mu_0 j h$）的磁场。",
+    "conditions": "安培环路定理对任意闭合回路均成立，但仅当电流分布具有轴对称、面对称或螺线管平移对称性时，才能把 $B$ 提出积分号直接求解场强。",
+    "pitfall": "定理右端 $\\sum_{\\mathrm{in}} I_i$ 只计入穿过回路所围曲面的电流（右手螺旋定正负），但左端环路上的 $\\vec{B}$ 是环路内外所有电流共同激发的合磁场；$\\oint \\vec{B}\\cdot\\mathrm{d}\\vec{l} = 0$ 绝不意味着环路上处处 $\\vec{B} = 0$。",
+    "section": "s12-4"
+  },
+  {
+    "name": "安培力、平行电流相互作用、载流线圈磁力矩与磁力做功",
+    "tex": "\\vec{F} = \\int_L I\\mathrm{d}\\vec{l}\\times\\vec{B}, \\qquad \\frac{\\mathrm{d}F}{\\mathrm{d}l} = \\frac{\\mu_0 I_1 I_2}{2\\pi d}, \\qquad \\vec{M} = \\vec{p}_m\\times\\vec{B}, \\qquad A = I\\Delta\\Phi_B = I(\\Phi_{B2} - \\Phi_{B1})",
+    "use": "计算任意形状载流导线在匀强/非均匀磁场中的安培力、平行长直导线单位长度吸斥力、刚性平面线圈磁力矩以及导线平动或线圈转动时磁力（矩）所做的功。",
+    "conditions": "匀强磁场中弯曲导线的合力 $\\vec{F} = I\\vec{L}_{\\mathrm{ac}}\\times\\vec{B}$ 仅适用于匀强磁场；磁力做功公式 $A = I\\Delta\\Phi_B$ 要求回路电流 $I$ 在移动或转动过程中保持恒定。",
+    "pitfall": "磁力矩公式中 $M = p_m B \\sin\\theta$ 的夹角 $\\theta$ 是线圈法向 $\\vec{p}_m$ 与 $\\vec{B}$ 的夹角，若题目给出线圈平面与 $\\vec{B}$ 的夹角 $\\alpha$，则应取 $\\cos\\alpha = \\sin(\\pi/2 - \\alpha)$；当 $\\theta = 0$ 时 $M = 0$ 为稳定平衡，$\\theta = \\pi$ 时为不稳定平衡。",
+    "section": "s12-5"
+  },
+  {
+    "name": "洛伦兹力、回旋运动与霍尔效应",
+    "tex": "\\vec{F} = q\\vec{E} + q\\vec{v}\\times\\vec{B}, \\quad R = \\frac{m v_{\\perp}}{\\lvert q\\rvert B}, \\quad T = \\frac{2\\pi m}{\\lvert q\\rvert B}, \\quad h = \\frac{2\\pi m v_{\\parallel}}{\\lvert q\\rvert B}, \\quad U_{\\mathrm{H}} = R_{\\mathrm{H}}\\frac{I B}{d} = \\frac{I B}{n q d}",
+    "use": "分析带电粒子在匀强磁场中的圆周/螺旋线运动及正交电磁场速度选择器，计算霍尔电势差 $U_{\\mathrm{H}}$、霍尔系数 $R_{\\mathrm{H}} = 1/(nq)$ 与载流子浓度 $n$，并判别 P 型/N 型半导体。",
+    "conditions": "经典非相对论近似（$v \\ll c$）；霍尔效应公式中 $d$ 必须是薄板沿磁场 $\\vec{B}$ 方向的厚度（而非沿霍尔电场方向的宽度 $b$）。",
+    "pitfall": "判断霍尔高低电势面时：不论是正载流子（空穴 $q > 0$，运动方向与 $I$ 相同）还是负载流子（自由电子 $q = -e < 0$，漂移速度 $\\vec{v}$ 与 $I$ 相反），洛伦兹力 $\\vec{F}_m = q\\vec{v}\\times\\vec{B}$ 所指的偏转侧完全相同，因此聚集的电荷符号相反、电势高低相反。",
+    "section": "s12-6"
+  }
+]
