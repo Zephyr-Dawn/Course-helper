@@ -1,0 +1,282 @@
+[
+  {
+    "id": "EX12-01",
+    "section": "s12-2",
+    "difficulty": 2,
+    "source": "课件第9讲 · PDF 第 295–299 页 · 例12.1",
+    "title": "旋转均匀带电扇形薄片在顶点处的磁感应强度（等效电流法与运动电荷法）",
+    "problem": "一扇形塑料薄片，半径为 $R$，张角为 $\\theta$（弧度），表面均匀带电，电荷面密度为 $\\sigma$。现使扇形薄片绕过顶点 $O$ 并垂直于表面的轴线逆时针匀速转动，转速为每秒 $n$ 转（即角速度 $\\omega = 2\\pi n$）。求顶点 $O$ 处的磁感应强度 $\\vec{B}$ 的大小和方向。",
+    "page": 295,
+    "crop": [0.58, 0.36, 0.93, 0.72],
+    "hints": [
+      "解法一（等效圆电流法）：取半径为 $r$、宽为 $\\mathrm{d}r$ 的扇形细环微元，其带电量 $\\mathrm{d}q = \\sigma\\theta r\\,\\mathrm{d}r$；在一个周期 $T = 1/n$ 内该电量完整扫过圆周任一截面一次，由此写出周期平均等效圆电流 $\\mathrm{d}I = \\mathrm{d}q / T = n\\,\\mathrm{d}q$。",
+      "解法二（运动电荷法）：直接应用运动电荷磁场公式 $\\mathrm{d}\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{\\mathrm{d}q\\,\\vec{v}\\times\\hat{r}}{r^2}$，其中微元速率 $v = \\omega r = 2\\pi n r$，且 $\\vec{v} \\perp \\vec{r}$。"
+    ],
+    "steps": [
+      "**选取微元电量**：在距顶点 $O$ 为 $r$ 处取宽度为 $\\mathrm{d}r$ 的圆弧条带微元，弧长为 $r\\theta$，面积为 $\\mathrm{d}S = r\\theta\\,\\mathrm{d}r$，所带电量为 $$\\mathrm{d}q = \\sigma\\,\\mathrm{d}S = \\sigma\\theta r\\,\\mathrm{d}r$$",
+      "**解法一（周期平均等效圆电流法）**：扇形薄片每秒逆时针旋转 $n$ 圈，在时间 $\\mathrm{d}t$ 内转过的圈数为 $n\\,\\mathrm{d}t$，通过圆周任一径向截面的电量为 $\\mathrm{d}q' = \\mathrm{d}q\\cdot n\\,\\mathrm{d}t$。因此该环元等效为完整的一匝圆电流，其周期平均电流强度为 $$\\mathrm{d}I = \\frac{\\mathrm{d}q'}{\\mathrm{d}t} = n\\,\\mathrm{d}q = n\\sigma\\theta r\\,\\mathrm{d}r$$",
+      "**由圆电流圆心磁场公式积分**：半径为 $r$ 的等效圆电流在圆心 $O$ 处产生的磁感应强度大小为 $$\\mathrm{d}B = \\frac{\\mu_0\\,\\mathrm{d}I}{2r} = \\frac{\\mu_0 n\\sigma\\theta r\\,\\mathrm{d}r}{2r} = \\frac{1}{2}\\mu_0 n\\sigma\\theta\\,\\mathrm{d}r$$ 由右手螺旋法则（假设 $\\sigma > 0$，逆时针旋转），各环元在 $O$ 点产生的 $\\mathrm{d}\\vec{B}$ 均垂直纸面向外，沿 $r \\in [0, R]$ 积分得 $$B = \\int_0^R \\frac{1}{2}\\mu_0 n\\sigma\\theta\\,\\mathrm{d}r = \\frac{1}{2}\\mu_0 n\\sigma\\theta R$$",
+      "**解法二（运动电荷磁场公式验证）**：微元 $\\mathrm{d}q$ 以线速度 $v = \\omega r = 2\\pi n r$ 绕 $O$ 点作圆周运动，从微元指向圆心 $O$ 的位矢 $\\vec{r}$ 与速度 $\\vec{v}$ 垂直（$\\sin 90^\\circ = 1$），且 $\\vec{v}\\times\\hat{r}$ 垂直纸面向外，故 $$\\mathrm{d}B = \\frac{\\mu_0}{4\\pi}\\frac{v\\sin 90^\\circ\\,\\mathrm{d}q}{r^2} = \\frac{\\mu_0 (2\\pi n r)(\\sigma\\theta r\\,\\mathrm{d}r)}{4\\pi r^2} = \\frac{1}{2}\\mu_0 n\\sigma\\theta\\,\\mathrm{d}r$$ 积分同样得到 $B = \\frac{1}{2}\\mu_0 n\\sigma\\theta R$。"
+    ],
+    "answer": "顶点 $O$ 处的磁感应强度大小为 $B = \\dfrac{1}{2}\\mu_0 n\\sigma\\theta R$，方向垂直纸面向外（当 $\\sigma > 0$ 时）。",
+    "check": "量纲与特例检验：$[\\mu_0][n][\\sigma][\\theta][R] = (\\mathrm{T\\cdot m/A})\\cdot \\mathrm{s^{-1}}\\cdot (\\mathrm{C/m^2})\\cdot 1 \\cdot \\mathrm{m} = \\mathrm{T}$，量纲完全正确；当 $\\theta = 2\\pi$ 时退化为完整均匀带电圆盘旋转的经典结论 $B_O = \\pi\\mu_0 n\\sigma R = \\frac{1}{2}\\mu_0 \\sigma \\omega R$。",
+    "note": "注意区分“瞬时电流”与“周期平均等效电流”：由于扇形并非完整圆环，圆周上某固定径向截面的瞬时电流是脉冲式的；但按运动电荷法（解法二）可知，只要扇形片匀速旋转，不管它转到哪个方位角，每个运动电荷微元 $\\mathrm{d}q$ 到圆心 $O$ 的距离 $r$ 和速率 $v = \\omega r$ 都恒定不变，故圆心 $O$ 处的真实瞬时磁场也是恒定不变的！",
+    "questionImage": "ex/EX12-01.webp"
+  },
+  {
+    "id": "EX12-02",
+    "section": "s12-3",
+    "difficulty": 1,
+    "source": "课件第9讲 · PDF 第 303 页 · 例12.2",
+    "title": "匀强磁场中三棱柱各侧面的磁通量与磁场高斯定理验证",
+    "problem": "在某空间区域存在磁感应强度大小 $B = 2.0\\,\\mathrm{T}$、方向沿 $x$ 轴正方向的匀强磁场。如图所示，直角三棱柱 $abcdef$ 放置于该磁场中，其中高 $ab = dc = ef = 30\\,\\mathrm{cm}$，沿 $x$ 轴方向的直角边 $be = cf = 30\\,\\mathrm{cm}$，沿 $z$ 轴方向的直角边 $bc = ad = 40\\,\\mathrm{cm}$，斜面宽 $ae = df = 50\\,\\mathrm{cm}$。规定闭合三棱柱各表面均取外法线方向为正，求通过矩形面 $abcd$、$befc$、$aefd$ 的磁通量以及穿过整个三棱柱闭合表面的总磁通量。",
+    "page": 303,
+    "crop": [0.62, 0.22, 0.97, 0.66],
+    "hints": [
+      "对于匀强磁场中的平面，$\\Phi_B = \\vec{B}\\cdot\\vec{S} = B S \\cos\\theta$，其中 $\\theta$ 是平面外法线 $\\hat{n}$ 与 $\\vec{B}$（$+x$ 方向）的夹角。",
+      "斜面 $aefd$ 的外法线在 $xz$ 平面内，与 $+x$ 轴夹角 $\\theta$ 满足 $\\cos\\theta = \\frac{ad}{df} = \\frac{40}{50} = \\frac{4}{5}$。"
+    ],
+    "steps": [
+      "**计算后侧面 $abcd$ 的磁通量**：面 $abcd$ 位于 $yz$ 平面内，面积 $S_{abcd} = 0.30 \\times 0.40 = 0.12\\,\\mathrm{m^2}$，其外法线沿 $-x$ 方向，与 $\\vec{B}$ 夹角为 $180^\\circ$，故 $$\\Phi_{abcd} = B S_{abcd} \\cos 180^\\circ = -2.0 \\times 0.12 = -0.24\\,\\mathrm{Wb}$$",
+      "**计算左侧面 $befc$ 与上下底面 $abe$、$dfc$ 的磁通量**：面 $befc$ 的外法线沿 $-z$ 方向，上下底面 $abe$ 与 $dfc$ 的外法线分别沿 $+y$ 与 $-y$ 方向，均与沿 $+x$ 方向的 $\\vec{B}$ 垂直（$\\theta = 90^\\circ, \\cos 90^\\circ = 0$），故 $$\\Phi_{befc} = 0, \\qquad \\Phi_{abe} = \\Phi_{dfc} = 0$$",
+      "**计算右侧斜面 $aefd$ 的磁通量**：斜面面积 $S_{aefd} = 0.30 \\times 0.50 = 0.15\\,\\mathrm{m^2}$，其外法线 $\\hat{n}$ 与 $+x$ 轴夹角 $\\theta$ 满足 $\\cos\\theta = \\frac{0.40}{0.50} = \\frac{4}{5}$，故 $$\\Phi_{aefd} = B S_{aefd} \\cos\\theta = 2.0 \\times 0.15 \\times \\frac{4}{5} = +0.24\\,\\mathrm{Wb}$$",
+      "**验证闭合曲面磁场高斯定理**：对整个三棱柱闭合表面求和：$$\\Phi_{\\mathrm{total}} = \\oiint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S} = \\Phi_{abcd} + \\Phi_{befc} + \\Phi_{aefd} + \\Phi_{abe} + \\Phi_{dfc} = -0.24 + 0 + 0.24 + 0 + 0 = 0\\,\\mathrm{Wb}$$"
+    ],
+    "answer": "$\\Phi_{abcd} = -0.24\\,\\mathrm{Wb}$，$\\Phi_{befc} = 0\\,\\mathrm{Wb}$，$\\Phi_{aefd} = +0.24\\,\\mathrm{Wb}$，闭合三棱柱总磁通量 $\\Phi_{\\mathrm{total}} = 0\\,\\mathrm{Wb}$。",
+    "check": "投影面积等价检验：斜面 $aefd$ 垂直于磁场 $\\vec{B}$（即在 $yz$ 平面上）的投影面积恰好等于矩形面 $abcd$ 的面积 $0.30\\times 0.40 = 0.12\\,\\mathrm{m^2}$，穿入面 $abcd$ 的磁感线悉数从斜面 $aefd$ 穿出。",
+    "note": "在复杂曲面磁通量计算中，若直接对曲面求积分困难，常可构造一个由该曲面与平面封口组成的闭合曲面，利用 $\\oiint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S} = 0$ 将曲面磁通量转化为平面投影磁通量。",
+    "questionImage": "ex/EX12-02.webp"
+  },
+  {
+    "id": "EX12-03",
+    "section": "s12-3",
+    "difficulty": 2,
+    "source": "课件第9讲 · PDF 第 304 页 · 例12.3",
+    "title": "与无限长直载流导线共面跨骑放置的矩形导线框磁通量",
+    "problem": "一长为 $2a$、宽为 $a$ 的矩形导线回路 $ABCD$ 与一根无限长直载流导线 $I_1$ 共面放置，如图所示。无限长直导线 $EF$ 平行于宽边 $AD$（长度为 $a$）并穿过矩形框内部，距离左端宽边 $AD$ 为 $a/2$，距离右端宽边 $BC$ 为 $3a/2$。规定矩形回路平面的正法向为垂直纸面向内，求穿过该矩形回路的净磁通量 $\\Phi_B$。",
+    "page": 304,
+    "crop": [0.65, 0.20, 0.98, 0.68],
+    "hints": [
+      "无限长直导线 $I_1$ 激发的磁场是非均匀场 $B(r) = \\frac{\\mu_0 I_1}{2\\pi r}$，在导线左侧（$AEFD$ 区）垂直纸面向外，在导线右侧（$EBCF$ 区）垂直纸面向内。",
+      "利用对称性：导线左侧宽度为 $a/2$ 的区域 $AEFD$ 与导线右侧紧邻宽度为 $a/2$ 的区域 $EGHF$ 内磁通量等大反向、精确抵消，只需对右侧剩余区 $GBCH$（$r$ 从 $a/2$ 到 $3a/2$）积分即可。"
+    ],
+    "steps": [
+      "**分析磁场分布与分区抵消**：设电流 $I_1$ 竖直向上。由右手螺旋定则，导线左侧区域 $AEFD$（宽 $a/2$）磁场垂直纸面向外（与规定向内的法向相反，$\\theta = 180^\\circ$）；导线右侧区域 $EBCF$（宽 $3a/2$）磁场垂直纸面向内（与法向同向，$\\theta = 0^\\circ$）。在右侧截取距导线同样为 $a/2$ 的子区域 $EGHF$，由对称性必有 $$\\Phi_B(AEFD) + \\Phi_B(EGHF) = 0$$",
+      "**选取条带面元**：在剩余右侧区域 $GBCH$（距导线距离 $r \\in [a/2, 3a/2]$）内，取平行于直导线的细长矩形条带面元，宽为 $\\mathrm{d}r$、高为 $a$，面积 $\\mathrm{d}S = a\\,\\mathrm{d}r$。在同一条带面元上各点到导线距离均为 $r$，磁感应强度大小恒为 $$B(r) = \\frac{\\mu_0 I_1}{2\\pi r}$$",
+      "**积分求净磁通量**：穿过条带面元的元磁通量为 $\\mathrm{d}\\Phi_B = B(r) a\\,\\mathrm{d}r = \\frac{\\mu_0 I_1 a}{2\\pi}\\frac{\\mathrm{d}r}{r}$，在 $r \\in [a/2, 3a/2]$ 上积分得：$$\\Phi_B = \\Phi_B(GBCH) = \\int_{a/2}^{3a/2} \\frac{\\mu_0 I_1 a}{2\\pi r}\\,\\mathrm{d}r = \\frac{\\mu_0 I_1 a}{2\\pi}\\ln\\frac{3a/2}{a/2} = \\frac{\\mu_0 I_1 a}{2\\pi}\\ln 3$$"
+    ],
+    "answer": "穿过矩形回路的净磁通量为 $\\Phi_B = \\dfrac{\\mu_0 I_1 a}{2\\pi}\\ln 3$（方向垂直纸面向内）。",
+    "check": "量纲与对称性自检：$[\\mu_0 I_1 a] = (\\mathrm{T\\cdot m/A})\\cdot\\mathrm{A}\\cdot\\mathrm{m} = \\mathrm{T\\cdot m^2} = \\mathrm{Wb}$；若直导线恰好穿过矩形中线（左右各宽 $a$），则积分上下限相等，净磁通量为 $0$，物理图像完全吻合。",
+    "note": "注意：从微观上看导线本身有极小半径 $r_0$，若不采用对称抵消而分别计算左右两侧积分 $\\int_{r_0}^{a/2}$ 与 $\\int_{r_0}^{3a/2}$，在 $r_0 \\to 0$ 时单侧积分会发散，但两侧相减后 $\\ln r_0$ 项正好消去，依然严格等于 $\\int_{a/2}^{3a/2}$。",
+    "questionImage": "ex/EX12-03.webp"
+  },
+  {
+    "id": "EX12-04",
+    "section": "s12-4",
+    "difficulty": 2,
+    "source": "课件第10讲 · PDF 第 324–328 页 · 例12.4",
+    "title": "无限大均匀载流厚导体平板内外的磁场分布（安培环路定理与薄片叠加法）",
+    "problem": "有一厚度为 $2h$ 的无限大（无限长、无限宽）导体平板，其内有均匀稳恒电流平行于板面流动（图中垂直纸面向外），体电流密度大小为 $i$（单位：$\\mathrm{A/m^2}$）。以平板厚度中面 $S$ 为 $y=0$ 平面、垂直板面向上为 $+y$ 轴、平行板面向右为 $+x$ 轴，试求平板内外全空间的磁感应强度分布 $\\vec{B}(y)$。",
+    "page": 326,
+    "crop": [0.52, 0.22, 0.95, 0.72],
+    "hints": [
+      "对称性分析：将厚板看作无数层无限大载流薄片，每层产生平行于板面（$x$ 方向）的磁场；电流关于中面 $y=0$ 对称，故关于中面对称的两点磁场大小相等、方向相反，即 $B_x(-y) = -B_x(y)$，且中面上 $B_x(0) = 0$。",
+      "分别作关于中面 $S$ 对称的矩形安培环路 $abcd$（跨板外）和跨越板内的矩形环路，应用安培环路定理求解；再用薄片磁场 $B_{\\mathrm{sheet}} = \\frac{1}{2}\\mu_0 i\\,\\mathrm{d}y$ 叠加校核。"
+    ],
+    "steps": [
+      "**对称性分析与磁场方向判定**：电流沿 $+z$（垂直纸面向外）且关于中面 $y=0$ 对称分布。由右手定则知：在 $y > 0$（上半空间），合磁场水平向左（$-x$ 方向）；在 $y < 0$（下半空间），合磁场水平向右（$+x$ 方向），且满足反对称关系 $B(-y) = B(y)$（大小相等、方向相反）。",
+      "**求板外磁场（$\\lvert y\\rvert \\ge h$）**：过板外场点 $P(y > h)$ 作关于中面 $S$ 上下对称的矩形安培环路 $abcd$，上下水平边 $ad$、$bc$ 长度均为 $l$，竖直边 $ab$、$cd$ 垂直于板面。沿逆时针方向（与向外电流成右手螺旋）绕行积分，竖直边与 $\\vec{B}$ 垂直贡献为 $0$，上下边 $\\vec{B}_{\\mathrm{out}}$ 与 $\\mathrm{d}\\vec{l}$ 同向：$$\\oint_{abcd} \\vec{B}\\cdot\\mathrm{d}\\vec{l} = 2 B_{\\mathrm{out}} l = \\mu_0 I_{\\mathrm{in}} = \\mu_0 (2 h l i) \\implies B_{\\mathrm{out}} = \\mu_0 h i$$",
+      "**求板内磁场（$\\lvert y\\rvert < h$）**：取上下边分别位于板内距离中面 $y$ 处与板外上侧（或直接取关于中面上下对称、高为 $2\\lvert y\\rvert$ 的矩形环路），同理可得：$$2 B_{\\mathrm{in}}(y) l = \\mu_0 (2 \\lvert y\\rvert l i) \\implies B_{\\mathrm{in}}(y) = \\mu_0 i \\lvert y\\rvert$$ 矢量式可统一写为：当 $\\lvert y\\rvert < h$ 时 $\\vec{B}(y) = -\\mu_0 i y\\,\\hat{x}$；当 $y \\ge h$ 时 $\\vec{B} = -\\mu_0 i h\\,\\hat{x}$；当 $y \\le -h$ 时 $\\vec{B} = +\\mu_0 i h\\,\\hat{x}$。",
+      "**方法二（无限大载流薄片叠加法验证）**：厚度为 $\\mathrm{d}y'$ 的薄层线电流密度为 $\\mathrm{d}\\alpha = i\\,\\mathrm{d}y'$，在两侧激发匀强磁场 $\\mathrm{d}B = \\frac{1}{2}\\mu_0 i\\,\\mathrm{d}y'$。对板内 $y \\in (0, h)$ 处的场点，位于 $[y, h]$ 与 $[2y-h, y]$ 的薄层成对抵消，仅剩下方 $[-h, 2y-h]$ 共厚 $2y$ 的薄层都产生向左的磁场，故 $B_{\\mathrm{in}} = \\frac{1}{2}\\mu_0 i (2y) = \\mu_0 i y$，完全一致！"
+    ],
+    "answer": "板内（$\\lvert y\\rvert < h$）：$B_{\\mathrm{in}} = \\mu_0 i \\lvert y\\rvert$（线性分布）；板外（$\\lvert y\\rvert \\ge h$）：$B_{\\mathrm{out}} = \\mu_0 i h$（匀强磁场）；在 $y>0$ 区域方向向左，在 $y<0$ 区域方向向右。",
+    "check": "连续性与类比自检：在板表面 $\\lvert y\\rvert = h$ 处，$B_{\\mathrm{in}}(h) = B_{\\mathrm{out}} = \\mu_0 i h$ 连续过渡；该结果与“无限大均匀带电厚板内电场 $E_{\\mathrm{in}} = \\rho y / \\varepsilon_0$、板外 $E_{\\mathrm{out}} = \\rho h / \\varepsilon_0$”在数学结构上完全对偶。",
+    "note": "注意原课件中用符号 $i$ 表示体电流密度（常见教材亦记作 $j$，单位 $\\mathrm{A/m^2}$），而把薄片的面（线）电流密度记为 $i = I/a$（单位 $\\mathrm{A/m}$）。审题时务必通过单位或上下文区分体电流密度与面电流密度。",
+    "questionImage": "ex/EX12-04.webp"
+  },
+  {
+    "id": "EX12-05",
+    "section": "s12-4",
+    "difficulty": 3,
+    "source": "课件第10讲 · PDF 第 313、330 页 · 安培环路定理与叠加原理综合",
+    "title": "含偏心圆柱形空腔的无限长载流圆柱体腔内匀强磁场证明（挖补叠加法）",
+    "problem": "一半径为 $R$ 的无限长圆柱形导体，内部挖去一个半径为 $R'\\,(R' < R)$ 的平行圆柱形空腔，两圆柱轴线平行且相距为 $d\\,(d + R' < R)$，由实心圆柱轴线 $O$ 指向空腔轴线 $O'$ 的垂线位移矢量为 $\\vec{d}$。现沿导体轴向通以均匀分布的稳恒电流，电流密度矢量为 $\\vec{j}$（沿轴向单位矢量 $\\hat{k}$ 方向，即 $\\vec{j} = j\\hat{k}$）。试结合安培环路定理与磁场叠加原理，证明空腔内部的磁场是匀强磁场，并求出磁感应强度矢量 $\\vec{B}$。",
+    "page": 313,
+    "crop": [0.66, 0.09, 0.96, 0.66],
+    "hints": [
+      "对于完整无空腔、半径为 $R$ 的均匀载流圆柱体，由安培环路定理知内部距轴线 $\\vec{r}$ 处的磁感应强度大小 $B = \\frac{1}{2}\\mu_0 j r$，写成矢量叉积形式为 $\\vec{B}(\\vec{r}) = \\frac{1}{2}\\mu_0 \\vec{j}\\times\\vec{r}$。",
+      "运用“填补（挖补）叠加原理”：带偏心空腔的载流导体 = 半径为 $R$、电流密度为 $+\\vec{j}$ 的完整大圆柱体 + 半径为 $R'$、电流密度为 $-\\vec{j}$ 的填补小圆柱体。"
+    ],
+    "steps": [
+      "**完整均匀载流圆柱体内部磁场的矢量表达式**：对完整圆柱体内部距轴线 $O$ 为 $r$ 的任一点，取半径为 $r$ 的同心圆环路应用安培环路定理：$$\\oint_L \\vec{B}\\cdot\\mathrm{d}\\vec{l} = B\\cdot 2\\pi r = \\mu_0 j (\\pi r^2) \\implies B = \\frac{1}{2}\\mu_0 j r$$ 因 $\\vec{B}$ 沿圆周切向且与 $\\vec{j}$、径向位矢 $\\vec{r}$（从轴线垂直指向场点）满足右手螺旋法则，且 $\\vec{j}\\perp\\vec{r}$，故矢量式为 $$\\vec{B}(\\vec{r}) = \\frac{1}{2}\\mu_0 \\vec{j}\\times\\vec{r}$$",
+      "**构造挖补叠加模型**：设空腔内任意一点 $P$ 相对于大圆柱轴线 $O$ 的垂直位矢为 $\\vec{r}$，相对于空腔轴线 $O'$ 的垂直位矢为 $\\vec{r}'$，由几何三角形关系有 $\\vec{r} = \\vec{d} + \\vec{r}'$（即 $\\vec{r} - \\vec{r}' = \\vec{d}$）。将空腔填补上等大反向的电流密度 $+\\vec{j}$ 与 $-\\vec{j}$，原导电体等效于“电流密度为 $+\\vec{j}$ 的完整大圆柱”与“电流密度为 $-\\vec{j}$ 的小圆柱”叠加。",
+      "**矢量叠加证明腔内为匀强磁场**：点 $P$ 同时处于大圆柱内部与小圆柱内部，故合磁感应强度为：$$\\vec{B}(P) = \\vec{B}_1 + \\vec{B}_2 = \\frac{1}{2}\\mu_0 \\vec{j}\\times\\vec{r} + \\frac{1}{2}\\mu_0 (-\\vec{j})\\times\\vec{r}' = \\frac{1}{2}\\mu_0 \\vec{j}\\times(\\vec{r} - \\vec{r}') = \\frac{1}{2}\\mu_0 \\vec{j}\\times\\vec{d}$$",
+      "**分析结果**：由于 $\\vec{j}$ 与轴间位移 $\\vec{d}$ 均为常矢量，与场点 $P$ 在空腔内的具体位置 $\\vec{r}'$ 完全无关，因此空腔内部是磁感应强度大小为 $B = \\frac{1}{2}\\mu_0 j d$、方向垂直于轴间连线与电流方向的匀强磁场！"
+    ],
+    "answer": "空腔内部为匀强磁场，磁感应强度矢量为 $\\vec{B} = \\dfrac{1}{2}\\mu_0 \\vec{j}\\times\\vec{d}$，大小为 $B = \\dfrac{1}{2}\\mu_0 j d = \\dfrac{\\mu_0 I d}{2\\pi(R^2 - R'^2)}$。",
+    "check": "特例与对偶检验：当两轴重合（同轴圆筒，$\\vec{d} = \\vec{0}$）时，腔内 $\\vec{B} = \\vec{0}$，与同轴空心圆筒安培环路定理结论完全一致；此题亦与静电场中“均匀带电球体含偏心球腔内匀强电场 $\\vec{E} = \\frac{\\rho}{3\\varepsilon_0}\\vec{d}$”完全对应。",
+    "note": "若题目给出的是穿过剩余导体的总电流 $I$（而非电流密度 $j$），由于有效导电截面积为 $\\pi(R^2 - R'^2)$，必须先换算 $j = \\frac{I}{\\pi(R^2 - R'^2)}$，再代入得 $B = \\frac{\\mu_0 I d}{2\\pi(R^2 - R'^2)}$，切勿误用 $\\pi R^2$ 作为分母！",
+    "questionImage": "ex/EX12-05.webp"
+  },
+  {
+    "id": "EX12-06",
+    "section": "s12-5",
+    "difficulty": 1,
+    "source": "课件第10讲 · PDF 第 333 页 · 例12.5",
+    "title": "匀强磁场中一段任意取向长直载流导线所受的安培力",
+    "problem": "如图所示，在磁感应强度为 $\\vec{B}$ 的匀强磁场中放置一段长度为 $l$、通有稳恒电流 $I$ 的长直导线。设 $\\vec{B}$ 位于 $xy$ 平面内，直导线沿 $+x$ 轴放置，导线电流方向与 $\\vec{B}$ 的夹角为 $\\theta$。求该段长直导线所受安培力 $\\vec{F}$ 的大小和方向。",
+    "page": 333,
+    "crop": [0.54, 0.20, 0.98, 0.50],
+    "hints": [
+      "在直导线上取电流元 $I\\mathrm{d}\\vec{l}$，应用安培定律 $\\mathrm{d}\\vec{F} = I\\mathrm{d}\\vec{l}\\times\\vec{B}$ 判断方向。",
+      "因磁场均匀且导线为直线，各电流元所受安培力方向均沿 $+z$ 轴，可直接对大小积分。"
+    ],
+    "steps": [
+      "**电流元安培力分析**：在直导线上取电流元 $I\\mathrm{d}\\vec{l} = I\\,\\mathrm{d}l\\,\\hat{i}$。因 $\\vec{B}$ 在 $xy$ 平面内且与 $+x$ 轴成 $\\theta$ 角，由右手螺旋定则，叉积 $\\mathrm{d}\\vec{F} = I\\mathrm{d}\\vec{l}\\times\\vec{B}$ 的方向处处沿 $+z$ 轴方向，大小为 $$\\mathrm{d}F = I B \\sin\\theta\\,\\mathrm{d}l$$",
+      "**沿整段直导线积分**：由于各段微元受力方向相同，总安培力大小为：$$F = \\int_0^l I B \\sin\\theta\\,\\mathrm{d}l = I B \\sin\\theta \\int_0^l \\mathrm{d}l = I B l \\sin\\theta$$ 写成矢量式即为 $\\vec{F} = I\\vec{l}\\times\\vec{B} = I B l \\sin\\theta\\,\\hat{k}$。"
+    ],
+    "answer": "直导线所受安培力大小为 $F = I B l \\sin\\theta$，方向垂直于导线与磁场所在的 $xy$ 平面并指向 $+z$ 轴正方向。",
+    "check": "特殊角度检验：当导线与磁场平行（$\\theta = 0$ 或 $\\pi$）时 $F = 0$；当导线与磁场垂直（$\\theta = \\pi/2$）时受力达到最大值 $F_{\\max} = I B l$。",
+    "note": "安培力 $\\vec{F} = I\\vec{l}\\times\\vec{B}$ 本质上是导体内所有定向漂移载流子所受洛伦兹力 $\\vec{f}_L = q\\vec{v}_d\\times\\vec{B}$ 通过晶格碰撞传递给宏观导体的合力。",
+    "questionImage": "ex/EX12-06.webp"
+  },
+  {
+    "id": "EX12-07",
+    "section": "s12-5",
+    "difficulty": 2,
+    "source": "课件第10讲 · PDF 第 334–336 页 · 例12.6",
+    "title": "匀强磁场中圆弧形载流导线所受的安培力与等效弦长定理",
+    "problem": "如图所示，一段半径为 $R$ 的圆弧形刚性导线 $ac$，其两端点 $a$、$c$ 之间的直线弦长距离为 $L$。导线通有从 $a$ 流向 $c$ 的稳恒电流 $I$，并置于磁感应强度大小为 $B$、方向垂直于圆弧所在平面向里的匀强磁场中。求磁场作用在该圆弧导线上的总安培力 $\\vec{F}$。",
+    "page": 335,
+    "crop": [0.60, 0.12, 0.98, 0.50],
+    "hints": [
+      "圆弧上各电流元 $I\\mathrm{d}\\vec{l}$ 所受安培力 $\\mathrm{d}\\vec{F} = I\\mathrm{d}\\vec{l}\\times\\vec{B}$ 方向沿各自半径向外，方向随位置变化，必须先正交分解为 $\\mathrm{d}F_x$ 与 $\\mathrm{d}F_y$ 再分别积分！",
+      "建立以圆心 $O$ 为原点、垂直平分弦 $ac$ 向上为 $+y$ 轴的坐标系，设端点 $c$、$a$ 对应的极角分别为 $\\theta_0$ 与 $\\pi - \\theta_0$，则弦长 $L = 2 R \\cos\\theta_0$。"
+    ],
+    "steps": [
+      "**电流元受力与正交分解**：在圆弧上极角为 $\\theta$ 处取微元 $\\mathrm{d}l$，因 $\\mathrm{d}\\vec{l}\\perp\\vec{B}$，安培力微元大小 $\\mathrm{d}F = I B\\,\\mathrm{d}l$，方向沿径向背离圆心 $O$。将其向 $x$ 轴（平行于弦 $ac$）与 $y$ 轴（垂直于弦 $ac$ 向上）分解：$$\\mathrm{d}F_x = \\mathrm{d}F\\cos\\theta = I B \\cos\\theta\\,\\mathrm{d}l, \\qquad \\mathrm{d}F_y = \\mathrm{d}F\\sin\\theta = I B \\sin\\theta\\,\\mathrm{d}l$$",
+      "**对称性分析与角度积分**：由于圆弧关于 $y$ 轴左右对称，水平分量成对抵消，故 $F_x = \\int \\mathrm{d}F_x = 0$。沿电流方向从左端点 $a(\\theta = \\pi - \\theta_0)$ 走向右端点 $c(\\theta = \\theta_0)$ 时，弧长 $l = R(\\pi - \\theta_0 - \\theta)$ 增加而极角 $\\theta$ 减小，故 $\\mathrm{d}l = -R\\,\\mathrm{d}\\theta$。代入 $F_y$ 积分得：$$F_y = \\int_{\\pi - \\theta_0}^{\\theta_0} I B \\sin\\theta (-R\\,\\mathrm{d}\\theta) = I B R \\int_{\\theta_0}^{\\pi - \\theta_0} \\sin\\theta\\,\\mathrm{d}\\theta = 2 I B R \\cos\\theta_0$$",
+      "**化为弦长并推广至一般等效弦长定理**：由几何关系知两端点 $a, c$ 间的距离为 $L = 2 R \\cos\\theta_0$，故 $$\\vec{F} = F_y\\,\\hat{y} = I B L\\,\\hat{y}$$ 特别地，当 $\\theta_0 = 0$（半圆弧）时，$\\vec{F} = 2 I B R\\,\\hat{y}$。"
+    ],
+    "answer": "圆弧导线所受安培力为 $\\vec{F} = I B L\\,\\hat{y} = 2 I B R \\cos\\theta_0\\,\\hat{y}$（方向垂直于弦 $ac$ 向上），其合力等于沿两端点连线（弦 $ac$）放置的直导线所受的安培力。",
+    "check": "一般性矢量证明：在匀强磁场中，$\\vec{B}$ 为常矢量，可提出积分号：$\\vec{F} = \\int_a^c I\\mathrm{d}\\vec{l}\\times\\vec{B} = I\\left(\\int_a^c \\mathrm{d}\\vec{l}\\right)\\times\\vec{B} = I\\vec{L}_{ac}\\times\\vec{B}$，即匀强磁场中任意弯曲导线的安培力恒等于起点到终点有向线段 $\\vec{L}_{ac}$ 的安培力；若导线闭合（$a=c, \\vec{L}_{ac}=\\vec{0}$），合力恒为 $\\vec{0}$。",
+    "note": "注意：“等效弦长定理”成立的充要条件是外磁场 $\\vec{B}$ 为匀强磁场！若 $\\vec{B}$ 是非均匀磁场（如下题 `EX12-08`），$\\vec{B}$ 不能提出积分号，绝不能用等效直导线代替圆弧。",
+    "questionImage": "ex/EX12-07.webp"
+  },
+  {
+    "id": "EX12-08",
+    "section": "s12-5",
+    "difficulty": 3,
+    "source": "课件第10讲 · PDF 第 339–340、349 页 · 例12.7",
+    "title": "无限长直载流导线与共面圆环左半圆弧及整圆环间的磁相互作用力",
+    "problem": "如图所示，半径为 $R$ 的圆形导线框中通有顺时针方向的稳恒电流 $I_2$，在沿圆环竖直直径 $MN$ 方向放置一根无限长直导线（与圆环绝缘且共面），通有竖直向上的稳恒电流 $I_1$。求：（1）左半侧圆弧电流 $I_2$ 所受长直导线电流 $I_1$ 磁场的作用力 $\\vec{F}_{\\mathrm{left}}$ 的大小和方向；（2）整个圆形导线框所受的合安培力 $\\vec{F}_{\\mathrm{total}}$ 与合磁力矩趋势。",
+    "page": 339,
+    "crop": [0.68, 0.22, 0.98, 0.72],
+    "hints": [
+      "长直导线 $I_1$（沿 $y$ 轴向上）在左半平面产生的磁场 $\\vec{B}_1$ 垂直纸面向外，到 $y$ 轴垂直距离为 $r = R\\sin\\theta$，故 $B_1 = \\frac{\\mu_0 I_1}{2\\pi R\\sin\\theta}$。",
+      "在左半圆弧上取电流元 $I_2\\,\\mathrm{d}l = I_2 R\\,\\mathrm{d}\\theta$，所受安培力 $\\mathrm{d}\\vec{F}$ 指向圆心 $O$，其水平分量 $\\mathrm{d}F_x = \\mathrm{d}F\\sin\\theta$ 中的 $\\sin\\theta$ 恰好与 $B_1$ 分母中的 $\\sin\\theta$ 约去！"
+    ],
+    "steps": [
+      "**求直导线 $I_1$ 在左半圆弧处的磁感应强度**：以圆心 $O$ 为原点、直导线 $MN$ 为 $+y$ 轴、水平向右为 $+x$ 轴。设左半圆弧上微元与 $+y$ 轴夹角为 $\\theta \\in (0, \\pi)$，则微元到直导线的垂直距离为 $r = R\\sin\\theta$。由右手螺旋定则，左半平面 $\\vec{B}_1$ 垂直纸面向外，大小为 $$B_1(\\theta) = \\frac{\\mu_0 I_1}{2\\pi r} = \\frac{\\mu_0 I_1}{2\\pi R\\sin\\theta}$$",
+      "**计算左半圆弧微元所受安培力及其分量**：圆环电流 $I_2$ 为顺时针，在左半圆弧上从 $N(\\theta=\\pi)$ 流向 $M(\\theta=0)$，弧长微元 $\\mathrm{d}l = R\\,\\mathrm{d}\\theta$。由 $\\mathrm{d}\\vec{F} = I_2\\mathrm{d}\\vec{l}\\times\\vec{B}_1$ 知，$\\mathrm{d}\\vec{F}$ 沿半径指向圆心 $O$（向右偏上下），大小为 $$\\mathrm{d}F = I_2 B_1 \\mathrm{d}l = \\frac{\\mu_0 I_1 I_2}{2\\pi\\sin\\theta}\\,\\mathrm{d}\\theta$$ 由上下对称性，$y$ 方向分量 $\\mathrm{d}F_y = \\mathrm{d}F\\cos\\theta$ 积分后抵消，$F_y = 0$；水平向右（$+x$）分量为：$$\\mathrm{d}F_x = \\mathrm{d}F\\sin\\theta = \\frac{\\mu_0 I_1 I_2}{2\\pi}\\,\\mathrm{d}\\theta$$",
+      "**积分求左半圆弧受力**：对 $\\theta \\in [0, \\pi]$ 积分得左半圆弧所受安培力：$$\\vec{F}_{\\mathrm{left}} = \\left(\\int_0^\\pi \\frac{\\mu_0 I_1 I_2}{2\\pi}\\,\\mathrm{d}\\theta\\right)\\hat{x} = \\frac{\\mu_0 I_1 I_2}{2}\\,\\hat{x}$$",
+      "**分析整个圆环所受合力与合力矩（课件 p349 拓展）**：在右半圆弧上，直导线激发的磁场 $\\vec{B}_1$ 垂直纸面向里，而电流 $I_2$ 从 $M$ 顺时针流向 $N$（向下），由 $\\mathrm{d}\\vec{F} = I_2\\mathrm{d}\\vec{l}\\times\\vec{B}_1$ 知右半圆弧各微元受力背离圆心向右！因此右半圆弧受力同样为 $\\vec{F}_{\\mathrm{right}} = +\\frac{\\mu_0 I_1 I_2}{2}\\,\\hat{x}$，整个圆环在非均匀磁场中所受合安培力不为零，而是 $\\vec{F}_{\\mathrm{total}} = \\mu_0 I_1 I_2\\,\\hat{x}$（但对直径 $MN$ 的合磁力矩因左右两侧受力都在圆环平面内而为零）。"
+    ],
+    "answer": "（1）左半侧圆弧所受安培力为 $\\vec{F}_{\\mathrm{left}} = \\dfrac{\\mu_0 I_1 I_2}{2}\\,\\hat{x}$（水平向右，与圆环半径 $R$ 无关）；（2）整个圆环所受合安培力为 $\\vec{F}_{\\mathrm{total}} = \\mu_0 I_1 I_2\\,\\hat{x}$。",
+    "check": "量纲与半径无关性检验：因为 $B_1 \\propto 1/R$ 而弧长 $\\mathrm{d}l \\propto R$，乘积中半径 $R$ 精确抵消，故安培力只与 $\\mu_0 I_1 I_2$ 成正比，量纲为 $(\\mathrm{N/A^2})\\cdot\\mathrm{A^2} = \\mathrm{N}$；左半圆电流向上（与 $I_1$ 同向相吸，故向右），右半圆电流向下（与 $I_1$ 反向相斥，亦向右），物理方向完全自洽！",
+    "note": "注意：在端点 $\\theta \\to 0$ 或 $\\pi$ 处虽然 $B_1 \\to \\infty$，但乘上投影因子 $\\sin\\theta$ 后被积函数 $\\mathrm{d}F_x/\\mathrm{d}\\theta = \\frac{\\mu_0 I_1 I_2}{2\\pi}$ 为有限常数，这正是课件 p349 强调“非均匀磁场中闭合载流线圈合磁力一般不为零”的经典反例。",
+    "questionImage": "ex/EX12-08.webp"
+  },
+  {
+    "id": "EX12-09",
+    "section": "s12-5",
+    "difficulty": 2,
+    "source": "课件第11讲 · PDF 第 347–348 页 · 例12.8",
+    "title": "旋转均匀带电扇形薄片的磁矩及匀强磁场中的周期平均磁力矩",
+    "problem": "一个半径为 $R$、张角为 $\\theta$（弧度）的绝缘扇形塑料薄片，表面均匀带电，电荷面密度为 $\\sigma$。现使扇形薄片绕过顶点 $O$ 且垂直于薄片表面的轴线逆时针匀速转动，转速为每秒 $n$ 转。若将该旋转薄片置于磁感应强度大小为 $B$ 的匀强磁场中，且薄片平面与磁场 $\\vec{B}$ 的夹角为 $\\varphi$（如图所示，薄片法向 $\\hat{n}$ 与 $\\vec{B}$ 在同一平面内且夹角为 $\\frac{\\pi}{2} - \\varphi$），求扇形薄片的周期平均磁矩 $\\vec{p}_m$ 以及所受周期平均磁力矩 $\\vec{M}$ 的大小。",
+    "page": 347,
+    "crop": [0.66, 0.44, 0.97, 0.98],
+    "hints": [
+      "如 `EX12-01` 所示，半径 $r \\sim r + \\mathrm{d}r$ 的扇形细环微元带电 $\\mathrm{d}q = \\sigma\\theta r\\,\\mathrm{d}r$，旋转时等效为半径为 $r$、周期平均电流为 $\\mathrm{d}I = n\\,\\mathrm{d}q = n\\sigma\\theta r\\,\\mathrm{d}r$ 的完整圆电流环。",
+      "该等效圆电流环所包围的面积是整圆面积 $S(r) = \\pi r^2$（而非扇形面积 $\\frac{1}{2}\\theta r^2$），故元磁矩 $\\mathrm{d}p_m = \\pi r^2\\,\\mathrm{d}I = \\pi n\\sigma\\theta r^3\\,\\mathrm{d}r$。"
+    ],
+    "steps": [
+      "**求旋转微元环的等效圆电流与元磁矩**：在距转轴 $O$ 为 $r$ 处取宽为 $\\mathrm{d}r$ 的扇形弧微元，电量 $\\mathrm{d}q = \\sigma\\theta r\\,\\mathrm{d}r$。绕轴旋转时，该电量沿半径为 $r$ 的整圆轨道运动，周期平均等效圆电流为 $\\mathrm{d}I = n\\,\\mathrm{d}q = n\\sigma\\theta r\\,\\mathrm{d}r$。因为该闭合电流路径所围面积为整圆面积 $S = \\pi r^2$，其元磁矩大小为 $$\\mathrm{d}p_m = S\\,\\mathrm{d}I = \\pi r^2 (n\\sigma\\theta r\\,\\mathrm{d}r) = \\pi n\\sigma\\theta r^3\\,\\mathrm{d}r$$ 方向由右手螺旋定则知垂直于薄片平面向外（沿法向 $\\hat{n}$）。",
+      "**积分求整个旋转扇形薄片的总磁矩**：由于各微元环的磁矩方向均沿 $\\hat{n}$，对 $r \\in [0, R]$ 积分得：$$p_m = \\int_0^R \\pi n\\sigma\\theta r^3\\,\\mathrm{d}r = \\frac{1}{4}\\pi n\\sigma\\theta R^4$$",
+      "**计算匀强磁场中的周期平均磁力矩**：由图可知，磁矩方向（法线 $\\hat{n}$）与磁场 $\\vec{B}$ 的夹角为 $\\frac{\\pi}{2} - \\varphi$，根据 $\\vec{M} = \\vec{p}_m\\times\\vec{B}$，磁力矩大小为：$$M = p_m B \\sin\\left(\\frac{\\pi}{2} - \\varphi\\right) = \\frac{1}{4}\\pi n\\sigma\\theta R^4 B \\cos\\varphi$$"
+    ],
+    "answer": "旋转扇形薄片的平均磁矩大小为 $p_m = \\dfrac{1}{4}\\pi n\\sigma\\theta R^4$（垂直薄片向外），所受周期平均磁力矩大小为 $M = \\dfrac{1}{4}\\pi n\\sigma\\theta R^4 B \\cos\\varphi$。",
+    "check": "总电量与旋磁比验证：扇形片总电量 $Q = \\frac{1}{2}\\sigma\\theta R^2$，转动角速度 $\\omega = 2\\pi n$，代入可得 $p_m = \\frac{1}{4} Q \\omega R^2$；若扇形片质量均匀分布（质量 $m$，转动惯量 $J = \\frac{1}{2} m R^2$，角动量 $L = J\\omega = \\frac{1}{2} m \\omega R^2$），则磁矩与角动量之比恒满足经典旋磁比 $\\frac{p_m}{L} = \\frac{Q}{2m}$！",
+    "note": "课件 p348 思考题重点警示：求总磁矩时，绝不能先算出沿半径积分的总电流 $I_{\\mathrm{tot}} = \\int_0^R \\mathrm{d}I = \\frac{1}{2}n\\sigma\\theta R^2$ 再乘以总圆面积 $\\pi R^2$（那样会错误得到 $\\frac{1}{2}\\pi n\\sigma\\theta R^4$，偏大一倍），因为不同半径 $r$ 处的环电流所围面积 $\\pi r^2$ 权重不同，必须按 $\\int \\pi r^2\\,\\mathrm{d}I$ 积分！",
+    "questionImage": "ex/EX12-09.webp"
+  },
+  {
+    "id": "EX12-10",
+    "section": "s12-5",
+    "difficulty": 3,
+    "source": "课件第11讲 · PDF 第 352–353 页 · 例12.9",
+    "title": "非均匀磁场中半圆形载流导线对轴线的磁力矩积分",
+    "problem": "如图所示，在 $xy$ 平面上存在非均匀磁场 $\\vec{B} = k x\\,\\vec{i}$（其中 $k > 0$ 为常数）。一半径为 $R$、通有顺时针（从 $+y$ 端经 $+x$ 区域流向 $-y$ 端）稳恒电流 $I$ 的半圆形刚性导线置于 $x \\ge 0$ 的右半平面内，其两端点位于 $y$ 轴上，圆心在原点 $O$。求此半圆弧导线所受安培力对 $y$ 轴的合磁力矩 $\\vec{M}$。",
+    "page": 352,
+    "crop": [0.74, 0.26, 0.98, 0.62],
+    "hints": [
+      "由于磁场 $\\vec{B} = k x\\,\\vec{i}$ 是非均匀磁场，且半圆弧并非闭合回路，不能套用匀强磁场磁力矩公式 $\\vec{M} = \\vec{p}_m\\times\\vec{B}$，必须从力矩定义 $\\mathrm{d}\\vec{M} = \\vec{r}\\times\\mathrm{d}\\vec{F}$ 出发积分！",
+      "在半圆弧上极角 $\\theta$（与 $+y$ 轴夹角）处，横坐标 $x = R\\sin\\theta$，电流元 $\\mathrm{d}\\vec{l}$ 与 $\\vec{B}$（沿 $+x$ 方向）的夹角恰好也是 $\\theta$，故 $\\mathrm{d}F = I B \\sin\\theta\\,\\mathrm{d}l = k I R^2 \\sin^2\\theta\\,\\mathrm{d}\\theta$。"
+    ],
+    "steps": [
+      "**电流元位置的磁感应强度与安培力微元**：以圆心 $O$ 为原点，设半圆弧上微元与 $+y$ 轴夹角为 $\\theta \\in [0, \\pi]$，则该点横坐标为 $x = R\\sin\\theta$，当地磁感应强度大小为 $B(x) = k x = k R\\sin\\theta$（沿 $+x$ 方向）。半圆弧电流从 $+y$ 流向 $-y$，微元弧长 $\\mathrm{d}l = R\\,\\mathrm{d}\\theta$，切向 $\\mathrm{d}\\vec{l}$ 与 $+x$ 轴（即 $\\vec{B}$ 方向）夹角为 $\\theta$。由右手定则知 $\\mathrm{d}\\vec{F} = I\\mathrm{d}\\vec{l}\\times\\vec{B}$ 垂直纸面向外（$+z$ 方向），大小为：$$\\mathrm{d}F = \\lvert I\\mathrm{d}\\vec{l}\\times\\vec{B}\\rvert = I B \\sin\\theta\\,\\mathrm{d}l = I (k R\\sin\\theta)\\sin\\theta (R\\,\\mathrm{d}\\theta) = k I R^2 \\sin^2\\theta\\,\\mathrm{d}\\theta$$",
+      "**计算电流元安培力对 $y$ 轴的力矩微元**：电流元到 $y$ 轴的垂直力臂为 $x = R\\sin\\theta$，力 $\\mathrm{d}\\vec{F}$ 垂直纸面向外，使半圆弧绕 $y$ 轴产生翻转力矩。由右手螺旋定则（$\\vec{r}_\\perp \\times \\mathrm{d}\\vec{F} = x\\hat{i}\\times \\mathrm{d}F\\hat{k} = -x\\,\\mathrm{d}F\\,\\hat{j}$），力矩微元方向沿 $-y$ 轴（竖直向下），大小为：$$\\mathrm{d}M = x\\,\\mathrm{d}F = (R\\sin\\theta)(k I R^2 \\sin^2\\theta\\,\\mathrm{d}\\theta) = k I R^3 \\sin^3\\theta\\,\\mathrm{d}\\theta$$",
+      "**沿半圆弧积分求总力矩**：利用三角恒等式 $\\sin^3\\theta\\,\\mathrm{d}\\theta = -(1 - \\cos^2\\theta)\\,\\mathrm{d}(\\cos\\theta)$ 在 $\\theta \\in [0, \\pi]$ 上积分：$$M = \\int_0^\\pi k I R^3 \\sin^3\\theta\\,\\mathrm{d}\\theta = k I R^3 \\left[-\\cos\\theta + \\frac{1}{3}\\cos^3\\theta\\right]_0^\\pi = \\frac{4}{3} k I R^3$$ 方向沿 $y$ 轴负方向（向下）。"
+    ],
+    "answer": "半圆弧所受对 $y$ 轴的磁力矩大小为 $M = \\dfrac{4}{3} k I R^3$，方向沿 $y$ 轴负方向（即 $\\vec{M} = -\\dfrac{4}{3} k I R^3\\,\\vec{j}$）。",
+    "check": "量纲与积分自检：$[k] = \\mathrm{T/m}$，故 $[k I R^3] = (\\mathrm{T/m})\\cdot\\mathrm{A}\\cdot\\mathrm{m^3} = \\mathrm{T\\cdot A\\cdot m^2} = \\mathrm{N\\cdot m}$，与力矩单位完全一致；注意 $\\int_0^\\pi \\sin^3\\theta\\,\\mathrm{d}\\theta = 2\\times \\frac{2}{3} = \\frac{4}{3}$（沃利斯积分公式）。",
+    "note": "掌握沃利斯公式（Wallis formula）可大幅加速此类积分：$\\int_0^{\\pi/2}\\sin^n\\theta\\,\\mathrm{d}\\theta = \\frac{n-1}{n}\\frac{n-3}{n-2}\\cdots$，在 $[0, \\pi]$ 上偶次幂与奇次幂对称翻倍，故 $\\int_0^\\pi \\sin^3\\theta\\,\\mathrm{d}\\theta = 2\\times\\frac{2}{3} = \\frac{4}{3}$。",
+    "questionImage": "ex/EX12-10.webp"
+  },
+  {
+    "id": "EX12-11",
+    "section": "s12-5",
+    "difficulty": 1,
+    "source": "课件第11讲 · PDF 第 356 页 · 例12.10",
+    "title": "匀强磁场中平面载流线圈从最大力矩位置转过给定角度的磁力做功与磁力矩",
+    "problem": "一面积为 $S$ 的刚性平面线圈载有稳恒电流 $I$，置于磁感应强度大小为 $B$ 的匀强磁场中。现使线圈在磁力矩作用下从所受磁力矩最大的位置（即线圈平面与 $\\vec{B}$ 平行、法线 $\\hat{n}$ 与 $\\vec{B}$ 夹角 $\\theta_1 = \\frac{\\pi}{2}$ 的位置）顺着磁力矩方向转过 $\\alpha$ 角（到达 $\\theta_2 = \\frac{\\pi}{2} - \\alpha$，如图所示）。求在此过程中磁力矩所做的功 $A$ 以及转过 $\\alpha$ 角时刻线圈所受磁力矩的大小 $M$。",
+    "page": 356,
+    "crop": [0.72, 0.30, 0.98, 0.62],
+    "hints": [
+      "所受磁力矩最大位置满足 $\\sin\\theta_1 = 1 \\implies \\theta_1 = \\frac{\\pi}{2}$（线圈平面与 $\\vec{B}$ 平行，此时穿过线圈的初始磁通量 $\\Phi_{B1} = B S \\cos\\frac{\\pi}{2} = 0$）。",
+      "顺着磁力矩转过 $\\alpha$ 角后，法线 $\\hat{n}$ 与 $\\vec{B}$ 夹角变为 $\\theta_2 = \\frac{\\pi}{2} - \\alpha$，直接应用 $A = I\\Delta\\Phi_B = I(\\Phi_{B2} - \\Phi_{B1})$ 与 $M = I S B \\sin\\theta_2$ 即可。"
+    ],
+    "steps": [
+      "**确定初末状态的磁通量**：线圈所受磁力矩 $M = I S B \\sin\\theta$ 最大时，线圈正法线 $\\hat{n}$ 与 $\\vec{B}$ 夹角为 $\\theta_1 = \\frac{\\pi}{2}$，此时初始磁通量为 $$\\Phi_{B1} = B S \\cos\\frac{\\pi}{2} = 0$$ 顺着磁力矩方向转过 $\\alpha$ 角后，法线 $\\hat{n}$ 与 $\\vec{B}$ 夹角减小为 $\\theta_2 = \\frac{\\pi}{2} - \\alpha$，末态磁通量为 $$\\Phi_{B2} = B S \\cos\\left(\\frac{\\pi}{2} - \\alpha\\right) = B S \\sin\\alpha$$",
+      "**由磁通量增量公式计算磁力矩做的功**：在线圈电流 $I$ 保持不变的条件下，磁力矩所做的功等于电流乘以穿过线圈的磁通量增量：$$A = I\\Delta\\Phi_B = I(\\Phi_{B2} - \\Phi_{B1}) = I\\left[B S \\cos\\left(\\frac{\\pi}{2} - \\alpha\\right) - 0\\right] = I B S \\sin\\alpha$$",
+      "**计算转过 $\\alpha$ 角时刻的磁力矩大小**：此时 $\\theta_2 = \\frac{\\pi}{2} - \\alpha$，由 $\\vec{M} = \\vec{p}_m\\times\\vec{B}$ 得：$$M = \\lvert\\vec{p}_m\\times\\vec{B}\\rvert = I S B \\sin\\left(\\frac{\\pi}{2} - \\alpha\\right) = I B S \\cos\\alpha$$"
+    ],
+    "answer": "此过程中磁力矩做的功为 $A = I B S \\sin\\alpha$；转过 $\\alpha$ 角时刻线圈所受磁力矩大小为 $M = I B S \\cos\\alpha$。",
+    "check": "直接力矩积分法互验：$A = \\int_0^\\alpha M(\\alpha')\\,\\mathrm{d}\\alpha' = \\int_0^\\alpha I B S \\cos\\alpha'\\,\\mathrm{d}\\alpha' = I B S \\sin\\alpha$，与磁通量增量法 $A = I\\Delta\\Phi_B$ 结果分毫不差；当 $\\alpha = \\pi/2$（转到稳定平衡位置 $\\theta_2 = 0$）时，$A = I B S$、$M = 0$。",
+    "note": "审题易错点：务必看清题目中的转角 $\\alpha$ 是从“力矩最大位置（$\\theta = \\pi/2$）”开始起算的，还是从“稳定平衡位置（$\\theta = 0$）”开始起算的！若从稳定平衡位置转过 $\\alpha$ 角，则 $\\Delta\\Phi_B = B S(\\cos\\alpha - 1)$ 且 $M = I B S \\sin\\alpha$，正余弦正好互换。",
+    "questionImage": "ex/EX12-11.webp"
+  },
+  {
+    "id": "EX12-12",
+    "section": "s12-6",
+    "difficulty": 2,
+    "source": "课件第11讲 · PDF 第 359–364 页 · 螺旋运动与霍尔效应综合",
+    "title": "带电粒子在匀强磁场中的螺旋线运动与半导体霍尔元件参数测定",
+    "problem": "（1）一质量为 $m$、带电量为 $q\\,(q > 0)$ 的带电粒子以初速率 $v_0$ 射入磁感应强度大小为 $B$ 的匀强磁场中，初速度 $\\vec{v}_0$ 与磁场 $\\vec{B}$ 的夹角为 $\\theta$。求粒子运动轨迹的螺旋半径 $R$、回旋周期 $T$ 及螺距 $h$。\n（2）如图所示，用一块宽为 $b$（上下方向）、厚为 $d$（沿磁场 $\\vec{B}$ 方向）的铜或半导体矩形薄片制作霍尔元件，沿水平方向通以电流 $I$，垂直于厚度方向施加匀强磁场 $B$。已知载流子浓度为 $n$、单个载流子电量为 $q$，推导稳态时的霍尔电场强度 $E_{\\mathrm{H}}$、霍尔电压 $U_{\\mathrm{H}} = U_1 - U_2$ 及霍尔系数 $R_{\\mathrm{H}}$。",
+    "page": 362,
+    "crop": [0.62, 0.16, 0.96, 0.56],
+    "hints": [
+      "对于第（1）问，将初速度正交分解为平行于磁场的分量 $v_{0x} = v_0\\cos\\theta$（不受磁力，匀速直线运动）和垂直于磁场的分量 $v_{0n} = v_0\\sin\\theta$（洛伦兹力提供向心力，匀速圆周运动）。",
+      "对于第（2）问，横向偏转达动态平衡时，霍尔静电场力 $q E_{\\mathrm{H}}$ 与洛伦兹力 $q \\bar{v} B$ 等大反向，结合微观电流关系 $I = n \\lvert q\\rvert \\bar{v} b d$ 消去漂移速率 $\\bar{v}$。"
+    ],
+    "steps": [
+      "**正交分解求带电粒子螺旋半径、周期与螺距**：将初速度分解为 $v_{0x} = v_0\\cos\\theta$（沿 $\\vec{B}$ 方向）和 $v_{0n} = v_0\\sin\\theta$（垂直 $\\vec{B}$ 方向）。在垂直平面内，洛伦兹力充当向心力：$$q v_{0n} B = m\\frac{v_{0n}^2}{R} \\implies R = \\frac{m v_0\\sin\\theta}{q B}, \\qquad T = \\frac{2\\pi R}{v_{0n}} = \\frac{2\\pi m}{q B}$$ 粒子每回旋一周，沿磁场方向匀速前进的距离即为螺距：$$h = v_{0x} T = (v_0\\cos\\theta)\\frac{2\\pi m}{q B} = \\frac{2\\pi m v_0\\cos\\theta}{q B}$$",
+      "**分析霍尔效应横向力平衡与霍尔电场**：以自由电子（$q = -e$）为例，电子定向漂移速率为 $\\bar{v}$，受洛伦兹力 $F_m = e\\bar{v}B$ 发生横向漂移并在上下侧面积累电荷，形成霍尔电场 $E_{\\mathrm{H}}$。稳态平衡时电场力与洛伦兹力相抵：$$e E_{\\mathrm{H}} = e \\bar{v} B \\implies E_{\\mathrm{H}} = \\bar{v} B$$",
+      "**结合微观电流公式推导霍尔电压与霍尔系数**：薄板横截面积为 $S = b d$，电流强度 $I = n e \\bar{v} S = n e \\bar{v} b d$，解出 $\\bar{v} = \\frac{I}{n e b d}$。于是上下表面（间距为 $b$）间的霍尔电势差为：$$U_{\\mathrm{H}} = U_1 - U_2 = -E_{\\mathrm{H}} b = -\\bar{v} B b = -\\frac{I B}{n e d}$$ 对一般带电量为 $q$ 的单一载流子模型，有 $U_{\\mathrm{H}} = R_{\\mathrm{H}}\\frac{I B}{d}$，其中霍尔系数为 $R_{\\mathrm{H}} = \\frac{1}{n q}$（自由电子 $R_{\\mathrm{H}} = -\\frac{1}{ne} < 0$，正空穴 $R_{\\mathrm{H}} = +\\frac{1}{ne} > 0$）。"
+    ],
+    "answer": "（1）螺旋半径 $R = \\dfrac{m v_0\\sin\\theta}{q B}$，周期 $T = \\dfrac{2\\pi m}{q B}$，螺距 $h = \\dfrac{2\\pi m v_0\\cos\\theta}{q B}$；（2）霍尔电场 $E_{\\mathrm{H}} = \\bar{v} B = \\dfrac{I B}{n \\lvert q\\rvert b d}$，霍尔电压 $U_{\\mathrm{H}} = R_{\\mathrm{H}}\\dfrac{I B}{d} = \\dfrac{I B}{n q d}$，霍尔系数 $R_{\\mathrm{H}} = \\dfrac{1}{n q}$。",
+    "check": "几何尺寸消去自检：计算 $U_{\\mathrm{H}} = E_{\\mathrm{H}} b$ 时，分子中的宽度 $b$ 与分母 $S = b d$ 中的 $b$ 精确约去，最终霍尔电压只与沿磁场方向的厚度 $d$ 成反比（薄片越薄，在相同电流 $I$ 下漂移速度 $\\bar{v}$ 越大，霍尔电压越显著）。",
+    "note": "为什么实验室霍尔元件都选用半导体而非金属铜片？因为金属中自由电子浓度 $n \\sim 10^{28}\\,\\mathrm{m^{-3}}$ 极大，导致 $\\lvert R_{\\mathrm{H}}\\rvert = 1/(ne)$ 极小，霍尔电压仅有微伏级；而掺杂半导体的 $n$ 小好几个数量级，霍尔效应极为显著。",
+    "questionImage": "ex/EX12-12.webp"
+  }
+]

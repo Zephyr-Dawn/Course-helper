@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data: blob:; style-src 'unsafe-inline'; font-src data:; script-src 'unsafe-inline';" />
+  <title>大学物理甲-II 互动复习讲义 · 电磁学（第9～14章）</title>
+  <style id="katex-styles">/* __KATEX_CSS__ */</style>
+  <style id="app-styles">/* __APP_CSS__ */</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <button type="button" id="sidebar-toggle" class="icon-btn" aria-label="切换目录侧栏" title="切换侧栏">☰</button>
+      <a href="#home" class="brand">
+        <span class="brand-badge">Physics II</span>
+        <span class="brand-title">大学物理甲-II 互动复习</span>
+        <span class="brand-sub">仅进行到期中内容，历年题待补 · 第9～14章</span>
+      </a>
+    </div>
+    <nav class="topnav" aria-label="主导航">
+      <a href="#home" class="nav-pill" data-nav="home">首页总览</a>
+      <a href="#ch09" class="nav-pill" data-nav="ch09">9 静电场</a>
+      <a href="#ch10" class="nav-pill" data-nav="ch10">10 导体与介质</a>
+      <a href="#ch11" class="nav-pill" data-nav="ch11">11 稳恒电流</a>
+      <a href="#ch12" class="nav-pill" data-nav="ch12">12 稳恒磁场</a>
+      <a href="#ch13" class="nav-pill" data-nav="ch13">13 磁介质</a>
+      <a href="#ch14" class="nav-pill" data-nav="ch14">14 电磁感应</a>
+      <a href="#exercises" class="nav-pill" data-nav="exercises">精选习题库</a>
+      <a href="#formulas" class="nav-pill" data-nav="formulas">重点公式速查</a>
+      <a href="#labs" class="nav-pill" data-nav="labs">互动实验室</a>
+      <a href="#quiz" class="nav-pill" data-nav="quiz">概念快测</a>
+    </nav>
+    <div class="topbar-right">
+      <button type="button" id="search-btn" class="search-trigger" title="全文搜索 (⌘K / Ctrl+K)">
+        <span>🔍 搜索讲义/公式/例题</span>
+        <kbd>⌘K</kbd>
+      </button>
+      <button type="button" id="print-page-btn" class="icon-btn" title="打印当前视图">🖨️</button>
+      <button type="button" id="theme-toggle" class="icon-btn" title="切换深浅色主题">🌓</button>
+    </div>
+  </header>
+
+  <div class="layout" id="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="章节与学习导航">
+      <div id="sidebar-content"></div>
+    </aside>
+    <main class="main-stage" id="main-stage" tabindex="-1">
+      <div id="view-root"></div>
+    </main>
+    <aside class="toc-rail" id="toc-rail" aria-label="本页小节导航">
+      <div id="toc-content"></div>
+    </aside>
+  </div>
+
+  <dialog id="search-dialog" class="modal-dialog" aria-label="全文搜索">
+    <div class="modal-box search-box">
+      <div class="search-head">
+        <input type="search" id="search-input" placeholder="输入关键词：高斯定理、电偶极子、位移电流、例10.9、洛伦兹力..." autocomplete="off" />
+        <button type="button" id="search-close" class="btn-ghost">关闭 (Esc)</button>
+      </div>
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </dialog>
+
+  <dialog id="img-dialog" class="modal-dialog img-modal" aria-label="配图放大预览">
+    <div class="img-modal-box">
+      <button type="button" id="img-dialog-close" class="btn-ghost img-close-btn">✕ 关闭</button>
+      <img id="img-dialog-target" alt="放大预览" />
+      <div id="img-dialog-caption" class="img-modal-caption"></div>
+    </div>
+  </dialog>
+
+  <script type="application/json" id="course-data">__COURSE_DATA_JSON__</script>
+  <script type="application/json" id="image-data">__IMAGE_DATA_JSON__</script>
+  <script>/* __MODELS_JS__ */</script>
+  <script>/* __LABS_JS__ */</script>
+  <script>/* __APP_JS__ */</script>
+</body>
+</html>

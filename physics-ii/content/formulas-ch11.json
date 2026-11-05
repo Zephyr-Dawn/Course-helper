@@ -1,0 +1,50 @@
+[
+  {
+    "name": "电流密度通量与电流连续性方程",
+    "tex": "I = \\iint_S \\vec{j}\\cdot\\mathrm{d}\\vec{S}, \\qquad \\oiint_S \\vec{j}\\cdot\\mathrm{d}\\vec{S} = -\\frac{\\mathrm{d}q_{\\mathrm{in}}}{\\mathrm{d}t}, \\qquad \\oiint_S \\vec{j}_{\\mathrm{dc}}\\cdot\\mathrm{d}\\vec{S} = 0",
+    "use": "由空间电流密度矢量分布求截面总电流 $I$，或由电荷守恒分析稳恒电流下不同截面的电流密度反比关系 $j_1 S_1 = j_2 S_2$。",
+    "conditions": "连续性方程对任何随时间变化的电流普遍成立（闭合曲面外法线为正）；等号右端为零仅在稳恒电流（空间各点电荷密度 $\\partial\\rho_e/\\partial t = 0$）时成立。",
+    "pitfall": "电流强度 $I$ 是标量而非矢量，不能按平行四边形法则合成；微观分布必须使用矢量 $\\vec{j} = n q \\vec{v}_d$。",
+    "section": "s11-1"
+  },
+  {
+    "name": "欧姆定律与焦耳定律的微分形式",
+    "tex": "\\vec{j} = \\gamma \\vec{E} = \\frac{1}{\\rho}\\vec{E}, \\qquad p_J = \\frac{\\mathrm{d}P}{\\mathrm{d}V} = \\vec{j}\\cdot\\vec{E} = \\gamma E^2 = \\rho j^2",
+    "use": "在非均匀截面导体（如球壳形、圆台形、同轴圆柱形介质漏电电阻）中直接建立局部电流密度 $\\vec{j}(r)$ 与场强 $\\vec{E}(r)$ 的逐点对应。",
+    "conditions": "适用于各向同性线性导电介质（金属、电解液在常规场强下），不含非静电力的纯电阻微元区域；半导体结或气体放电区不满足线性关系。",
+    "pitfall": "在粗细不均匀的串联导体中，各截面总电流 $I$ 相同，但截面积越小处 $j=I/S$ 越大、内部电场 $E=\\rho j$ 越强、单位体积发热功率密度 $\\rho j^2$ 呈 $1/S^2$ 剧增！",
+    "section": "s11-2"
+  },
+  {
+    "name": "电源电动势与一段含源电路的欧姆定律",
+    "tex": "\\mathcal{E} = \\int_{(-)}^{(+)}\\vec{E}_k\\cdot\\mathrm{d}\\vec{l}, \\qquad V_a - V_b = U_{ab} = \\pm I R_{ab} \\mp \\mathcal{E}_{ab}",
+    "use": "由非静电场强 $\\vec{E}_k$ 计算电源电动势 $\\mathcal{E}$，或计算含内阻电源在放电、充电、开路状态下的端电压 $U_{ab}$ 与充放电功率。",
+    "conditions": "积分路径必须沿电源内部由负极 $(-)$ 指向正极 $(+)$；计算 $V_a - V_b$ 时需沿 $a \\to b$ 路径严格按绕行方向套用电动势与 $IR$ 压降符号。",
+    "pitfall": "切勿死记端电压等于 $\\mathcal{E}-Ir$！当电流从电源正极流入（被充电电池，如例11.2中的 $4\\,\\mathrm{V}$ 电池）时，端电压 $U = \\mathcal{E} + Ir > \\mathcal{E}$。",
+    "section": "s11-3"
+  },
+  {
+    "name": "基尔霍夫节点定律 (KCL) 与回路定律 (KVL)",
+    "tex": "\\sum_{k} I_k = 0 \\;(\\mathrm{KCL}), \\qquad \\sum_{k} \\Delta V_k = \\sum (\\pm \\mathcal{E}_k \\pm I_k R_k) = 0 \\;(\\mathrm{KVL})",
+    "use": "求解不能用简单串并联化简的多电源回路、桥式复杂电阻网络（如例11.3）的各支路电流与等效电阻。",
+    "conditions": "KCL 基于节点无电荷堆积（稳恒或准稳恒条件）；KVL 基于静电场环路定理 $\\oint \\vec{E}\\cdot\\mathrm{d}\\vec{l}=0$（无穿过回路的时变磁通量）。若网络有 $n$ 个节点、$b$ 条支路，独立 KCL 方程数为 $n-1$，独立 KVL 方程数为 $b-(n-1)$。",
+    "pitfall": "列 KVL 时最易混淆支路参考方向与回路绕行方向：若按 $\\sum \\Delta V = 0$（电势升降代数和为零）列式，顺电流方向经过电阻电势降低记 $-IR$，从负极穿向正极经过电源电势升高记 $+\\mathcal{E}$。",
+    "section": "s11-4"
+  },
+  {
+    "name": "惠斯通电桥平衡条件与非平衡开路输出电压",
+    "tex": "I_g=0 \\implies X = \\frac{M}{N}P; \\qquad R_V\\to\\infty \\implies V_{ab} = \\mathcal{E}\\left(\\frac{M}{M+N} - \\frac{X}{X+P}\\right)",
+    "use": "利用零示法高精度测量未知电阻 $X$，或在电子秤应变传感器中将微小电阻变化 $\\Delta R/R$ 转化为非平衡电桥差分电压输出 $V_{ab}$。",
+    "conditions": "平衡公式要求检流计支路电流严格为零（此时检流计内阻与电源内阻均不影响平衡条件）；非平衡电压公式要求 $a,b$ 间接入理想高阻电压表（桥支路近似开路，不取用电流）。",
+    "pitfall": "若桥支路接的是有限内阻检流计（如例11.3中 $R_5=1\\,\\Omega$）且电桥不平衡，则左右桥臂不再是简单独立分压，必须用 KCL+KVL 或 $\\Delta\\text{-Y}$ 变换求解！",
+    "section": "s11-5"
+  },
+  {
+    "name": "RC 串联电路充放电暂态规律与时间常数",
+    "tex": "\\tau = RC, \\qquad q_{\\mathrm{chg}}(t) = C\\mathcal{E}\\left(1 - \\mathrm{e}^{-t/\\tau}\\right), \\qquad q_{\\mathrm{dis}}(t) = Q_0\\mathrm{e}^{-t/\\tau}, \\qquad I(t) = I_0\\mathrm{e}^{-t/\\tau}",
+    "use": "计算含电容支路在开关切换后的电荷 $q(t)$、电压 $u_C(t)$、电流 $I(t)$ 瞬态演化及达到稳态所需时间（约 $5\\tau$）。",
+    "conditions": "适用于线性定常电阻 $R$ 与电容 $C$ 串联、由恒定直流电动势 $\\mathcal{E}$ 激励的一阶电路（充电初始 $q(0)=0$，放电初始 $q(0)=Q_0$）。",
+    "pitfall": "放电时极板电荷减少（$\\mathrm{d}q/\\mathrm{d}t < 0$），列微分方程时若取放电方向为电流正方向，必须写 $I = -\\mathrm{d}q/\\mathrm{d}t$，否则会得出电荷指数发散的荒谬结论！",
+    "section": "s11-6"
+  }
+]

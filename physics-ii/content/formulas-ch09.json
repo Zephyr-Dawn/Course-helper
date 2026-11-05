@@ -1,0 +1,66 @@
+[
+  {
+    "name": "库仑定律与静电力叠加原理",
+    "tex": "\\vec{F}_{12} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{q_1 q_2}{r_{12}^2}\\hat{r}_{12}, \\quad \\vec{F}_1 = \\sum_{i=2}^{n}\\frac{1}{4\\pi\\varepsilon_0}\\frac{q_1 q_i}{r_{1i}^2}\\hat{r}_{1i}",
+    "use": "计算点电荷之间的相互作用静电力，以及点电荷系对某一受力点电荷的合静电力。",
+    "conditions": "真空（或空气近似）、相对于观察者静止的点电荷（带电体尺寸远小于间距 $d \\ll r$）。",
+    "pitfall": "$\\hat{r}_{12}$ 是从施力电荷指向受力电荷的单位矢量；若带电体距离较近，球体表面电荷分布发生极化偏移，不能直接用球心距代入。",
+    "section": "s9-1"
+  },
+  {
+    "name": "电场强度定义、点电荷场与电偶极子远场",
+    "tex": "\\vec{E} = \\frac{\\vec{F}}{q_0} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{Q}{r^2}\\hat{r}, \\quad \\vec{E}_{\\mathrm{axial}} \\approx \\frac{1}{4\\pi\\varepsilon_0}\\frac{2\\vec{p}_e}{r^3}, \\quad \\vec{E}_{\\mathrm{eq}} \\approx -\\frac{1}{4\\pi\\varepsilon_0}\\frac{\\vec{p}_e}{r^3}",
+    "use": "描述空间点电场强弱与方向；快速给出电偶极子在轴线延长线与中垂线远区（$r \\gg l$）的场强。",
+    "conditions": "试探电荷 $q_0$ 必须足够小且不扰动源电荷分布；电偶极子远场公式要求 $r \\gg l$，电偶极矩 $\\vec{p}_e = q\\vec{l}$ 由 $-q$ 指向 $+q$。",
+    "pitfall": "电偶极子远场按 $1/r^3$ 衰减而非 $1/r^2$；延长线上 $\\vec{E}$ 与 $\\vec{p}_e$ 同向，中垂线上 $\\vec{E}$ 与 $\\vec{p}_e$ 反向且大小仅为同距离延长线的一半。",
+    "section": "s9-2"
+  },
+  {
+    "name": "连续带电体场强积分与典型模型（细棒、圆环、圆盘）",
+    "tex": "\\vec{E} = \\int \\frac{\\mathrm{d}q}{4\\pi\\varepsilon_0 r^2}\\hat{r}, \\quad E_{\\mathrm{ring}}(z) = \\frac{qz}{4\\pi\\varepsilon_0(R^2+z^2)^{3/2}}, \\quad E_{\\mathrm{disk}}(z) = \\frac{\\sigma}{2\\varepsilon_0}\\left(1 - \\frac{z}{\\sqrt{R^2+z^2}}\\right)",
+    "use": "通过线元 $\\lambda\\mathrm{d}l$、面元 $\\sigma\\mathrm{d}S$ 或二级微元（圆环）积分求非球对称带电体的空间电场。",
+    "conditions": "真空静电场，源电荷分布已知；圆盘公式默认 $z > 0$ 且 $\\sigma$ 均匀。",
+    "pitfall": "矢量积分不能直接把 $\\mathrm{d}E$ 标量相加，必须先正交分解为 $\\mathrm{d}E_x,\\mathrm{d}E_y,\\mathrm{d}E_z$ 或配对抵消垂直分量；当 $R \\to \\infty$ 时圆盘退化为无限大平面 $E = \\sigma/(2\\varepsilon_0)$。",
+    "section": "s9-3"
+  },
+  {
+    "name": "电通量与真空静电场高斯定理",
+    "tex": "\\Phi_e = \\oint_S \\vec{E}\\cdot\\mathrm{d}\\vec{S} = \\frac{1}{\\varepsilon_0}\\sum_{i \\in S} q_i = \\frac{1}{\\varepsilon_0}\\iiint_V \\rho\\,\\mathrm{d}V",
+    "use": "计算穿过任意闭合曲面（或借助辅助面补齐的非闭合曲面）的电通量，检验静电场的有源性。",
+    "conditions": "闭合曲面 $S$ 规定外法线方向 $\\hat{n}$ 为正（穿出为正、穿入为负），对任意静电场及变化电场均成立。",
+    "pitfall": "积分号内的 $\\vec{E}$ 是闭合面上所有内外电荷共同激发的合场强，而右端 $\\sum q_i$ 仅计及高斯面内部包围的净电荷代数和。",
+    "section": "s9-4"
+  },
+  {
+    "name": "三种高对称场源的高斯定理场强公式",
+    "tex": "E_{\\mathrm{sphere}} = \\frac{Q_{\\mathrm{enc}}(r)}{4\\pi\\varepsilon_0 r^2}, \\quad E_{\\mathrm{cyl}} = \\frac{\\lambda_{\\mathrm{enc}}(r)}{2\\pi\\varepsilon_0 r}, \\quad E_{\\mathrm{plane}} = \\frac{\\sigma}{2\\varepsilon_0}",
+    "use": "利用同心球面、同轴圆柱面或对称柱状高斯面，一步脱去积分号求解球对称、轴对称和无限大平面对称电场。",
+    "conditions": "电荷分布必须严格具备球对称（$\\rho=\\rho(r)$）、无限长轴对称或无限大平面对称。",
+    "pitfall": "有限长带电棒、有限大圆盘或带电立方体不具备完整对称性，绝不能直接把 $\\oint \\vec{E}\\cdot\\mathrm{d}\\vec{S}$ 化为 $E\\cdot S$ 求解场强。",
+    "section": "s9-5"
+  },
+  {
+    "name": "静电场环路定理、电势差与电场力做功",
+    "tex": "\\oint_L \\vec{E}\\cdot\\mathrm{d}\\vec{l} = 0, \\quad U_{ab} = U_a - U_b = \\int_a^b \\vec{E}\\cdot\\mathrm{d}\\vec{l}, \\quad A_{ab} = q_0 U_{ab} = W_a - W_b",
+    "use": "表征静电场的保守性（无旋性），由已知场强线积分求电势差及移动电荷时静电力所做的功。",
+    "conditions": "仅对静电场成立（若存在随时间变化的磁场激发涡旋电场，则环流不为零）。",
+    "pitfall": "某点电势 $U_p = \\int_p^{p_0}\\vec{E}\\cdot\\mathrm{d}\\vec{l}$ 与参考零点 $p_0$ 的选择有关，但电势差 $U_{ab}$ 和静电力做功 $A_{ab}$ 与参考零点及积分路径均无关。",
+    "section": "s9-6"
+  },
+  {
+    "name": "电势叠加原理与典型带电体电势",
+    "tex": "U_P = \\sum_i \\frac{q_i}{4\\pi\\varepsilon_0 r_i} = \\int \\frac{\\mathrm{d}q}{4\\pi\\varepsilon_0 r}, \\quad U_{\\mathrm{dipole}} \\approx \\frac{\\vec{p}_e\\cdot\\hat{r}}{4\\pi\\varepsilon_0 r^2}, \\quad U_{\\mathrm{ring}}(z) = \\frac{Q}{4\\pi\\varepsilon_0\\sqrt{R^2+z^2}}",
+    "use": "通过标量代数和或标量积分求解点电荷系、电偶极子、圆环、圆盘及球壳的电势分布。",
+    "conditions": "公式 $q/(4\\pi\\varepsilon_0 r)$ 默认以无穷远处为电势零点（$U_\\infty = 0$），仅适用于有限区域分布的电荷。",
+    "pitfall": "无限长带电直线的场强按 $1/r$ 衰减，积分至 $\\infty$ 发散，故不能选无穷远为电势零点，必须选有限距离 $r_0$ 为零点，得 $U(r) = \\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln(r_0/r)$。",
+    "section": "s9-7"
+  },
+  {
+    "name": "电势梯度与由电势求电场强度",
+    "tex": "\\vec{E} = -\\nabla U = -\\frac{\\mathrm{d}U}{\\mathrm{d}n}\\hat{n} = -\\left(\\frac{\\partial U}{\\partial x}\\vec{i} + \\frac{\\partial U}{\\partial y}\\vec{j} + \\frac{\\partial U}{\\partial z}\\vec{k}\\right)",
+    "use": "已知空间电势函数 $U(x,y,z)$，通过求偏导数直接获得电场强度矢量的各个分量。",
+    "conditions": "必须已知待求点邻域内的电势函数分布（用来对空间坐标求偏导），而非仅知道单点的电势数值。",
+    "pitfall": "负号表示电场强度方向指向电势降落最快的方向；某点 $U=0$ 处 $\\vec{E}$ 不一定为零（如偶极子中垂面），反之 $\\vec{E}=0$ 处 $U$ 也不一定为零（如带电球壳内部）。",
+    "section": "s9-8"
+  }
+]

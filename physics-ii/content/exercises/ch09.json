@@ -1,0 +1,400 @@
+[
+  {
+    "id": "EX09-01",
+    "section": "s9-2",
+    "difficulty": 2,
+    "source": "课件第1讲 · PDF 第 26–27 页 · 例9-1",
+    "title": "电偶极子在轴线延长线与中垂线上的电场强度",
+    "page": 27,
+    "crop": [
+      0.59,
+      0.38,
+      0.96,
+      0.95
+    ],
+    "problem": "一对相距为 $l$ 的等量异号点电荷 $+q$ 和 $-q$ 构成电偶极子，定义电偶极矩为 $\\vec{p}_e = q\\vec{l}$（方向由 $-q$ 指向 $+q$）。以连线中点 $O$ 为原点、偶极矩方向为 $x$ 轴正向，试求：(1) 轴线延长线上距 $O$ 点为 $r$ 的 $P_1$ 点处的电场强度（精确解与 $r \\gg l$ 远场近似）；(2) 连线中垂线上距 $O$ 点为 $r$ 的 $P_2$ 点处的电场强度（精确解与 $r \\gg l$ 远场近似）。",
+    "hints": [
+      "分别写出 $+q$ 与 $-q$ 在场点激发的点电荷场强，注意各自到场点的距离差或角度关系。",
+      "在中垂线 $P_2$ 点处，利用对称性先抵消 $y$ 方向分量，再将 $x$ 方向分量用 $\\cos\\theta = (l/2)/\\sqrt{r^2+l^2/4}$ 合成。"
+    ],
+    "steps": [
+      "**轴线延长线 $P_1$ 点**：$+q$ 距 $P_1$ 为 $r - l/2$，场强沿 $+x$；$-q$ 距 $P_1$ 为 $r + l/2$，场强沿 $-x$。代数叠加得 $$E_{P1} = \\frac{q}{4\\pi\\varepsilon_0(r-l/2)^2} - \\frac{q}{4\\pi\\varepsilon_0(r+l/2)^2} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{2q l r}{(r^2 - l^2/4)^2}$$",
+      "引入 $\\vec{p}_e = q\\vec{l}$，当 $r \\gg l$ 时忽略分母中的 $l^2/4$，得远场公式 $$\\vec{E}_{P1} \\approx \\frac{1}{4\\pi\\varepsilon_0}\\frac{2\\vec{p}_e}{r^3}$$",
+      "**中垂线 $P_2$ 点**：$+q$ 与 $-q$ 到 $P_2$ 的距离均为 $\\sqrt{r^2 + l^2/4}$，场强大小相等 $E_{+2}=E_{-2}=\\frac{q}{4\\pi\\varepsilon_0(r^2+l^2/4)}$，其 $y$ 分量对称抵消，$x$ 分量均沿 $-x$ 方向：$$\\vec{E}_{P2} = -2E_{+2}\\cos\\theta\\,\\vec{i} = -\\frac{1}{4\\pi\\varepsilon_0}\\frac{\\vec{p}_e}{(r^2 + l^2/4)^{3/2}} \\xrightarrow{r \\gg l} -\\frac{1}{4\\pi\\varepsilon_0}\\frac{\\vec{p}_e}{r^3}$$"
+    ],
+    "answer": "轴线延长线：$\\vec{E}_{P1} = \\dfrac{2r\\,\\vec{p}_e}{4\\pi\\varepsilon_0(r^2-l^2/4)^2} \\approx \\dfrac{2\\vec{p}_e}{4\\pi\\varepsilon_0 r^3}$；中垂线：$\\vec{E}_{P2} = -\\dfrac{\\vec{p}_e}{4\\pi\\varepsilon_0(r^2+l^2/4)^{3/2}} \\approx -\\dfrac{\\vec{p}_e}{4\\pi\\varepsilon_0 r^3}$。",
+    "check": "量纲检查：$[p_e / (\\varepsilon_0 r^3)] = \\mathrm{C\\cdot m / (\\varepsilon_0 m^3)} = [q / (\\varepsilon_0 r^2)]$，与点电荷场强量纲一致；由于正负电荷场几乎相消，远场按 $1/r^3$ 比单点电荷 $1/r^2$ 更快衰减。",
+    "note": "同距离 $r$ 处，轴线延长线远场大小是中垂线远场的 $2$ 倍，且延长线场强与 $\\vec{p}_e$ 同向、中垂线场强与 $\\vec{p}_e$ 反向。",
+    "questionImage": "ex/EX09-01.webp"
+  },
+  {
+    "id": "EX09-02",
+    "section": "s9-3",
+    "difficulty": 2,
+    "source": "课件第1讲 · PDF 第 28–31 页 · 例9-2",
+    "title": "有限长均匀带电细棒外一点的场强与无限长极限",
+    "page": 31,
+    "crop": [
+      0.52,
+      0.14,
+      0.98,
+      0.78
+    ],
+    "problem": "长为 $l$ 的均匀带电细棒沿 $x$ 轴放置，电荷线密度为 $\\lambda$。场点 $P$ 到细棒的垂直距离为 $a$，由 $P$ 点向细棒左、右两端点引连线，与棒正方向（$+x$）的夹角分别为 $\\theta_1$ 和 $\\theta_2$（见图）。试求：(1) $P$ 点处的电场强度分量 $E_x$ 与 $E_y$；(2) 当细棒无限长（$l \\to \\infty$）时 $P$ 点的电场强度。",
+    "hints": [
+      "在坐标 $x$ 处取电荷元 $\\mathrm{d}q = \\lambda\\mathrm{d}x$，由于 $x$、$r$、$\\theta$ 三个变量相关，统一换元为角度变量 $\\theta$ 最简便。",
+      "利用几何关系 $x = -a\\cot\\theta$ 得 $\\mathrm{d}x = a\\csc^2\\theta\\,\\mathrm{d}\\theta$，且 $r = a/\\sin\\theta$，从而约去 $\\csc^2\\theta$。"
+    ],
+    "steps": [
+      "在 $x$ 处取微元 $\\mathrm{d}q = \\lambda\\mathrm{d}x$，它在 $P$ 点产生场强大小 $\\mathrm{d}E = \\frac{\\lambda\\mathrm{d}x}{4\\pi\\varepsilon_0 r^2}$，正交分解为 $\\mathrm{d}E_x = \\mathrm{d}E\\cos\\theta$、$\\mathrm{d}E_y = \\mathrm{d}E\\sin\\theta$。",
+      "由几何关系 $x = a\\cot(\\pi - \\theta) = -a\\cot\\theta$，求微分得 $\\mathrm{d}x = a\\csc^2\\theta\\,\\mathrm{d}\\theta = \\frac{a}{\\sin^2\\theta}\\mathrm{d}\\theta$，结合 $r = \\frac{a}{\\sin\\theta}$ 代入得：$$\\mathrm{d}E_x = \\frac{\\lambda}{4\\pi\\varepsilon_0 a}\\cos\\theta\\,\\mathrm{d}\\theta, \\quad \\mathrm{d}E_y = \\frac{\\lambda}{4\\pi\\varepsilon_0 a}\\sin\\theta\\,\\mathrm{d}\\theta$$",
+      "在 $\\theta \\in [\\theta_1, \\theta_2]$ 上积分：$$E_x = \\int_{\\theta_1}^{\\theta_2}\\frac{\\lambda\\cos\\theta}{4\\pi\\varepsilon_0 a}\\mathrm{d}\\theta = \\frac{\\lambda}{4\\pi\\varepsilon_0 a}(\\sin\\theta_2 - \\sin\\theta_1), \\quad E_y = \\int_{\\theta_1}^{\\theta_2}\\frac{\\lambda\\sin\\theta}{4\\pi\\varepsilon_0 a}\\mathrm{d}\\theta = \\frac{\\lambda}{4\\pi\\varepsilon_0 a}(\\cos\\theta_1 - \\cos\\theta_2)$$",
+      "当细棒无限长时，$\\theta_1 \\to 0$、$\\theta_2 \\to \\pi$，代入得 $E_x = 0$，$E_y = \\frac{\\lambda}{4\\pi\\varepsilon_0 a}(1 - (-1)) = \\frac{\\lambda}{2\\pi\\varepsilon_0 a}$。"
+    ],
+    "answer": "有限长：$\\vec{E} = \\dfrac{\\lambda}{4\\pi\\varepsilon_0 a}(\\sin\\theta_2 - \\sin\\theta_1)\\vec{i} + \\dfrac{\\lambda}{4\\pi\\varepsilon_0 a}(\\cos\\theta_1 - \\cos\\theta_2)\\vec{j}$；无限长极限：$\\vec{E} = \\dfrac{\\lambda}{2\\pi\\varepsilon_0 a}\\vec{j}$。",
+    "check": "对称性检验：若 $P$ 位于有限长棒中垂线上，则 $\\theta_2 = \\pi - \\theta_1$，$\\sin\\theta_2 = \\sin\\theta_1 \\Rightarrow E_x = 0$，平行于棒的分量严格抵消。",
+    "note": "角度换元法 $\\mathrm{d}x = a\\csc^2\\theta\\,\\mathrm{d}\\theta$ 能完美抵消分母中的 $r^2 = a^2\\csc^2\\theta$，是处理一切直线带电体/载流导线积分的标准技巧。",
+    "questionImage": "ex/EX09-02.webp"
+  },
+  {
+    "id": "EX09-03",
+    "section": "s9-3",
+    "difficulty": 1,
+    "source": "课件第1讲 · PDF 第 32–33 页 · 例9-3",
+    "title": "均匀带电细圆环轴线上的电场强度分布",
+    "page": 33,
+    "crop": [
+      0.73,
+      0.25,
+      0.99,
+      0.95
+    ],
+    "problem": "一半径为 $R$ 的均匀带电细圆环，总电量为 $q$，静置于 $xy$ 平面内且圆心在原点 $O$。试求垂直于环面的轴线（$z$ 轴）上距圆心为 $z$ 的 $P$ 点处的电场强度，并讨论 $z = 0$ 与 $z \\gg R$ 时的极限行为。",
+    "hints": [
+      "圆环上各线元 $\\mathrm{d}q = \\lambda\\mathrm{d}l$ 到轴线上同一点 $P$ 的距离 $r = \\sqrt{R^2+z^2}$ 相等。",
+      "先由轴对称性消去垂直于轴线的分量 $\\mathrm{d}\\vec{E}_\\perp$，仅对轴向分量 $\\mathrm{d}E_z = \\mathrm{d}E\\cos\\theta$ 积分。"
+    ],
+    "steps": [
+      "设线电荷密度 $\\lambda = \\frac{q}{2\\pi R}$，在环上取弧元 $\\mathrm{d}l$，电荷元 $\\mathrm{d}q = \\lambda\\mathrm{d}l$ 到 $P(0,0,z)$ 的距离为 $r = \\sqrt{R^2 + z^2}$。",
+      "将微元场强 $\\mathrm{d}\\vec{E}$ 分解为沿 $z$ 轴的 $\\mathrm{d}E_z = \\mathrm{d}E\\cos\\theta$ 和垂直于 $z$ 轴的 $\\mathrm{d}\\vec{E}_\\perp$。由圆环对称性，$\\int \\mathrm{d}\\vec{E}_\\perp = 0$。",
+      "其中 $\\cos\\theta = \\frac{z}{r} = \\frac{z}{\\sqrt{R^2+z^2}}$，对整个圆环积分（$z$ 与 $R$ 在积分中均为常数）：$$E_z = \\int_0^{2\\pi R} \\frac{\\lambda\\mathrm{d}l}{4\\pi\\varepsilon_0(R^2+z^2)}\\frac{z}{\\sqrt{R^2+z^2}} = \\frac{z\\lambda(2\\pi R)}{4\\pi\\varepsilon_0(R^2+z^2)^{3/2}} = \\frac{qz}{4\\pi\\varepsilon_0(R^2+z^2)^{3/2}}$$"
+    ],
+    "answer": "$\\vec{E}(z) = \\dfrac{qz}{4\\pi\\varepsilon_0(R^2+z^2)^{3/2}}\\vec{k}$；圆心 $z=0$ 处 $E=0$，远区 $z \\gg R$ 处 $E \\approx \\dfrac{q}{4\\pi\\varepsilon_0 z^2}$。",
+    "check": "由 $\\mathrm{d}E_z/\\mathrm{d}z = 0$ 可求得在 $z = \\pm R/\\sqrt{2}$ 处轴向场强达到极大值 $E_{\\max} = \\frac{q}{6\\sqrt{3}\\pi\\varepsilon_0 R^2}$。",
+    "note": "该结果是求解圆盘、球壳、柱面等旋转体轴线电场的“二级微元母公式”。",
+    "questionImage": "ex/EX09-03.webp"
+  },
+  {
+    "id": "EX09-04",
+    "section": "s9-3",
+    "difficulty": 2,
+    "source": "课件第1讲 · PDF 第 35–36 页 · 例9-4",
+    "title": "均匀带电薄圆盘轴线场强与无限大平面极限",
+    "page": 36,
+    "crop": [
+      0.8,
+      0.3,
+      0.99,
+      0.92
+    ],
+    "problem": "半径为 $R$ 的均匀带电薄圆盘，电荷面密度为 $\\sigma$（$\\sigma > 0$）。试求：(1) 圆盘轴线上距盘心为 $z$（$z > 0$）的 $P$ 点处的电场强度；(2) 当 $z \\ll R$（或 $R \\to \\infty$）时的场强极限。",
+    "hints": [
+      "不要取点电荷作为微元（否则需要二重积分），而是将圆盘分割为半径 $r$、宽 $\\mathrm{d}r$ 的同心细圆环。",
+      "细圆环的电量为 $\\mathrm{d}q = \\sigma\\,\\mathrm{d}S = \\sigma 2\\pi r\\mathrm{d}r$，直接代入圆环轴线场强公式对 $r \\in [0, R]$ 积分。"
+    ],
+    "steps": [
+      "在圆盘上取半径为 $r$、宽度为 $\\mathrm{d}r$ 的同心细圆环，其面积 $\\mathrm{d}S = 2\\pi r\\mathrm{d}r$，带电量 $\\mathrm{d}q = \\sigma 2\\pi r\\mathrm{d}r$。",
+      "根据例 9-3 的细圆环轴线场强公式，该细环在 $P$ 点产生的轴向场强微元为：$$\\mathrm{d}E_z = \\frac{z\\,\\mathrm{d}q}{4\\pi\\varepsilon_0(z^2+r^2)^{3/2}} = \\frac{\\sigma z}{4\\varepsilon_0}(z^2+r^2)^{-3/2}(2r\\,\\mathrm{d}r)$$",
+      "对 $r$ 从 $0$ 到 $R$ 积分（令 $u = z^2 + r^2$，则 $\\mathrm{d}u = 2r\\,\\mathrm{d}r$）：$$E_z = \\frac{\\sigma z}{4\\varepsilon_0}\\int_0^R (z^2+r^2)^{-3/2}\\mathrm{d}(z^2+r^2) = \\frac{\\sigma z}{2\\varepsilon_0}\\left[-\\frac{1}{\\sqrt{z^2+r^2}}\\right]_0^R = \\frac{\\sigma}{2\\varepsilon_0}\\left(1 - \\frac{z}{\\sqrt{z^2+R^2}}\\right)$$",
+      "当 $z \\ll R$（或 $R \\to \\infty$）时，$\\frac{z}{\\sqrt{z^2+R^2}} \\to 0$，场强趋于匀强电场 $\\vec{E} = \\frac{\\sigma}{2\\varepsilon_0}\\vec{k}$。"
+    ],
+    "answer": "$\\vec{E}(z) = \\dfrac{\\sigma}{2\\varepsilon_0}\\left(1 - \\dfrac{z}{\\sqrt{z^2+R^2}}\\right)\\vec{k}$；当 $R \\to \\infty$ 时退化为无限大均匀带电平面场强 $\\vec{E} = \\dfrac{\\sigma}{2\\varepsilon_0}\\vec{k}$。",
+    "check": "当 $z \\gg R$ 时，利用泰勒展开 $(1 + R^2/z^2)^{-1/2} \\approx 1 - \\frac{R^2}{2z^2}$，得 $E_z \\approx \\frac{\\sigma \\pi R^2}{4\\pi\\varepsilon_0 z^2} = \\frac{Q}{4\\pi\\varepsilon_0 z^2}$，回到点电荷公式。",
+    "note": "若 $z$ 可正可负，需将公式中的 $z / \\sqrt{z^2+R^2}$ 写为 $z / \\lvert z \\rvert$ 修正项：$\\vec{E}(z) = \\frac{\\sigma}{2\\varepsilon_0}\\left(\\frac{z}{\\lvert z \\rvert} - \\frac{z}{\\sqrt{z^2+R^2}}\\right)\\vec{k}$。",
+    "questionImage": "ex/EX09-04.webp"
+  },
+  {
+    "id": "EX09-05",
+    "section": "s9-3",
+    "difficulty": 3,
+    "source": "课件第1讲 · PDF 第 37–38 页 · 例9-5",
+    "title": "非均匀带电四分之一细圆弧（λ = λ₀θ）圆心处的场强",
+    "page": 37,
+    "crop": [
+      0.67,
+      0.27,
+      0.98,
+      0.64
+    ],
+    "problem": "一段半径为 $a$ 的细圆弧位于第一象限，对圆心 $O$ 的张角为 $\\pi/2$。其电荷线密度随极角 $\\theta$（半径与 $+x$ 轴夹角）按 $\\lambda = \\lambda_0 \\theta$ 规律变化（$\\lambda_0 > 0$ 为常数）。试求圆心 $O$ 处的电场强度矢量 $\\vec{E}$。",
+    "hints": [
+      "在极角 $\\theta$ 处取弧元 $\\mathrm{d}l = a\\mathrm{d}\\theta$，则 $\\mathrm{d}q = \\lambda_0 \\theta a\\mathrm{d}\\theta$，注意 $\\mathrm{d}\\vec{E}$ 指向第三象限（角 $\\pi + \\theta$）。",
+      "利用分部积分公式 $\\int u\\,\\mathrm{d}v = uv - \\int v\\,\\mathrm{d}u$ 分别计算 $\\int_0^{\\pi/2}\\theta\\cos\\theta\\,\\mathrm{d}\\theta$ 和 $\\int_0^{\\pi/2}\\theta\\sin\\theta\\,\\mathrm{d}\\theta$。"
+    ],
+    "steps": [
+      "在角 $\\theta$ 处取线元 $\\mathrm{d}l = a\\mathrm{d}\\theta$，带电量 $\\mathrm{d}q = \\lambda\\mathrm{d}l = \\lambda_0\\theta a\\mathrm{d}\\theta$，它在圆心 $O$ 产生的场强大小 $\\mathrm{d}E = \\frac{\\mathrm{d}q}{4\\pi\\varepsilon_0 a^2} = \\frac{\\lambda_0}{4\\pi\\varepsilon_0 a}\\theta\\mathrm{d}\\theta$。",
+      "因 $\\lambda > 0$，场强背离圆弧指向第三象限：$\\mathrm{d}E_x = -\\mathrm{d}E\\cos\\theta$，$\\mathrm{d}E_y = -\\mathrm{d}E\\sin\\theta$。",
+      "由分部积分求 $E_x$：$$E_x = -\\frac{\\lambda_0}{4\\pi\\varepsilon_0 a}\\int_0^{\\pi/2}\\theta\\,\\mathrm{d}(\\sin\\theta) = -\\frac{\\lambda_0}{4\\pi\\varepsilon_0 a}\\left[\\left.\\theta\\sin\\theta\\right|_0^{\\pi/2} - \\int_0^{\\pi/2}\\sin\\theta\\,\\mathrm{d}\\theta\\right] = -\\frac{\\lambda_0}{4\\varepsilon_0 a}\\left(\\frac{1}{2} - \\frac{1}{\\pi}\\right)$$",
+      "同理求 $E_y$：$$E_y = \\frac{\\lambda_0}{4\\pi\\varepsilon_0 a}\\int_0^{\\pi/2}\\theta\\,\\mathrm{d}(\\cos\\theta) = \\frac{\\lambda_0}{4\\pi\\varepsilon_0 a}\\left[\\left.\\theta\\cos\\theta\\right|_0^{\\pi/2} - \\int_0^{\\pi/2}\\cos\\theta\\,\\mathrm{d}\\theta\\right] = -\\frac{\\lambda_0}{4\\pi\\varepsilon_0 a}$$"
+    ],
+    "answer": "$\\vec{E} = -\\dfrac{\\lambda_0}{4\\varepsilon_0 a}\\left(\\dfrac{1}{2} - \\dfrac{1}{\\pi}\\right)\\vec{i} - \\dfrac{\\lambda_0}{4\\pi\\varepsilon_0 a}\\vec{j}$。",
+    "check": "物理合理性检验：由于 $\\lambda = \\lambda_0\\theta$ 在靠近 $y$ 轴（$\\theta \\to \\pi/2$）处电荷更密集，故 $\\lvert E_y \\rvert / \\lvert E_x \\rvert = \\frac{1}{\\pi/2 - 1} \\approx 1.75 > 1$，合场强偏向 $-y$ 轴一侧。",
+    "note": "非均匀带电圆弧无法用对称性直接消去分量，必须对 $x, y$ 两个分量分别做分部积分。",
+    "questionImage": "ex/EX09-05.webp"
+  },
+  {
+    "id": "EX09-06",
+    "section": "s9-4",
+    "difficulty": 1,
+    "source": "课件第2讲 · PDF 第 45、57 页 · 例9-6",
+    "title": "匀强电场穿过半球面的电通量（直接积分法与高斯面法）",
+    "page": 57,
+    "crop": [
+      0.69,
+      0.28,
+      0.96,
+      0.9
+    ],
+    "problem": "匀强电场 $\\vec{E}$ 与半径为 $R$ 的半球面的对称轴平行（由半球开口底面穿入、从球冠穿出）。试分别用：(1) 球面环带微元直接积分法；(2) 补齐底面构造闭合高斯面法，求穿过该半球面的电通量 $\\Phi_e$。",
+    "hints": [
+      "方法一：取极角 $\\theta$ 处的圆环带 $\\mathrm{d}S = 2\\pi(R\\sin\\theta)(R\\mathrm{d}\\theta)$，其外法线 $\\hat{n}$ 与 $\\vec{E}$ 夹角恰为 $\\theta$。",
+      "方法二：将半球面 $S_2$ 与圆形底面 $S_1$ 拼成无源闭合曲面，利用 $\\oint (\\cdots) = 0$ 将曲面通量转化为垂直投影平面的通量。"
+    ],
+    "steps": [
+      "**方法一（球带直接积分）**：在极角 $\\theta$ 处取环带面元 $\\mathrm{d}S = 2\\pi R^2\\sin\\theta\\,\\mathrm{d}\\theta$，法线与 $\\vec{E}$ 夹角为 $\\theta$，则 $$\\Phi_e = \\iint_S E\\cos\\theta\\,\\mathrm{d}S = 2\\pi R^2 E \\int_0^{\\pi/2}\\sin\\theta\\cos\\theta\\,\\mathrm{d}\\theta = \\pi R^2 E$$",
+      "**方法二（闭合高斯面投影）**：以半球面 $S_2$ 与底面圆盘 $S_1$ 组成闭合高斯面，其内部无电荷，由高斯定理得 $\\Phi_{S1} + \\Phi_{S2} = 0$。",
+      "底面外法线向左（与 $\\vec{E}$ 夹角 $\\pi$），故 $\\Phi_{S1} = -E\\cdot \\pi R^2$，从而穿过半球面向右的电通量 $\\Phi_{S2} = -\\Phi_{S1} = \\pi R^2 E$。"
+    ],
+    "answer": "$\\Phi_e = \\pi R^2 E$。",
+    "check": "几何意义：匀强电场穿过任意无源曲面的电通量，恒等于该曲面在垂直于电场方向上的投影面积 $\\pi R^2$ 乘以 $E$。",
+    "note": "当曲面法线随位置变化复杂但边界开口是简单平面时，“补面用高斯定理”比直接曲面积分快得多。",
+    "questionImage": "ex/EX09-06.webp"
+  },
+  {
+    "id": "EX09-07",
+    "section": "s9-4",
+    "difficulty": 2,
+    "source": "课件第2讲 · PDF 第 58–60 页 · 例9-7",
+    "title": "点电荷置于立方体中心与立方体顶点时侧面的电通量",
+    "page": 60,
+    "crop": [
+      0.02,
+      0.48,
+      0.62,
+      0.78
+    ],
+    "problem": "若将电量为 $+q$ 的点电荷分别置于边长为 $a$ 的立方体的：(1) 几何中心；(2) 左下顶点（如图所示）。试求在这两种情形下，通过立方体右侧面 $A$ 的电通量 $\\Phi_{eA}$。",
+    "hints": [
+      "情形 (1)：点电荷位于立方体中心时，六个侧面对中心点张开的立体角完全相等，各为 $4\\pi/6$。",
+      "情形 (2)：点电荷在顶点上时处于交界处，添加 $7$ 个辅助正方体拼成边长为 $2a$ 的大立方体，使 $+q$ 成为大立方体的几何中心。"
+    ],
+    "steps": [
+      "**情形 (1)（几何中心）**：整个立方体闭合面总电通量为 $\\Phi_{\\mathrm{all}} = \\frac{q}{\\varepsilon_0}$。因六个面与中心完全对称（每个面所张立体角 $\\Omega = \\frac{4\\pi}{6}$），故右侧面 $A$ 的电通量为 $$\\Phi_{eA} = \\frac{1}{6}\\Phi_{\\mathrm{all}} = \\frac{q}{6\\varepsilon_0}$$",
+      "**情形 (2)（左下顶点）**：围绕左下顶点拼合 $8$ 个边长为 $a$ 的小正方体，组成边长为 $2a$ 的大立方体，此时 $+q$ 位于大立方体几何中心，穿过其外表面的总通量为 $\\frac{q}{\\varepsilon_0}$。",
+      "大立方体的 $6$ 个大正方形面共包含 $6 \\times 4 = 24$ 个与侧面 $A$ 完全等价的小正方形面（在小正方体中，过 $+q$ 顶点的三个相邻面因 $\\vec{E}\\perp\\hat{n}$ 电通量为 $0$，其余三个不相邻面等价），故 $$\\Phi_{eA} = \\frac{1}{24}\\Phi_{\\mathrm{all}} = \\frac{q}{24\\varepsilon_0}$$"
+    ],
+    "answer": "(1) 置于几何中心时：$\\Phi_{eA} = \\dfrac{q}{6\\varepsilon_0}$；(2) 置于左下顶点时：$\\Phi_{eA} = \\dfrac{q}{24\\varepsilon_0}$。",
+    "check": "立体角核对：在小立方体中，与 $+q$ 顶点不相邻的 $3$ 个面各分得 $\\frac{q}{24\\varepsilon_0}$，三面合计 $\\frac{3q}{24\\varepsilon_0} = \\frac{q}{8\\varepsilon_0}$，恰为第一卦限立体角 $\\frac{4\\pi/8}{4\\pi} = \\frac{1}{8}$ 所占的通量。",
+    "note": "若问的是过顶点 $+q$ 的相邻底面或左侧面，由于电场线与面平行（$\\cos 90^\\circ = 0$），电通量恒为 $0$。",
+    "questionImage": "ex/EX09-07.webp"
+  },
+  {
+    "id": "EX09-08",
+    "section": "s9-4",
+    "difficulty": 2,
+    "source": "课件第2讲 · PDF 第 61–63 页 · 例9-8",
+    "title": "非匀强电场中利用高斯定理反求立方体内的净电荷",
+    "page": 61,
+    "crop": [
+      0.67,
+      0.28,
+      0.98,
+      0.62
+    ],
+    "problem": "设真空中某区域的电场强度分布为 $E_x = b x^{1/2}$，$E_y = E_z = 0$（其中 $b > 0$ 为常数）。如图所示，一立方体边长为 $a$，其左、右两个侧面分别位于 $x = a$ 和 $x = 2a$ 平面上。试求：(1) 穿过该立方体闭合表面的总电通量 $\\Phi_e$；(2) 该立方体内部包围的净电荷量 $Q_{\\mathrm{enc}}$。",
+    "hints": [
+      "闭合曲面规定外法线为正：左表面（$x=a$）外法线指向 $-x$，右表面（$x=2a$）外法线指向 $+x$。",
+      "上、下、前、后四个侧面的法线均与 $x$ 轴垂直，电通量为零。"
+    ],
+    "steps": [
+      "由于 $E_y = E_z = 0$，电场沿 $+x$ 方向，因此上、下、前、后四个表面的外法线均与 $\\vec{E}$ 垂直，通量为零：$\\Phi_{\\mathrm{top}} = \\Phi_{\\mathrm{bottom}} = \\Phi_{\\mathrm{front}} = \\Phi_{\\mathrm{back}} = 0$。",
+      "左边面（$x = a$）外法线沿 $-x$，与 $\\vec{E}$ 夹角为 $\\pi$：$$\\Phi_{\\mathrm{left}} = -E_x(a)\\cdot a^2 = -b a^{1/2} a^2 = -b a^{5/2}$$",
+      "右边面（$x = 2a$）外法线沿 $+x$，与 $\\vec{E}$ 夹角为 $0$：$$\\Phi_{\\mathrm{right}} = +E_x(2a)\\cdot a^2 = b(2a)^{1/2} a^2 = \\sqrt{2}\\,b a^{5/2}$$",
+      "总电通量 $\\Phi_e = \\Phi_{\\mathrm{left}} + \\Phi_{\\mathrm{right}} = (\\sqrt{2}-1)b a^{5/2}$。由高斯定理得立方体内总电荷：$$Q_{\\mathrm{enc}} = \\varepsilon_0 \\Phi_e = (\\sqrt{2} - 1)\\varepsilon_0 b a^{5/2}$$"
+    ],
+    "answer": "总电通量 $\\Phi_e = (\\sqrt{2}-1)b a^{5/2}$；立方体内净电荷 $Q_{\\mathrm{enc}} = (\\sqrt{2}-1)\\varepsilon_0 b a^{5/2}$。",
+    "check": "微分高斯定理验证：体电荷密度 $\\rho = \\varepsilon_0 \\nabla\\cdot\\vec{E} = \\varepsilon_0 \\frac{\\partial E_x}{\\partial x} = \\frac{1}{2}\\varepsilon_0 b x^{-1/2}$，对体积积分 $\\int_a^{2a} \\rho a^2\\mathrm{d}x = \\varepsilon_0 b a^2 \\left[x^{1/2}\\right]_a^{2a} = (\\sqrt{2}-1)\\varepsilon_0 b a^{5/2}$，结果完全一致。",
+    "note": "场强随 $x$ 增大而增强，说明在 $x \\in [a, 2a]$ 区间内有新的电场线产生，即内部必有正的体电荷分布。",
+    "questionImage": "ex/EX09-08.webp"
+  },
+  {
+    "id": "EX09-09",
+    "section": "s9-5",
+    "difficulty": 2,
+    "source": "课件第2讲 · PDF 第 82–84 页 · 例9-9",
+    "title": "径向非均匀球对称带电球体的电场强度分布",
+    "page": 84,
+    "crop": [
+      0.76,
+      0.12,
+      0.99,
+      0.68
+    ],
+    "problem": "一个半径为 $R$ 的绝缘球体，其电荷体密度按 $\\rho(r) = \\rho_0 \\dfrac{e^{-kr}}{r^2}$ 球对称分布（其中 $r$ 为到球心的距离，$\\rho_0, k$ 为正的常数）。试利用高斯定理求球体内部（$r < R$）和球体外部（$r > R$）的电场强度分布 $\\vec{E}(r)$。",
+    "hints": [
+      "由于 $\\rho(r)$ 仅与半径 $r$ 有关，电场具备球对称性，取半径为 $r$ 的同心球面作为高斯面。",
+      "球壳体积元为 $\\mathrm{d}V = 4\\pi r'^2\\,\\mathrm{d}r'$，恰好与 $\\rho(r')$ 分母中的 $r'^2$ 约去，再对 $r' \\in [0, r]$ 或 $[0, R]$ 积分求包围电量。"
+    ],
+    "steps": [
+      "因电荷体密度 $\\rho(r)$ 仅依赖 $r$，电场具有球对称性，过场点取半径为 $r$ 的同心球面为高斯面，电通量恒为 $\\oint_S \\vec{E}\\cdot\\mathrm{d}\\vec{S} = E(r)\\cdot 4\\pi r^2$。",
+      "**球体内部（$r < R$）**：将球面内分成半径 $r'$、厚 $\\mathrm{d}r'$ 的同心薄球壳，体积元 $\\mathrm{d}V = 4\\pi r'^2\\mathrm{d}r'$，高斯面内包围的电量为：$$Q_{\\mathrm{enc}}(r) = \\int_0^r \\rho_0\\frac{e^{-kr'}}{r'^2}\\cdot 4\\pi r'^2\\,\\mathrm{d}r' = 4\\pi\\rho_0 \\int_0^r e^{-kr'}\\mathrm{d}r' = \\frac{4\\pi\\rho_0}{k}\\left(1 - e^{-kr}\\right)$$",
+      "由高斯定理 $E\\cdot 4\\pi r^2 = Q_{\\mathrm{enc}}(r)/\\varepsilon_0$，解得球内场强：$$\\vec{E}(r) = \\frac{\\rho_0}{\\varepsilon_0 k r^2}\\left(1 - e^{-kr}\\right)\\hat{r} \\quad (r < R)$$",
+      "**球体外部（$r > R$）**：高斯面内包围整个球体的总电量 $Q = \\int_0^R \\rho(r')4\\pi r'^2\\mathrm{d}r' = \\frac{4\\pi\\rho_0}{k}(1 - e^{-kR})$，故球外场强为：$$\\vec{E}(r) = \\frac{\\rho_0}{\\varepsilon_0 k r^2}\\left(1 - e^{-kR}\\right)\\hat{r} = \\frac{Q}{4\\pi\\varepsilon_0 r^2}\\hat{r} \\quad (r \\ge R)$$"
+    ],
+    "answer": "球内（$r < R$）：$\\vec{E}(r) = \\dfrac{\\rho_0}{\\varepsilon_0 k r^2}(1 - e^{-kr})\\hat{r}$；球外（$r \\ge R$）：$\\vec{E}(r) = \\dfrac{\\rho_0}{\\varepsilon_0 k r^2}(1 - e^{-kR})\\hat{r}$。",
+    "check": "在 $r \\to 0$ 处，$1 - e^{-kr} \\approx kr$，故 $E(r) \\approx \\frac{\\rho_0}{\\varepsilon_0 r}$；在球面 $r = R$ 处内、外公式取值完全连续。",
+    "note": "计算非均匀球体包围电量时，必须使用积分哑元 $r'$ 对 $\\int_0^r \\rho(r')4\\pi r'^2\\mathrm{d}r'$ 积分，切勿直接用 $\\rho(r)\\cdot \\frac{4}{3}\\pi r^3$ 相乘！",
+    "questionImage": "ex/EX09-09.webp"
+  },
+  {
+    "id": "EX09-10",
+    "section": "s9-5",
+    "difficulty": 2,
+    "source": "课件第2讲 · PDF 第 85–89 页 · 例9-10",
+    "title": "均匀带电无限大厚平板内外的电场分布（高斯面法与薄片叠加法）",
+    "page": 85,
+    "crop": [
+      0.65,
+      0.45,
+      0.98,
+      0.98
+    ],
+    "problem": "一无限大均匀带电厚平板，厚度为 $d$，体电荷密度为 $\\rho$（$\\rho > 0$）。取垂直于板面的坐标轴为 $x$ 轴，原点 $O$ 设在平板中央对称面上（板面位于 $x = \\pm d/2$）。试分别用：(1) 柱状高斯面法；(2) 薄平面切片叠加法，求板外（$\\lvert x \\rvert > d/2$）与板内（$\\lvert x \\rvert \\le d/2$）的电场强度分布 $\\vec{E}(x)$。",
+    "hints": [
+      "高斯面法：取两底面关于 $x=0$ 对称（面积均为 $S$）、轴线平行于 $x$ 轴的直圆柱闭合面。",
+      "薄片叠加法：将厚板切成厚 $\\mathrm{d}x'$、面电荷密度 $\\mathrm{d}\\sigma = \\rho\\mathrm{d}x'$ 的无限大薄平面，注意板内场点 $x$ 左、右两侧薄片激发的场强方向相反。"
+    ],
+    "steps": [
+      "**解法一（对称柱状高斯面）**：由平面对称性知 $E(-x) = E(x)$ 且方向背离中心面 $x=0$。当 $\\lvert x \\rvert > d/2$ 时，取两底面位于 $\\pm\\lvert x \\rvert$ 的柱面，有 $2 E_2 S = \\frac{\\rho S d}{\\varepsilon_0} \\Rightarrow E_2 = \\frac{\\rho d}{2\\varepsilon_0}$。",
+      "当 $\\lvert x \\rvert \\le d/2$ 时，取两底面位于 $\\pm\\lvert x \\rvert$ 的柱面，内部包围厚度为 $2\\lvert x \\rvert$ 的电荷，由 $2 E_1 S = \\frac{\\rho S (2\\lvert x \\rvert)}{\\varepsilon_0}$ 得 $E_1 = \\frac{\\rho \\lvert x \\rvert}{\\varepsilon_0}$，考虑方向即 $\\vec{E}_1 = \\frac{\\rho x}{\\varepsilon_0}\\vec{i}$。",
+      "**解法二（薄片场强叠加）**：在 $x'$ 处取厚 $\\mathrm{d}x'$ 的无限大薄片，等效面密度 $\\mathrm{d}\\sigma = \\rho\\mathrm{d}x'$，产生场强大小 $\\mathrm{d}E = \\frac{\\rho\\mathrm{d}x'}{2\\varepsilon_0}$。对板内点 $x \\in [-d/2, d/2]$，左侧薄片（$x' < x$）场强沿 $+x$，右侧薄片（$x' > x$）场强沿 $-x$：$$E_1(x) = \\int_{-d/2}^{x}\\frac{\\rho\\mathrm{d}x'}{2\\varepsilon_0} - \\int_{x}^{d/2}\\frac{\\rho\\mathrm{d}x'}{2\\varepsilon_0} = \\frac{\\rho(x+d/2) - \\rho(d/2-x)}{2\\varepsilon_0} = \\frac{\\rho x}{\\varepsilon_0}$$"
+    ],
+    "answer": "板内（$\\lvert x \\rvert \\le d/2$）：$\\vec{E}(x) = \\dfrac{\\rho x}{\\varepsilon_0}\\vec{i}$；板外：$x > d/2$ 时 $\\vec{E} = \\dfrac{\\rho d}{2\\varepsilon_0}\\vec{i}$，$x < -d/2$ 时 $\\vec{E} = -\\dfrac{\\rho d}{2\\varepsilon_0}\\vec{i}$。",
+    "check": "若令总面电荷密度 $\\sigma = \\rho d$，则板外场强恰为 $\\pm \\frac{\\sigma}{2\\varepsilon_0}$，与无限大薄平面外部场强一致；中心对称面 $x=0$ 处场强为零。",
+    "note": "课件第 86 页还展示了底面取在左板外与板内 $x$ 处的非对称柱面写法：$\\frac{\\rho d}{2\\varepsilon_0}S + E_1 S = \\frac{\\rho S(x+d/2)}{\\varepsilon_0}$，同样解得 $E_1 = \\frac{\\rho x}{\\varepsilon_0}$。",
+    "questionImage": "ex/EX09-10.webp"
+  },
+  {
+    "id": "EX09-11",
+    "section": "s9-6",
+    "difficulty": 2,
+    "source": "课件第3讲 · PDF 第 107–110 页 · 例9-13 & 例9-14",
+    "title": "均匀带电球面与无限长带电直线的电势分布及参考零点选取",
+    "page": 107,
+    "crop": [
+      0.55,
+      0.16,
+      0.97,
+      0.56
+    ],
+    "problem": "利用场强线积分定义 $U_P = \\int_P^{P_0}\\vec{E}\\cdot\\mathrm{d}\\vec{l}$ 求解下列两个高对称系统的电势分布：(1) 半径为 $R$、总带电量为 $Q$ 的均匀带电薄球面（选无穷远处为电势零点）；(2) 电荷线密度为 $\\lambda$ 的无限长均匀带电直线（选距直线 $r_1$ 处为电势零点，并说明为何不能选无穷远为电势零点）。",
+    "hints": [
+      "球壳内部（$r < R$）场强 $E=0$，从 $r < R$ 积分到 $\\infty$ 必须拆分为 $\\int_r^R 0\\,\\mathrm{d}r + \\int_R^\\infty E_{\\mathrm{out}}\\,\\mathrm{d}r$ 两段。",
+      "无限长直线场强 $E = \\frac{\\lambda}{2\\pi\\varepsilon_0 r}$ 按 $1/r$ 衰减，其反常积分 $\\int_r^\\infty \\frac{\\mathrm{d}r}{r} = \\ln\\infty$ 发散，故只能选有限点 $r_1$ 为电势零点。"
+    ],
+    "steps": [
+      "**(1) 均匀带电球面**：由高斯定理知 $r > R$ 时 $E = \\frac{Q}{4\\pi\\varepsilon_0 r^2}$，$r < R$ 时 $E = 0$。当 $r > R$ 时：$$U(r) = \\int_r^\\infty \\frac{Q}{4\\pi\\varepsilon_0 r'^2}\\mathrm{d}r' = \\frac{Q}{4\\pi\\varepsilon_0 r}$$",
+      "当 $r < R$ 时，球内场强为零，分段积分得电势为常量：$$U(r) = \\int_r^R 0\\,\\mathrm{d}r' + \\int_R^\\infty \\frac{Q}{4\\pi\\varepsilon_0 r'^2}\\mathrm{d}r' = \\frac{Q}{4\\pi\\varepsilon_0 R}$$",
+      "**(2) 无限长带电直线**：场强为 $E = \\frac{\\lambda}{2\\pi\\varepsilon_0 r}$。选距轴线 $r_1$ 处的 $P_1$ 点为电势零点（$U_{P1}=0$），则距轴线 $r$ 处的电势为：$$U(r) = \\int_r^{r_1} \\frac{\\lambda}{2\\pi\\varepsilon_0 r'}\\mathrm{d}r' = \\frac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\frac{r_1}{r}$$"
+    ],
+    "answer": "(1) 球面：$r \\ge R$ 时 $U(r) = \\dfrac{Q}{4\\pi\\varepsilon_0 r}$，$r < R$ 时 $U(r) = \\dfrac{Q}{4\\pi\\varepsilon_0 R}$；(2) 无限长直线：$U(r) = \\dfrac{\\lambda}{2\\pi\\varepsilon_0}\\ln\\dfrac{r_1}{r}$（若取 $r_1 = 1\\,\\mathrm{m}$，则 $U(r) = -\\dfrac{\\lambda}{2\\pi\\varepsilon_0}\\ln r$）。",
+    "check": "在球面 $r = R$ 处，$E(r)$ 从 $0$ 跃变到 $\\frac{Q}{4\\pi\\varepsilon_0 R^2}$，但电势 $U(r)$ 连续等于 $\\frac{Q}{4\\pi\\varepsilon_0 R}$，因为有限场强在零宽度上的积分为零。",
+    "note": "凡是延伸至无穷远的理想带电体（无限长直线、无限大平面、无限长圆柱），均不能选无穷远为电势零点。",
+    "questionImage": "ex/EX09-11.webp"
+  },
+  {
+    "id": "EX09-12",
+    "section": "s9-7",
+    "difficulty": 2,
+    "source": "课件第3讲 · PDF 第 113–116 页 · 例9-15 & 例9-16",
+    "title": "电偶极子远场电势与均匀带电细圆环轴线电势的两种求法",
+    "page": 113,
+    "crop": [
+      0.04,
+      0.28,
+      0.32,
+      0.85
+    ],
+    "problem": "选无穷远处为电势零点：(1) 电偶极子由相距 $l$ 的 $+q$ 与 $-q$ 组成（电偶极矩 $\\vec{p}_e = q\\vec{l}$），求远区任意点 $P(r, \\theta)$（$r \\gg l$，$\\theta$ 为位矢 $\\vec{r}$ 与 $\\vec{p}_e$ 的夹角）的电势 $U_P$；(2) 半径为 $R$、总电量为 $Q$ 的均匀带电细圆环，试分别用电势叠加法与场强线积分法求环轴线上距环心 $z$ 处的电势 $U(z)$。",
+    "hints": [
+      "电偶极子远场近似（$r \\gg l$）下，正负电荷到 $P$ 点的波程差为 $r_- - r_+ \\approx l\\cos\\theta$，分母 $r_+ r_- \\approx r^2$。",
+      "圆环上所有电荷元 $\\mathrm{d}q$ 到轴线上同一点 $P$ 的距离恒为 $\\sqrt{R^2+z^2}$，标量积分可直接提公因式。"
+    ],
+    "steps": [
+      "**(1) 电偶极子远场电势**：由点电荷系电势叠加原理得 $$U_P = \\frac{q}{4\\pi\\varepsilon_0 r_+} - \\frac{q}{4\\pi\\varepsilon_0 r_-} = \\frac{q}{4\\pi\\varepsilon_0}\\frac{r_- - r_+}{r_+ r_-}$$",
+      "当 $r \\gg l$ 时，$r_- - r_+ \\approx l\\cos\\theta$，$r_+ r_- \\approx r^2$，且 $q l\\cos\\theta = \\vec{p}_e\\cdot\\hat{r}$，故 $$U_P \\approx \\frac{q l\\cos\\theta}{4\\pi\\varepsilon_0 r^2} = \\frac{\\vec{p}_e\\cdot\\hat{r}}{4\\pi\\varepsilon_0 r^2}$$",
+      "**(2) 圆环轴线电势（电势叠加法 vs 场强线积分法）**：取电荷元 $\\mathrm{d}q$，因 $r = \\sqrt{R^2+z^2}$ 对所有电荷元均为常数，直接标量积分得 $$U(z) = \\int \\frac{\\mathrm{d}q}{4\\pi\\varepsilon_0\\sqrt{R^2+z^2}} = \\frac{Q}{4\\pi\\varepsilon_0\\sqrt{R^2+z^2}}$$",
+      "若用场强定义积分，将已知轴线场强 $E_z = \\frac{Qz}{4\\pi\\varepsilon_0(R^2+z^2)^{3/2}}$ 从 $z$ 积分到 $\\infty$：$$U(z) = \\int_z^\\infty \\frac{Qz'}{4\\pi\\varepsilon_0(R^2+z'^2)^{3/2}}\\mathrm{d}z' = \\frac{Q}{4\\pi\\varepsilon_0\\sqrt{R^2+z^2}}$$"
+    ],
+    "answer": "(1) 电偶极子远场：$U(r,\\theta) \\approx \\dfrac{p_e\\cos\\theta}{4\\pi\\varepsilon_0 r^2} = \\dfrac{\\vec{p}_e\\cdot\\hat{r}}{4\\pi\\varepsilon_0 r^2}$；(2) 圆环轴线：$U(z) = \\dfrac{Q}{4\\pi\\varepsilon_0\\sqrt{R^2+z^2}}$。",
+    "check": "在中垂面（$\\theta = \\pi/2$）上，$\\cos\\theta = 0 \\Rightarrow U = 0$，即电偶极子中垂面是一个延伸至无穷远的零等势面，但面上场强 $\\vec{E} \\neq 0$。",
+    "note": "求圆环轴线电势时无需分解角度，直接把 $\\int \\mathrm{d}q = Q$ 提出积分号即可，比求矢量场强简单得多。",
+    "questionImage": "ex/EX09-12.webp"
+  },
+  {
+    "id": "EX09-13",
+    "section": "s9-7",
+    "difficulty": 3,
+    "source": "课件第3讲 · PDF 第 117–120 页 · 例9-17A & 例9-17B",
+    "title": "均匀带电薄圆盘边缘电势（极坐标积分）与有限电势零点辨析",
+    "page": 117,
+    "crop": [
+      0.02,
+      0.5,
+      0.32,
+      0.88
+    ],
+    "problem": "回答下列两个关于电势积分与参考零点的问题：(1)（例9-17A，p117）半径为 $R$ 的非导体薄圆盘均匀带电，面电荷密度为 $\\sigma$，选无穷远处为电势零点，求圆盘**边缘**上一点 $P$ 的电势 $U_P$；(2)（例9-17B，p120）点电荷 $+q$ 电场中，若选距电荷 $r_1$ 处的 $P_1$ 点为电势零点，求距电荷 $r$ 处的电势 $U(r)$，并说明为何不能将电势零点选在点电荷所在处（$r_1 \\to 0$）。",
+    "hints": [
+      "以圆盘边缘点 $P$ 为极坐标原点、过盘心的直径为极轴（$\\theta \\in [-\\pi/2, \\pi/2]$），圆边界方程为 $r(\\theta) = 2R\\cos\\theta$。",
+      "极坐标面元 $\\mathrm{d}S = r\\,\\mathrm{d}\\theta\\,\\mathrm{d}r$ 中的 $r$ 恰好与电势公式分母中的距离 $r$ 约去！"
+    ],
+    "steps": [
+      "**(1) 圆盘边缘点 $P$ 的电势**：以边缘点 $P$ 为极点、过圆盘中心的直径方向为极轴建立极坐标系。在极角 $\\theta$、距离 $r$ 处取微面元 $\\mathrm{d}S = r\\,\\mathrm{d}\\theta\\,\\mathrm{d}r$，带电量 $\\mathrm{d}q = \\sigma r\\,\\mathrm{d}\\theta\\,\\mathrm{d}r$。",
+      "该微元在 $P$ 点产生的电势 $\\mathrm{d}U_P = \\frac{\\mathrm{d}q}{4\\pi\\varepsilon_0 r} = \\frac{\\sigma}{4\\pi\\varepsilon_0}\\mathrm{d}\\theta\\,\\mathrm{d}r$（分母 $r$ 被完美约去）。在圆盘区域 $\\theta \\in [-\\pi/2, \\pi/2]$、$r \\in [0, 2R\\cos\\theta]$ 上积分：$$U_P = \\int_{-\\pi/2}^{\\pi/2}\\mathrm{d}\\theta \\int_0^{2R\\cos\\theta}\\frac{\\sigma}{4\\pi\\varepsilon_0}\\mathrm{d}r = \\int_{-\\pi/2}^{\\pi/2}\\frac{\\sigma R\\cos\\theta}{2\\pi\\varepsilon_0}\\mathrm{d}\\theta = \\frac{\\sigma R}{\\pi\\varepsilon_0}$$",
+      "**(2) 有限电势零点与奇点禁区**：选 $r_1$ 处为电势零点时，$U(r) = \\int_r^{r_1}\\frac{q}{4\\pi\\varepsilon_0 r'^2}\\mathrm{d}r' = \\frac{q}{4\\pi\\varepsilon_0 r} - \\frac{q}{4\\pi\\varepsilon_0 r_1}$。若令 $r_1 \\to 0$（选在点电荷上），则 $-\\frac{q}{4\\pi\\varepsilon_0 r_1} \\to -\\infty$ 发散，故电势零点绝不能选在点电荷所在位置。"
+    ],
+    "answer": "(1) 圆盘边缘电势 $U_{\\mathrm{edge}} = \\dfrac{\\sigma R}{\\pi\\varepsilon_0}$；(2) 以 $r_1$ 为零点时 $U(r) = \\dfrac{q}{4\\pi\\varepsilon_0 r} - \\dfrac{q}{4\\pi\\varepsilon_0 r_1}$，$r_1 \\to 0$ 时发散。",
+    "check": "对比圆盘中心电势 $U_{\\mathrm{center}} = \\int_0^R \\frac{\\sigma 2\\pi r\\mathrm{d}r}{4\\pi\\varepsilon_0 r} = \\frac{\\sigma R}{2\\varepsilon_0}$，可见边缘电势与中心电势之比为 $\\frac{U_{\\mathrm{edge}}}{U_{\\mathrm{center}}} = \\frac{2}{\\pi} \\approx 0.637 < 1$，符合物理直觉。",
+    "note": "**课件编号勘误说明**：原课件 PDF 第 117 页（圆盘边缘电势）与第 120 页（非无穷远电势零点）连续使用了相同的编号“例9-17”，本复习讲义将其区分为 例9-17A 与 例9-17B。",
+    "questionImage": "ex/EX09-13.webp"
+  },
+  {
+    "id": "EX09-14",
+    "section": "s9-8",
+    "difficulty": 3,
+    "source": "课件第4讲 · PDF 第 127–136 页 · 例9-18、例9-20、例9-21 & 例9-22",
+    "title": "利用电势梯度求电场强度与环形圆盘轴线场强",
+    "page": 132,
+    "crop": [
+      0.77,
+      0.52,
+      0.99,
+      0.92
+    ],
+    "problem": "应用电势叠加原理与电势梯度公式 $\\vec{E} = -\\nabla U$ 求解：(1)（例9-18）已知某静电场电势函数为 $U(x,y,z) = 6x - 6x^2 y - 7y^2$，求点 $(1, 1, 0)$ 处的电场强度矢量；(2)（例9-20）半径为 $R_2$ 的均匀带电圆盘（面密度 $\\sigma$）在盘心挖去半径为 $R_1$ 的同心圆，先求轴线上距盘心 $x$（$x > 0$）处的电势 $U(x)$，再由电势梯度求该处场强 $E_x$。",
+    "hints": [
+      "对题 (1)，直接按 $\\vec{E} = -\\left(\\frac{\\partial U}{\\partial x}\\vec{i} + \\frac{\\partial U}{\\partial y}\\vec{j} + \\frac{\\partial U}{\\partial z}\\vec{k}\\right)$ 求偏导并代入坐标 $(1,1,0)$。",
+      "对题 (2)，取半径 $r$、宽 $\\mathrm{d}r$ 的细圆环微元（$r \\in [R_1, R_2]$），先积分出标量电势 $U(x)$，再对 $x$ 求负导数 $-\\frac{\\partial U}{\\partial x}$。"
+    ],
+    "steps": [
+      "**(1) 由电势函数求场强**：对 $U = 6x - 6x^2 y - 7y^2$ 求偏导：$$E_x = -\\frac{\\partial U}{\\partial x} = -(6 - 12xy), \\quad E_y = -\\frac{\\partial U}{\\partial y} = -(-6x^2 - 14y), \\quad E_z = 0$$ 代入 $(1, 1, 0)$ 得 $\\vec{E}(1,1,0) = 6\\vec{i} + 20\\vec{j}$。",
+      "**(2) 挖空环形圆盘轴线电势**：取半径 $r$、宽 $\\mathrm{d}r$ 的细环（$\\mathrm{d}q = \\sigma 2\\pi r\\mathrm{d}r$），利用圆环电势公式对 $r \\in [R_1, R_2]$ 积分：$$U(x) = \\int_{R_1}^{R_2} \\frac{\\sigma 2\\pi r\\,\\mathrm{d}r}{4\\pi\\varepsilon_0\\sqrt{r^2+x^2}} = \\frac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{R_2^2 + x^2} - \\sqrt{R_1^2 + x^2}\\right)$$",
+      "**由电势梯度求轴向场强**：因对称性知 $E_y = E_z = 0$，对 $x$ 求负偏导数：$$E_x = -\\frac{\\partial U}{\\partial x} = -\\frac{\\sigma}{2\\varepsilon_0}\\left(\\frac{x}{\\sqrt{R_2^2+x^2}} - \\frac{x}{\\sqrt{R_1^2+x^2}}\\right) = \\frac{\\sigma}{2\\varepsilon_0}\\left(\\frac{x}{\\sqrt{R_1^2+x^2}} - \\frac{x}{\\sqrt{R_2^2+x^2}}\\right)$$"
+    ],
+    "answer": "(1) $\\vec{E}(1,1,0) = 6\\vec{i} + 20\\vec{j}$；(2) 电势 $U(x) = \\dfrac{\\sigma}{2\\varepsilon_0}\\left(\\sqrt{R_2^2+x^2}-\\sqrt{R_1^2+x^2}\\right)$，场强 $\\vec{E}(x) = \\dfrac{\\sigma}{2\\varepsilon_0}\\left(\\dfrac{x}{\\sqrt{R_1^2+x^2}} - \\dfrac{x}{\\sqrt{R_2^2+x^2}}\\right)\\vec{i}$。",
+    "check": "极限检验：当挖空半径 $R_1 \\to 0$ 时，$\\frac{x}{\\sqrt{R_1^2+x^2}} \\to 1$，结果立即退化为完整圆盘场强 $\\frac{\\sigma}{2\\varepsilon_0}\\left(1 - \\frac{x}{\\sqrt{R_2^2+x^2}}\\right)$。",
+    "note": "同见课件 p135–136 例9-21（半圆环圆心电势 $U_O = \\frac{q}{4\\pi\\varepsilon_0 R} = \\frac{\\lambda}{4\\varepsilon_0}$）与例9-22（非均匀带电球面仅球心电势仍为 $\\frac{q}{4\\pi\\varepsilon_0 R}$）：注意不能仅由单点电势 $U_O$ 对常数 $R$ 求导来算圆心场强！",
+    "questionImage": "ex/EX09-14.webp"
+  }
+]
