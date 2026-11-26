@@ -1,0 +1,142 @@
+[
+  {
+    "id": "F11-01",
+    "page": 243,
+    "crop": [
+      0.06,
+      0.08,
+      0.9,
+      0.42
+    ],
+    "title": "电流密度矢量 $\\vec{j}$ 与通过任意截面面元 $\\mathrm{d}\\vec{S}$ 的电流通量",
+    "caption": "导体内某点电流密度 $\\vec{j}$ 的方向为正电荷定向移动方向，大小等于垂直穿过单位面积的电流强度；通过任意有向面元 $\\mathrm{d}\\vec{S}$ 的微元电流为 $\\mathrm{d}I = \\vec{j}\\cdot\\mathrm{d}\\vec{S} = j\\,\\mathrm{d}S\\cos\\theta$。",
+    "source": "课件 PDF 第 243 页",
+    "assetKey": "figs/F11-01.webp"
+  },
+  {
+    "id": "F11-02",
+    "page": 245,
+    "crop": [
+      0.66,
+      0.14,
+      0.98,
+      0.46
+    ],
+    "title": "闭合曲面 $S$ 的电流连续性方程与电荷守恒定律",
+    "caption": "由电荷守恒定律，单位时间内从闭合曲面 $S$ 净流出的电荷量等于 $S$ 内净电荷的减少率，即 $\\oiint_S \\vec{j}\\cdot\\mathrm{d}\\vec{S} = -\\mathrm{d}q/\\mathrm{d}t$；稳恒电流下处处 $\\oiint_S \\vec{j}\\cdot\\mathrm{d}\\vec{S} = 0$。",
+    "source": "课件 PDF 第 245 页",
+    "assetKey": "figs/F11-02.webp"
+  },
+  {
+    "id": "F11-03",
+    "page": 246,
+    "crop": [
+      0.7,
+      0.35,
+      0.98,
+      0.65
+    ],
+    "title": "导体内体积微元 $\\mathrm{d}V$ 与欧姆定律微分形式 $\\vec{j} = \\gamma\\vec{E}$ 的推导",
+    "caption": "沿电场线方向取截面为 $\\mathrm{d}S$、长度为 $\\mathrm{d}l$ 的微元柱体，由 $\\mathrm{d}U = E\\,\\mathrm{d}l$ 及 $R = \\rho\\,\\mathrm{d}l/\\mathrm{d}S$ 可得局部点关系 $\\vec{j} = \\gamma\\vec{E} = \\vec{E}/\\rho$。",
+    "source": "课件 PDF 第 246 页",
+    "assetKey": "figs/F11-03.webp"
+  },
+  {
+    "id": "F11-04",
+    "page": 248,
+    "crop": [
+      0.58,
+      0.34,
+      0.98,
+      0.62
+    ],
+    "title": "电源内部的非静电力 $\\vec{F}_k$、非静电场强 $\\vec{E}_k$ 与静电场强 $\\vec{E}$",
+    "caption": "在电源内部，静电场 $\\vec{E}$ 由正极指向负极阻碍正电荷汇集，而非静电力 $\\vec{F}_k = q\\vec{E}_k$ 克服静电力将正电荷从负极搬运至正极以维持稳恒电势差。",
+    "source": "课件 PDF 第 248 页",
+    "assetKey": "figs/F11-04.webp"
+  },
+  {
+    "id": "F11-05",
+    "page": 253,
+    "crop": [
+      0.05,
+      0.25,
+      0.9,
+      0.64
+    ],
+    "title": "复杂电路网络的节点（Node）与独立闭合回路（Loop）拓扑示意",
+    "caption": "三条及以上支路的交汇点称为节点（如 $a,b,c,d$），任意闭合导电路径称为回路；分析复杂桥式网络需联合基尔霍夫节点电流方程（KCL）与回路电压方程（KVL）。",
+    "source": "课件 PDF 第 253 页",
+    "assetKey": "figs/F11-05.webp"
+  },
+  {
+    "id": "F11-06",
+    "page": 257,
+    "crop": [
+      0.12,
+      0.65,
+      0.87,
+      0.95
+    ],
+    "title": "基尔霍夫回路方程（KVL）中电源电动势与电阻压降的符号约定",
+    "caption": "选定回路绕行方向（Travel）后：绕行方向从电源负极到正极取 $+\\mathcal{E}$，反之取 $-\\mathcal{E}$；绕行方向与支路参考电流同向时电阻压降取 $-IR$，反向取 $+IR$。",
+    "source": "课件 PDF 第 257 页",
+    "assetKey": "figs/F11-06.webp"
+  },
+  {
+    "id": "F11-07",
+    "page": 258,
+    "crop": [
+      0.62,
+      0.36,
+      0.97,
+      0.79
+    ],
+    "title": "单回路多电源含内阻电路与充电电池功率分析（例11.2）",
+    "caption": "含 $12\\,\\mathrm{V}$ 与 $4\\,\\mathrm{V}$ 两个电源的回路：电流从 $4\\,\\mathrm{V}$ 电池正极流入，表明 $4\\,\\mathrm{V}$ 电池处于被充电状态（吸收电能转化为化学能）。",
+    "source": "课件 PDF 第 258 页",
+    "assetKey": "figs/F11-07.webp"
+  },
+  {
+    "id": "F11-08",
+    "page": 261,
+    "crop": [
+      0.51,
+      0.21,
+      0.99,
+      0.57
+    ],
+    "title": "非平衡桥式电阻网络的支路电流设定与三回路求解（例11.3）",
+    "caption": "利用 KCL 先用三个独立未知量 $I_1, I_2, I_3$ 表出全部五条支路电流（如右下支路为 $I_1-I_3$、右上支路为 $I_2+I_3$），可显著减少 KVL 联立方程阶数。",
+    "source": "课件 PDF 第 261 页",
+    "assetKey": "figs/F11-08.webp"
+  },
+  {
+    "id": "F11-09",
+    "page": 263,
+    "crop": [
+      0.02,
+      0.14,
+      0.96,
+      0.74
+    ],
+    "title": "惠斯通电桥（Wheatstone Bridge）平衡测量与非平衡电压输出原理",
+    "caption": "左图：调节桥臂使检流计 $G$ 电流 $I_g=0$（$V_b=V_c$），可得未知电阻 $X = MP/N$；右图：电子秤应变片电桥工作于非平衡态，输出电压 $V_{ab}$ 正比于微小电阻应变。",
+    "source": "课件 PDF 第 263 页",
+    "assetKey": "figs/F11-09.webp"
+  },
+  {
+    "id": "F11-10",
+    "page": 268,
+    "crop": [
+      0.6,
+      0.08,
+      0.98,
+      0.95
+    ],
+    "title": "RC 串联电路充电过程的极板电荷 $q(t)$ 与电流 $I(t)$ 指数弛豫曲线",
+    "caption": "时间常数 $\\tau = RC$ 决定充放电快慢：$t=\\tau$ 时电荷充至最终值 $Q_f=C\\mathcal{E}$ 的 $63.2\\%$，电流衰减至初始值 $I_0=\\mathcal{E}/R$ 的 $36.8\\%$；工程上认为 $t \\approx 5\\tau$（达 $99.3\\%$）时暂态过程结束。",
+    "source": "课件 PDF 第 268 页",
+    "assetKey": "figs/F11-10.webp"
+  }
+]

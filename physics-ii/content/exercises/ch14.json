@@ -1,0 +1,366 @@
+[
+  {
+    "id": "EX14-01",
+    "section": "s14-1",
+    "difficulty": 2,
+    "source": "课件第14章 · PDF 第 417–419 页 · 例14.1",
+    "title": "长直交变电流旁共面矩形线圈的感应电动势",
+    "problem": "一无限长直导线中通有交变电流 $I = I_0 \\sin(\\omega t)$，其中 $I_0$ 和 $\\omega$ 均为正常量。在长直导线旁同一平面内平行放置一矩形线圈，线圈长为 $l$、宽为 $b$，其近端长边与长直导线的距离为 $d$（如图所示）。求任一瞬时 $t$ 矩形线圈中的感应电动势 $\\varepsilon_i$，并说明其方向判定规则。",
+    "page": 417,
+    "crop": [
+      0.64,
+      0.11,
+      0.98,
+      0.57
+    ],
+    "hints": [
+      "长直导线激发的磁场 $B(x) = \\frac{\\mu_0 I}{2\\pi x}$ 随距离 $x$ 非均匀衰减，不能直接用 $B \\cdot S$ 计算磁通量，需取宽为 $\\mathrm{d}x$、长为 $l$ 的细长条面元积分。",
+      "严格遵循法拉第定律方向判定五步法：先选定回路面积法向 $\\vec{n}$（垂直纸面向里，对应顺时针参考正方向），求出 $\\Phi_B(t)$ 后直接对时间求导。"
+    ],
+    "steps": [
+      "**选定回路法向与参考正方向**：由安培右手螺旋定则，当 $I > 0$（向上）时，矩形线圈所在处的磁场方向垂直纸面向里。选闭合回路面积法向 $\\vec{n}$ 垂直纸面向里，则由右手螺旋法则，感应电动势 $\\varepsilon_i$ 的参考正方向为**顺时针方向**。",
+      "**取条形面元计算瞬时磁通量**：在距长直导线为 $x$ 处取宽为 $\\mathrm{d}x$、长为 $l$ 的平行细条面元 $\\mathrm{d}S = l\\,\\mathrm{d}x$，该处磁感应强度为 $B(x,t) = \\frac{\\mu_0 I(t)}{2\\pi x}$。穿过面元的磁通量为 $\\mathrm{d}\\Phi_B = \\vec{B}\\cdot\\mathrm{d}\\vec{S} = \\frac{\\mu_0 I l}{2\\pi x}\\,\\mathrm{d}x$。对 $x$ 从 $d$ 到 $d+b$ 积分得总磁通量：$$\\Phi_B(t) = \\int_d^{d+b} \\frac{\\mu_0 I l}{2\\pi x}\\,\\mathrm{d}x = \\frac{\\mu_0 l I_0 \\sin(\\omega t)}{2\\pi}\\ln\\frac{d+b}{d}$$",
+      "**由法拉第电磁感应定律求感应电动势**：对时间 $t$ 求导得：$$\\varepsilon_i(t) = -\\frac{\\mathrm{d}\\Phi_B}{\\mathrm{d}t} = -\\frac{\\mu_0 \\omega l I_0}{2\\pi}\\ln\\left(\\frac{d+b}{d}\\right)\\cos(\\omega t)$$当 $\\varepsilon_i > 0$（即 $\\cos(\\omega t) < 0$）时，感应电动势实际方向为顺时针；当 $\\varepsilon_i < 0$（即 $\\cos(\\omega t) > 0$）时，实际方向为逆时针。"
+    ],
+    "answer": "$$\\varepsilon_i(t) = -\\frac{\\mu_0 \\omega l I_0}{2\\pi}\\ln\\left(\\frac{d+b}{d}\\right)\\cos(\\omega t)$$（以顺时针方向为参考正方向）。",
+    "check": "量纲检验：$[\\mu_0 \\omega l I_0] = (\\mathrm{T\\cdot m/A})\\cdot \\mathrm{s^{-1}} \\cdot \\mathrm{m} \\cdot \\mathrm{A} = \\mathrm{T\\cdot m^2/s} = \\mathrm{Wb/s} = \\mathrm{V}$，对数项无量纲；极限检验：当 $d \\to \\infty$ 或 $b \\to 0$ 时，$\\ln((d+b)/d) \\to 0$，$\\varepsilon_i \\to 0$，物理图像完全自洽。",
+    "note": "对比拓展：若将本题与匀强磁场 $B$ 中绕轴以角速度 $\\omega$ 匀速旋转的 $N$ 匝交流发电机矩形线圈（面积 $S$）对比，后者 $\\Phi_B(t) = BS\\cos(\\omega t)$，总感应电动势 $\\varepsilon_i = -N\\mathrm{d}\\Phi_B/\\mathrm{d}t = NBS\\omega\\sin(\\omega t)$；而本题中线圈静止、磁场随时间正弦变化（属于感生电动势，亦即长直导线与矩形线圈互感 $M = \\frac{\\mu_0 l}{2\\pi}\\ln\\frac{d+b}{d}$ 产生的互感电动势 $\\varepsilon_i = -M\\mathrm{d}I/\\mathrm{d}t$）。",
+    "questionImage": "ex/EX14-01.webp"
+  },
+  {
+    "id": "EX14-02",
+    "section": "s14-1",
+    "difficulty": 2,
+    "source": "课件第14章 · PDF 第 420–422 页 · 例14.2",
+    "title": "非均匀时变磁场中厚铜圆环的感应电流分布与积分",
+    "problem": "高度（轴向厚度）为 $D$、电阻率为 $\\rho$ 的空心厚铜圆环，内外半径分别为 $R_1$ 和 $R_2$，放置在局限于环面（$R_1 \\le r \\le R_2$）的垂直磁场中（垂直纸面向里）。若环面内磁感应强度按 $B(r,t) = \\frac{t}{r}$（SI 单位）的规律随时间变化，且内孔 $r < R_1$ 区域无磁场，求铜圆环上的总感应电流 $I_i$。",
+    "page": 420,
+    "crop": [
+      0.71,
+      0.53,
+      0.98,
+      0.9
+    ],
+    "hints": [
+      "由于铜环较宽（$R_1$ 到 $R_2$），不同半径 $r$ 处的同心细圆环所围磁通量 $\\Phi_B(r,t)$ 不同，且周长 $2\\pi r$ 不同导致电阻不同，因此必须将厚铜环分割为无数个半径为 $r$、径向宽度为 $\\mathrm{d}r$ 的同心细圆环并联。",
+      "注意题目给定的磁场仅局限于环面（$R_1 \\le r' \\le R_2$），因此计算半径为 $r$ 的细圆环所围磁通量时，径向积分下限是 $R_1$ 而不是 $0$！"
+    ],
+    "steps": [
+      "**求半径为 $r$ 的同心圆周所围磁通量**：选定回路法向垂直纸面向里（顺时针为参考正方向）。在半径为 $r$（$R_1 \\le r \\le R_2$）的圆内，取半径为 $r'$、宽度为 $\\mathrm{d}r'$ 的同心圆环面元 $\\mathrm{d}S' = 2\\pi r'\\,\\mathrm{d}r'$。因磁场仅存在于 $r' \\ge R_1$ 区域，故穿过半径为 $r$ 圆周的磁通量为：$$\\Phi_B(r,t) = \\int_{R_1}^r B(r',t)\\cdot 2\\pi r'\\,\\mathrm{d}r' = \\int_{R_1}^r \\frac{t}{r'}\\cdot 2\\pi r'\\,\\mathrm{d}r' = 2\\pi t(r - R_1)$$",
+      "**求细圆环上的感应电动势与微元电导**：由法拉第定律，半径为 $r$ 的细圆环回路中的感应电动势为：$$\\varepsilon_i(r) = -\\frac{\\mathrm{d}\\Phi_B(r,t)}{\\mathrm{d}t} = -2\\pi(r - R_1)$$负号表示实际方向为**逆时针方向**。该半径为 $r$、宽为 $\\mathrm{d}r$、高为 $D$ 的细圆环沿圆周方向的周长为 $L = 2\\pi r$，截面积为 $\\mathrm{d}S = D\\,\\mathrm{d}r$，其电阻与微元电导分别为：$$\\mathrm{d}R = \\rho\\frac{2\\pi r}{D\\,\\mathrm{d}r} \\implies \\mathrm{d}G = \\frac{1}{\\mathrm{d}R} = \\frac{D\\,\\mathrm{d}r}{2\\pi \\rho r}$$",
+      "**并联积分求总感应电流**：细圆环上的微元感应电流为 $\\mathrm{d}I_i = \\varepsilon_i(r)\\,\\mathrm{d}G = -\\frac{D}{\\rho}\\left(1 - \\frac{R_1}{r}\\right)\\mathrm{d}r$。对 $r$ 从 $R_1$ 到 $R_2$ 积分得总感应电流：$$I_i = \\int_{R_1}^{R_2} -\\frac{D}{\\rho}\\left(1 - \\frac{R_1}{r}\\right)\\mathrm{d}r = -\\frac{D}{\\rho}\\left[(R_2 - R_1) - R_1\\ln\\frac{R_2}{R_1}\\right]$$"
+    ],
+    "answer": "感应电流大小为 $$\\lvert I_i\\rvert = \\frac{D}{\\rho}\\left(R_2 - R_1 - R_1\\ln\\frac{R_2}{R_1}\\right)$$，实际流动方向为**逆时针方向**。",
+    "check": "极限检验：当 $R_2 \\to R_1$（环宽 $\\Delta R = R_2 - R_1 \\to 0$）时，利用 $\\ln(1 + \\Delta R/R_1) \\approx \\Delta R/R_1 - (\\Delta R)^2/(2R_1^2)$，可得 $\\lvert I_i\\rvert \\approx \\frac{D(\\Delta R)^2}{2\\rho R_1} \\to 0$，符合薄环所围磁通趋于零的物理极限。",
+    "note": "易错提醒：切勿先求整个外径 $R_2$ 所围总磁通再除以“总电阻”，因为各层同心圆环的电动势 $\\varepsilon_i(r)$ 随半径 $r$ 变化，必须先求微元电流 $\\mathrm{d}I_i(r) = \\varepsilon_i(r)/\\mathrm{d}R(r)$ 再沿径向积分（这就是大块导体内涡电流分布求解的标准微元法）。",
+    "questionImage": "ex/EX14-02.webp"
+  },
+  {
+    "id": "EX14-03",
+    "section": "s14-2",
+    "difficulty": 2,
+    "source": "课件第14章 · PDF 第 431–434 页 · 例14.3",
+    "title": "匀强磁场中平动 3/4 圆弧导体的动生电动势（定义法与辅助线法）",
+    "problem": "一导体被弯成半径为 $R$ 的 $3/4$ 圆弧 $abc$ 的形状（圆心角 $270^\\circ$，端点 $a,c$ 连线竖直且 $\\angle aOc = 90^\\circ$），放在垂直纸面向里的均匀磁场 $\\vec{B}$ 中。若此导线以速度 $\\vec{v}$ 沿 $x$ 轴方向匀速向右平动（如图所示），分别用动生电动势定义式与法拉第定律辅助线法求此导线中的动生电动势，并判断 $a, c$ 哪端电势高。",
+    "page": 431,
+    "crop": [
+      0.65,
+      0.1,
+      0.94,
+      0.87
+    ],
+    "hints": [
+      "解法一（定义积分法）：取圆弧微元 $\\mathrm{d}\\vec{l}$，$\\vec{v}\\times\\vec{B}$ 方向竖直向上，积分 $\\mathrm{d}\\varepsilon_i = (\\vec{v}\\times\\vec{B})\\cdot\\mathrm{d}\\vec{l} = Bv\\,\\mathrm{d}y$，仅与竖直坐标增量有关。",
+      "解法二（闭合辅助线法）：连接首尾端点 $a,c$ 构成闭合回路 $abca$，因匀强磁场中平动回路磁通量 $\\Phi_B = \\text{const}$，故圆弧 $abc$ 的动生电动势必等于弦 $ac$ 的动生电动势。"
+    ],
+    "steps": [
+      "**解法一（按动生电动势定义微元积分）**：设动生电动势参考正方向为 $a \\to b \\to c$。导线以速度 $\\vec{v}$ 向右平动，磁场 $\\vec{B}$ 垂直纸面向里，故 $\\vec{v}\\times\\vec{B}$ 竖直向上，大小为 $vB$。在圆弧方位角 $\\theta$ 处取微元 $\\mathrm{d}l = R\\,\\mathrm{d}\\theta$，其切向与竖直向下方向夹角为 $\\theta$（或与 $\\vec{v}\\times\\vec{B}$ 夹角为 $\\pi - \\theta$），则：$$\\varepsilon_{abc} = \\int_a^c (\\vec{v}\\times\\vec{B})\\cdot\\mathrm{d}\\vec{l} = \\int_{45^\\circ}^{315^\\circ} BvR\\cos\\theta\\,\\mathrm{d}\\theta = BvR\\left(\\sin 315^\\circ - \\sin 45^\\circ\\right) = -\\sqrt{2}BvR$$",
+      "**解法二（按法拉第电磁感应定律作辅助线）**：作连接端点 $a,c$ 的直导线辅助线，使 $abca$ 形成闭合回路。当整个回路在均匀磁场 $\\vec{B}$ 中平动时，穿过回路的磁通量 $\\Phi_B = \\iint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S} = \\text{const}$，由法拉第定律得闭合回路总电动势：$$\\varepsilon_{abca} = -\\frac{\\mathrm{d}\\Phi_B}{\\mathrm{d}t} = 0 \\implies \\varepsilon_{abc} + \\varepsilon_{ca} = \\varepsilon_{abc} - \\varepsilon_{ac} = 0$$",
+      "**求直导线辅助线 $ac$ 的电动势并判别电势高低**：弦长 $L_{ac} = \\sqrt{R^2 + R^2} = \\sqrt{2}R$，方向竖直向下（从 $a$ 到 $c$），与竖直向上的 $\\vec{v}\\times\\vec{B}$ 反向（夹角 $180^\\circ$），故：$$\\varepsilon_{abc} = \\varepsilon_{ac} = \\int_a^c (\\vec{v}\\times\\vec{B})\\cdot\\mathrm{d}\\vec{l} = -Bv L_{ac} = -\\sqrt{2}BvR$$负号表明非静电力实际推动正电荷由 $c \\to b \\to a$，故 **$a$ 端为电源正极，$a$ 点电势高于 $c$ 点**（$U_a - U_c = \\sqrt{2}BvR$）。"
+    ],
+    "answer": "动生电动势大小为 $$\\lvert\\varepsilon_i\\rvert = \\sqrt{2}BvR$$，实际方向为 $c \\to b \\to a$，**$a$ 端电势高**（$U_a - U_c = \\sqrt{2}BvR$）。",
+    "check": "投影等效性检验：在匀强磁场中以相同速度 $\\vec{v}$ 平动的任意形状空间或平面曲线导体，其动生电动势恒为 $\\varepsilon_i = (\\vec{v}\\times\\vec{B})\\cdot\\vec{L}_{ac}$，即仅取决于连接首尾两端点的有向弦矢量 $\\vec{L}_{ac}$ 在垂直于 $\\vec{v}$ 和 $\\vec{B}$ 方向上的有效投影长度。",
+    "note": "拓展对比：若是非匀强磁场（例如无限长直载流导线 $I$ 旁，长为 $L$ 的直杆平行于导线以速度 $v$ 运动，或沿径向远离导线运动），此时不能简单用均匀场结论：平行于长直导线运动且杆垂直于导线（近端距 $d$）时，$\\varepsilon_i = \\int_d^{d+L} \\frac{\\mu_0 I v}{2\\pi r}\\,\\mathrm{d}r = \\frac{\\mu_0 I v}{2\\pi}\\ln\\frac{d+L}{d}$。",
+    "questionImage": "ex/EX14-03.webp"
+  },
+  {
+    "id": "EX14-04",
+    "section": "s14-2",
+    "difficulty": 2,
+    "source": "课件第14章 · PDF 第 435–439 页 · 例14.4",
+    "title": "匀强磁场中绕轴旋转铜棒与法拉第圆盘的动生电动势",
+    "problem": "在磁感应强度 $B = 1.0\\times 10^{-2}\\,\\mathrm{T}$（垂直纸面向外）的匀强磁场中，有一长 $L = 0.5\\,\\mathrm{m}$ 的铜棒 $OA$ 绕端点 $O$ 轴在纸面内沿逆时针方向匀速转动，角速度 $\\omega = 50\\,\\mathrm{rad/s}$（如图所示）。（1）分别用电动势定义式和法拉第定律扇形辅助回路法求铜棒中的感应电动势 $\\varepsilon_i$ 及电势差 $U_{OA} = U_O - U_A$；（2）讨论：若将铜棒换成同半径 $L$ 的旋转铜盘（法拉第圆盘），为什么直接对圆盘面积写 $\\Phi_B = B\\pi L^2 = \\text{const} \\implies \\varepsilon_i = 0$ 是错误的？",
+    "page": 435,
+    "crop": [
+      0.66,
+      0.14,
+      0.96,
+      0.54
+    ],
+    "hints": [
+      "旋转铜棒上距转轴 $O$ 为 $l$ 处的线元速度 $v(l) = \\omega l$ 随半径线性递增，需对 $\\mathrm{d}\\varepsilon_i = B\\omega l\\,\\mathrm{d}l$ 积分。",
+      "注意区分电源电动势方向（内部从负极指向正极）与电势差 $U_{OA} = U_O - U_A$ 的正负号：若 $\\varepsilon_i$ 方向为 $O \\to A$，则 $A$ 为高电势端，$U_{OA} = -\\varepsilon_i < 0$。"
+    ],
+    "steps": [
+      "**（1a）按动生电动势定义式计算**：设参考正方向为 $O \\to A$。在距 $O$ 轴为 $l$ 处取微元 $\\mathrm{d}\\vec{l}$，其线速度 $v = \\omega l$（切向逆时针），磁场 $\\vec{B}$ 垂直纸面向外，故 $\\vec{v}\\times\\vec{B}$ 沿径向由 $O$ 指向 $A$，与 $\\mathrm{d}\\vec{l}$ 同向：$$\\varepsilon_i = \\int_O^A (\\vec{v}\\times\\vec{B})\\cdot\\mathrm{d}\\vec{l} = \\int_0^L B\\omega l\\,\\mathrm{d}l = \\frac{1}{2}B\\omega L^2 = \\frac{1}{2}\\times 1.0\\times 10^{-2}\\times 50\\times 0.5^2 = 0.0625\\,\\mathrm{V}$$因 $\\varepsilon_i > 0$，电动势实际方向为 $O \\to A$（$A$ 端为正极，电势高），故：$$U_{OA} = U_O - U_A = -\\varepsilon_i = -0.0625\\,\\mathrm{V}$$",
+      "**（1b）按法拉第电磁感应定律（扇形辅助线法）计算**：设铜棒在 $t$ 时间内从初始位置 $OC$ 转过角度 $\\theta = \\omega t$ 到达 $OA$，添加静止辅助半径 $OC$ 和静止圆弧 $CA$ 构成闭合扇形回路 $OCA$（静止辅助线上动生电动势为零）。取面法向向外（逆时针 $O \\to C \\to A \\to O$ 为正向，对应棒上参考方向 $A \\to O$），扇形面积 $S(t) = \\frac{1}{2}L^2\\theta$，磁通量 $\\Phi_B(t) = \\frac{1}{2}BL^2\\theta$，故：$$\\varepsilon_i = -\\frac{\\mathrm{d}\\Phi_B}{\\mathrm{d}t} = -\\frac{1}{2}BL^2\\frac{\\mathrm{d}\\theta}{\\mathrm{d}t} = -\\frac{1}{2}B\\omega L^2 = -0.0625\\,\\mathrm{V}$$负号表明实际方向与 $A \\to O$ 相反，即沿 $O \\to A$。",
+      "**（2）法拉第圆盘与课件 p439 思考题辨析**：旋转铜盘可视为无数根从圆心 $O$ 到边缘的径向铜棒并联，故盘心与盘缘间的电动势仍为 $\\frac{1}{2}B\\omega L^2$。若错误地将整个圆盘几何边界当作回路写 $\\Phi_B = B\\pi L^2 = \\text{const} \\implies \\varepsilon_i = 0$，是因为混淆了“固定空间几何边界的磁通”与“随物质导线运动的回路切割磁感线”：圆盘内部径向导电通道在不断切割磁感线扫过扇形磁通。"
+    ],
+    "answer": "铜棒感应电动势 $$\\varepsilon_i = \\frac{1}{2}B\\omega L^2 = 0.0625\\,\\mathrm{V}$$（方向 $O \\to A$），电势差 $$U_{OA} = U_O - U_A = -0.0625\\,\\mathrm{V}$$。",
+    "check": "中点平均速度验算：棒上各点速度线性分布，中点平均速度 $\\bar{v} = \\frac{1}{2}\\omega L$，故 $\\varepsilon_i = B\\bar{v}L = \\frac{1}{2}B\\omega L^2$，直观准确。",
+    "note": "高频变形（绕非端点轴 $O$ 转动）：若长为 $L = l_1 + l_2$ 的直棒 $AB$ 绕棒内某点 $O$（$OA = l_1, OB = l_2$）旋转，则 $OA$ 段与 $OB$ 段的 $\\vec{v}\\times\\vec{B}$ 均背离（或均指向）转轴 $O$，两段电动势反向串联：$U_A - U_B = \\frac{1}{2}B\\omega(l_1^2 - l_2^2)$；特别地，若 $O$ 为棒中点（$l_1 = l_2$），则 $A,B$ 两端电势相等（$U_{AB} = 0$），但中点 $O$ 与端点间存在电势差 $\\frac{1}{8}B\\omega L^2$。",
+    "questionImage": "ex/EX14-04.webp"
+  },
+  {
+    "id": "EX14-05",
+    "section": "s14-2",
+    "difficulty": 3,
+    "source": "课件第14章 · PDF 第 441–442 页 · 例14.5",
+    "title": "电磁涡流制动器的制动转矩推导与非均匀场弯折杆分析",
+    "problem": "电磁“涡流”制动器由一电导率为 $\\gamma$、厚度为 $\\tau$ 的大金属圆盘组成，此盘绕通过其中心的竖直轴以角速度 $\\omega$ 逆时针旋转。在距离转轴为 $r$ 处有一覆盖面积为 $a^2$（$a \\ll r$）的局部匀强磁场 $\\vec{B}$ 垂直向下穿过圆盘（如图所示）。忽略磁场区以外大圆盘回流的电阻，试求使圆盘慢下来的电磁制动转矩 $M$ 的近似表达式。",
+    "page": 441,
+    "crop": [
+      0.66,
+      0.16,
+      0.98,
+      0.92
+    ],
+    "hints": [
+      "由于 $a \\ll r$，磁场覆盖的 $a \\times a$ 正方形小区域内各点的线速度可近似视为常数 $v \\approx \\omega r$，沿径向长度为 $a$ 的线段切割磁感线产生动生电动势 $\\varepsilon_i = Bva = B r \\omega a$。",
+      "将该 $a \\times a \\times \\tau$ 的小方块视为径向流动的等效电源内阻 $R = \\frac{1}{\\gamma}\\frac{l}{S} = \\frac{a}{\\gamma a \\tau} = \\frac{1}{\\gamma\\tau}$，求出径向涡流 $I$ 后再计算安培阻力与对转轴的力矩。"
+    ],
+    "steps": [
+      "**求磁场覆盖区径向切割的动生电动势**：当圆盘以角速度 $\\omega$ 逆时针旋转时，离转轴 $r$ 处的线速度大小近似为 $v = \\omega r$（沿切向）。磁场 $\\vec{B}$ 竖直向下，由 $\\vec{v}\\times\\vec{B}$ 判定非静电力沿径向指向圆心 $O$。沿径向长度为 $a$ 的导体段产生的动生电动势为：$$\\varepsilon_i = v B a = B r \\omega a$$",
+      "**求小方块内阻与涡电流强度**：感应电流在圆盘内沿径向指向圆心 $O$ 流过磁场区，再由磁场区外广阔的圆盘回流构成闭合涡流。因外回路截面积很大、电阻可忽略，总电阻等于 $a \\times a \\times \\tau$ 方块沿径向（长度 $l=a$、横截面积 $S = a\\tau$）的内阻：$$R = \\frac{l}{\\gamma S} = \\frac{a}{\\gamma a \\tau} = \\frac{1}{\\gamma \\tau} \\implies I = \\frac{\\varepsilon_i}{R} = B r \\omega a \\gamma \\tau$$",
+      "**求安培制动力与制动转矩**：径向电流 $I$（长 $a$）在垂直磁场 $B$ 中受到的安培力大小为 $F = I a B$，方向由 $I\\,\\mathrm{d}\\vec{l}\\times\\vec{B}$ 判定为沿切向与圆盘运动速度 $\\vec{v}$ 相反（阻碍圆盘旋转）。该制动力对转轴 $O$ 的制动转矩大小为：$$M = r F = r I a B = B^2 r^2 \\omega a^2 \\gamma \\tau$$方向沿轴向向下（与角速度 $\\vec{\\omega}$ 反向，使圆盘减速）。"
+    ],
+    "answer": "电磁制动转矩近似表达式为 $$M = B^2 r^2 \\omega a^2 \\gamma \\tau$$，方向与角速度 $\\vec{\\omega}$ 相反（阻碍圆盘转动）。",
+    "check": "量纲与物理规律检验：制动转矩 $M \\propto B^2 \\omega \\gamma$，与电功率耗散 $P = \\varepsilon_i^2 / R = (Br\\omega a)^2 \\gamma\\tau = M\\omega$ 完全一致（机械制动功率 $M\\omega$ 全部转化为盘内焦耳热功率 $I^2 R$）。",
+    "note": "典型拓展（非匀强磁场中的直角弯折杆）：若在通有电流 $I$ 的长直导线旁，有一直角弯折导体杆 $abc$（一段垂直于长直导线、长 $l_1$，另一段平行于长直导线、长 $l_2$）以速度 $\\vec{v}$ 运动，求解时应分段计算 $\\varepsilon_{ab}$ 与 $\\varepsilon_{bc}$：凡是 $\\vec{v} \\parallel \\vec{B}$ 或 $(\\vec{v}\\times\\vec{B}) \\perp \\mathrm{d}\\vec{l}$ 的线段动生电动势为零；需要积分的线段代入 $B(x) = \\frac{\\mu_0 I}{2\\pi x}$ 逐段叠加即可。",
+    "questionImage": "ex/EX14-05.webp"
+  },
+  {
+    "id": "EX14-06",
+    "section": "s14-3",
+    "difficulty": 2,
+    "source": "课件第14章 · PDF 第 451–452 页 · 例14.6",
+    "title": "圆柱形均匀时变磁场在柱内与柱外激发的涡旋电场分布",
+    "problem": "在半径为 $R$ 的无限长圆柱形空间内存在着均匀磁场 $\\vec{B}$（方向垂直纸面向里，如图所示），圆柱外（$r > R$）无磁场。当此磁场的磁感应强度正以恒定变化率 $\\frac{\\mathrm{d}B}{\\mathrm{d}t} > 0$ 增大时，求圆柱体内（$r < R$）和圆柱体外（$r > R$）涡旋电场 $\\vec{E}_i$ 的分布。",
+    "page": 451,
+    "crop": [
+      0.72,
+      0.28,
+      0.99,
+      0.65
+    ],
+    "hints": [
+      "由于圆柱形磁场具有轴对称性，激发的涡旋电场 $\\vec{E}_i$ 电力线必为以轴线为圆心的同心圆，且同一半径 $r$ 上各点 $E_i$ 大小相等、方向沿圆周切向。",
+      "分别在 $r < R$ 与 $r > R$ 区域作半径为 $r$ 的同心圆积分回路 $L$，注意 $r > R$ 时穿过回路的磁通量仅局限于半径为 $R$ 的圆柱截面 $\\pi R^2$！"
+    ],
+    "steps": [
+      "**对称性分析与积分环路选取**：因磁场分布具有轴对称性，涡旋电场 $\\vec{E}_i$ 的场强大小仅与距轴线的距离 $r$ 有关，方向沿同心圆切线。取半径为 $r$ 的同心圆周为积分回路 $L$，设顺时针绕行方向为正（对应回路所围面积法向 $\\vec{n}$ 垂直纸面向里，与 $\\vec{B}$ 同向）。",
+      "**（1）圆柱内部区域（$r < R$）**：穿过半径为 $r$ 的圆面积的磁通量为 $\\Phi_B = B \\pi r^2$。由麦克斯韦感生电场环路定理：$$\\oint_L \\vec{E}_i\\cdot\\mathrm{d}\\vec{l} = E_i \\cdot 2\\pi r = -\\frac{\\mathrm{d}\\Phi_B}{\\mathrm{d}t} = -\\pi r^2\\frac{\\mathrm{d}B}{\\mathrm{d}t} \\implies E_i = -\\frac{r}{2}\\frac{\\mathrm{d}B}{\\mathrm{d}t}$$负号表明当 $\\mathrm{d}B/\\mathrm{d}t > 0$ 时，$\\vec{E}_i$ 的实际方向与所设顺时针正向相反，即沿**逆时针切线方向**（与 $\\partial\\vec{B}/\\partial t$ 成左手螺旋关系），大小随 $r$ 线性增大。",
+      "**（2）圆柱外部区域（$r > R$）**：由于磁场仅分布在 $r \\le R$ 的圆柱体内，半径 $r > R$ 的回路所包围的磁通量恒为 $\\Phi_B = B \\pi R^2$。再次应用感生电场环路定理：$$\\oint_L \\vec{E}_i\\cdot\\mathrm{d}\\vec{l} = E_i \\cdot 2\\pi r = -\\frac{\\mathrm{d}\\Phi_B}{\\mathrm{d}t} = -\\pi R^2\\frac{\\mathrm{d}B}{\\mathrm{d}t} \\implies E_i = -\\frac{R^2}{2r}\\frac{\\mathrm{d}B}{\\mathrm{d}t}$$大小与 $r$ 成反比（$E_i \\propto 1/r$），方向仍为逆时针切线方向。"
+    ],
+    "answer": "$$E_i(r) = \\begin{cases} \\dfrac{r}{2}\\dfrac{\\mathrm{d}B}{\\mathrm{d}t}, & r \\le R \\\\[8pt] \\dfrac{R^2}{2r}\\dfrac{\\mathrm{d}B}{\\mathrm{d}t}, & r > R \\end{cases}$$方向均沿同心圆**逆时针切向**（与 $\\partial\\vec{B}/\\partial t$ 成左手螺旋关系）。",
+    "check": "边界连续性检验：在圆柱边界 $r = R$ 处，柱内公式与柱外公式给出完全相同的最大值 $E_{i,\\max} = \\frac{R}{2}\\frac{\\mathrm{d}B}{\\mathrm{d}t}$；当 $r \\to 0$ 或 $r \\to \\infty$ 时均有 $E_i \\to 0$。",
+    "note": "核心物理图像：虽然圆柱外（$r > R$）磁感应强度 $B = 0$，但变化磁场激发的涡旋电场充满整个空间（包括 $r > R$ 的无磁场区）！这正是理想变压器铁芯外部副线圈仍能产生感生电动势的根本原因。",
+    "questionImage": "ex/EX14-06.webp"
+  },
+  {
+    "id": "EX14-07",
+    "section": "s14-3",
+    "difficulty": 2,
+    "source": "课件第14章 · PDF 第 453–456 页 · 例14.7",
+    "title": "圆柱形时变磁场中弦状导体棒 ab 的感生电动势与辅助线法",
+    "problem": "在半径为 $R$ 的圆柱形均匀变化磁场（$\\vec{B}$ 垂直纸面向里，且 $\\frac{\\mathrm{d}B}{\\mathrm{d}t} > 0$）内部，放置一长为 $L$ 的静止细导体棒 $ab$，棒与圆柱轴线（圆心 $O$）的垂直距离（弦心距）为 $h$（如图所示）。（1）分别用感生电动势定义式与法拉第定律径向辅助线法求棒 $ab$ 上的感生电动势；（2）讨论：若棒 $ab$ 部分伸出圆外或完全位于圆柱磁场区域外部，棒上是否仍有感生电动势？",
+    "page": 454,
+    "crop": [
+      0.62,
+      0.1,
+      0.96,
+      0.58
+    ],
+    "hints": [
+      "解法一（定义积分法）：柱内 $r < R$ 处 $E_i = \\frac{r}{2}\\frac{\\mathrm{d}B}{\\mathrm{d}t}$，方向垂直于径向 $\\vec{r}$；在棒上取微元 $\\mathrm{d}y$，利用几何投影 $r\\cos\\theta = h$ 消去变量 $r$。",
+      "解法二（径向辅助线法）：连接圆心与两端点作半径 $Oa$、$Ob$ 构成三角形闭合回路 $ObaO$。由于涡旋电场 $\\vec{E}_i$ 沿同心圆切向，必与径向辅助线 $Oa, Ob$ 处处垂直，故径向辅助线上感生电动势恒为零！"
+    ],
+    "steps": [
+      "**解法一（按感生电动势定义沿棒积分）**：以圆心 $O$ 为原点建立直角坐标系，$x$ 轴垂直于棒 $ab$（棒位于 $x = h$ 处），设感生电动势参考正方向为 $a \\to b$（沿 $+y$ 方向）。在棒上坐标 $y$ 处取微元 $\\mathrm{d}\\vec{l} = \\mathrm{d}y\\,\\vec{j}$，该点距圆心 $r = \\sqrt{h^2 + y^2} < R$，涡旋电场大小 $E_i = \\frac{r}{2}\\frac{\\mathrm{d}B}{\\mathrm{d}t}$，方向沿逆时针切向，与 $+y$ 轴夹角余弦为 $\\cos\\theta = \\frac{h}{r}$。因此：$$\\mathrm{d}\\varepsilon_i = \\vec{E}_i\\cdot\\mathrm{d}\\vec{l} = E_i\\cos\\theta\\,\\mathrm{d}y = \\left(\\frac{r}{2}\\frac{\\mathrm{d}B}{\\mathrm{d}t}\\right)\\frac{h}{r}\\,\\mathrm{d}y = \\frac{h}{2}\\frac{\\mathrm{d}B}{\\mathrm{d}t}\\,\\mathrm{d}y$$对 $y$ 从 $-L/2$ 到 $L/2$ 积分得：$$\\varepsilon_i = \\int_{-L/2}^{L/2} \\frac{h}{2}\\frac{\\mathrm{d}B}{\\mathrm{d}t}\\,\\mathrm{d}y = \\frac{1}{2}hL\\frac{\\mathrm{d}B}{\\mathrm{d}t} > 0$$方向由 $a$ 指向 $b$（$b$ 端为等效电源正极）。",
+      "**解法二（利用法拉第电磁感应定律作径向辅助线）**：连接圆心 $O$ 与端点 $a,b$ 作辅助线段 $Oa$ 和 $Ob$，构成闭合三角形回路 $ObaO$（顺时针绕行，法向向里与 $\\vec{B}$ 同向）。由于涡旋电场 $\\vec{E}_i$ 沿同心圆切向，在径向线 $Oa$ 和 $Ob$ 上处处有 $\\vec{E}_i \\perp \\mathrm{d}\\vec{l}$，故 $\\varepsilon_{Oa} = \\varepsilon_{Ob} = 0$。穿过 $\\triangle Oab$ 的磁通量为 $\\Phi_B = B S_{\\triangle Oab} = \\frac{1}{2}BhL$，从而：$$\\varepsilon_{ba} = \\varepsilon_{ObaO} = -\\frac{\\mathrm{d}\\Phi_B}{\\mathrm{d}t} = -\\frac{1}{2}hL\\frac{\\mathrm{d}B}{\\mathrm{d}t}$$负号表明实际方向与 $b \\to a$ 相反，即为 $a \\to b$，大小同样为 $\\frac{1}{2}hL\\frac{\\mathrm{d}B}{\\mathrm{d}t}$。",
+      "**（2）棒伸出磁场外或完全位于磁场外的讨论（课件 p456）**：因涡旋电场充满整个空间，即便导体棒部分伸出圆外或完全位于 $r > R$ 的圆柱磁场外部，只要 $\\triangle Oab$ 截获了圆柱内有磁场的扇形/弓形面积 $S_{\\mathrm{mag}} > 0$，棒上就依然存在感生电动势 $\\lvert\\varepsilon_i\\rvert = S_{\\mathrm{mag}}\\lvert\\mathrm{d}B/\\mathrm{d}t\\rvert$！"
+    ],
+    "answer": "$$\\varepsilon_i = \\frac{1}{2}hL\\frac{\\mathrm{d}B}{\\mathrm{d}t}$$（方向为 $a \\to b$，即等于 $\\triangle Oab$ 面积与 $\\mathrm{d}B/\\mathrm{d}t$ 的乘积）。",
+    "check": "特殊位置检验：当棒过圆心 $O$（弦心距 $h = 0$，即直径）时，$\\vec{E}_i \\perp \\mathrm{d}\\vec{l}$ 处处成立，公式给出 $\\varepsilon_i = 0$，完全吻合。",
+    "note": "经典拓展（弦 $ab$ 与圆弧 $ab$ 闭合回路及内接直角三角形 $abc$）：（1）若将弦 $ab$（电阻 $R_1$）与同心圆弧 $ab$（电阻 $R_2$，圆心角 $\\theta$）连成闭合回路，圆弧段感生电动势为 $\\varepsilon_{\\mathrm{arc}} = \\frac{1}{2}R^2\\theta\\frac{\\mathrm{d}B}{\\mathrm{d}t}$，弦段为 $\\varepsilon_{\\mathrm{chord}} = \\frac{1}{2}hL\\frac{\\mathrm{d}B}{\\mathrm{d}t}$，回路总电动势为弓形面积乘以 $\\mathrm{d}B/\\mathrm{d}t$，接在 $a,b$ 间的电压表读数取决于电压表引线所走的路径（因为涡旋电场非保守，不同路径包含的磁通不同）！（2）若圆内放置内接直角三角形导线框 $abc$（斜边 $ab$ 为直径过圆心），则斜边 $ab$ 上感生电动势为零，两直角边感生电动势之和恰等于直角三角形面积乘以 $\\mathrm{d}B/\\mathrm{d}t$。",
+    "questionImage": "ex/EX14-07.webp"
+  },
+  {
+    "id": "EX14-08",
+    "section": "s14-3",
+    "difficulty": 2,
+    "source": "课件第14章 · PDF 第 458–461 页 · 例14.8",
+    "title": "时变匀强磁场中滑动导轨回路的动生+感生复合电动势",
+    "problem": "一矩形导线回路两平行长边相距为 $l$，另一导体边 $ab$ 以恒定速度 $v$ 平行于长边向右滑动（如图所示）。整个回路都处在垂直于回路平面向外的均匀磁场 $\\vec{B}$ 中，且磁感应强度随时间按 $B(t) = B_0 \\cos(\\omega t)$ 的规律变化。试分别用“法拉第定律同时求导法”和“感生+动生分解法”求当导体棒 $ab$ 到左端距离为 $x$ 时，闭合回路中的总感应电动势 $\\varepsilon_i$。",
+    "page": 458,
+    "crop": [
+      0.74,
+      0.45,
+      0.98,
+      0.75
+    ],
+    "hints": [
+      "由于回路本身是闭合导体回路，且所处磁场在空间上均匀分布（$B$ 与坐标无关），直接对瞬时磁通量 $\\Phi_B(t) = B(t) S(t) = B_0 \\cos(\\omega t) \\cdot l x(t)$ 求全导数即可同时包含动生与感生两项贡献。",
+      "按链式法则展开：$-\\frac{\\mathrm{d}(BS)}{\\mathrm{d}t} = -S\\frac{\\mathrm{d}B}{\\mathrm{d}t} - B\\frac{\\mathrm{d}S}{\\mathrm{d}t}$，其中第一项固定面积 $S=lx$ 求导对应感生电动势 $\\varepsilon_{i1}$，第二项固定磁场 $B(t)$ 求导对应动生电动势 $\\varepsilon_{i2}$。"
+    ],
+    "steps": [
+      "**方法一（动生电动势与感生电动势同时计算）**：选定回路面积法向 $\\vec{n}$ 垂直纸面向外（与 $B>0$ 方向一致），则感应电动势参考正方向为**逆时针方向**（沿棒为 $b \\to a$）。穿过闭合回路的瞬时磁通量为 $\\Phi_B(t) = B(t) l x(t) = B_0 l x(t)\\cos(\\omega t)$。由法拉第定律对时间 $t$ 求全导数（利用 $\\mathrm{d}x/\\mathrm{d}t = v$）：$$\\varepsilon_i = -\\frac{\\mathrm{d}\\Phi_B}{\\mathrm{d}t} = -\\frac{\\mathrm{d}}{\\mathrm{d}t}\\left[B_0 l x(t)\\cos(\\omega t)\\right] = B_0 l\\left(\\omega x\\sin\\omega t - v\\cos\\omega t\\right)$$",
+      "**方法二（感生电动势与动生电动势分别计算再叠加）**：保持逆时针方向为参考正方向。第一步求感生电动势 $\\varepsilon_{i1}$：固定导体棒不动（视 $x$ 为常量），则：$$\\varepsilon_{i1} = -l x\\frac{\\mathrm{d}B}{\\mathrm{d}t} = -l x\\frac{\\mathrm{d}}{\\mathrm{d}t}\\left(B_0\\cos\\omega t\\right) = B_0 l \\omega x\\sin(\\omega t)$$",
+      "**第二步求动生电动势 $\\varepsilon_{i2}$ 并求和**：固定某瞬时磁场 $B(t) = B_0\\cos(\\omega t)$ 不变，导体棒 $ab$ 向右以速度 $v$ 切割磁感线，$\\vec{v}\\times\\vec{B}$ 方向沿 $a \\to b$（顺时针，与逆时针参考正方向 $b \\to a$ 相反），故：$$\\varepsilon_{i2} = \\int_b^a (\\vec{v}\\times\\vec{B})\\cdot\\mathrm{d}\\vec{l} = -v B(t) l = -B_0 l v\\cos(\\omega t)$$两者代数相加得总感应电动势：$$\\varepsilon_i = \\varepsilon_{i1} + \\varepsilon_{i2} = B_0 l\\left(\\omega x\\sin\\omega t - v\\cos\\omega t\\right)$$两种方法结果完全一致。"
+    ],
+    "answer": "$$\\varepsilon_i = B_0 l\\left(\\omega x\\sin\\omega t - v\\cos\\omega t\\right)$$（以逆时针方向为参考正方向）。",
+    "check": "双极限检验：当棒静止（$v = 0$）时退化为纯感生电动势 $B_0 l x \\omega\\sin(\\omega t)$；当磁场恒定（$\\omega = 0$）时退化为纯动生电动势 $-B_0 l v$（顺时针方向，大小 $B_0 l v$）。",
+    "note": "链式法则的物理本质（课件 p461 讨论）：对于闭合导体回路，$\\varepsilon_i = -\\frac{\\mathrm{d}\\Phi_B}{\\mathrm{d}t} = -\\frac{\\partial\\Phi_B}{\\partial B}\\frac{\\mathrm{d}B}{\\mathrm{d}t} - \\frac{\\partial\\Phi_B}{\\partial S}\\frac{\\mathrm{d}S}{\\mathrm{d}t}$，数学上的乘积求导链式法则恰对应物理上“磁场时间变化（涡旋电场感生）”与“边界位置运动（洛伦兹力动生）”两种独立物理机制的线性叠加。",
+    "questionImage": "ex/EX14-08.webp"
+  },
+  {
+    "id": "EX14-09",
+    "section": "s14-3",
+    "difficulty": 3,
+    "source": "课件第14章 · PDF 第 463–468 页 · 例14.9",
+    "title": "局域圆柱时变磁场中长 2R 运动导体棒 ac 的复合电动势与辅助线辨析",
+    "problem": "均匀磁场 $\\vec{B}$（方向垂直纸面向里）被限制在半径为 $R$ 的圆柱形空间中，磁场大小的变化率为 $\\frac{\\mathrm{d}B}{\\mathrm{d}t} > 0$。有一根长为 $2R$ 的水平金属棒 $ac$ 如图放置：左端点 $a$ 与中点 $b$ 均在圆柱边界圆周上（弦长 $ab = R$，$\\angle aOb = 60^\\circ$），右半段 $bc$（长 $R$）伸出圆柱磁场区域之外。若在图示时刻（磁感应强度大小为 $B$），金属棒在此位置还具有竖直向上的平动速度 $v$，试求此时金属棒 $ac$ 中的总感应电动势 $\\varepsilon_i$，并对比剖析“分解法”与课件 p466–468“同时计算法”的微妙差异。",
+    "page": 463,
+    "crop": [
+      0.59,
+      0.14,
+      0.98,
+      0.8
+    ],
+    "hints": [
+      "解法一（分解法，最稳妥推荐）：先假定棒静止，连接圆心作径向辅助线 $Oa$ 和 $Oc$（$\\vec{E}_i \\perp Oa, Oc$），计算 $\\triangle Oac$ 落在圆柱磁场内的有磁通面积 $S_0 = S_{\\triangle Oab} + S_{\\mathrm{sec}}$ 求感生电动势 $\\varepsilon_{i1}$；再假定磁场恒定，仅在圆内有磁场的 $ab$ 段（长 $R$）积分求动生电动势 $\\varepsilon_{i2} = BvR$。",
+      "解法二（同时计算法的微妙陷阱）：若对辅助回路 $OacO$ 直接写 $\\mathrm{d}S/\\mathrm{d}t = -Rv$，为什么能算对？必须注意圆心 $O$ 是静止的，若让辅助线随棒运动则辅助线会切割磁感线产生附加动生电动势！"
+    ],
+    "steps": [
+      "**解法一（感生与动生分解法）——（1）固定导体不动求感生电动势 $\\varepsilon_{i1}$**：连接圆心 $O$ 与端点 $a,c$ 作径向辅助线 $Oa$ 和 $Oc$ 构成闭合回路 $OacO$（顺时针绕行，对应棒上参考方向 $c \\to a$，法向向里与 $\\vec{B}$ 同向）。由于涡旋电场 $\\vec{E}_i$ 沿同心圆切向，与径向线 $Oa, Oc$ 垂直，故 $Oa, Oc$ 上不产生感生电动势。在 $\\triangle Oac$ 中，$Oa = Ob = R$ 且 $ab = R$，故 $\\triangle Oab$ 为等边三角形（高 $h = \\frac{\\sqrt{3}}{2}R$，$\\angle aOb = 60^\\circ$）；又 $bc = Ob = R$ 且 $\\angle Obc = 120^\\circ$，故 $\\angle bOc = 30^\\circ$。因此回路 $OacO$ 落在圆柱内有磁场区域的面积 $S_0$ 由等边三角形 $\\triangle Oab$ 与圆心角 $30^\\circ$ 的扇形组成：$$S_0 = \\frac{1}{2}R\\cdot\\frac{\\sqrt{3}}{2}R + \\frac{30^\\circ}{360^\\circ}\\pi R^2 = \\frac{R^2}{4}\\left(\\sqrt{3} + \\frac{\\pi}{3}\\right)$$由法拉第定律得感生电动势（沿顺时针参考方向 $c \\to a$）：$$\\varepsilon_{i1} = -\\frac{\\mathrm{d}(B S_0)}{\\mathrm{d}t} = -\\frac{R^2}{4}\\left(\\sqrt{3} + \\frac{\\pi}{3}\\right)\\frac{\\mathrm{d}B}{\\mathrm{d}t}$$负号表明感生电动势实际方向为 $a \\to c$。",
+      "**（2）固定磁场不变求动生电动势 $\\varepsilon_{i2}$ 并叠加**：仍设参考正方向为 $c \\to a$（向左）。当金属棒以速度 $v$ 竖直向上平动时，$\\vec{v}\\times\\vec{B}$ 方向水平向左（即 $c \\to a$）。由于右半段 $bc$ 处于圆柱外无磁场区（$B=0$），不切割磁感线，仅左半段 $ab$（长 $R$）在磁场中切割磁感线：$$\\varepsilon_{i2} = \\int_c^b (\\vec{v}\\times\\vec{B})\\cdot\\mathrm{d}\\vec{l} + \\int_b^a (\\vec{v}\\times\\vec{B})\\cdot\\mathrm{d}\\vec{l} = 0 + v B R = v B R$$将两者按同一参考正方向（$c \\to a$）代数相加，得棒 $ac$ 的总感应电动势：$$\\varepsilon_i = \\varepsilon_{i2} + \\varepsilon_{i1} = v B R - \\frac{R^2}{4}\\left(\\sqrt{3} + \\frac{\\pi}{3}\\right)\\frac{\\mathrm{d}B}{\\mathrm{d}t}$$",
+      "**解法二（课件 p466–468 同时计算法）的深度辨析**：课件解法二对 $\\Phi(t) = B(t)S(t)$ 求全导数，并在 $t=0$ 瞬时令有磁场区域面积变化率 $\\frac{\\mathrm{d}S}{\\mathrm{d}t} = -R\\frac{\\mathrm{d}x}{\\mathrm{d}t} = -Rv$，从而得出相同结果。但这里隐藏着极关键的物理微妙性：若将 $Oa, Oc$ 视为随棒一起向上运动的辅助线，它们就会切割磁感线并偏离圆心径向（不再垂直于 $\\vec{E}_i$）；若将 $O$ 固定在圆心而让端点 $a(t), c(t)$ 随棒上移，则径向线 $Oa(t), Oc(t)$ 在绕 $O$ 摆动时同样会在圆内扫过磁通（切割磁感线）！课件之所以写 $\\mathrm{d}S/\\mathrm{d}t = -Rv$，实际上是只计入了导体棒圆内段 $ab$（长 $R$）向上平动 $\\mathrm{d}x = v\\,\\mathrm{d}t$ 所扫过的矩形面积减少量 $-R\\,\\mathrm{d}x$，而人为排除了辅助线摆动扫过的面积——这本质上就是把动生电动势还原为 $ab$ 段切割磁感线！因此对于非闭合运动导体，**强烈建议采用解法一（感生+动生分解法）**，物理清晰且绝不会因动辅助线切割磁感线而出错。"
+    ],
+    "answer": "以 $c \\to a$ 为参考正方向，总感应电动势为 $$\\varepsilon_i = v B R - \\frac{R^2}{4}\\left(\\sqrt{3} + \\frac{\\pi}{3}\\right)\\frac{\\mathrm{d}B}{\\mathrm{d}t}$$（若 $\\varepsilon_i > 0$ 则实际方向为 $c \\to a$，$a$ 端电势高；若 $\\varepsilon_i < 0$ 则实际方向为 $a \\to c$）。",
+    "check": "分段贡献核对：动生项仅来自圆内段 $ab$（$vBR$），感生项来自整个 $ac$ 段（圆内段 $ab$ 对应 $\\frac{\\sqrt{3}}{4}R^2\\frac{\\mathrm{d}B}{\\mathrm{d}t}$，圆外段 $bc$ 对应 $\\frac{\\pi}{12}R^2\\frac{\\mathrm{d}B}{\\mathrm{d}t}$），物理职责边界分明。",
+    "note": "方法论总结（回应课件 p468 讨论“感生和动生一起计算在该问题中是否带来方便”）：对闭合回路（如例14.8），合并求导 $\\varepsilon_i = -\\mathrm{d}\\Phi_B/\\mathrm{d}t$ 非常简捷；但对不闭合的开路运动导体棒（如例14.9），合并求导极易在辅助线是否切割磁感线上犯错，采用“先固定导体求感生、再固定磁场求动生”的分解法才是最安全可靠的通法。",
+    "questionImage": "ex/EX14-09.webp"
+  },
+  {
+    "id": "EX14-10",
+    "section": "s14-4",
+    "difficulty": 2,
+    "source": "课件第14章 · PDF 第 475–476 页 · 例14.10",
+    "title": "充有磁介质的无限长同轴圆筒电缆单位长度自感系数",
+    "problem": "由两个“无限长”的同轴薄壁圆筒状导体所组成的同轴电缆，内外圆筒半径分别为 $R_1$ 和 $R_2$（$R_1 < R_2$），其间充满磁导率为 $\\mu = \\mu_0\\mu_{\\mathrm{r}}$ 的均匀线性磁介质（如图所示）。当电缆中沿内圆筒和外圆筒均匀流过的电流 $I$ 大小相等、方向相反时，求该同轴电缆单位长度的自感系数 $L_1 = L/l$。",
+    "page": 475,
+    "crop": [
+      0.64,
+      0.52,
+      0.96,
+      0.89
+    ],
+    "hints": [
+      "遵循自感系数静态定义三步法：$I \\to B(r) \\to \\Phi_B \\to L = \\Phi_B / I$。",
+      "由安培环路定理可知磁场仅存在于内外圆筒之间（$R_1 < r < R_2$），取包含轴线的径向平面上长为 $l$、宽为 $\\mathrm{d}r$ 的矩形条面元计算穿过内外导体间回路的磁通量。"
+    ],
+    "steps": [
+      "**由安培环路定理求磁感应强度分布**：在垂直于轴线的平面内作半径为 $r$ 的同心圆环路。因电流沿薄壁圆筒均匀分布且内外电流等值反向：当 $r < R_1$ 或 $r > R_2$ 时，$\\sum I_{\\mathrm{in}} = 0 \\implies H = 0, B = 0$；当 $R_1 < r < R_2$ 时：$$\\oint_L \\vec{H}\\cdot\\mathrm{d}\\vec{l} = H\\cdot 2\\pi r = I \\implies H = \\frac{I}{2\\pi r}, \\quad B = \\mu H = \\frac{\\mu I}{2\\pi r}$$方向与内圆筒电流成右手螺旋关系（沿同心圆切向）。",
+      "**积分求长为 $l$ 的一段电缆回路间的磁通量**：在内外圆筒之间的径向截面上，取距轴线为 $r$、宽为 $\\mathrm{d}r$、轴向长为 $l$ 的矩形面元 $\\mathrm{d}S = l\\,\\mathrm{d}r$，其法向与环向磁场 $\\vec{B}$ 处处平行（$\\cos 0^\\circ = 1$），故：$$\\Phi_B = \\int_{R_1}^{R_2} B(r) l\\,\\mathrm{d}r = \\int_{R_1}^{R_2} \\frac{\\mu I l}{2\\pi}\\frac{\\mathrm{d}r}{r} = \\frac{\\mu I l}{2\\pi}\\ln\\frac{R_2}{R_1}$$",
+      "**求自感系数及单位长度自感**：由自感定义 $\\Phi_B = L I$，得长为 $l$ 的电缆自感及单位长度自感 $L_1$ 分别为：$$L = \\frac{\\Phi_B}{I} = \\frac{\\mu l}{2\\pi}\\ln\\frac{R_2}{R_1} \\implies L_1 = \\frac{L}{l} = \\frac{\\mu}{2\\pi}\\ln\\frac{R_2}{R_1}$$"
+    ],
+    "answer": "单位长度电缆的自感系数为 $$L_1 = \\frac{L}{l} = \\frac{\\mu}{2\\pi}\\ln\\frac{R_2}{R_1} = \\frac{\\mu_0\\mu_{\\mathrm{r}}}{2\\pi}\\ln\\frac{R_2}{R_1}$$。",
+    "check": "量纲与极限检验：$[\\mu/(2\\pi)] = \\mathrm{H/m}$，正是单位长度电感的国际单位；当 $R_2 \\to R_1$（内外筒间隙趋于零）时，$\\ln(R_2/R_1) \\to 0 \\implies L_1 \\to 0$，磁场空间体积消失，电感归零。",
+    "note": "对比提示：本题假定内导体为中空薄壁圆筒（$r < R_1$ 内无磁场），故只有外自感 $\\frac{\\mu}{2\\pi}\\ln\\frac{R_2}{R_1}$；若内导体为实心圆柱且电流均匀分布，则还需计入内导体内部的磁通/磁能贡献（详见例14.13）。",
+    "questionImage": "ex/EX14-10.webp"
+  },
+  {
+    "id": "EX14-11",
+    "section": "s14-4",
+    "difficulty": 2,
+    "source": "课件第14章 · PDF 第 477–478 页 · 例14.11",
+    "title": "平行双线传输线的自感系数与长直导线—矩形框互感拓展",
+    "problem": "两根半径均为 $a$ 的平行长直圆柱形传输线 $AB$ 和 $CD$，轴线相距为 $d$，且满足 $a \\ll d$（如图所示）。设传输线置于空气中（$\\mu \\approx \\mu_0$），一端接电源、另一端接负载，电流 $I$ 从导线 $AB$ 输出并从导线 $CD$ 等值反向返回。忽略两导线内部的磁通量，试求长为 $l$ 的这对传输线的自感系数 $L$ 及单位长度电感 $L_0 = L/l$。",
+    "page": 477,
+    "crop": [
+      0.69,
+      0.15,
+      0.97,
+      0.62
+    ],
+    "hints": [
+      "在两导线所在的平面内（$a \\le r \\le d-a$），由右手螺旋定则可知，左导线向下电流 $I$ 与右导线向上电流 $I$ 在两线之间激发的磁场方向相同（均垂直纸面向外），总磁场为两导线磁场算术相加！",
+      "积分区间应从左导线表面 $r = a$ 积到右导线表面 $r = d - a$；由对称性，两项积分完全相等。"
+    ],
+    "steps": [
+      "**求两平行传输线之间的合磁感应强度**：在两导线轴线所在平面内，距左导线 $AB$ 轴线距离为 $r$（$a \\le r \\le d-a$）处，左导线电流 $I$ 产生的磁场与右导线反向电流 $I$ 产生的磁场方向相同（均垂直纸面向外），合磁感应强度大小为：$$B(r) = \\frac{\\mu_0 I}{2\\pi r} + \\frac{\\mu_0 I}{2\\pi(d - r)}$$",
+      "**积分求长为 $l$ 的两导线间回路磁通量**：因 $a \\ll d$，忽略导线内部的磁通量，在两导线间取长为 $l$、宽为 $\\mathrm{d}r$ 的矩形条面元 $\\mathrm{d}S = l\\,\\mathrm{d}r$，对 $r$ 从 $a$ 到 $d-a$ 积分（对第二项作变量代换 $u = d - r$，积分限仍为 $a$ 到 $d-a$）：$$\\Phi_B = \\int_a^{d-a} \\left[\\frac{\\mu_0 I}{2\\pi r} + \\frac{\\mu_0 I}{2\\pi(d - r)}\\right] l\\,\\mathrm{d}r = 2\\cdot\\frac{\\mu_0 I l}{2\\pi}\\ln\\frac{d - a}{a} = \\frac{\\mu_0 I l}{\\pi}\\ln\\frac{d - a}{a}$$",
+      "**求自感系数 $L$ 与单位长度自感 $L_0$**：由 $L = \\Phi_B / I$ 可得：$$L = \\frac{\\mu_0 l}{\\pi}\\ln\\frac{d - a}{a} \\approx \\frac{\\mu_0 l}{\\pi}\\ln\\frac{d}{a}, \\qquad L_0 = \\frac{L}{l} = \\frac{\\mu_0}{\\pi}\\ln\\frac{d - a}{a}$$"
+    ],
+    "answer": "长为 $l$ 的传输线自感为 $$L = \\frac{\\mu_0 l}{\\pi}\\ln\\frac{d - a}{a}$$，单位长度自感为 $$L_0 = \\frac{\\mu_0}{\\pi}\\ln\\frac{d - a}{a}$$。",
+    "check": "对称性倍增检验：单根导线对区间 $[a, d-a]$ 的磁通贡献为 $\\frac{\\mu_0 I l}{2\\pi}\\ln\\frac{d-a}{a}$，双线反向电流在中间区域磁场同向叠加，故总电感恰好是单根贡献的 2 倍（分母为 $\\pi$ 而非 $2\\pi$）。",
+    "note": "互感拓展（长直导线与共面矩形线圈的互感系数 $M$）：回顾例14.1，长直导线通电流 $I_1$ 时穿过旁侧共面矩形线圈（长 $l$、宽 $b$、近距 $d$）的磁通量为 $\\Phi_{21} = \\frac{\\mu_0 l I_1}{2\\pi}\\ln\\frac{d+b}{d}$，故两者的互感系数直接由 $M = \\Phi_{21}/I_1 = \\frac{\\mu_0 l}{2\\pi}\\ln\\frac{d+b}{d}$ 给出；若反过来求矩形线圈通电 $I_2$ 在无限长直导线回路中产生的磁通 $\\Phi_{12}$ 则积分极繁琐，利用互易定理 $M_{12} = M_{21} = M$ 即可一步秒杀！",
+    "questionImage": "ex/EX14-11.webp"
+  },
+  {
+    "id": "EX14-12",
+    "section": "s14-4",
+    "difficulty": 3,
+    "source": "课件第14章 · PDF 第 490–491 页 · 例14.12",
+    "title": "不等半径共轴长直螺线管的互感系数与耦合系数辨析",
+    "problem": "两个长度均为 $l$ 的共轴空心细长直螺线管（$l \\gg R_1 > R_2$，置于真空中），外管半径为 $R_1$、匝数为 $N_1$、自感系数为 $L_1$；内管半径为 $R_2$、匝数为 $N_2$、自感系数为 $L_2$（如图所示）。（1）求它们的互感系数 $M$ 及其与 $L_1, L_2$ 的关系；（2）深度辨析课件 p491 的设问：若先设内螺线管通电流 $I_2$，能否因为外管截面积为 $\\pi R_1^2$ 而得出 $M_{12} = \\frac{R_1}{R_2}\\sqrt{L_1 L_2}$？为什么？",
+    "page": 490,
+    "crop": [
+      0.59,
+      0.31,
+      0.96,
+      0.63
+    ],
+    "hints": [
+      "外管通电 $I_1$ 时，其内部匀强磁场 $B_1 = \\frac{\\mu_0 N_1 I_1}{l}$ 充满整个半径 $R_1$ 的空间，因此穿过内管（半径 $R_2 < R_1$）每匝的磁通量为 $B_1 \\pi R_2^2$。",
+      "反之，当内管通电 $I_2$ 时，其产生的磁场 $B_2 = \\frac{\\mu_0 N_2 I_2}{l}$ 仅局限于内管内部（$r < R_2$），在环形间隙（$R_2 < r < R_1$）内磁感应强度为零！故穿过外管每匝的磁通量依然只能按有效有场面积 $\\pi R_2^2$ 计算！"
+    ],
+    "steps": [
+      "**（1）由外管通电计算互感系数 $M_{21}$**：设外螺线管通以电流 $I_1$，管内均匀磁感应强度为 $B_1 = \\mu_0 n_1 I_1 = \\frac{\\mu_0 N_1}{l}I_1$。穿过内螺线管（截面积 $S_2 = \\pi R_2^2$，匝数 $N_2$）的全磁通与互感系数为：$$\\Psi_{21} = N_2 B_1 S_2 = \\frac{\\mu_0 N_1 N_2}{l}\\pi R_2^2 I_1 \\implies M_{21} = \\frac{\\Psi_{21}}{I_1} = \\frac{\\mu_0 N_1 N_2}{l}\\pi R_2^2$$",
+      "**建立 $M$ 与 $L_1, L_2$ 的关系**：两螺线管各自的自感系数分别为：$$L_1 = \\frac{\\mu_0 N_1^2}{l}\\pi R_1^2, \\qquad L_2 = \\frac{\\mu_0 N_2^2}{l}\\pi R_2^2 \\implies \\sqrt{L_1 L_2} = \\frac{\\mu_0 N_1 N_2}{l}\\pi R_1 R_2$$将其与 $M_{21}$ 对比，消去 $\\frac{\\mu_0 N_1 N_2}{l}\\pi R_2$，立得：$$M = M_{21} = \\frac{R_2}{R_1}\\sqrt{L_1 L_2}$$对照耦合公式 $M = K\\sqrt{L_1 L_2}$，可知两管的耦合系数为 $K = \\frac{R_2}{R_1} < 1$。",
+      "**（2）课件 p491 设问辨析（由内管通电计算 $M_{12}$）**：若改设内管通电 $I_2$，内管内部（$r < R_2$）磁感应强度为 $B_2 = \\frac{\\mu_0 N_2}{l}I_2$，但内管外部（$r > R_2$）磁场为零！因此，虽然外管几何截面积为 $S_1 = \\pi R_1^2$，但其中只有半径 $r < R_2$ 的中心圆面积 $S_2 = \\pi R_2^2$ 内有磁感线穿过。穿过外管 $N_1$ 匝的全磁通仍为：$$\\Psi_{12} = N_1 B_2 S_2 = \\frac{\\mu_0 N_1 N_2}{l}\\pi R_2^2 I_2 \\implies M_{12} = \\frac{\\Psi_{12}}{I_2} = \\frac{\\mu_0 N_1 N_2}{l}\\pi R_2^2 = \\frac{R_2}{R_1}\\sqrt{L_1 L_2}$$可见 $M_{12} = M_{21} = M$ 严格成立！课件 p491 故意写出的 $M_{12} = \\frac{R_1}{R_2}\\sqrt{L_1 L_2}$ 是错误的（它错把外管面积 $S_1 = \\pi R_1^2$ 当成有磁场穿过的面积，且会导致耦合系数 $K = R_1/R_2 > 1$，违背能量守恒定律 $K \\le 1$）。"
+    ],
+    "answer": "互感系数 $$M = \\frac{\\mu_0 N_1 N_2}{l}\\pi R_2^2 = \\frac{R_2}{R_1}\\sqrt{L_1 L_2}$$，耦合系数 $K = \\frac{R_2}{R_1} < 1$；课件 p491 设问中的 $\\frac{R_1}{R_2}\\sqrt{L_1 L_2}$ 不成立。",
+    "check": "物理约束检验：任何无源线性耦合系统的耦合系数必须满足 $0 \\le K \\le 1$。因外管半径 $R_1 > R_2$，外管产生的总磁通 $\\Phi_1 \\propto \\pi R_1^2$ 中只有 $\\frac{\\pi R_2^2}{\\pi R_1^2} = \\left(\\frac{R_2}{R_1}\\right)^2$ 的比例穿过内管，故 $K = \\sqrt{1 \\cdot (R_2/R_1)^2} = \\frac{R_2}{R_1} < 1$。",
+    "note": "考场铁律：计算两不同截面积共轴线圈（或螺线管）的互感磁通时，有效面积永远取**较小线圈的横截面积** $\\min(S_1, S_2) = \\pi R_{\\min}^2$！",
+    "questionImage": "ex/EX14-12.webp"
+  },
+  {
+    "id": "EX14-13",
+    "section": "s14-5",
+    "difficulty": 3,
+    "source": "课件第14章 · PDF 第 498–500 页 · 例14.13",
+    "title": "实心芯线同轴电缆的磁场能量分布与内外总自感系数",
+    "problem": "一“无限长”同轴电缆由半径为 $R_1$ 的实心圆柱铜芯线（磁导率为 $\\mu_1$）和半径为 $R_2$（$R_2 > R_1$）的同轴薄壁外圆筒所组成，其间（$R_1 < r < R_2$）充满磁导率为 $\\mu$ 的均匀绝缘介质（如图所示）。电流 $I$ 从实心芯线的一端均匀流出（电流在芯线横截面上均匀分布），经外层圆筒等值反向返回。求长为 $l$ 的一段同轴电缆内贮藏的总磁场能量 $W_m$ 以及该段电缆的总自感系数 $L$。",
+    "page": 498,
+    "crop": [
+      0.68,
+      0.33,
+      0.98,
+      0.78
+    ],
+    "hints": [
+      "由于电流 $I$ 在半径为 $R_1$ 的实心铜芯截面上均匀分布（电流密度 $J = I/(\\pi R_1^2)$），铜芯内部（$r < R_1$）也存在非零磁场 $B_1(r) = \\frac{\\mu_1 I r}{2\\pi R_1^2}$，储存了不可忽略的内部磁能 $W_{m2}$！",
+      "由于铜芯内部磁通仅与部分电流（$\\frac{r^2}{R_1^2}I$）相交链，直接用磁通法算内自感容易出错；利用磁场能量公式 $W_m = \\iiint \\frac{B^2}{2\\mu'}\\,\\mathrm{d}V = \\frac{1}{2}LI^2$ 求总自感 $L = \\frac{2W_m}{I^2}$ 是最严谨简捷的标准方法！"
+    ],
+    "steps": [
+      "**分区应用安培环路定理求磁场分布**：作半径为 $r$ 的同心圆环路。在实心铜芯内部（$r < R_1$），环路包围的电流为 $I_{\\mathrm{in}} = I\\frac{\\pi r^2}{\\pi R_1^2} = I\\frac{r^2}{R_1^2}$；在绝缘介质层（$R_1 < r < R_2$），$I_{\\mathrm{in}} = I$；在外圆筒外部（$r > R_2$），$I_{\\mathrm{in}} = 0$。故各区磁场强度与磁感应强度分别为：$$\\begin{cases} r < R_1: & H_1 = \\dfrac{I r}{2\\pi R_1^2}, \\quad B_1 = \\dfrac{\\mu_1 I r}{2\\pi R_1^2} \\\\[8pt] R_1 < r < R_2: & H_2 = \\dfrac{I}{2\\pi r}, \\quad B_2 = \\dfrac{\\mu I}{2\\pi r} \\\\[6pt] r > R_2: & H_3 = 0, \\quad B_3 = 0 \\end{cases}$$",
+      "**计算各区磁能密度并积分求长为 $l$ 的总磁能 $W_m$**：由 $w_m = \\frac{B^2}{2\\mu'}$，取半径为 $r$、厚为 $\\mathrm{d}r$、长为 $l$ 的薄圆柱壳体元 $\\mathrm{d}V = 2\\pi r l\\,\\mathrm{d}r$。在介质层（$R_1 < r < R_2$）内的磁能 $W_{m1}$ 为：$$W_{m1} = \\int_{R_1}^{R_2} \\frac{\\mu I^2}{8\\pi^2 r^2}\\cdot 2\\pi r l\\,\\mathrm{d}r = \\frac{\\mu I^2 l}{4\\pi}\\ln\\frac{R_2}{R_1}$$在实心铜芯内部（$r < R_1$）的磁能 $W_{m2}$ 为：$$W_{m2} = \\int_0^{R_1} \\frac{\\mu_1 I^2 r^2}{8\\pi^2 R_1^4}\\cdot 2\\pi r l\\,\\mathrm{d}r = \\frac{\\mu_1 I^2 l}{4\\pi R_1^4}\\left[\\frac{r^4}{4}\\right]_0^{R_1} = \\frac{\\mu_1 I^2 l}{16\\pi}$$外筒之外 $W_{m3} = 0$。故总磁场能量为：$$W_m = W_{m1} + W_{m2} = \\frac{\\mu I^2 l}{4\\pi}\\ln\\frac{R_2}{R_1} + \\frac{\\mu_1 I^2 l}{16\\pi}$$",
+      "**由磁能与自感的关系求总自感系数 $L$**：利用 $W_m = \\frac{1}{2}L I^2$，解得长为 $l$ 的同轴电缆总自感系数：$$L = \\frac{2W_m}{I^2} = \\frac{\\mu l}{2\\pi}\\ln\\frac{R_2}{R_1} + \\frac{\\mu_1 l}{8\\pi}$$其中第一项 $L_0 = \\frac{\\mu l}{2\\pi}\\ln\\frac{R_2}{R_1}$ 为外自感（与例14.10空心内筒结果完全一致），第二项 $L_{\\mathrm{in}} = \\frac{\\mu_1 l}{8\\pi}$ 为实心芯线的**内自感**。"
+    ],
+    "answer": "总磁场能量 $$W_m = \\frac{\\mu I^2 l}{4\\pi}\\ln\\frac{R_2}{R_1} + \\frac{\\mu_1 I^2 l}{16\\pi}$$，总自感系数 $$L = \\frac{\\mu l}{2\\pi}\\ln\\frac{R_2}{R_1} + \\frac{\\mu_1 l}{8\\pi}$$。",
+    "check": "高频趋肤效应极限检验：当电缆传输超高频交变电流时，由于趋肤效应，电流全部集中于铜芯外表面（退化为空心薄壁圆筒，芯内 $B_1 = 0$），此时内磁能 $W_{m2} = 0$、内自感 $L_{\\mathrm{in}} = 0$，总自感退化为例14.10的 $L_0 = \\frac{\\mu l}{2\\pi}\\ln\\frac{R_2}{R_1}$。",
+    "note": "为什么不能直接把芯内磁通 $\\int_0^{R_1} B_1(r) l\\,\\mathrm{d}r = \\frac{\\mu_1 I l}{4\\pi}$ 除以 $I$ 当作内自感？因为半径 $r$ 处的磁感线只包围了 $\\frac{r^2}{R_1^2}$ 份额的电流（只与 $\\frac{r^2}{R_1^2}I$ 匝链），加权磁通匝链数为 $\\Psi_{\\mathrm{in}} = \\int_0^{R_1} \\left(\\frac{r^2}{R_1^2}\\right) B_1(r) l\\,\\mathrm{d}r = \\frac{\\mu_1 I l}{8\\pi}$，除以 $I$ 才得到正确的内自感 $\\frac{\\mu_1 l}{8\\pi}$。显然直接用能量法 $L = 2W_m/I^2$ 避免了部分匝链加权的易错点！",
+    "questionImage": "ex/EX14-13.webp"
+  }
+]

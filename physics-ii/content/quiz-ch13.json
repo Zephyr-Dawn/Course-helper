@@ -1,0 +1,67 @@
+[
+  {
+    "id": "Q13-01",
+    "section": "s13-1",
+    "q": "关于顺磁质与抗磁质的微观磁化机制，下列说法正确的是：",
+    "options": [
+      "顺磁质在外磁场中只发生分子固有磁矩的取向排列，完全不产生与外场反向的附加（抗）磁矩",
+      "抗磁质分子在无外磁场时固有磁矩不为零，只是因为热运动而统计抵消",
+      "无论顺磁质还是抗磁质，在外磁场中电子轨道拉莫尔进动都会产生与外磁场方向相反的附加磁矩 $\\Delta\\vec{p}_m$",
+      "电子轨道磁矩 $\\vec{\\mu}_L$ 的方向总是与电子轨道角动量 $\\vec{L}$ 的方向相同"
+    ],
+    "answer": 2,
+    "explain": "外磁场引起的电子轨道拉莫尔进动产生与 $\\vec{B}_0$ 反向的附加磁矩 $\\Delta\\vec{p}_m$ 是所有物质的普遍属性（见课件 p371–374）。抗磁质分子固有磁矩 $\\vec{p}_m = \\vec{0}$，故只显示出 $\\Delta\\vec{p}_m$ 的反向抗磁效应；顺磁质分子 $\\vec{p}_m \\ne \\vec{0}$，其沿外场的取向磁化远强于反向附加磁矩 $\\Delta\\vec{p}_m$，宏观表现为顺磁性。"
+  },
+  {
+    "id": "Q13-02",
+    "section": "s13-2",
+    "q": "一圆柱形均匀磁介质沿轴向均匀磁化，磁化强度矢量为 $\\vec{M}$（平行于圆柱轴线）。设介质表面的外法线单位矢量为 $\\hat{n}_e$，则该圆柱体表面上的磁化面电流线密度 $\\vec{j}_m$ 分布为：",
+    "options": [
+      "圆柱两个端面上 $j_m = M$，圆柱侧面上 $j_m = 0$",
+      "圆柱侧面上 $j_m = M$（环绕侧面且与 $\\vec{M}$ 成右手螺旋关系），两个端面上 $j_m = 0$",
+      "圆柱侧面上和两个端面上均有 $j_m = M$",
+      "由于是均匀磁化，介质内部和表面上的磁化电流处处为零"
+    ],
+    "answer": 1,
+    "explain": "由磁化面电流线密度公式 $\\vec{j}_m = \\vec{M}\\times\\hat{n}_e$（大小 $j_m = M\\sin\\theta$，见课件 p377）：在圆柱两个端面上，$\\hat{n}_e$ 与 $\\vec{M}$ 平行或反平行（$\\theta = 0$ 或 $\\pi$），故 $\\vec{j}_m = \\vec{0}$；在圆柱侧面上，$\\hat{n}_e$ 垂直于轴向 $\\vec{M}$（$\\theta = \\pi/2$），故 $j_m = M$，方向沿圆周切向且与 $\\vec{M}$ 满足右手螺旋法则。"
+  },
+  {
+    "id": "Q13-03",
+    "section": "s13-3",
+    "q": "将磁介质中的稳恒磁场基本规律与电介质中的静电场规律作对照（见课件 p393 小结表），下列对应关系完全正确的是：",
+    "options": [
+      "$\\oint_L \\vec{H}\\cdot\\mathrm{d}\\vec{l} = \\sum I_0$ 对应 $\\oiint_S \\vec{D}\\cdot\\mathrm{d}\\vec{S} = \\sum q_0$，且 $\\vec{B} = \\mu_0(\\vec{H} + \\vec{M})$、$\\vec{j}_m = \\vec{M}\\times\\hat{n}_e$",
+      "$\\vec{B} = \\mu_0\\mu_r\\vec{H}$ 对应 $\\vec{E} = \\varepsilon_0\\varepsilon_r\\vec{D}$，且两者均使介质内总场比真空场减弱",
+      "磁化强度满足 $\\vec{M} = (\\mu_r - 1)\\vec{B}$，极化强度满足 $\\vec{P} = (\\varepsilon_r - 1)\\vec{D}$",
+      "有磁介质时磁场高斯定理变为 $\\oiint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S} = \\mu_0 \\sum I_m$"
+    ],
+    "answer": 0,
+    "explain": "根据课件 p393 对照表：$\\vec{H}$ 的环路定理 $\\oint \\vec{H}\\cdot\\mathrm{d}\\vec{l}=\\sum I_0$ 对应 $\\vec{D}$ 的高斯定理 $\\oiint \\vec{D}\\cdot\\mathrm{d}\\vec{S}=\\sum q_0$；$\\vec{B}=\\mu_0\\mu_r\\vec{H}$ 对应 $\\vec{E}=\\vec{D}/(\\varepsilon_0\\varepsilon_r)$；$\\vec{M}=(\\mu_r-1)\\vec{H}$ 对应 $\\vec{P}=\\varepsilon_0(\\varepsilon_r-1)\\vec{E}$；$\\vec{j}_m=\\vec{M}\\times\\hat{n}_e$ 对应 $\\sigma'=\\vec{P}\\cdot\\hat{n}_e$。且存在磁介质时磁感应线仍闭合，$\\oiint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S} = 0$ 依然严格成立。"
+  },
+  {
+    "id": "Q13-04",
+    "section": "s13-3",
+    "q": "一密绕长直螺线管每厘米有 $10$ 匝线圈，通有传导电流 $I = 2.0\\,\\mathrm{A}$，管内充满相对磁导率 $\\mu_r = 250$ 的均匀线性磁介质（课件 p385 例13.1）。则管内磁场强度 $H$ 与磁化电流产生的磁感应强度 $B'$ 分别为：",
+    "options": [
+      "$H = 20\\,\\mathrm{A/m}$，$B' \\approx 6.26\\times 10^{-3}\\,\\mathrm{T}$",
+      "$H = 2000\\,\\mathrm{A/m}$，$B' = \\mu_0(\\mu_r - 1)H \\approx 0.626\\,\\mathrm{T}$",
+      "$H = 5.0\\times 10^5\\,\\mathrm{A/m}$，$B' = \\mu_0\\mu_r H \\approx 0.628\\,\\mathrm{T}$",
+      "$H = 2000\\,\\mathrm{A/m}$，$B' = \\mu_0 H \\approx 2.51\\times 10^{-3}\\,\\mathrm{T}$"
+    ],
+    "answer": 1,
+    "explain": "注意单位换算：$n = 10\\,\\mathrm{cm}^{-1} = 1000\\,\\mathrm{m}^{-1}$，故 $H = nI = 2000\\,\\mathrm{A/m}$；磁化强度 $M = (\\mu_r - 1)H = 249 \\times 2000 = 4.98\\times 10^5\\,\\mathrm{A/m}$，磁化电流产生的磁感应强度为 $B' = \\mu_0 M = 4\\pi\\times 10^{-7} \\times 4.98\\times 10^5 \\approx 0.626\\,\\mathrm{T}$（总场 $B = \\mu_0\\mu_r H \\approx 0.628\\,\\mathrm{T}$）。"
+  },
+  {
+    "id": "Q13-05",
+    "section": "s13-4",
+    "q": "关于铁磁质的磁滞回线、软磁材料与硬磁材料的应用，下列说法错误的是：",
+    "options": [
+      "铁磁质的磁导率 $\\mu_r$ 不是常数，且同一磁场强度 $H$ 下的磁感应强度 $B$ 依赖于此前的磁化历史",
+      "软磁材料（如硅钢片、软磁铁氧体）矫顽力 $H_c$ 小、磁滞回线窄、每周期磁滞损耗 $\\lvert\\oint H\\,\\mathrm{d}B\\rvert$ 小，适合制造变压器与电机铁芯",
+      "硬磁材料（如钕铁硼、铝镍钴）剩磁 $B_r$ 和矫顽力 $H_c$ 均很大，适合制造永久磁体",
+      "当环境温度升高并超过居里温度 $T_C$ 时，铁磁质将转变为抗磁质"
+    ],
+    "answer": 3,
+    "explain": "当温度高于居里温度 $T_C$（如铁 $T_C \\approx 1040\\,\\mathrm{K}$）时，剧烈的热运动破坏了电子自旋间的交换耦合长程有序，自发磁化磁畴瓦解，铁磁质转变为**顺磁质**（而非抗磁质，见课件 p394、p403）。"
+  }
+]

@@ -1,0 +1,226 @@
+[
+  {
+    "id": "F12-01",
+    "page": 276,
+    "crop": [
+      0.04,
+      0.14,
+      0.96,
+      0.94
+    ],
+    "title": "磁感应强度的定义与洛伦兹力关系式",
+    "caption": "运动电荷在磁场中所受磁力总垂直于速度 $\\vec{v}$ 与磁感应强度 $\\vec{B}$ 构成的平面，满足 $\\vec{F} = q\\vec{v}\\times\\vec{B}$；电磁场共存时总受力为洛伦兹关系式 $\\vec{F} = q\\vec{E} + q\\vec{v}\\times\\vec{B}$。",
+    "source": "课件 PDF 第 276 页",
+    "assetKey": "figs/F12-01.webp"
+  },
+  {
+    "id": "F12-02",
+    "page": 277,
+    "crop": [
+      0.03,
+      0.1,
+      0.96,
+      0.94
+    ],
+    "title": "磁感应线的定义与典型电流磁感线分布",
+    "caption": "磁感应线是无头无尾的闭合曲线，切线方向表征 $\\vec{B}$ 的方向，疏密表征 $\\lvert\\vec{B}\\rvert$ 的大小，其环绕方向与电流方向遵循右手螺旋法则。",
+    "source": "课件 PDF 第 277 页",
+    "assetKey": "figs/F12-02.webp"
+  },
+  {
+    "id": "F12-03",
+    "page": 279,
+    "crop": [
+      0.04,
+      0.18,
+      0.94,
+      0.94
+    ],
+    "title": "毕奥-萨伐尔定律与磁场叠加原理",
+    "caption": "电流元 $I\\mathrm{d}\\vec{l}$ 在场点 $P$ 激发的元磁场为 $\\mathrm{d}\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{I\\mathrm{d}\\vec{l}\\times\\hat{r}}{r^2}$，任意载流导线激发的总磁场由曲线积分叠加求得。",
+    "source": "课件 PDF 第 279 页",
+    "assetKey": "figs/F12-03.webp"
+  },
+  {
+    "id": "F12-04",
+    "page": 282,
+    "crop": [
+      0.04,
+      0.1,
+      0.96,
+      0.92
+    ],
+    "title": "载流直导线的磁场及三种典型极限",
+    "caption": "有限长直导线场强 $B = \\frac{\\mu_0 I}{4\\pi a}(\\cos\\theta_1 - \\cos\\theta_2)$；无限长直导线为 $\\frac{\\mu_0 I}{2\\pi a}$，半无限长端点垂面为 $\\frac{\\mu_0 I}{4\\pi a}$，导线延长线上处处为 $0$。",
+    "source": "课件 PDF 第 282 页",
+    "assetKey": "figs/F12-04.webp"
+  },
+  {
+    "id": "F12-05",
+    "page": 284,
+    "crop": [
+      0.04,
+      0.09,
+      0.96,
+      0.95
+    ],
+    "title": "载流圆线圈轴线上的磁场分量叠加",
+    "caption": "关于轴线对称的电流元产生的垂直分量 $\\mathrm{d}B_\\perp$ 成对抵消，轴向分量 $\\mathrm{d}B_\\parallel = \\mathrm{d}B\\cos\\theta$ 同向相加，积分得 $B = \\frac{\\mu_0 I R^2}{2(R^2 + x^2)^{3/2}}$。",
+    "source": "课件 PDF 第 284 页",
+    "assetKey": "figs/F12-05.webp"
+  },
+  {
+    "id": "F12-06",
+    "page": 286,
+    "crop": [
+      0.04,
+      0.1,
+      0.94,
+      0.92
+    ],
+    "title": "载流线圈的磁矩（磁偶极矩）定义",
+    "caption": "$N$ 匝平面载流线圈的磁矩定义为 $\\vec{p}_m = N I S \\hat{n}_e$，其中法向单位矢量 $\\hat{n}_e$ 与电流环绕方向呈右手螺旋关系。",
+    "source": "课件 PDF 第 286 页",
+    "assetKey": "figs/F12-06.webp"
+  },
+  {
+    "id": "F12-07",
+    "page": 291,
+    "crop": [
+      0.04,
+      0.1,
+      0.94,
+      0.94
+    ],
+    "title": "载流直螺线管轴线上的磁场分布与安匝密度",
+    "caption": "长直螺线管内部中心区域磁场平坦接近 $\\mu_0 n I$，两端管口处跌落为内部的一半 $\\frac{1}{2}\\mu_0 n I$；$n I = \\mathrm{d}I/\\mathrm{d}l$ 代表单位轴向长度的环向电流（安匝数）。",
+    "source": "课件 PDF 第 291 页",
+    "assetKey": "figs/F12-07.webp"
+  },
+  {
+    "id": "F12-08",
+    "page": 292,
+    "crop": [
+      0.04,
+      0.1,
+      0.97,
+      0.95
+    ],
+    "title": "无限长均匀载流薄导体片的微元条带积分",
+    "caption": "将宽为 $a$ 的无限长薄导体片分割为宽 $\\mathrm{d}x$ 的无限长直导线微元，对称性使 $B_y = 0$，积分得 $B_x = \\frac{\\mu_0 I}{\\pi a}\\arctan\\frac{a}{2y}$。",
+    "source": "课件 PDF 第 292 页",
+    "assetKey": "figs/F12-08.webp"
+  },
+  {
+    "id": "F12-09",
+    "page": 298,
+    "crop": [
+      0.04,
+      0.1,
+      0.96,
+      0.9
+    ],
+    "title": "运动电荷激发的磁场公式推导",
+    "caption": "由电流元 $I\\mathrm{d}\\vec{l} = q n S \\vec{v}\\mathrm{d}l$ 除以载流子数 $\\mathrm{d}N = n S \\mathrm{d}l$，得到单个低速运动点电荷激发的磁感应强度 $\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{q\\vec{v}\\times\\vec{r}}{r^3}$。",
+    "source": "课件 PDF 第 298 页",
+    "assetKey": "figs/F12-09.webp"
+  },
+  {
+    "id": "F12-10",
+    "page": 302,
+    "crop": [
+      0.04,
+      0.1,
+      0.96,
+      0.9
+    ],
+    "title": "磁场中的高斯定理与无源涡旋场特性",
+    "caption": "由于磁感应线闭合无头尾，穿入任意闭合曲面的磁感线条数恒等于穿出条数，故闭合曲面磁通量恒为零 $\\oint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S} = 0$。",
+    "source": "课件 PDF 第 302 页",
+    "assetKey": "figs/F12-10.webp"
+  },
+  {
+    "id": "F12-11",
+    "page": 310,
+    "crop": [
+      0.04,
+      0.09,
+      0.97,
+      0.92
+    ],
+    "title": "稳恒磁场的安培环路定理",
+    "caption": "磁感应强度沿任意闭合回路 $L$ 的环流等于 $\\mu_0$ 乘以穿过该回路所张曲面的代数电流之和 $\\oint_L \\vec{B}\\cdot\\mathrm{d}\\vec{l} = \\mu_0\\sum_{\\mathrm{in}} I_i$，电流正负由右手螺旋法则判定。",
+    "source": "课件 PDF 第 310 页",
+    "assetKey": "figs/F12-11.webp"
+  },
+  {
+    "id": "F12-12",
+    "page": 314,
+    "crop": [
+      0.04,
+      0.1,
+      0.95,
+      0.9
+    ],
+    "title": "长直圆柱形载流导线内外的磁场径向分布对比",
+    "caption": "表面载流圆筒管内 $B = 0$、管外 $B \\propto 1/r$；截面均匀载流圆柱体内 $B = \\frac{\\mu_0 I r}{2\\pi R^2} \\propto r$、体外 $B = \\frac{\\mu_0 I}{2\\pi r} \\propto 1/r$。",
+    "source": "课件 PDF 第 314 页",
+    "assetKey": "figs/F12-12.webp"
+  },
+  {
+    "id": "F12-13",
+    "page": 316,
+    "crop": [
+      0.04,
+      0.1,
+      0.96,
+      0.95
+    ],
+    "title": "载流螺绕环（环形螺线管）内部的磁场推导",
+    "caption": "沿管内半径为 $r$ 的同心圆环路应用安培环路定理，得管内 $B = \\frac{\\mu_0 N I}{2\\pi r}$，管外及中心空心区 $B = 0$。",
+    "source": "课件 PDF 第 316 页",
+    "assetKey": "figs/F12-13.webp"
+  },
+  {
+    "id": "F12-14",
+    "page": 344,
+    "crop": [
+      0.04,
+      0.1,
+      0.97,
+      0.95
+    ],
+    "title": "均匀磁场中载流线圈所受的安培力偶与磁力矩",
+    "caption": "匀强磁场中刚性平面载流线圈所受安培力合力为零，但两侧边形成力偶，总磁力矩为 $\\vec{M} = \\vec{p}_m\\times\\vec{B}$，大小为 $M = N B I S \\sin\\theta$。",
+    "source": "课件 PDF 第 344 页",
+    "assetKey": "figs/F12-14.webp"
+  },
+  {
+    "id": "F12-15",
+    "page": 359,
+    "crop": [
+      0.03,
+      0.1,
+      0.95,
+      0.93
+    ],
+    "title": "带电粒子斜射入匀强磁场的螺旋线运动",
+    "caption": "垂直于磁场的速度分量 $v_{0n} = v_0\\sin\\theta$ 产生匀速圆周运动（半径 $R = \\frac{m v_0\\sin\\theta}{qB}$），平行分量 $v_{0x} = v_0\\cos\\theta$ 产生匀速直线运动，合成为螺距 $h = \\frac{2\\pi m v_0\\cos\\theta}{qB}$ 的螺旋线。",
+    "source": "课件 PDF 第 359 页",
+    "assetKey": "figs/F12-15.webp"
+  },
+  {
+    "id": "F12-16",
+    "page": 362,
+    "crop": [
+      0.04,
+      0.1,
+      0.96,
+      0.93
+    ],
+    "title": "霍尔效应的产生机理与横向稳恒电场平衡",
+    "caption": "载流薄板置于垂直磁场中时，载流子受洛伦兹力横向偏转积累电荷，直至霍尔电场力 $e E_{\\mathrm{H}}$ 与洛伦兹力 $e \\bar{v} B$ 平衡，形成霍尔电压 $U_{\\mathrm{H}} = R_{\\mathrm{H}}\\frac{IB}{d}$。",
+    "source": "课件 PDF 第 362 页",
+    "assetKey": "figs/F12-16.webp"
+  }
+]

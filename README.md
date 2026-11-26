@@ -7,6 +7,7 @@
 | 复变函数与积分变换 | [打开课程](https://zephyr-dawn.github.io/Course-helper/complex-functions/) | `complex-functions` |
 | 电子电路基础 | [打开课程](https://zephyr-dawn.github.io/Course-helper/analog-circuit/) | `analog-circuit` |
 | 模拟电路（下半学期） | [打开课程](https://zephyr-dawn.github.io/Course-helper/analog-circuit-micro/) | `analog-circuit-micro` |
+| 大学物理甲-II（仅进行到期中内容，历年题待补） | [打开课程](https://zephyr-dawn.github.io/Course-helper/physics-ii/) | `physics-ii` |
 
 [课程总入口](https://zephyr-dawn.github.io/Course-helper/)。后续课程新增同级目录并在首页添加入口。
 

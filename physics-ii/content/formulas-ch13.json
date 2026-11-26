@@ -1,0 +1,42 @@
+[
+  {
+    "name": "电子轨道磁矩与角动量关系及分子固有磁矩",
+    "tex": "\\vec{\\mu}_L = \\frac{1}{2}evr\\hat{n}_e = -\\frac{e}{2m_e}\\vec{L}, \\qquad \\vec{\\mu}_S = -\\frac{e}{m_e}\\vec{S}, \\qquad \\vec{p}_m = \\sum_i \\left(\\vec{\\mu}_{Li} + \\vec{\\mu}_{Si}\\right)",
+    "use": "分析原子或分子磁性的微观起源，区分固有磁矩 $\\vec{p}_m \\ne \\vec{0}$ 的顺磁质与 $\\vec{p}_m = \\vec{0}$ 的抗磁质。",
+    "conditions": "轨道磁矩与轨道角动量旋磁比为 $-e/(2m_e)$，电子自旋旋磁比约为轨道的两倍（$-e/m_e$）；外磁场中拉莫尔进动产生的附加磁矩 $\\Delta\\vec{p}_m$ 恒与外场 $\\vec{B}_0$ 反向。",
+    "pitfall": "由于电子带负电，轨道磁矩 $\\vec{\\mu}_L$ 的方向与电子轨道角动量 $\\vec{L}$ 的方向严格相反（切勿漏掉负号）！",
+    "section": "s13-1"
+  },
+  {
+    "name": "磁化强度矢量与磁化电流（面密度及环流定理）",
+    "tex": "\\vec{M} = \\frac{\\sum \\vec{p}_{mi}}{\\Delta V}, \\qquad \\vec{j}_m = \\vec{M}\\times\\hat{n}_e \\;(j_m = M\\sin\\theta), \\qquad \\oint_L \\vec{M}\\cdot\\mathrm{d}\\vec{l} = \\sum_{L\\mathrm{in}} I_m",
+    "use": "由介质的磁化强度分布 $\\vec{M}$ 计算介质分界面上的束缚（磁化）面电流线密度 $\\vec{j}_m$ 及穿过闭合回路的磁化总电流 $I_m$。",
+    "conditions": "对任何磁介质（包括铁磁质和非线性介质）普遍成立；其中 $\\hat{n}_e$ 为磁介质表面的外法线单位矢量。",
+    "pitfall": "对照电介质极化电荷面密度 $\\sigma' = \\vec{P}\\cdot\\hat{n}_e$（点乘）：磁化面电流密度是叉乘 $\\vec{j}_m = \\vec{M}\\times\\hat{n}_e$！当 $\\vec{M}$ 垂直于圆柱端面时 $\\vec{j}_m = \\vec{0}$；当 $\\vec{M}$ 平行于圆柱侧面时 $j_m = M$。",
+    "section": "s13-2"
+  },
+  {
+    "name": "磁场强度 H 的定义与有磁介质时的安培环路定理",
+    "tex": "\\vec{H} = \\frac{\\vec{B}}{\\mu_0} - \\vec{M} \\;\\Longleftrightarrow\\; \\vec{B} = \\mu_0(\\vec{H} + \\vec{M}), \\qquad \\oint_L \\vec{H}\\cdot\\mathrm{d}\\vec{l} = \\sum_{L\\mathrm{in}} I_0",
+    "use": "在存在磁介质且具有对称性（轴对称、螺线管、螺绕环）的系统中，直接由已知的传导电流 $I_0$ 求出磁场强度 $\\vec{H}$。",
+    "conditions": "有磁介质的安培环路定理在稳恒电流条件下对任意介质普遍成立，右端 $\\sum I_0$ 仅包含自由（传导）电流，不包含磁化电流 $I_m$。",
+    "pitfall": "环路积分 $\\oint \\vec{H}\\cdot\\mathrm{d}\\vec{l} = \\sum I_0$ 虽然只含传导电流，但空间某点的 $\\vec{H}$ 本身一般与磁介质分布有关；只有在介质均匀充满或磁介质边界与 $\\vec{H}$ 线完全贴合/正交的对称情形下，才能把 $H$ 直接提出积分号。",
+    "section": "s13-3"
+  },
+  {
+    "name": "线性各向同性磁介质的本构关系",
+    "tex": "\\vec{M} = \\chi_m \\vec{H}, \\qquad \\mu_r = 1 + \\chi_m, \\qquad \\vec{B} = \\mu_0(1+\\chi_m)\\vec{H} = \\mu_0\\mu_r\\vec{H} = \\mu\\vec{H}",
+    "use": "在已知磁场强度 $\\vec{H}$ 后，一键求得线性顺磁质（$\\chi_m>0, \\mu_r>1$）或抗磁质（$\\chi_m<0, \\mu_r<1$）中的磁化强度 $\\vec{M}$、附加场 $\\vec{B}'=\\mu_0\\vec{M}$ 和总磁感应强度 $\\vec{B}$。",
+    "conditions": "仅适用于线性、各向同性磁介质（顺磁质、抗磁质）；铁磁质的 $\\mu_r(H)$ 是 $H$ 的非线性函数且具有磁滞多值性，不满足常数比例关系。",
+    "pitfall": "在均匀充满相对磁导率为 $\\mu_r$ 的长直螺线管或螺绕环中，传导电流产生的真空场为 $B_0 = \\mu_0 H$，磁化电流产生的附加场为 $B' = \\mu_0 M = (\\mu_r - 1)B_0$（注意系数是 $\\mu_r - 1$ 而非 $\\mu_r$）！",
+    "section": "s13-3"
+  },
+  {
+    "name": "铁磁质饱和渐近规律与单位体积周期磁滞损耗",
+    "tex": "B(H) \\xrightarrow{H \\gg H_s} \\mu_0(H + M_s), \\qquad \\frac{\\mathrm{d}B}{\\mathrm{d}H}\\bigg|_{H \\gg H_s} \\approx \\mu_0, \\qquad w_h = \\left\\lvert \\oint H\\,\\mathrm{d}B \\right\\rvert",
+    "use": "分析铁磁材料在强场下的磁饱和行为，以及交变磁场中每周期单位体积因磁畴不可逆壁移/转向产生的磁滞热损耗 $w_h$（$\\mathrm{J/m^3}$）。",
+    "conditions": "温度低于居里温度 $T_C$（铁 $T_C \\approx 1040\\,\\mathrm{K}$）；高于居里温度 $T_C$ 时自发磁化磁畴瓦解，铁磁质相变为普通顺磁质。",
+    "pitfall": "误认为铁磁质磁化饱和后 $B$ 不再随 $H$ 增加：实际上饱和是指磁化强度 $M \\to M_s$（常数），此后继续增大 $H$，总磁感应强度 $B = \\mu_0 H + \\mu_0 M_s$ 仍以真空斜率 $\\mu_0$ 缓慢线性增加（见课件 p396 图）！",
+    "section": "s13-4"
+  }
+]

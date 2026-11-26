@@ -1,0 +1,80 @@
+[
+  {
+    "id": "Q12-01",
+    "section": "s12-1",
+    "q": "关于毕奥-萨伐尔定律 $\\mathrm{d}\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{I\\mathrm{d}\\vec{l}\\times\\hat{r}}{r^2}$ 及低速运动点电荷激发的磁场，下列说法正确的是（  ）",
+    "options": [
+      "在电流元 $I\\mathrm{d}\\vec{l}$ 所在的直线（即其正向或反向延长线）上，该电流元激发的磁感应强度处处为零",
+      "电流元激发的磁感应强度 $\\mathrm{d}\\vec{B}$ 方向与电流元 $I\\mathrm{d}\\vec{l}$ 平行",
+      "运动电子（带负电 $-e$）在空间某点激发的磁场方向与 $\\vec{v}\\times\\vec{r}$ 方向相同",
+      "毕奥-萨伐尔定律可以直接由安培环路定理在不做任何对称性假设的情况下推导出来"
+    ],
+    "answer": 0,
+    "explain": "在电流元所在的延长线上，$\\mathrm{d}\\vec{l}$ 与位矢 $\\vec{r}$ 平行或反平行（夹角为 $0$ 或 $\\pi$），叉积 $I\\mathrm{d}\\vec{l}\\times\\hat{r} = \\vec{0}$，故 $\\mathrm{d}\\vec{B} = \\vec{0}$。$\\mathrm{d}\\vec{B}$ 总是同时垂直于 $\\mathrm{d}\\vec{l}$ 与 $\\vec{r}$；对负电荷 $q = -e < 0$，$\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{q\\vec{v}\\times\\vec{r}}{r^3}$ 与 $\\vec{v}\\times\\vec{r}$ 方向相反。"
+  },
+  {
+    "id": "Q12-02",
+    "section": "s12-2",
+    "q": "一半径为 $R$、张角为 $\\theta$ 的绝缘扇形薄片均匀带有面电荷密度 $\\sigma$，绕过顶点 $O$ 且垂直于盘面的轴以转速 $n$（单位：$\\mathrm{r/s}$）匀速旋转。关于扇形片在顶点 $O$ 处激发的磁感应强度 $B_O$ 与扇形片总磁矩 $p_m$ 的半径标度律，下列结论正确的是（  ）",
+    "options": [
+      "$B_O = \\frac{1}{2}\\mu_0 n \\sigma \\theta R \\propto R$，$p_m = \\frac{1}{4}\\pi n \\sigma \\theta R^4 \\propto R^4$",
+      "$B_O = \\frac{1}{2}\\mu_0 n \\sigma \\theta R^2 \\propto R^2$，$p_m = \\frac{1}{2}\\pi n \\sigma \\theta R^3 \\propto R^3$",
+      "$B_O = \\mu_0 n \\sigma \\theta R \\propto R$，$p_m = \\frac{1}{2}\\pi n \\sigma \\theta R^4 \\propto R^4$",
+      "求总磁矩 $p_m$ 时，可以先积分求出旋转扇形的总等效电流 $I_{\\mathrm{tot}} = \\frac{1}{2}n\\sigma\\theta R^2$，再直接乘以面积 $\\pi R^2$"
+    ],
+    "answer": 0,
+    "explain": "取半径 $r \\sim r+\\mathrm{d}r$ 的扇形环微元，电量 $\\mathrm{d}q = \\sigma\\theta r\\mathrm{d}r$，周期平均等效电流 $\\mathrm{d}I = n\\mathrm{d}q = n\\sigma\\theta r\\mathrm{d}r$。在圆心处 $\\mathrm{d}B_O = \\frac{\\mu_0 \\mathrm{d}I}{2r} = \\frac{1}{2}\\mu_0 n\\sigma\\theta\\,\\mathrm{d}r$，积分得 $B_O = \\frac{1}{2}\\mu_0 n\\sigma\\theta R$；而每个等效圆电流环的磁矩微元为 $\\mathrm{d}p_m = \\pi r^2 \\mathrm{d}I = \\pi n\\sigma\\theta r^3\\mathrm{d}r$，积分得 $p_m = \\frac{1}{4}\\pi n\\sigma\\theta R^4$。不同半径环元所围面积不同，严禁将总电流直接乘外圆面积。"
+  },
+  {
+    "id": "Q12-03",
+    "section": "s12-3",
+    "q": "关于磁通量 $\\Phi_B = \\iint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S}$ 与磁场高斯定理 $\\oiint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S} = 0$，下列叙述正确的是（  ）",
+    "options": [
+      "若穿过某一闭合曲面的净磁通量为零，则该闭合曲面上各点的磁感应强度 $\\vec{B}$ 必定处处为零",
+      "磁场高斯定理表明磁感应线是无头无尾的闭合曲线，稳恒磁场是无源场（涡旋场），自然界中尚未发现孤立的磁单极子",
+      "通过任意曲面的磁通量正负号完全由磁场本身决定，与人为选定的曲面法向无关",
+      "将一载流圆线圈放入非均匀磁场中，穿过以该圆线圈为边界的不同张面的磁通量数值各不相同"
+    ],
+    "answer": 1,
+    "explain": "任意磁场中穿过任何闭合曲面的磁通量恒为零（穿入与穿出磁感线条数相等），但这绝不意味着曲面上 $\\vec{B} = \\vec{0}$；正是因为 $\\oiint_S \\vec{B}\\cdot\\mathrm{d}\\vec{S} = 0$，以同一闭合回路 $L$ 为边界且取向一致的任意两张曲面 $S_1, S_2$ 所穿过的磁通量必然相等。"
+  },
+  {
+    "id": "Q12-04",
+    "section": "s12-4",
+    "q": "对于稳恒磁场的安培环路定理 $\\oint_L \\vec{B}\\cdot\\mathrm{d}\\vec{l} = \\mu_0 \\sum_{\\mathrm{in}} I_i$，下列理解正确的是（  ）",
+    "options": [
+      "若沿某闭合回路 $L$ 的环流 $\\oint_L \\vec{B}\\cdot\\mathrm{d}\\vec{l} = 0$，则回路 $L$ 上各点的磁感应强度 $\\vec{B}$ 一定处处为零",
+      "定理左端的磁感应强度 $\\vec{B}$ 仅由闭合回路 $L$ 内部包围的电流激发，回路外部的电流对环路上的 $\\vec{B}$ 无贡献",
+      "定理左端的 $\\vec{B}$ 是空间所有电流（含环路内外）共同激发的合磁场，但右端沿回路的环流值仅由穿过回路所张曲面的内部电流代数和决定",
+      "只要已知闭合回路包围的总电流，无论电流分布是否具有对称性，都能直接用安培环路定理算出回路上某点的 $B$"
+    ],
+    "answer": 2,
+    "explain": "环路外的电流在环路上各点也会产生磁场 $\\vec{B}_{\\mathrm{out}}$，只是其沿整个闭合回路的线积分为零 $\\oint_L \\vec{B}_{\\mathrm{out}}\\cdot\\mathrm{d}\\vec{l} = 0$；因此左端 $\\vec{B}$ 由环路内外全部电流共同决定，而环流值只取决于环路包围的电流代数和。只有高对称性电流分布才能把 $B$ 提出积分号求场强。"
+  },
+  {
+    "id": "Q12-05",
+    "section": "s12-5",
+    "q": "将一面积为 $S$、通有稳恒电流 $I$ 的刚性任意形状平面闭合导线框置于磁感应强度为 $\\vec{B}$ 的匀强磁场中，设线圈磁矩为 $\\vec{p}_m = I S \\hat{n}$，$\\vec{p}_m$ 与 $\\vec{B}$ 的夹角为 $\\theta$。下列说法正确的是（  ）",
+    "options": [
+      "导线框所受安培力的合力恒为零；当 $\\theta = 0$ 时磁力矩 $M = 0$ 且磁势能最低，线圈处于稳定平衡状态",
+      "当 $\\theta = \\pi$ 时，磁力矩 $M = 0$，线圈同样处于稳定平衡状态",
+      "当线圈在磁力矩作用下从 $\\theta = \\pi/2$ 转到 $\\theta = 0$ 的过程中（电流 $I$ 不变），磁力矩所做的功为 $A = -I B S$",
+      "若将该平面闭合线圈改放到非均匀磁场中，线圈所受安培力的合力依然恒为零"
+    ],
+    "answer": 0,
+    "explain": "在匀强磁场中，$\\oint_L I\\mathrm{d}\\vec{l}\\times\\vec{B} = (I\\oint_L \\mathrm{d}\\vec{l})\\times\\vec{B} = \\vec{0}$，合力恒为零；磁力矩 $\\vec{M} = \\vec{p}_m\\times\\vec{B}$，磁势能 $U_B = -\\vec{p}_m\\cdot\\vec{B} = -p_m B \\cos\\theta$。$\\theta = 0$ 时 $M = 0$、$U_B$ 最小，为稳定平衡；$\\theta = \\pi$ 时 $U_B$ 最大，为不稳定平衡。从 $\\theta = \\pi/2$ 转到 $\\theta = 0$ 时 $\\Delta\\Phi_B = B S - 0 = B S > 0$，磁力矩做正功 $A = I\\Delta\\Phi_B = +I B S$。"
+  },
+  {
+    "id": "Q12-06",
+    "section": "s12-6",
+    "q": "在霍尔效应实验中，将宽为 $b$（上下方向）、厚为 $d$（沿磁场方向）的扁平导电薄板通以向右的电流 $I$，并置于垂直纸面向里的匀强磁场 $\\vec{B}$ 中。关于上下两个侧面的电势高低，下列判断正确的是（  ）",
+    "options": [
+      "无论是金属导体（自由电子导电）还是 P 型半导体（正空穴导电），都是上表面电势高于下表面",
+      "若为金属导体（自由电子导电），电子受洛伦兹力向上表面偏转积累，上表面电势低于下表面；若为 P 型半导体（空穴导电），空穴同样向上表面偏转积累，上表面电势高于下表面",
+      "霍尔电势差 $U_{\\mathrm{H}}$ 的大小与薄板沿霍尔电场方向的宽度 $b$ 成反比，而与沿磁场方向的厚度 $d$ 无关",
+      "金属导体的自由电子浓度 $n$ 很大，因此其霍尔系数 $R_{\\mathrm{H}} = -1/(ne)$ 的绝对值远大于半导体，霍尔效应比半导体更显著"
+    ],
+    "answer": 1,
+    "explain": "电流向右、磁场向里时：对正载流子（P 型空穴，$q > 0$，速度向右），由右手定则知 $\\vec{F}_m = q\\vec{v}\\times\\vec{B}$ 向上；对负载流子（自由电子，$q = -e < 0$，漂移速度向左），$-e\\vec{v}\\times\\vec{B}$ 同样向上！因此两种载流子均向上表面偏转聚集，故电子导电时上负下正（$U_{\\mathrm{top}} < U_{\\mathrm{bottom}}$），空穴导电时上正下负（$U_{\\mathrm{top}} > U_{\\mathrm{bottom}}$）。且 $U_{\\mathrm{H}} = \\frac{IB}{nqd}$ 与厚度 $d$ 及浓度 $n$ 成反比，金属 $n$ 极大导致霍尔效应很微弱。"
+  }
+]

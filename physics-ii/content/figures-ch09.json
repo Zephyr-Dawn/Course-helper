@@ -1,0 +1,212 @@
+[
+  {
+    "id": "F9-01",
+    "page": 17,
+    "crop": [
+      0.55,
+      0.45,
+      0.97,
+      0.72
+    ],
+    "title": "库仑定律的位矢与相互作用力矢量图",
+    "caption": "在选定参考系中，位矢 $\\vec{r}_{12} = \\vec{r}_1 - \\vec{r}_2$ 由施力电荷 $q_2$ 指向受力电荷 $q_1$，相互作用力满足牛顿第三定律 $\\vec{F}_{12} = -\\vec{F}_{21}$。",
+    "source": "课件 PDF 第 17 页",
+    "assetKey": "figs/F9-01.webp"
+  },
+  {
+    "id": "F9-02",
+    "page": 26,
+    "crop": [
+      0.55,
+      0.19,
+      0.99,
+      0.49
+    ],
+    "title": "电偶极子概念与轴线延长线场强叠加",
+    "caption": "相距 $l$ 的等量异号点电荷 $\\pm q$ 构成电偶极子，电偶极矩 $\\vec{p}_e = q\\vec{l}$ 由负电荷指向正电荷；轴线延长线上正、负电荷场强反向叠加。",
+    "source": "课件 PDF 第 26 页",
+    "assetKey": "figs/F9-02.webp"
+  },
+  {
+    "id": "F9-03",
+    "page": 28,
+    "crop": [
+      0.47,
+      0.26,
+      0.98,
+      0.8
+    ],
+    "title": "有限长均匀带电细棒的场强微元与角度变量替换",
+    "caption": "取线元 $\\mathrm{d}q = \\lambda \\mathrm{d}x$，将微元场强 $\\mathrm{d}\\vec{E}$ 正交分解为 $\\mathrm{d}E_x$ 与 $\\mathrm{d}E_y$，并借助几何关系 $x = -a\\cot\\theta$ 统一积分变量。",
+    "source": "课件 PDF 第 28 页",
+    "assetKey": "figs/F9-03.webp"
+  },
+  {
+    "id": "F9-04",
+    "page": 32,
+    "crop": [
+      0.67,
+      0.23,
+      0.99,
+      0.96
+    ],
+    "title": "均匀带电圆环轴线场强的对称性分解",
+    "caption": "圆环上对称线元在轴线 $P$ 点产生的垂直分量 $\\mathrm{d}\\vec{E}_\\perp$ 成对抵消，仅轴向分量 $\\mathrm{d}E_z = \\mathrm{d}E\\cos\\theta$ 累加。",
+    "source": "课件 PDF 第 32 页",
+    "assetKey": "figs/F9-04.webp"
+  },
+  {
+    "id": "F9-05",
+    "page": 35,
+    "crop": [
+      0.68,
+      0.22,
+      0.99,
+      0.92
+    ],
+    "title": "均匀带电薄圆盘切分为同心细圆环微元",
+    "caption": "将半径为 $R$ 的带电圆盘划分为半径 $r$、宽 $\\mathrm{d}r$ 的同心细圆环（$\\mathrm{d}q = \\sigma 2\\pi r\\mathrm{d}r$），直接调用圆环轴线场强公式积分。",
+    "source": "课件 PDF 第 35 页",
+    "assetKey": "figs/F9-05.webp"
+  },
+  {
+    "id": "F9-06",
+    "page": 42,
+    "crop": [
+      0.55,
+      0.09,
+      0.97,
+      0.47
+    ],
+    "title": "面元矢量定义与电通量的垂直投影面积解释",
+    "caption": "面元矢量 $\\mathrm{d}\\vec{S} = \\mathrm{d}S\\,\\hat{n}$，通过面元的电通量 $\\mathrm{d}\\Phi_e = \\vec{E}\\cdot\\mathrm{d}\\vec{S} = E\\,\\mathrm{d}S_\\perp$ 正比于穿过垂直投影面 $\\mathrm{d}S_\\perp = \\mathrm{d}S\\cos\\theta$ 的电场线根数。",
+    "source": "课件 PDF 第 42 页",
+    "assetKey": "figs/F9-06.webp"
+  },
+  {
+    "id": "F9-07",
+    "page": 49,
+    "crop": [
+      0.34,
+      0.27,
+      0.96,
+      0.63
+    ],
+    "title": "有向立体角与任意闭合曲面的高斯定理几何证明",
+    "caption": "面元对点电荷张开的有向立体角 $\\mathrm{d}\\Omega = \\mathrm{d}S\\cos\\theta / r^2$，任意包围源电荷的闭合曲面总立体角恒为 $\\oint \\mathrm{d}\\Omega = 4\\pi$。",
+    "source": "课件 PDF 第 49 页",
+    "assetKey": "figs/F9-07.webp"
+  },
+  {
+    "id": "F9-08",
+    "page": 56,
+    "crop": [
+      0.05,
+      0.33,
+      0.96,
+      0.78
+    ],
+    "title": "高斯面内外电荷对电通量与面上场强的贡献辨析",
+    "caption": "闭合曲面外的电荷（如右图 $+2q$）穿入与穿出电场线数目相等，对总电通量 $\\Phi_e$ 无贡献，但会显著改变高斯面上各点的场强 $\\vec{E}$。",
+    "source": "课件 PDF 第 56 页",
+    "assetKey": "figs/F9-08.webp"
+  },
+  {
+    "id": "F9-09",
+    "page": 69,
+    "crop": [
+      0.16,
+      0.17,
+      0.86,
+      0.98
+    ],
+    "title": "均匀带电球壳的场强分布曲线与多同心球壳推广",
+    "caption": "带电薄球壳内部（$r < R$）场强处处为零，球壳外部（$r > R$）场强按 $1/r^2$ 衰减，等效于全部电荷集中在球心。",
+    "source": "课件 PDF 第 69 页",
+    "assetKey": "figs/F9-09.webp"
+  },
+  {
+    "id": "F9-10",
+    "page": 70,
+    "crop": [
+      0.53,
+      0.22,
+      0.98,
+      0.68
+    ],
+    "title": "无限长轴对称带电体的同轴圆柱高斯面选取",
+    "caption": "由轴对称与镜面对称可知场强沿径向垂直于轴线，取同轴圆柱闭合高斯面时上、下底面电通量为零，仅侧面 $2\\pi r l$ 有通量贡献。",
+    "source": "课件 PDF 第 70 页",
+    "assetKey": "figs/F9-10.webp"
+  },
+  {
+    "id": "F9-11",
+    "page": 87,
+    "crop": [
+      0.18,
+      0.2,
+      0.8,
+      0.97
+    ],
+    "title": "均匀带电无限大厚平板内外的电场强度分布曲线",
+    "caption": "厚度为 $d$、体电荷密度为 $\\rho$ 的无限大平板内场强 $E(x) = \\rho x / \\varepsilon_0$ 随坐标线性变化，板外为匀强电场 $\\pm \\rho d / (2\\varepsilon_0)$。",
+    "source": "课件 PDF 第 87 页",
+    "assetKey": "figs/F9-11.webp"
+  },
+  {
+    "id": "F9-12",
+    "page": 96,
+    "crop": [
+      0.58,
+      0.09,
+      0.99,
+      0.89
+    ],
+    "title": "点电荷场中电场力沿任意路径做功的径向投影",
+    "caption": "位移微元在径向的投影为 $\\mathrm{d}l\\cos\\theta = \\mathrm{d}r$，元功 $\\mathrm{d}A = q_0 E\\,\\mathrm{d}r$ 仅取决于起止径向距离 $r_a, r_b$，证明静电场力为保守力。",
+    "source": "课件 PDF 第 96 页",
+    "assetKey": "figs/F9-12.webp"
+  },
+  {
+    "id": "F9-13",
+    "page": 108,
+    "crop": [
+      0.0,
+      0.2,
+      0.99,
+      0.83
+    ],
+    "title": "均匀带电球面的场强跃变与电势连续分布对比",
+    "caption": "在带电球面 $r = R$ 处电场强度发生突变，但电势 $U(r)$ 连续过渡；球壳内部是场强为零、电势恒为 $Q/(4\\pi\\varepsilon_0 R)$ 的等势区。",
+    "source": "课件 PDF 第 108 页",
+    "assetKey": "figs/F9-13.webp"
+  },
+  {
+    "id": "F9-14",
+    "page": 124,
+    "crop": [
+      0.08,
+      0.22,
+      0.97,
+      0.85
+    ],
+    "title": "正点电荷、电偶极子与等量双正电荷的等势面与电场线",
+    "caption": "等势面处处与电场线正交，等势面密集处场强数值大，且电场线恒指向电势降低最快的方向。",
+    "source": "课件 PDF 第 124 页",
+    "assetKey": "figs/F9-14.webp"
+  },
+  {
+    "id": "F9-15",
+    "page": 125,
+    "crop": [
+      0.54,
+      0.21,
+      0.94,
+      0.65
+    ],
+    "title": "相邻等势面间的电势差与电势梯度推导几何",
+    "caption": "在电势相差 $\\mathrm{d}U$ 的两等势面间移动电荷，由 $\\mathrm{d}l\\cos\\theta = \\mathrm{d}n$ 导出 $\\vec{E} = -(\\mathrm{d}U/\\mathrm{d}n)\\hat{n} = -\\nabla U$。",
+    "source": "课件 PDF 第 125 页",
+    "assetKey": "figs/F9-15.webp"
+  }
+]
