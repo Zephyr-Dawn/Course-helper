@@ -13,6 +13,7 @@ Callouts:
 import html, json, re, subprocess
 from pathlib import Path
 import markdown
+from example_circuits import diagram
 
 SITE = Path(__file__).resolve().parents[1]
 MATH_TOKEN = "QMATHQ{}QEND"
@@ -130,6 +131,7 @@ def expand_markers(h, ctx):
         return f'<a class="ex-chip" href="#/ex/{key}">习题 {key}</a>'
 
     h = MARKER_RE.sub(rep, h)
+    h = re.sub(r"(?:<p>)?\{\{drawing:([a-z]+)\}\}(?:</p>)?", lambda m: diagram(m[1]), h)
 
     def rep_img(m):
         p = m.group(1)
@@ -144,9 +146,11 @@ def fig_html(fig, ctx):
     key = ctx["img_key"]("figs/" + fig["id"] + ".webp")
     cap = ctx["inline_md"](fig.get("caption", ""))
     src = html.escape(fig.get("sourceLabel", ""))
+    btn = (f' <button type="button" class="page-link no-print" data-page="{fig["pdf"]}/{fig["page"]}">查看完整原页</button>'
+           if fig["pdf"].startswith("ch") else "")
     return (f'<figure class="fig" id="fig-{fig["id"]}"><img data-img="{key}" alt="{html.escape(fig.get("alt", fig["id"]))}" '
-            f'class="zoomable" loading="lazy"><figcaption><b>图 {fig["id"]}</b> {cap}'
-            f'<span class="fig-src">{src}</span></figcaption></figure>')
+            f'class="zoomable" loading="lazy" tabindex="0"><figcaption><b>图 {fig["id"]}</b> {cap}'
+            f'<span class="fig-src">{src}{btn}</span></figcaption></figure>')
 
 
 def inline_md(text, store):

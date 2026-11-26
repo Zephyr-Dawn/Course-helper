@@ -6,7 +6,7 @@
 
 ## 内容
 
-依据课堂讲义 `chap_6m`–`chap_12m`（含第 8、11 章补充讲义），以 MIT 讲义作补充：二极管、三极管（BJT）、场效应管（FET）、频率响应、反馈、功率放大器，共 6 章、89 个专题。
+依据课堂讲义 `chap_6m`–`chap_12m`（含第 8、11 章补充讲义），以 MIT 讲义作补充：二极管、三极管（BJT）、场效应管（FET）、频率响应、反馈、功率放大器，共 6 章、89 个专题。每个专题从核心公式和适用条件开始，可直接翻到对应的讲义原页。
 
 | 内容 | 数量 |
 |---|---|
@@ -14,7 +14,9 @@
 | 习题（[EC2024](https://bc0403.github.io/EC2024/) Microelectronic Circuits 部分，题面、题图与原参考答案照录） | 191 |
 | 重点公式（人工精选，含用途、适用条件、易错点） | 52 |
 | 概念快测 | 38 |
-| 互动实验（理想化解析模型） | 18 |
+| 调参实验 | 18 |
+| 三极管、MOS 管工作区与小信号波形动画 | 4 |
+| 内嵌讲义完整原页 | 342 |
 
 191 道习题逐题看图独立求解：156 题与原答案一致，29 题答案正确但补充了条件或说明，5 题勘误，1 题题图存疑。勘误和讲义疑点见 [ERRATA.md](ERRATA.md)。运放（第 9 章）属上半学期，只保留其习题；不包含 LTspice 等仿真软件教程；不推断未标明的考试年份。
 
@@ -22,7 +24,7 @@
 
 ## 在线版与离线版
 
-`index.html` 已内嵌字体、数学排版（KaTeX 预渲染）、图片和程序，另存这一个 HTML 后可离线使用，打开时不发出任何网络请求（只有“原题页”链接需要联网）。原始讲义 PDF 和整页课件截图不发布。
+`index.html` 已内嵌字体、数学排版（KaTeX 预渲染）、图片和程序，另存这一个 HTML 后可离线使用，打开时不发出任何网络请求（只有“原题页”链接需要联网）。本版将 8 份课堂讲义和补充本的 342 页整页图像嵌入 HTML。原始 PDF 和独立整页图片保存在本地。
 
 学习记录保存在当前浏览器。在线站点与本地文件的存储来源不同；需要迁移时，在“收藏与学习记录”导出 JSON，再到另一入口导入。
 
@@ -32,13 +34,14 @@
 
 ```bash
 python3 -m pip install -r requirements.txt
+python3 src/render_course_pages.py        # 首次从源码构建时，从上一级目录的 8 份课堂 PDF 生成整页图像
 python3 build.py --out index.html        # 生成 Pages 产物
 python3 src/lint_content.py ch06 ch07 ch08 ch10 ch11 ch12 ex:diode ex:bjt ex:mosfet ex:opam ex:freq ex:feedbak ex:pa ex:int
 node tests/models.test.cjs               # 互动模型数值校验
 SITE_HTML=index.html QA_OUTPUT=test-output PLAYWRIGHT_MODULE=<playwright-core 路径> node tests/functional.browser.cjs
 ```
 
-- 构建需要 Node.js（KaTeX 预渲染）。浏览器测试需要 `playwright-core` 与本机 Google Chrome。
+- 构建需要 Node.js（KaTeX 预渲染）。阅读发布版直接打开 index.html 即可。浏览器测试需要 `playwright-core` 与本机 Google Chrome。
 - 讲义配图已生成在 `assets/figs/`；只有调整裁剪时才需要把讲义 PDF 放到上一级目录并运行 `src/render_figures.py`。
 - 习题由 `src/parse_ec2024.py` 从 `assets/ec2024/*.md` 解析（EC2024 为 MIT License，许可证见 `assets/ec2024/LICENSE`）；人工核对写在 `content/exercises/<set>.review.json`。
 - 编写规范见 [docs/AUTHORING.md](docs/AUTHORING.md)，验证记录见 [QA.md](QA.md)。

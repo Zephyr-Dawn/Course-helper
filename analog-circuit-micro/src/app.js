@@ -39,14 +39,41 @@
   }
   const dlg = $('#zoom-dlg'), zbody = $('.zoom-body', dlg), zimg = $('img', dlg);
   let zscale = 1;
+  let bookKey = '', pageNo = 0;
+  const pageBar = $('.page-bar', dlg), pageSelect = $('select', pageBar);
+  function showPage(key, number) {
+    const book = D.library[key];
+    if (!book || number < 1 || number > book.images.length) return;
+    if (bookKey !== key) pageSelect.innerHTML = book.images.map((_, i) => `<option value="${i+1}">${i+1}</option>`).join('');
+    bookKey = key; pageNo = number; pageSelect.value = number;
+    $('.zoom-cap', dlg).textContent = book.title + ' · PDF 第 ' + number + ' / ' + book.images.length + ' 页';
+    zimg.alt = $('.zoom-cap', dlg).textContent;
+    zimg.src = IMG[book.images[number-1]];
+    $('[data-pg="-1"]', dlg).disabled = number === 1;
+    $('[data-pg="1"]', dlg).disabled = number === book.images.length;
+    pageBar.hidden = false;
+    if (!dlg.open) dlg.showModal();
+    zoomTo(0); zbody.scrollTop = 0; zbody.scrollLeft = 0;
+  }
+  pageBar.addEventListener('click', e => {
+    const b = e.target.closest('button[data-pg]'); if (b) showPage(bookKey, pageNo + Number(b.dataset.pg));
+  });
+  pageSelect.onchange = () => showPage(bookKey, Number(pageSelect.value));
+  dlg.addEventListener('keydown', e => {
+    if (!pageBar.hidden && e.target !== pageSelect && ['ArrowLeft','ArrowRight'].includes(e.key)) {
+      e.preventDefault(); showPage(bookKey, pageNo + (e.key === 'ArrowLeft' ? -1 : 1));
+    }
+  });
   function zoomTo(s) { zscale = s; if (s === 0) { zbody.classList.add('fit'); zimg.style.width = ''; } else { zbody.classList.remove('fit'); zimg.style.width = (zimg.naturalWidth * s) + 'px'; } }
   document.addEventListener('click', e => {
+    const pb = e.target.closest('button[data-page]');
+    if (pb) { const [key, n] = pb.dataset.page.split('/'); showPage(key, Number(n)); return; }
     const img = e.target.closest('img.zoomable');
     if (img && img.src) {
-      zimg.src = img.src;
+      pageBar.hidden = true; zimg.alt = img.alt; zimg.src = img.src;
       const cap = img.closest('figure') ? $('figcaption', img.closest('figure')).textContent : (img.alt || '');
       $('.zoom-cap', dlg).textContent = cap;
-      dlg.showModal(); zoomTo(0);
+      if (!dlg.open) dlg.showModal(); zoomTo(0);
     }
   });
   $$('.zoom-bar button', dlg).forEach(b => b.onclick = () => {
@@ -61,13 +88,39 @@
     if (e.key === 'Enter' && document.activeElement && document.activeElement.matches('img.zoomable')) document.activeElement.click();
   });
 
+  function enableVectorZoom(root) {
+    $$('.dm-panel, .scope-plots figure, .example-schematic', root).forEach(panel => {
+      const svg = $('svg', panel);
+      if (!svg || $('button.page-link',panel)) return;
+      const button = document.createElement('button');
+      button.type = 'button'; button.className = 'page-link no-print';
+      button.textContent = '放大此图';
+      button.onclick = () => {
+        const copy = svg.cloneNode(true), originals = [svg, ...svg.querySelectorAll('*')], clones = [copy, ...copy.querySelectorAll('*')];
+        const props = ['color','fill','stroke','stroke-width','stroke-dasharray','stroke-linecap','stroke-linejoin','font-family','font-size','font-weight','text-anchor','opacity','vector-effect','visibility'];
+        originals.forEach((node, i) => {
+          const styles = getComputedStyle(node);
+          for (const prop of props) clones[i].style.setProperty(prop, styles.getPropertyValue(prop));
+        });
+        const vb = svg.viewBox.baseVal;
+        copy.setAttribute('xmlns','http://www.w3.org/2000/svg');
+        copy.setAttribute('width', vb.width*3); copy.setAttribute('height', vb.height*3);
+        const txt = svg.getAttribute('aria-label') || panel.querySelector('h4,figcaption')?.textContent || '电路图';
+        pageBar.hidden = true; zimg.alt = txt; $('.zoom-cap', dlg).textContent = txt;
+        zimg.src = 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(copy));
+        dlg.showModal(); zoomTo(0);
+      };
+      panel.append(button);
+    });
+  }
+
   /* ---------- 导航 ---------- */
   const exBySet = {};
   D.exercises.forEach(e => (exBySet[e.set] = exBySet[e.set] || []).push(e));
   function renderNav() {
     const r = location.hash || '#/home';
     let h = '<h4>开始</h4>' + link('#/home', '学习导览') +
-      '<h4>讲义</h4>' + D.chapters.map(c => link('#/ch/' + c.id, c.title, S.chDone[c.id] ? '✓' : '')).join('') +
+      link('#/topics', '专题索引', D.meta.counts.sections) + link('#/atlas', '讲义完整原页') + '<h4>讲义</h4>' + D.chapters.map(c => link('#/ch/' + c.id, c.title, S.chDone[c.id] ? '✓' : '')).join('') +
       '<h4>练习</h4>' + link('#/ex', '习题总览', D.exercises.length) +
       D.sets.map(s => link('#/ex/set/' + s.name, (s.chapter ? s.chapter + ' · ' : '') + s.title, s.count)).join('') +
       link('#/quiz', '概念快测', D.quizzes.length) +
@@ -99,32 +152,48 @@
 
   /* ---------- 视图 ---------- */
   const counts = D.meta.counts;
+  const chapterInfo = {
+    ch06: ['二极管', '从导通假设到整流、稳压与限幅', [5,7,8,9]],
+    ch07: ['三极管 BJT', '从两个 PN 结到偏置、负载线与共射放大', [2,3,7,5,10]],
+    ch08: ['场效应管 MOS', '从反型沟道到夹断、跨导与共源放大', [2,3,4,10,6,11]],
+    ch10: ['频率响应', '从电容的通路到波特图与上下限频率', [3,7,8,12]],
+    ch11: ['反馈', '从反馈路径到闭环增益、阻抗与稳定性', [2,9,11,15]],
+    ch12: ['功率放大器', '从导通角到输出摆幅、效率与热耗散', [3,6,7,10]]
+  };
+  const topics = c => c.sections.filter(s => s.level === 2);
+  const sect = (id, n) => '#/ch/' + id + '/' + id + '-s' + String(n).padStart(2, '0');
+  const chapterLinks = c => chapterInfo[c.id][2].map(n => {
+    const topic = topics(c)[n - 1];
+    return `<a href="${sect(c.id,n)}">${esc(topic.focus)}</a>`;
+  }).join('');
   function viewHome() {
-    const exDone = Object.values(S.ex).filter(v => v === 'done').length;
-    const wrong = Object.values(S.ex).filter(v => v === 'wrong').length;
-    main.innerHTML = `<h1>模拟电路（下半学期）互动复习</h1>
-    <p class="lead">覆盖课堂讲义第 6–8、10–12 章：二极管、三极管、场效应管、频率响应、反馈与功率放大器。课堂讲义是主线，MIT 讲义作补充，习题来自 EC2024 网站 Microelectronic Circuits 部分并逐题核对。</p>
-    <div class="cards">${D.chapters.map(c => {
-      const n = c.sections.filter(s => s.level === 2).length;
-      const ex = D.exercises.filter(e => e.chapter === c.num);
-      const d = ex.filter(e => S.ex[e.id] === 'done').length;
-      return `<a class="card" href="#/ch/${c.id}"><h3>${esc(c.title)}</h3><div class="meta">${n} 个专题 · ${ex.length} 道习题 ${S.chDone[c.id] ? '· 已掌握 ✓' : ''}</div><div class="progress"><i style="width:${ex.length ? Math.round(100 * d / ex.length) : 0}%"></i></div></a>`;
-    }).join('')}</div>
-    <h2>怎么用</h2>
-    <ol>
-      <li><b>先读讲义</b>：每个专题按“定义 → 推导 → 条件 → 例题 → 易错 → 自检”展开，图紧跟文字，点图可放大。</li>
-      <li><b>再动手调参</b>：<a href="#/labs">互动实验</a>里先猜结果，再拖滑块看曲线怎么变，最后回正文对照。</li>
-      <li><b>做题</b>：<a href="#/ex">习题</a>先看题图独立做，再依次展开提示、参考答案和本站核对。做完标“会了”或“错题”。</li>
-      <li><b>考前</b>：看 <a href="#/formulas">重点公式速查</a> 和 <a href="#/quiz">概念快测</a>，再刷错题。</li>
-    </ol>
-    <div class="cards">
-      <div class="card"><h3>${counts.exercises}</h3><div class="meta">习题（已核对 ${counts.reviewed}）</div></div>
-      <div class="card"><h3>${exDone} / ${wrong}</h3><div class="meta">已会 / 错题</div></div>
-      <div class="card"><h3>${counts.figures}</h3><div class="meta">讲义配图</div></div>
-      <div class="card"><h3>${Object.keys(window.LABS || {}).length}</h3><div class="meta">互动实验</div></div>
-    </div>
-    ${S.last && S.last !== '#/home' ? `<p>上次读到：<a href="${esc(S.last)}">${esc(S.last)}</a></p>` : ''}
-    <p class="muted">快捷键：<span class="kbd">Ctrl/⌘</span>+<span class="kbd">K</span> 搜索。学习记录只存在本浏览器，可在“收藏与学习记录”导出备份。</p>`;
+    main.innerHTML = `<section class="review-cover"><div><p class="course-term">第 6–8、10–12 章</p><h1>电子电路基础<span>模拟电路复习手册</span></h1>
+      <p class="cover-desc">对着电路读公式，从器件的工作区推到整级电路的增益、带宽与输出功率。</p>
+      <a class="cover-primary" href="#/topics">浏览 ${counts.sections} 个专题</a></div>
+      <figure class="cover-circuit">${GainScope.circuit('bjt',true)}<figcaption>共射级 · 电阻负载下的静态偏置</figcaption></figure></section>
+      <div class="home-heading"><h2>分章复习</h2><a href="#/formulas">全书重点公式</a></div>
+      <div class="course-grid">${D.chapters.map(c => `<section class="course-entry"><div class="entry-head"><span>第 ${c.num} 章</span><small>${topics(c).length} 个专题</small></div>
+        <h3><a href="#/ch/${c.id}">${chapterInfo[c.id][0]}</a></h3><p>${chapterInfo[c.id][1]}</p>
+        <div class="entry-links"><a href="#/topics/${c.id}">专题目录</a><a href="#/ch/${c.id}">阅读本章</a></div></section>`).join('')}</div>
+      <div class="home-heading"><h2>器件动画</h2><a href="#/labs">查看全部实验</a></div>
+      <div class="device-links"><div><h3>三极管为什么能放大？</h3><a href="#/ch/ch07/motion-bjt">看负载线上的工作点</a><a href="#/ch/ch07/scope-bjt">看共射输入与输出的波形</a></div>
+      <div><h3>MOS 管夹断后为何还有电流？</h3><a href="#/ch/ch08/motion-mos">看沟道与漏极电流</a><a href="#/ch/ch08/scope-mos">看共源输入与输出的波形</a></div></div>
+      <div class="home-heading"><h2>练习与原图</h2></div><div class="quick-links"><a href="#/ex">逐步解析 · ${counts.exercises} 道习题</a><a href="#/quiz">概念快测 · ${counts.quizzes} 题</a><a href="#/atlas">课堂讲义 · 完整原页</a><a href="#/me">收藏与错题</a></div>
+      ${S.last && S.last !== '#/home' ? `<p><a href="${esc(S.last)}">继续上次学习</a></p>` : ''}`;
+    setToc([]);
+  }
+  function viewTopics(id) {
+    const chapters = id ? D.chapters.filter(c=>c.id===id) : D.chapters;
+    if (!chapters.length) return viewNotFound();
+    main.innerHTML = `<h1>专题索引</h1><p class="lead">按要解决的问题选一节，进入正文即可看到核心公式、成立条件和对应讲义页。</p>
+      <div class="quick-links"><a href="#/topics">全部章节</a>${D.chapters.map(c=>`<a href="#/topics/${c.id}">${chapterInfo[c.id][0]}</a>`).join('')}</div>` +
+      chapters.map(c=>`<h2 id="topics-${c.id}">${esc(c.title)}</h2><div class="topic-list">${topics(c).map(topic=>
+        `<a href="#/ch/${c.id}/${topic.id}"><b>${esc(topic.title)}</b><span>${esc(topic.focus)}</span></a>`).join('')}</div>`).join('');
+    setToc(chapters.map(c=>({id:'topics-'+c.id, level:2, title:c.title, href:'#/topics/'+c.id})));
+  }
+  function viewAtlas() {
+    main.innerHTML = '<h1>讲义原页</h1><p class="lead">完整保留电源、公共地、偏置支路、图中注记与波形。页码按 PDF 的物理页序，从 1 开始。</p>'+
+      Object.entries(D.library).map(([key,book])=>`<details class="atlas-book"><summary>${esc(book.title)} <small>· ${book.images.length} 页</small></summary><div class="page-grid">${book.images.map((_,i)=>`<button data-page="${key}/${i+1}">P${i+1}</button>`).join('')}</div></details>`).join('');
     setToc([]);
   }
 
@@ -139,12 +208,14 @@
       <div class="toolbar no-print"><button class="btn ${S.chDone[c.id] ? 'on' : ''}" id="ch-done">${S.chDone[c.id] ? '已标记掌握 ✓' : '标记本章已掌握'}</button>
       ${set ? `<a class="btn" href="#/ex/set/${set.name}">本章习题 ${exCount} 道</a>` : ''}
       <a class="btn" href="#/formulas?ch=${c.num}">本章公式</a><button class="btn" id="print-all-btn">打印全部讲义</button></div>
+      <section class="chapter-path"><b>本章重点</b><div>${chapterLinks(c)}</div>
+      <details><summary>展开本章 ${topics(c).length} 个专题</summary><div class="local-toc">${topics(c).map(s=>`<a href="#/ch/${c.id}/${s.id}">${esc(s.title)}</a>`).join('')}</div></details></section>
       <article class="chapter-body">${c.html}</article>
       <div class="toolbar no-print" style="margin-top:2em">${prev ? `<a class="btn" href="#/ch/${prev.id}">← ${esc(prev.title)}</a>` : ''}${next ? `<a class="btn" href="#/ch/${next.id}">${esc(next.title)} →</a>` : ''}</div>`;
     $('#ch-done').onclick = () => { S.chDone[c.id] = !S.chDone[c.id]; if (!S.chDone[c.id]) delete S.chDone[c.id]; save(); route(); };
     $('#print-all-btn').onclick = printAll;
     setToc(c.sections.map(s => ({ id: s.id, level: s.level, title: s.title, href: `#/ch/${c.id}/${s.id}` })));
-    mountLabs(main); markFavs(main);
+    mountLabs(main); markFavs(main); DeviceMotion.mount(main); GainScope.mount(main); enableVectorZoom(main);
     if (anchor) scrollToId(anchor);
   }
 
@@ -277,7 +348,7 @@
   function viewLabs(focus) {
     const L = window.LABS || {};
     const ids = Object.keys(L);
-    main.innerHTML = `<h1>互动实验</h1><p class="lead">每个实验都是理想化的解析模型：先预测，再拖动参数，看图和读数怎么变，最后回到正文对照条件。</p>` +
+    main.innerHTML = `<h1>互动实验</h1><div class="quick-links"><a href="#/ch/ch07/motion-bjt">三极管工作区动画</a><a href="#/ch/ch08/motion-mos">MOS 沟道动画</a><a href="#/ch/ch07/scope-bjt">共射波形实验</a><a href="#/ch/ch08/scope-mos">共源波形实验</a></div><p class="lead">每个实验都是理想化的解析模型：先预测，再拖动参数，看图和读数怎么变，最后回到正文对照条件。</p>` +
       D.chapters.map(c => {
         const mine = ids.filter(id => L[id].chapter === c.num);
         return mine.length ? `<h2 id="labs-${c.id}">${esc(c.title)}</h2>` + mine.map(id => `<div class="lab-mount" data-lab="${id}"></div>`).join('') : '';
@@ -285,6 +356,23 @@
     mountLabs(main);
     setToc(ids.map(id => ({ id: 'lab-' + id, level: 2, title: L[id].title, href: '#/labs/' + id })));
     if (focus) scrollToId('lab-' + focus);
+  }
+
+  function labArt(id, p) {
+    const rect = id === 'rectifier', clip = id === 'clipper';
+    if (rect || clip) {
+      const drawing = rect ? p.type + (p.C > 0 ? '-c' : '') : p.mode;
+      return `<figure class="example-schematic">${D.labDrawings[drawing]}</figure>`;
+    }
+    const pages = {
+      'diode-iv':[6,6], 'diode-loadline':[6,18], zener:[6,16], 'bjt-output':[7,38], 'bjt-bias':[7,27],
+      'bjt-amp':[7,({CE:p.RE>0?49:46,CC:54,CB:52})[p.cfg]], 'mos-iv':[8,10],
+      'mos-amp':[8,({CS:p.RS>0?31:28,CD:32,CG:34})[p.cfg]], bode:[10,32], miller:[10,61],lowfreq:[10,36],
+      'fb-gain':[11,2], 'fb-impedance':[11,({'series-shunt':31,'shunt-shunt':32,'shunt-series':33,'series-series':34})[p.topo]],
+      'fb-stability':[11,39],'pa-efficiency':[12,p.cls==='A'?4:12],crossover:[12,p.Vb>0?17:12]
+    };
+    const [n, pg] = pages[id], key = 'ch'+String(n).padStart(2,'0');
+    return `<button class="page-link" data-page="${key}/${pg}">查看讲义原图 · P${pg}</button>`;
   }
 
   function mountLabs(root) {
@@ -296,7 +384,7 @@
       m.dataset.done = '1';
       const uid = 'lab-' + m.dataset.lab + (document.getElementById('lab-' + m.dataset.lab) ? '-' + Math.random().toString(36).slice(2, 6) : '');
       m.innerHTML = `<div class="lab" id="${uid}"><div class="lab-title">互动 · ${esc(lab.title)}</div><div class="lab-desc">${lab.desc}</div>
-        <div class="lab-grid"><div class="lab-ctrl">${lab.controls.map(c => ctrlHtml(c, uid)).join('')}</div><div><div class="lab-svg"></div><div class="lab-out" aria-live="polite"></div></div></div></div>`;
+        <div class="lab-grid"><div class="lab-ctrl">${lab.controls.map(c => ctrlHtml(c, uid)).join('')}</div><div><div class="lab-svg"></div><div class="lab-out" aria-live="polite"></div></div></div><div class="lab-art"></div></div>`;
       const box = m.firstElementChild;
       const read = () => {
         const p = {};
@@ -306,6 +394,10 @@
         try { r = lab.update(p); } catch (err) { r = { svg: '', out: '<span class="warnline">参数超出模型范围：' + esc(err.message) + '</span>' }; }
         $('.lab-svg', box).innerHTML = r.svg || '';
         $('.lab-out', box).innerHTML = r.out || '';
+        const art = $('.lab-art', box), markup = labArt(m.dataset.lab, p);
+        if (art.dataset.current !== markup) {
+          art.innerHTML = markup; art.dataset.current = markup; enableVectorZoom(art);
+        }
       };
       $$('input,select', box).forEach(el => el.addEventListener('input', read));
       read();
@@ -372,9 +464,12 @@
     const view = seg[0] + '/' + (seg[1] || '');
     // 同一视图内锚点跳转：不重绘，避免重置滑块
     if (view === curView && seg[0] === 'ch' && seg[2] && document.getElementById(seg[2])) { scrollToId(seg[2]); renderNav(); return; }
+    DeviceMotion.dispose(); GainScope.dispose();
     curView = view;
     switch (seg[0]) {
       case 'home': case '': viewHome(); break;
+      case 'topics': viewTopics(seg[1]); break;
+      case 'atlas': viewAtlas(); break;
       case 'ch': viewChapter(seg[1], seg[2]); break;
       case 'ex':
         if (!seg[1]) viewExOverview();
