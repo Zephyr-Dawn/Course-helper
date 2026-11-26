@@ -7,3 +7,5 @@ __pycache__/
 *.zip
 .DS_Store
 test-output/
+
+/assets/pages/

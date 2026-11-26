@@ -15,6 +15,9 @@ SITE = Path(__file__).resolve().parent
 sys.path.insert(0, str(SITE / "src"))
 from mdconv import MathStore, md_to_html, inline_md as _inline_md  # noqa: E402
 
+from example_circuits import lab_drawings
+from review_guide import add_example_figures, attach_guides, page_library, read_guides
+
 CONTENT = SITE / "content"
 ASSETS = SITE / "assets"
 CACHE = SITE / ".cache"
@@ -104,6 +107,9 @@ def main():
             figures[f["id"]] = f
     ctx["figures"] = figures
 
+    guide = read_guides(CONTENT / "section-guide.txt")
+    library = page_library(imgs)
+    original_questions = {r["id"]: r for name in SETS for r in load_json(CONTENT / "exercises" / f"{name}.json", [])}
     chapters = []
     for ch in CHAPTERS:
         p = CONTENT / f"{ch}.md"
@@ -115,8 +121,9 @@ def main():
         m = re.match(r"#\s+(.+)\n", text)
         title = m.group(1).strip() if m else ch
         body = text[m.end():] if m else text
-        h = md_to_html(body, store, ctx)
+        h = md_to_html(add_example_figures(body, original_questions), store, ctx)
         h, secs = section_ids(h, ch)
+        h = attach_guides(h, ch, secs, guide, store, imgs, load_json(CONTENT / f"formulas-{ch}.json", []))
         chapters.append({"id": ch, "num": int(ch[2:]), "title": title, "html": h, "sections": secs})
 
     # exercises
@@ -220,7 +227,7 @@ def main():
                        "figures": len(figs_used), "exercises": len(exercises),
                        "reviewed": sum(1 for e in exercises if e["solutionHtml"] or e["checkHtml"]),
                        "formulas": len(formulas), "quizzes": len(quizzes), "images": len(image_data)}}
-    data = {"chapters": chapters, "exercises": exercises, "sets": sets, "formulas": formulas,
+    data = {"labDrawings": lab_drawings(), "library": library, "chapters": chapters, "exercises": exercises, "sets": sets, "formulas": formulas,
             "quizzes": quizzes, "search": search, "meta": meta}
 
     # KaTeX css with embedded woff2 fonts
@@ -237,10 +244,11 @@ def main():
         return json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
     shell = (SITE / "src" / "shell.html").read_text(encoding="utf-8")
-    src = {n: (SITE / "src" / n).read_text(encoding="utf-8") for n in ("style.css", "models.js", "labs.js", "app.js")}
-    out = (shell.replace("/*KATEX_CSS*/", kcss).replace("/*STYLE_CSS*/", src["style.css"])
+    src = {n: (SITE / "src" / n).read_text(encoding="utf-8") for n in ("style.css", "models.js", "labs.js", "app.js", "device-motion.js", "device-motion.css", "scope.js")}
+    out = (shell.replace("/*KATEX_CSS*/", kcss).replace("/*STYLE_CSS*/", src["style.css"] + "\n" + src["device-motion.css"])
            .replace("/*COURSE_DATA*/", js_json(data)).replace("/*IMAGE_DATA*/", js_json(image_data))
            .replace("/*MODELS_JS*/", src["models.js"]).replace("/*LABS_JS*/", src["labs.js"])
+           .replace("/*DEVICE_JS*/", src["device-motion.js"] + "\n" + src["scope.js"])
            .replace("/*APP_JS*/", src["app.js"]))
     target = Path(OUT_ARG).resolve() if OUT_ARG else DIST / OUT_NAME
     target.parent.mkdir(parents=True, exist_ok=True)
