@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="偏微分方程离线学习讲义，按课程顺序收录基础知识、行波法和分离变量法。">
+  <title>偏微分方程学习笔记</title>
+  <link rel="stylesheet" href="assets/notes.css">
+  <script defer src="assets/notes.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main-content">跳到正文</a>
+  <header class="top">
+    <div class="bar">
+      <a class="brand" href="index.html"><svg viewBox="0 0 44 36" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true"><path d="M22 7C16 3 9 3 3 6v25c6-3 13-3 19 1 6-4 13-4 19-1V6c-6-3-13-3-19 1zM22 7v25"/></svg>偏微分方程</a>
+
+    </div>
+  </header>
+  <div class="layout">
+    <aside>
+      <nav class="contents" aria-label="课程目录">
+        <h2>目录</h2>
+        <ul>
+          <li><a href="#course-index" aria-current="true">课程索引</a></li>
+<li><a href="chapters/basics.html">第一章　基础知识</a></li>
+<li><a href="chapters/waves.html">第二章　行波法</a></li>
+<li><a href="chapters/separation.html">第三章　分离变量法</a></li>
+<li><a href="chapters/laplacian.html">附录　坐标变换</a></li>
+<li><a href="chapters/review.html">自测与速查</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main-content" tabindex="-1">
+
+      <section class="hero" id="overview" aria-labelledby="title">
+  <div>
+    <h1 id="title">偏微分方程</h1>
+    <p>按课程顺序学习方程建模、行波传播与特征函数展开。每章配推导、例题和自测入口。</p>
+    <a class="button primary" href="#course-index">查看课程索引</a>
+  </div>
+  <canvas id="hero-plot" aria-hidden="true"></canvas>
+</section>
+<section class="index-section" id="course-index" aria-labelledby="index-title">
+  <h2 id="index-title">课程索引</h2>
+  <ol class="index-chapters">
+    <li>
+      <h3><a href="chapters/basics.html">第一章　方程的导出和定解问题</a></h3>
+      <p>从波动、热传导、泊松方程入手，区分初值和边界，再判断二阶线性方程的类型。</p>
+      <ul class="subnav">
+        <li><a href="chapters/basics.html#models">典型模型</a></li>
+        <li><a href="chapters/basics.html#conditions">定解条件</a></li>
+        <li><a href="chapters/basics.html#classification">分类与化简</a></li>
+      </ul>
+    </li>
+    <li>
+      <h3><a href="chapters/waves.html">第二章　行波法</a></h3>
+      <p>沿特征线追踪初值与源项，区分全轴和半轴问题。</p>
+      <ol class="index-links">
+        <li><a href="chapters/waves.html">一维波动　达朗贝尔公式、受迫振动与反射</a><span class="topic-detail"><a href="chapters/waves.html#characteristic-lab">特征线动画</a></span></li>
+        <li><a href="chapters/wave-examples.html">补充例题　分段取值与反求端点参数</a></li>
+        <li><a href="chapters/wave-dimensions.html">高维波动的物理意义</a> <span class="topic-level">了解</span></li>
+      </ol>
+    </li>
+    <li>
+      <h3><a href="chapters/separation.html">第三章　分离变量法</a></h3>
+      <p><strong>本周重点。</strong> 先用边界条件求空间模态，再分别处理初始数据、方程源项和非零边界。</p>
+      <ol class="index-links">
+        <li><a href="chapters/separation.html#separation-flow">三类题型流程对照</a></li>
+        <li><a href="chapters/separation.html#sturm-liouville">预备　Sturm–Liouville 固有值问题</a></li>
+        <li><a href="chapters/separation.html#sep-wave">3.1.1　齐次方程、齐次边界</a><span class="topic-detail">固定弦、混合边界热方程、圆域拉普拉斯</span></li>
+        <li><a href="chapters/separation-forcing.html">3.1.2　非齐次方程、齐次边界</a><span class="topic-detail">投影源项、杜哈梅尔原理、零模态</span></li>
+        <li><a href="chapters/separation-boundary.html">3.2　非齐次边界条件</a><span class="topic-detail">时变端点、边界齐次化与静态解</span><span class="topic-detail"><a href="chapters/separation-boundary.html#multi-mode-example">多模态综合例</a></span></li>
+      </ol>
+    </li>
+  </ol>
+</section>
+<div class="index-extra">
+  <a href="chapters/laplacian.html"><strong>附录　拉普拉斯算子的坐标变换</strong><span>极坐标链式法则，球坐标通量推导</span></a>
+  <a href="chapters/review.html"><strong>自测与速查</strong><span>按题型选择解法，15 道可展开解析的练习</span></a>
+</div>
+<footer class="sources" id="sources">
+  <h2>课程材料</h2>
+  <p>以下资料名称和页码供对照，原始文件可通过课程渠道获取。</p>
+  <p>2026-11-26 学习版 · 浙江大学 MATH2132F 偏微分方程</p>
+  <ul>
+    <li>第一周讲义（<cite>2026w_PDEnotes_beamer_w1.pdf</cite>），PDF 第 8–51 页。</li>
+    <li>第二周讲义（<cite>2026w_PDEnotes_beamer_w2.pdf</cite>），PDF 第 5–35 页。</li>
+    <li>第三周讲义（<cite>2026w_PDEnotes_beamer_w3.pdf</cite>），PDF 第 1–63 页。</li>
+    <li>几道行波法例题（<cite>几道行波法例题.pdf</cite>），PDF 第 1–8 页。</li>
+    <li>高维波动方程（<cite>高维波动方程.pdf</cite>），物理意义见 PDF 第 13–18 页。</li>
+    <li>极坐标拉普拉斯推导（<cite>laplacian1_en.pdf</cite>）与球坐标拉普拉斯推导（<cite>laplacian1.pdf</cite>）。</li>
+  </ul>
+</footer>
+
+    </main>
+  </div>
+  <script>
+    const previousSections = new Map(Object.entries({"basics": "basics", "basics-title": "basics", "models": "basics", "conditions": "basics", "classification": "basics", "waves": "waves", "waves-title": "waves", "dalembert": "waves", "wave-lab": "waves", "wave-t-value": "waves", "wave-t": "waves", "wave-plot": "waves", "wave-reading": "waves", "forced": "waves", "reflection": "waves", "separation": "separation", "separation-title": "separation", "sep-wave": "separation", "sep-orthogonal": "separation", "mode-lab": "separation", "mode-kind": "separation", "mode-n-value": "separation", "mode-n": "separation", "mode-t-value": "separation", "mode-t": "separation", "mode-plot": "separation", "mode-reading": "separation", "sep-boundary": "separation", "sep-heat": "separation", "fourier-lab": "separation", "fourier-n-value": "separation", "fourier-n": "separation", "fourier-plot": "separation", "fourier-reading": "separation", "sep-disk": "separation", "review": "review", "review-title": "review", "quick-reference": "review", "quiz": "review"}));
+    function openPreviousSection() {
+      const anchor = location.hash.slice(1);
+      const chapter = previousSections.get(anchor);
+      if (chapter) location.replace("chapters/" + chapter + ".html#" + anchor);
+    }
+    openPreviousSection();
+    window.addEventListener("hashchange", openPreviousSection);
+  </script>
+</body>
+</html>

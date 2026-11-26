@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="偏微分方程离线学习讲义，按课程顺序收录基础知识、行波法和分离变量法。">
+  <title>高维波动的物理意义｜偏微分方程</title>
+  <link rel="stylesheet" href="../assets/notes.css">
+  <script defer src="../assets/notes.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main-content">跳到正文</a>
+  <header class="top">
+    <div class="bar">
+      <a class="brand" href="../index.html"><svg viewBox="0 0 44 36" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true"><path d="M22 7C16 3 9 3 3 6v25c6-3 13-3 19 1 6-4 13-4 19-1V6c-6-3-13-3-19 1zM22 7v25"/></svg>偏微分方程</a>
+      <button class="button" id="print" type="button">打印本页</button>
+    </div>
+  </header>
+  <div class="layout">
+    <aside>
+      <nav class="contents" aria-label="课程目录">
+        <h2>目录</h2>
+        <ul>
+          <li><a href="../index.html#course-index">课程索引</a></li>
+<li><a href="basics.html">第一章　基础知识</a></li>
+<li><a href="waves.html" aria-current="true">第二章　行波法</a></li>
+<li><a href="separation.html">第三章　分离变量法</a></li>
+<li><a href="laplacian.html">附录　坐标变换</a></li>
+<li><a href="review.html">自测与速查</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main-content" tabindex="-1">
+      <nav class="section-links" aria-label="本章分节"><a href="waves.html">一维波动</a><a href="wave-examples.html">补充例题</a><a href="wave-dimensions.html" aria-current="page">高维波动 · 了解</a></nav>
+      <section class="chapter" id="wave-dimensions">
+  <header>
+    <h1>高维波动的物理意义</h1>
+    <p class="reading"><strong>了解。</strong> 本节看扰动何时到达、波前过去后还会不会有响应。球面平均、降维公式的计算可按需展开。</p>
+    <ul class="subnav">
+      <li><a href="#wave-fronts">波前与波尾</a></li>
+      <li><a href="#spherical-average">三维球面平均</a></li>
+      <li><a href="#descent">二维降维</a></li>
+    </ul>
+  </header>
+  <div class="reading">
+    <section class="lesson" id="wave-fronts">
+      <h2>先到达的都是波前，波尾取决于维数</h2>
+      <p>考虑全空间、常波速 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a&gt;0</annotation></semantics></math>、无外力的波动方程 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>u</mi><mrow><mi>t</mi><mi>t</mi></mrow></msub><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mi>&#x00394;</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">u_{tt}=a^2\Delta u</annotation></semantics></math>。若初始扰动集中在离观测点距离约 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math> 的小区域，最早的影响在约 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo>&#x0002F;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">d/a</annotation></semantics></math> 时到达。能否感受到更早发出的扰动，要看解取了哪些位置上的初值。</p>
+      <figure class="wave-compare">
+        <div><div class="wave-disc shell" aria-hidden="true"></div><p><strong>三维</strong>　球面取样</p><p>图为传播球壳的截面。</p></div>
+        <div><div class="wave-disc filled" aria-hidden="true"></div><p><strong>二维</strong>　圆盘取样</p><p>圆盘内部也参与计算。</p></div>
+        <figcaption>圆心是扰动源。三维图用球壳表示有限尺寸初始扰动的传播范围，二维图的渐淡区域表示波前后的波尾。</figcaption>
+      </figure>
+      <ul class="content-list">
+        <li><strong>三维（惠更斯原理）。</strong> 观测点 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math> 在时刻 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math> 的值由以 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math> 为中心、半径 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">at</annotation></semantics></math> 的球面上的初值信息决定。若光滑初值支撑在半径 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x003C1;</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math> 的小球内，且球心到观测点距离 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>d</mi><mo>&#x0003E;</mo><mi>&#x003C1;</mi></mrow><annotation encoding="application/x-tex">d&gt;\rho</annotation></semantics></math>，只有 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>d</mi><mo>&#x02212;</mo><mi>&#x003C1;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002F;</mo><mi>a</mi><mo>&#x02264;</mo><mi>t</mi><mo>&#x02264;</mo><mo stretchy="false">&#x00028;</mo><mi>d</mi><mo>&#x0002B;</mo><mi>&#x003C1;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002F;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">(d-\rho)/a\le t\le(d+\rho)/a</annotation></semantics></math> 才可能有响应。球面完全扫过扰动区后，响应消失。</li>
+        <li><strong>二维（可出现波尾）。</strong> 观测公式会用到半径 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">at</annotation></semantics></math> 的整个圆盘内的初值。圆周过了扰动区，区内初值仍留在积分中。例如初位移为零、初速度是非负小脉冲时，只要圆盘包含其支撑，积分仍为正。</li>
+      </ul>
+      <div class="note"><p><strong>复习时记两件事。</strong> 两种波都以有限速度传播。三维取球面，二维取圆盘，因此先到时间的判断相近，离开时间的判断不同。</p></div>
+    </section>
+
+    <section class="lesson" id="spherical-average">
+      <h2>三维公式为什么在球面上取值</h2>
+      <p>对空间函数 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math>，记 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>M</mi><mi>r</mi></msub><mi>h</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">M_rh(x)</annotation></semantics></math> 为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math> 周围半径 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math> 球面上的平均。全空间三维自由波的 Kirchhoff 公式可以紧凑地写成下面两行。令 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math> 固定，对 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>t</mi><msub><mi>M</mi><mrow><mi>a</mi><mi>t</mi></mrow></msub><mi>&#x003D5;</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">tM_{at}\phi(x)</annotation></semantics></math> 求导时，半径 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">at</annotation></semantics></math> 随时间变化。</p>
+      <div class="formula">
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>M</mi><mi>r</mi></msub><mi>h</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>&#x003C0;</mi><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac><msub><mo>&#x0222B;</mo><mrow><mo stretchy="false">&#x0007C;</mo><mi>y</mi><mo>&#x02212;</mo><mi>x</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mi>r</mi></mrow></msub><mi>h</mi><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo stretchy="false">&#x00029;</mo><mspace width="0.167em" /><mi>d</mi><msub><mi>S</mi><mi>y</mi></msub><mo>&#x0002C;</mo></mrow><annotation encoding="application/x-tex">M_rh(x)=\frac1{4\pi r^2}\int_{|y-x|=r}h(y)\,dS_y,</annotation></semantics></math>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>u</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mo>&#x02202;</mo><mi>t</mi></msub><mo stretchy="false">&#x00028;</mo><mi>t</mi><msub><mi>M</mi><mrow><mi>a</mi><mi>t</mi></mrow></msub><mi>&#x003D5;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002B;</mo><mi>t</mi><msub><mi>M</mi><mrow><mi>a</mi><mi>t</mi></mrow></msub><mi>&#x003C8;</mi><mo>&#x0002E;</mo></mrow><annotation encoding="application/x-tex">u(x,t)=\partial_t(tM_{at}\phi)+tM_{at}\psi.</annotation></semantics></math>
+      </div>
+      <details><summary>选读　球平均怎样化成一维方程？</summary><div>
+        <p>直接对径向函数或球面平均函数 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>U</mi><mo stretchy="false">&#x00028;</mo><mi>r</mi><mo>&#x0002C;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">U(r,t)</annotation></semantics></math> 考虑 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>r</mi><mo>&#x0003E;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">r&gt;0</annotation></semantics></math>。将球面平均对 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math> 求导，再用散度定理将法向通量转成球体内的 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x00394;</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">\Delta u</annotation></semantics></math> 积分，可得到径向算子 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>U</mi><mrow><mi>r</mi><mi>r</mi></mrow></msub><mo>&#x0002B;</mo><mn>2</mn><msub><mi>U</mi><mi>r</mi></msub><mo>&#x0002F;</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">U_{rr}+2U_r/r</annotation></semantics></math>。乘以 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math>，它恰是 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>r</mi><mi>U</mi><msub><mo stretchy="false">&#x00029;</mo><mrow><mi>r</mi><mi>r</mi></mrow></msub></mrow><annotation encoding="application/x-tex">(rU)_{rr}</annotation></semantics></math>。</p>
+        <div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">&#x00028;</mo><mi>r</mi><mi>U</mi><msub><mo stretchy="false">&#x00029;</mo><mrow><mi>t</mi><mi>t</mi></mrow></msub><mo>&#x0003D;</mo><msup><mi>a</mi><mn>2</mn></msup><mo stretchy="false">&#x00028;</mo><mi>r</mi><mi>U</mi><msub><mo stretchy="false">&#x00029;</mo><mrow><mi>r</mi><mi>r</mi></mrow></msub><mo>&#x0002E;</mo></mrow><annotation encoding="application/x-tex">(rU)_{tt}=a^2(rU)_{rr}.</annotation></semantics></math></div>
+        <p>在 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>r</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">r=0</annotation></semantics></math> 有 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>r</mi><mi>U</mi><mo>&#x0003D;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">rU=0</annotation></semantics></math>，可作奇延拓并用一维达朗贝尔公式。最后令 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math> 趋于 0，取回球心的值。若有源项，再按杜哈梅尔原理把各时刻 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>&#x003C4;</mi></mrow><annotation encoding="application/x-tex">\tau</annotation></semantics></math> 的球面贡献积分，该次贡献的传播时间为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>t</mi><mo>&#x02212;</mo><mi>&#x003C4;</mi></mrow><annotation encoding="application/x-tex">t-\tau</annotation></semantics></math>。</p>
+        <p><a href="laplacian.html#spherical">查看球坐标拉普拉斯的径向部分</a></p>
+      </div></details>
+    </section>
+
+    <section class="lesson" id="descent">
+      <h2>二维圆盘来自球面投影</h2>
+      <p>把二维初值看作沿第三个坐标不变的三维初值。三维解也沿这一方向不变，因为沿该方向平移后方程和初值都一样。把球面压到平面上观察，上下半球都会覆盖整个圆盘，因此圆盘内部也参与计算。</p>
+      <details><summary>选读　圆盘积分的权重从哪里来？</summary><div>
+        <p>设球半径 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math>，平面上到圆心的距离为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math>。上半球高度为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>z</mi><mo>&#x0003D;</mo><msqrt><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>&#x02212;</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">z=\sqrt{R^2-r^2}</annotation></semantics></math>。把曲面面积换成平面面积，每个半球都带 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>R</mi><mo>&#x0002F;</mo><msqrt><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>&#x02212;</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">R/\sqrt{R^2-r^2}</annotation></semantics></math>，两个半球再相加。记 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>D</mi><mi>t</mi></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><annotation encoding="application/x-tex">D_t(x)</annotation></semantics></math> 为以 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math> 为圆心、半径为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>a</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">at</annotation></semantics></math> 的开圆盘。代入 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>R</mi><mo>&#x0003D;</mo><mi>a</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">R=at</annotation></semantics></math> 的三维球平均，得到</p>
+        <div class="formula">
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>P</mi><mi>t</mi></msub><mi>h</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>&#x003C0;</mi><mi>a</mi></mrow></mfrac><msub><mo>&#x0222B;</mo><mrow><msub><mi>D</mi><mi>t</mi></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow></msub><mfrac><mrow><mi>h</mi><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo stretchy="false">&#x00029;</mo></mrow><mrow><mi>s</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo></mrow></mfrac><mspace width="0.167em" /><mi>d</mi><mi>y</mi><mo>&#x0002C;</mo></mrow><annotation encoding="application/x-tex">P_t h(x)=\frac1{2\pi a}\int_{D_t(x)}\frac{h(y)}{s(x,y,t)}\,dy,</annotation></semantics></math>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>s</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><msup><mi>t</mi><mn>2</mn></msup><mo>&#x02212;</mo><mo stretchy="false">&#x0007C;</mo><mi>y</mi><mo>&#x02212;</mo><mi>x</mi><msup><mo stretchy="false">&#x0007C;</mo><mn>2</mn></msup></mrow></msqrt><mo>&#x0002C;</mo></mrow><annotation encoding="application/x-tex">s(x,y,t)=\sqrt{a^2t^2-|y-x|^2},</annotation></semantics></math>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>u</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>t</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mo>&#x02202;</mo><mi>t</mi></msub><msub><mi>P</mi><mi>t</mi></msub><mi>&#x003D5;</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002B;</mo><msub><mi>P</mi><mi>t</mi></msub><mi>&#x003C8;</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002E;</mo></mrow><annotation encoding="application/x-tex">u(x,t)=\partial_t P_t\phi(x)+P_t\psi(x).</annotation></semantics></math>
+        </div>
+        <p>用 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>h</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">h=1</annotation></semantics></math> 可核对系数，极坐标下圆盘积分给出 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>P</mi><mi>t</mi></msub><mn>1</mn><mo>&#x0003D;</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">P_t1=t</annotation></semantics></math>。所以常初位移对应常位移，常初速度对应线性增长。</p>
+      </div></details>
+    </section>
+  </div>
+</section>
+      <nav class="chapter-next" aria-label="章节顺序"><a rel="prev" href="wave-examples.html">← 行波法例题</a><a rel="next" href="separation.html">分离变量法 · 齐次问题 →</a></nav><footer class="sources"><p>对应材料　高维波动方程，第 1–18 页（<cite>高维波动方程.pdf</cite>）</p></footer>
+    </main>
+  </div>
+</body>
+</html>
