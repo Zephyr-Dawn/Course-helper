@@ -8,7 +8,7 @@
 | 电子电路基础 | [打开课程](https://zephyr-dawn.github.io/Course-helper/analog-circuit/) | `analog-circuit` |
 | 模拟电路（下半学期） | [打开课程](https://zephyr-dawn.github.io/Course-helper/analog-circuit-micro/) | `analog-circuit-micro` |
 | 大学物理甲-II（仅进行到期中内容，历年题待补） | [打开课程](https://zephyr-dawn.github.io/Course-helper/physics-ii/) | `physics-ii` |
-| 偏微分方程 | [讲义文件](PDE/) | `PDE` |
+| 偏微分方程 | [打开课程](https://zephyr-dawn.github.io/Course-helper/PDE/) | `PDE` |
 
 [课程总入口](https://zephyr-dawn.github.io/Course-helper/)。后续课程新增同级目录并在首页添加入口。
 
